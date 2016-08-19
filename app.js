@@ -6,9 +6,18 @@ var
   containerTime,
   inputText,
   inputBtn,
+  messageTitle,
   containerMessage,
+  RED = "red",
+  GREEN = "green",
   inputTextVal,
   inputTextNoSpaces,
+  btnGenerate,
+  inputStr,
+  inputStrVal,
+  subSrtTitle,
+  containerSubStr,
+  onlySpaces,
   intervalID;
 
 window.onload = function () {
@@ -31,14 +40,45 @@ window.onload = function () {
   inputBtn.className = "input-btn";
   inputBtn.value = "Cheсk";
 
-  containerMessage = document.createElement("div", {"clas": "containerMessage"});
+  messageTitle = document.createElement("div");
+  messageTitle.className = "messageTitle";
+  messageTitle.innerHTML = "Message: ";
 
-  appendChild([containerDate, containerTime, inputText, inputBtn, containerMessage]);
+  containerMessage = document.createElement("div");
+  containerMessage.className = "containerMessage";
+
+  inputStr = document.createElement("input");
+  inputStr.type = "text";
+  inputStr.className = "input-srt";
+  inputStr.placeholder = "Input string here";
+
+  btnGenerate = document.createElement("input");
+  btnGenerate.type = "button";
+  btnGenerate.className = "btn-Generate";
+  btnGenerate.value = "Generate sub-strings";
+
+  subSrtTitle = document.createElement("div");
+  subSrtTitle.className = "subSrtTitle";
+  subSrtTitle.innerHTML = "Sub Strings: ";
+
+  containerSubStr = document.createElement("div");
+  containerSubStr.className = "containerSubStr";
+
+  appendChild([containerDate, containerTime, inputText, inputBtn, messageTitle, containerMessage, inputStr, btnGenerate, subSrtTitle, containerSubStr]);
 
   intervalID = window.setInterval(secondsTimer, 1000);
 
   secondsTimer();
+
   inputBtn.onclick = checkPolindrome;
+  btnGenerate.onclick = generateStrings;
+
+  inputStr.onkeypress = clearMass;
+  inputText.onkeypress = clearMass;
+}
+
+function clearMass() {
+  containerMessage.innerHTML = "";
 }
 
 function appendChild(items) {
@@ -53,32 +93,61 @@ function secondsTimer() {
   ${date.getMinutes()} : ${date.getSeconds()}`;
 } 
 
-function checkInput() {
-  inputTextVal = inputText.value;
-  var onlySpaces = inputTextVal.replace(/\s+/g,'');
-  console.log(onlySpaces);
-  if(inputTextVal === "" || onlySpaces == "") {
+function checkPolindrome() {
+  if (checkInput(inputText.value) == true) {
+    if (inputTextNoSpaces === inputTextNoSpaces.split('').reverse().join('')) 
+      containerMessage.innerHTML = "This is polindrome";
+    else 
+    {
+      containerMessage.innerHTML = "This is NOT a polindrome";
+      containerMessage.style.color = RED;
+    }
+  }
+}
+
+function checkInput(inputTextValue) {
+  clearMass();
+  onlySpaces = inputTextValue.replace(/\s+/g,'');
+  
+  if(inputTextValue === "" || onlySpaces == "") {
     containerMessage.innerHTML = "Insert your text";
+    containerMessage.style.color = RED;
     return false;
   }
-  else if(inputTextVal.search(/[^a-zA-Zа-яА-я\' ']/) < 0 && onlySpaces !== "")
+  else if(inputTextValue.search(/[^a-zA-Zа-яА-я\' ']/) < 0 && onlySpaces !== "")
   {
-    inputTextNoSpaces = inputTextVal.replace(/(^\s+|\s+$)/g,'');
-    containerMessage.innerHTML = "";
+    inputTextNoSpaces = inputTextValue.replace(/(^\s+|\s+$)/g,'');
+    clearMass();
+    containerMessage.style.color = GREEN;
     return true;
   }  
   else{
     containerMessage.innerHTML = "Incorrect text";
+    containerMessage.style.color = RED;
     return false;
   }
 }
 
-function checkPolindrome() {
-  if (checkInput() == true) {
-    if (inputTextNoSpaces === inputTextNoSpaces.split('').reverse().join('')) 
-      containerMessage.innerHTML = "This is polindrome";
-    else 
-      containerMessage.innerHTML = "This is NOT a polindrome";
-  }
+function generateStrings() {
+  containerSubStr.innerHTML = "";
+  inputStrVal = inputStr.value;
+  if (checkInput(inputStrVal) == true) {
+
+    var 
+      subStr = "",
+      strArr = "";
+    
+    for (var i = 0; i < inputTextNoSpaces.length; i++) {
+      for (var j = i; j < inputTextNoSpaces.length; j++) {         
+        subStr += inputTextNoSpaces[j];
+        if (i < inputTextNoSpaces.length-1)
+          strArr += `${subStr}, `;
+        else
+          strArr += `${subStr}`;
+      }
+      subStr = "";
+    }
+    containerSubStr.innerHTML = strArr;
+  } 
 }
 
