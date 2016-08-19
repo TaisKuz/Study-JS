@@ -1,0 +1,8 @@
+.input-text, .input-btn {
+  	display: block;
+  	margin: 10px 0;
+} 
+
+.input-text {
+  	width: 250px;
+} 
