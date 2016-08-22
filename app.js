@@ -10,6 +10,8 @@ var
   containerMessage,
   RED = "red",
   GREEN = "green",
+  BG_GREEN = "#b3ffb3",
+  BG_RED = "#ffd6cc",
   inputTextVal,
   inputTextNoSpaces,
   btnGenerate,
@@ -18,13 +20,17 @@ var
   subSrtTitle,
   containerSubStr,
   onlySpaces,
+  containerWrapper1,
+  containerWrapper2,
+  containerWrapper3,
+  containerWrapper4,
   intervalID;
 
 window.onload = function () {
 
+
   containerDate = document.createElement("div");
   containerDate.className = "container-date";
-
   containerDate.innerHTML = `Today is : ${date.toLocaleString("en-US", { weekday: 'long' })}.`;
 
   containerTime = document.createElement("div");
@@ -64,11 +70,36 @@ window.onload = function () {
   containerSubStr = document.createElement("div");
   containerSubStr.className = "containerSubStr";
 
-  appendChild([containerDate, containerTime, inputText, inputBtn, messageTitle, containerMessage, inputStr, btnGenerate, subSrtTitle, containerSubStr]);
+  containerWrapper1 = document.createElement("div");
+  containerWrapper1.className = "containerWrapper";
+  containerWrapper1.appendChild(containerDate);
+  containerWrapper1.appendChild(containerTime);
+
+  containerWrapper2 = document.createElement("div");
+  containerWrapper2.className = "containerWrapper";
+  containerWrapper2.appendChild(inputText);
+  containerWrapper2.appendChild(inputBtn);
+
+  containerWrapper3 = document.createElement("div");
+  containerWrapper3.className = "containerWrapper massege";
+  containerWrapper3.appendChild(messageTitle);
+  containerWrapper3.appendChild(containerMessage);
+ 
+  containerWrapper4 = document.createElement("div");
+  containerWrapper4.className = "containerWrapper";
+  containerWrapper4.appendChild(inputStr);
+  containerWrapper4.appendChild(btnGenerate);
+  containerWrapper4.appendChild(subSrtTitle);
+  containerWrapper4.appendChild(containerSubStr);  
+
+  appendChild([containerWrapper1, containerWrapper2, containerWrapper3, containerWrapper4]);
 
   intervalID = window.setInterval(secondsTimer, 1000);
 
   secondsTimer();
+
+
+ ßß
 
   inputBtn.onclick = checkPolindrome;
   btnGenerate.onclick = generateStrings;
@@ -119,6 +150,7 @@ function checkInput(inputTextValue) {
     inputTextNoSpaces = inputTextValue.replace(/(^\s+|\s+$)/g,'');
     clearMass();
     containerMessage.style.color = GREEN;
+    containerMessage.style.background = BG_GREEN;
     return true;
   }  
   else{

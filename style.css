@@ -27,3 +27,14 @@ input.input-btn{
 	height: 20px;
 	margin-bottom: 30px;
 }
+
+.containerWrapper {
+	border: 1px solid black;
+	background-color: #cceeff;
+	border-radius: 10px;
+	width: 350px;
+	text-align: left;
+	padding-left: 60px;
+	margin: 10px 5px 15px;
+	box-shadow: 3px 3px 8px #a3a3c2; 
+}
