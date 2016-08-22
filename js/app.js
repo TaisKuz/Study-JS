@@ -24,11 +24,14 @@ var
   containerWrapper2,
   containerWrapper3,
   containerWrapper4,
+  titlePart1_1,
+  titlePart2_1,
+  titlePart2_2,
+  titlePart4_1,
+  titlePart4_2,
   intervalID;
 
 window.onload = function () {
-
-
   containerDate = document.createElement("div");
   containerDate.className = "container-date";
   containerDate.innerHTML = `Today is : ${date.toLocaleString("en-US", { weekday: 'long' })}.`;
@@ -53,6 +56,26 @@ window.onload = function () {
   containerMessage = document.createElement("div");
   containerMessage.className = "containerMessage";
 
+  titlePart1_1 = document.createElement("p");
+  titlePart1_1.className = "titlePart1";
+  titlePart1_1.innerHTML = "Write a JavaScript program to display the current day and time in the following format.<br>Sample Output : Today is : Friday.<br>Current time is : 4 PM : 50 : 22";
+
+  titlePart2_1 = document.createElement("p");
+  titlePart2_1.className = "titlePart1";
+  titlePart2_1.innerHTML = "Write a JavaScript function that checks whether a passed string is palindrome or not?<br>Note: A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.";
+
+  titlePart2_2 = document.createElement("p");
+  titlePart2_2.className = "titlePart2";
+  titlePart2_2.innerHTML = "Input palindrome: ";
+
+  titlePart4_1 = document.createElement("p");
+  titlePart4_1.className = "titlePart1";
+  titlePart4_1.innerHTML = "Write a JavaScript function that generates all combinations of a string.<br>Example string : 'dog' <br> Expected Output : d,do,dog,o,og,g";
+
+  titlePart4_2 = document.createElement("p");
+  titlePart4_2.className = "titlePart2";
+  titlePart4_2.innerHTML = "Input string: ";
+
   inputStr = document.createElement("input");
   inputStr.type = "text";
   inputStr.className = "input-srt";
@@ -72,11 +95,14 @@ window.onload = function () {
 
   containerWrapper1 = document.createElement("div");
   containerWrapper1.className = "containerWrapper";
+  containerWrapper1.appendChild(titlePart1_1);
   containerWrapper1.appendChild(containerDate);
   containerWrapper1.appendChild(containerTime);
 
   containerWrapper2 = document.createElement("div");
   containerWrapper2.className = "containerWrapper";
+  containerWrapper2.appendChild(titlePart2_1);
+  containerWrapper2.appendChild(titlePart2_2);
   containerWrapper2.appendChild(inputText);
   containerWrapper2.appendChild(inputBtn);
 
@@ -87,6 +113,8 @@ window.onload = function () {
  
   containerWrapper4 = document.createElement("div");
   containerWrapper4.className = "containerWrapper";
+  containerWrapper4.appendChild(titlePart4_1);
+  containerWrapper4.appendChild(titlePart4_2); 
   containerWrapper4.appendChild(inputStr);
   containerWrapper4.appendChild(btnGenerate);
   containerWrapper4.appendChild(subSrtTitle);
@@ -98,9 +126,6 @@ window.onload = function () {
 
   secondsTimer();
 
-
- ßß
-
   inputBtn.onclick = checkPolindrome;
   btnGenerate.onclick = generateStrings;
 
@@ -108,78 +133,8 @@ window.onload = function () {
   inputText.onkeypress = clearMass;
 }
 
-function clearMass() {
-  containerMessage.innerHTML = "";
-}
-
 function appendChild(items) {
   for (var i = 0; i < items.length; i++) {
     document.body.appendChild(items[i]); 
   }
 }
-
-function secondsTimer() {
-  date = new Date();
-  containerTime.innerHTML =  `Current time is : ${date.toLocaleString("en-US", { hour: 'numeric' })} : 
-  ${date.getMinutes()} : ${date.getSeconds()}`;
-} 
-
-function checkPolindrome() {
-  if (checkInput(inputText.value) == true) {
-    if (inputTextNoSpaces === inputTextNoSpaces.split('').reverse().join('')) 
-      containerMessage.innerHTML = "This is polindrome";
-    else 
-    {
-      containerMessage.innerHTML = "This is NOT a polindrome";
-      containerMessage.style.color = RED;
-    }
-  }
-}
-
-function checkInput(inputTextValue) {
-  clearMass();
-  onlySpaces = inputTextValue.replace(/\s+/g,'');
-  
-  if(inputTextValue === "" || onlySpaces == "") {
-    containerMessage.innerHTML = "Insert your text";
-    containerMessage.style.color = RED;
-    return false;
-  }
-  else if(inputTextValue.search(/[^a-zA-Zа-яА-я\' ']/) < 0 && onlySpaces !== "")
-  {
-    inputTextNoSpaces = inputTextValue.replace(/(^\s+|\s+$)/g,'');
-    clearMass();
-    containerMessage.style.color = GREEN;
-    containerMessage.style.background = BG_GREEN;
-    return true;
-  }  
-  else{
-    containerMessage.innerHTML = "Incorrect text";
-    containerMessage.style.color = RED;
-    return false;
-  }
-}
-
-function generateStrings() {
-  containerSubStr.innerHTML = "";
-  inputStrVal = inputStr.value;
-  if (checkInput(inputStrVal) == true) {
-
-    var 
-      subStr = "",
-      strArr = "";
-    
-    for (var i = 0; i < inputTextNoSpaces.length; i++) {
-      for (var j = i; j < inputTextNoSpaces.length; j++) {         
-        subStr += inputTextNoSpaces[j];
-        if (i < inputTextNoSpaces.length-1)
-          strArr += `${subStr}, `;
-        else
-          strArr += `${subStr}`;
-      }
-      subStr = "";
-    }
-    containerSubStr.innerHTML = strArr;
-  } 
-}
-
