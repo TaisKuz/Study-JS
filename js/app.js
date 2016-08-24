@@ -6,9 +6,6 @@ window.onload = function () {
 
   polindrome();
 
-  massegeBox();
-
   subStrings();
-
 
 }

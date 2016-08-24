@@ -1,13 +1,18 @@
 "use strict";
 
-var inputText;
+var 
+  inputText,
+  errorMessage1,
+  containerResult;
 
-function polindrome(){
+function polindrome() {
 
   var 
     containerWrapper2,
     titlePart2_1,
+    containerWrapTitle1,
     titlePart2_2,
+    titlePart2_3,
     inputBtn;
 
   containerWrapper2 = createUI("div", {className: "containerWrapper"}, document.body);  
@@ -16,9 +21,13 @@ function polindrome(){
     innerHTML: "Write a JavaScript function that checks whether a passed string is palindrome or not?<br>Note: A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run."
   }, containerWrapper2); 
 
+  containerWrapTitle1 = createUI("div", {className: "containerWrapTitle"}, containerWrapper2); 
+
   titlePart2_2 = createUI("p", {className: "titlePart2", 
     innerHTML: "Input palindrome: "
-  }, containerWrapper2); 
+  }, containerWrapTitle1);
+
+  errorMessage1 = createUI("p", {className: "errorMessage"}, containerWrapTitle1);  
 
   inputText = createUI("input", {type: "text", className: "input-text", 
     placeholder: "Input palindrome here"
@@ -28,20 +37,28 @@ function polindrome(){
     value: "Cheсk"
   }, containerWrapper2);
 
+  titlePart2_3 = createUI("div", {className: "resultTitle", 
+    innerHTML: "Result: "
+  }, containerWrapper2);  
+
+  containerResult = createUI("div", {className: "containerMessage"}, containerWrapper2);
+
   inputBtn.onclick = checkPolindrome;
-  inputText.onkeypress = clearMass;
+  inputText.onchange = clearMess;
+  inputText.onkeypress = clearMess;
+  inputText.onfocus = clearMess;
 }
 
 function checkPolindrome() {
-  if (checkInput(inputText.value) == true) {
+  if (checkInput(inputText.value, errorMessage1, inputText) == true) {
     if (inputTextNoSpaces === inputTextNoSpaces.split('').reverse().join('')) {
-      containerMessage.innerHTML = "This is polindrome";
-  	  changeColor(GREEN, BG_GREEN);
+      containerResult.innerHTML = "This is polindrome";
+      changeColor(GREEN, BG_GREEN, containerResult);
   	}
     else 
     {
-      containerMessage.innerHTML = "This is NOT a polindrome";
-      changeColor(RED, BG_RED);
+      containerResult.innerHTML = "This is NOT a polindrome";
+      changeColor(RED, BG_RED, containerResult);
     }
   }
 }

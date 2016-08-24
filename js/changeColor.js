@@ -1,6 +1,6 @@
 "use strict";
 
-function changeColor(color, bgColor) {
-  containerMessage.style.color = color;
-  containerWrapper3.style.background = bgColor;
+function changeColor(color, bgColor, container) {
+  container.style.color = color;
+  container.style.background = bgColor;
 }

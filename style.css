@@ -8,22 +8,32 @@ body {
 }
 
 div, input[type = "text"], input[type = "button"] { 
-	margin: 10px 15px;
+	margin: 8px 15px;
 	font-size: 18px;
 	display: block;
 	padding: 5px 8px;
 }
+
+input[type = "text"]{
+	background: #fdfdfd;
+}
+
 input[type = "button"]{
 	background: #b5ff99;
 	border-radius: 10px;
 }
 
-
 input.input-btn{
-	margin-bottom: 25px;
+	margin-bottom: 10px;
 }
-.input-text, .input-srt, .containerMessage, .containerSubStr, p {
+.input-text, .input-srt, .containerMessage, .containerSubStr {
   	width: 540px;
+}
+
+.containerWrapper {
+	width: 585px;
+	text-align: left;
+	padding-left: 15px;
 }
 
 .containerWrapper {
@@ -31,15 +41,25 @@ input.input-btn{
 	border: 1px solid black;
 	background-color: #cceeff;
 	border-radius: 10px;
-	text-align: left;
-	padding-left: 15px;
-	margin: 10px 5px 15px;
+	margin: 5px 5px 15px;
 	box-shadow: 3px 3px 8px #a3a3c2; 
 }
 
-.titlePart1, .titlePart2, .containerSubStr {
+.titlePart1, .titlePart2, .containerSubStr, .errorMessage{
 	margin: 5px 10px 0px;
 	padding: 5px 8px;
+}
+
+.errorMessage, .titlePart2{
+	display: inline-block;
+	margin: 0;
+	padding-left: 0;
+}
+
+.errorMessage{
+	margin-left: 10px;
+	max-width: 350px;
+	color: red;
 }
 
 .titlePart1, .containerSubStr, .containerMessage {
@@ -56,11 +76,11 @@ input.input-btn{
 .containerMessage {
 	color: green;
 	height: 20px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 .containerSubStr {
 	min-height: 100px;
 	color: black;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }

@@ -5,7 +5,7 @@
 	messageTitle,
 	containerMessage;	
 
-function massegeBox(){
+function messageBox(){
 
   containerWrapper3 = createUI("div", {className: "containerWrapper massege"}, document.body);
 
