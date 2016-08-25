@@ -8,8 +8,11 @@ var
   containerWrapper1,
   intervalID;
 
-function timer(){
-	containerWrapper1 = createUI("div", {className: "containerWrapper"}, document.body); 
+function timer() {
+
+	containerWrapper1 = createUI("div", {className: "containerWrapper", 
+		id: "lesson1"
+	}, document.body); 
 
 	titlePart1_1 = createUI("p", {className: "titlePart1", 
 		innerHTML: "Write a JavaScript program to display the current day and time in the following format.<br>Sample Output : Today is : Friday.<br>Current time is : 4 PM : 50 : 22"
@@ -23,7 +26,7 @@ function timer(){
 
 	secondsTimer();
 
-	intervalID = window.setInterval(secondsTimer, 1000);
+	intervalID = window.setInterval(secondsTimer, 1000);	
 }
 
 function secondsTimer() {

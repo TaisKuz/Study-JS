@@ -12,6 +12,7 @@ var
   onlySpaces;
 
 function checkInput(inputTextValue, messageBox, inputBox) {
+
   clearMess();
   onlySpaces = inputTextValue.replace(/\s+/g,'');
   

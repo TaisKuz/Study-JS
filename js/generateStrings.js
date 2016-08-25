@@ -5,7 +5,7 @@ var
   inputStrVal, 
   containerWrapTitle2,
   errorMessage2,
-  containerSubStr; 
+  containerSubStr;  
 
 function subStrings() {
 
@@ -16,7 +16,9 @@ function subStrings() {
     btnGenerate,
     subSrtTitle; 
 
-  containerWrapper4 = createUI("div", {className: "containerWrapper"}, document.body);  
+  containerWrapper4 = createUI("form", {className: "containerWrapper", 
+    id: "lesson3"
+  }, document.body);  
 
   titlePart4_1 = createUI("p", {className: "titlePart1", 
     innerHTML: "Write a JavaScript function that generates all combinations of a string.<br>Example string : 'dog' <br> Expected Output : d,do,dog,o,og,g"
@@ -34,7 +36,7 @@ function subStrings() {
     placeholder: "Input string here"
   }, containerWrapper4); 
 
-  btnGenerate = createUI("input", {type: "button", className: "btn-Generate", 
+  btnGenerate = createUI("input", {type: "submit", className: "btn-Generate", 
     value: "Generate sub-strings"
   }, containerWrapper4);
 
@@ -44,17 +46,17 @@ function subStrings() {
 
   containerSubStr = createUI("div", {className: "containerSubStr"}, containerWrapper4);  
 
-  btnGenerate.onclick = generateStrings;
+  containerWrapper4.onsubmit = generateStrings;
   inputStr.onchange = clearMess;
-  inputStr.onkeypress = clearMess; 
-  inputStr.oncancel = clearMess; 
   inputStr.onfocus = clearMess;
   
 }
 
 function generateStrings() {
+
   containerSubStr.innerHTML = "";
   inputStrVal = inputStr.value;
+
   if (checkInput(inputStrVal, errorMessage2, inputStr) == true) {
 
     var 
@@ -73,4 +75,5 @@ function generateStrings() {
     }
     containerSubStr.innerHTML = strArr;
   } 
+  return false;
 }

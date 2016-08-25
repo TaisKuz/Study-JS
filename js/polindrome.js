@@ -15,7 +15,9 @@ function polindrome() {
     titlePart2_3,
     inputBtn;
 
-  containerWrapper2 = createUI("div", {className: "containerWrapper"}, document.body);  
+  containerWrapper2 = createUI("form", {className: "containerWrapper", 
+    id: "lesson2"
+  }, document.body);  
 
   titlePart2_1 = createUI("p", {className: "titlePart1", 
     innerHTML: "Write a JavaScript function that checks whether a passed string is palindrome or not?<br>Note: A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run."
@@ -33,7 +35,7 @@ function polindrome() {
     placeholder: "Input palindrome here"
   }, containerWrapper2);
 
-  inputBtn = createUI("input", {type: "button", className: "input-btn", 
+  inputBtn = createUI("input", {type: "submit", className: "input-btn", 
     value: "Cheсk"
   }, containerWrapper2);
 
@@ -43,13 +45,13 @@ function polindrome() {
 
   containerResult = createUI("div", {className: "containerMessage"}, containerWrapper2);
 
-  inputBtn.onclick = checkPolindrome;
+  containerWrapper2.onsubmit = checkPolindrome;
   inputText.onchange = clearMess;
-  inputText.onkeypress = clearMess;
   inputText.onfocus = clearMess;
 }
 
 function checkPolindrome() {
+
   if (checkInput(inputText.value, errorMessage1, inputText) == true) {
     if (inputTextNoSpaces === inputTextNoSpaces.split('').reverse().join('')) {
       containerResult.innerHTML = "This is polindrome";
@@ -61,4 +63,5 @@ function checkPolindrome() {
       changeColor(RED, BG_RED, containerResult);
     }
   }
+  return false;
 }

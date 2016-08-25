@@ -7,18 +7,23 @@ body {
 	font-family: 'Arial';
 }
 
-div, input[type = "text"], input[type = "button"] { 
+div, form, input[type = "text"], input[type = "button"], input[type = "submit"], 
+.taskSelect { 
 	margin: 8px 15px;
 	font-size: 18px;
 	display: block;
 	padding: 5px 8px;
 }
 
+.taskSelect {
+	background-color: #fdfdfd;
+}
+
 input[type = "text"]{
 	background: #fdfdfd;
 }
 
-input[type = "button"]{
+input[type = "button"], input[type = "submit"] {
 	background: #b5ff99;
 	border-radius: 10px;
 }
@@ -45,7 +50,7 @@ input.input-btn{
 	box-shadow: 3px 3px 8px #a3a3c2; 
 }
 
-.titlePart1, .titlePart2, .containerSubStr, .errorMessage{
+.titlePart1, .titlePart2, .containerSubStr, .errorMessage, .titleMain{
 	margin: 5px 10px 0px;
 	padding: 5px 8px;
 }
