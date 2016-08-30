@@ -48,6 +48,7 @@ function polindrome() {
   containerWrapper2.onsubmit = checkPolindrome;
   inputText.onchange = clearMess;
   inputText.onfocus = clearMess;
+  return false;
 }
 
 function checkPolindrome() {

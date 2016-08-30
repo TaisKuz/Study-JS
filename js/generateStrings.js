@@ -50,6 +50,7 @@ function subStrings() {
   inputStr.onchange = clearMess;
   inputStr.onfocus = clearMess;
   
+  return false;
 }
 
 function generateStrings() {

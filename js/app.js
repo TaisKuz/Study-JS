@@ -93,7 +93,11 @@ function loadScript(scriptsArray) {
       
       document.head.appendChild(script);
       loadedScripts[scriptsArray[i]].value = script;  
+
+      return true;
     }
+
+    else return false;
   }
 }
 
@@ -102,39 +106,48 @@ function loadHandler() {
 
   if (this.path == 'js/timer.js') timer();
 
-  else if (this.path == 'js/polindrome.js') polindrome();
+  if (this.path == 'js/polindrome.js') polindrome();
 
-  else if (this.path == 'js/generateStrings.js') subStrings();
+  if (this.path == 'js/generateStrings.js') subStrings();
 }
 
+
+    var flag1, flag2, flag3;
 function selectTasks() {
 
   if(taskSelect[0].selected)  {
-
-    loadScript(lessons['lesson' + taskSelect.options[0].id]);
+    flag1 = loadScript(lessons['lesson' + taskSelect.options[0].id]);
     removeLessons(1);
-    timer();
   }
   else if (taskSelect[1].selected) {
-    
-    loadScript(lessons['lesson' + taskSelect.options[1].id]);
+    flag2 = loadScript(lessons['lesson' + taskSelect.options[1].id]);
     removeLessons(2);
-    polindrome();
   }
   else if (taskSelect[2].selected) {
-     
-    loadScript(lessons['lesson' + taskSelect.options[2].id]);
+    flag3 =  loadScript(lessons['lesson' + taskSelect.options[2].id]);
     removeLessons(3);
-    subStrings();  
   }
 }
 
 function removeLessons(lesson) {
-  if (lesson == 1) removeElement(["lesson2", "lesson3"]);
+  if (lesson == 1) {
+    if (document.getElementById("lesson2")) removeElement(["lesson2"]);
+    if (document.getElementById("lesson3")) removeElement(["lesson3"]);
+    if (!flag1 && !document.getElementById("lesson1")) timer();
+  }
   
-  else if (lesson == 2) removeElement(["lesson1", "lesson3"]);
+  else if (lesson == 2) {
+    if (document.getElementById("lesson1")) removeElement(["lesson1"]);
+    if (document.getElementById("lesson3")) removeElement(["lesson3"]);
+    if (!flag2 && !document.getElementById("lesson2")) polindrome();
+
+  }
   
-  else if(lesson == 3) removeElement(["lesson1", "lesson2"]);
+  else if(lesson == 3) {
+    if (document.getElementById("lesson1")) removeElement(["lesson1"]);
+    if (document.getElementById("lesson2")) removeElement(["lesson2"]);
+    if (!flag3 && !document.getElementById("lesson3")) subStrings();
+  }
 
 }
 
