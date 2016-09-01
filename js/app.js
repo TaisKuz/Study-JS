@@ -48,11 +48,11 @@ function mainForm() {
 
   containerMain = createUI("form", {className: "containerWrapper"}, document.body); 
 
-  titleMain = createUI("p", {className: "titleMain", 
+  titleMain = createUI("p", {className: "titleBig", 
     innerHTML: "Select the task below:"
   }, containerMain); 
   
-  taskSelect = createUI("select", {className: "taskSelect"}, containerMain);  
+  taskSelect = createUI("select", {className: "lessonSelect"}, containerMain);  
 
   setOption(["task-1: timer", "task-2: polindrome", "task-3: generateStrings"]);
 
@@ -108,7 +108,7 @@ function loadHandler() {
 
   if (this.path == 'js/polindrome.js') polindrome();
 
-  if (this.path == 'js/generateStrings.js') subStrings();
+  if (this.path == 'js/generateStrings.js') generateStrings();
 }
 
 
@@ -146,7 +146,7 @@ function removeLessons(lesson) {
   else if(lesson == 3) {
     if (document.getElementById("lesson1")) removeElement(["lesson1"]);
     if (document.getElementById("lesson2")) removeElement(["lesson2"]);
-    if (!flag3 && !document.getElementById("lesson3")) subStrings();
+    if (!flag3 && !document.getElementById("lesson3")) generateStrings();
   }
 
 }

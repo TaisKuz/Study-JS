@@ -7,7 +7,7 @@ var
   errorMessage2,
   containerSubStr;  
 
-function subStrings() {
+function generateStrings() {
 
   var
     containerWrapper4,
@@ -20,23 +20,23 @@ function subStrings() {
     id: "lesson3"
   }, document.body);  
 
-  titlePart4_1 = createUI("p", {className: "titlePart1", 
+  titlePart4_1 = createUI("p", {className: "description", 
     innerHTML: "Write a JavaScript function that generates all combinations of a string.<br>Example string : 'dog' <br> Expected Output : d,do,dog,o,og,g"
   }, containerWrapper4); 
 
   containerWrapTitle2 = createUI("div", {className: "containerWrapTitle"}, containerWrapper4); 
 
-  titlePart4_2 = createUI("p", {className: "titlePart2", 
+  titlePart4_2 = createUI("p", {className: "titleBig", 
     innerHTML: "Input string: "
   }, containerWrapTitle2);  
 
   errorMessage2 = createUI("p", {className: "errorMessage"}, containerWrapTitle2);  
 
-  inputStr = createUI("input", {type: "text", className: "input-srt", 
+  inputStr = createUI("input", {type: "text", className: "inputSrt", 
     placeholder: "Input string here"
   }, containerWrapper4); 
 
-  btnGenerate = createUI("input", {type: "submit", className: "btn-Generate", 
+  btnGenerate = createUI("input", {type: "submit", className: "btnGenerate", 
     value: "Generate sub-strings"
   }, containerWrapper4);
 
@@ -46,14 +46,14 @@ function subStrings() {
 
   containerSubStr = createUI("div", {className: "containerSubStr"}, containerWrapper4);  
 
-  containerWrapper4.onsubmit = generateStrings;
+  containerWrapper4.onsubmit = subStrings;
   inputStr.onchange = clearMess;
   inputStr.onfocus = clearMess;
   
   return false;
 }
 
-function generateStrings() {
+function subStrings() {
 
   containerSubStr.innerHTML = "";
   inputStrVal = inputStr.value;

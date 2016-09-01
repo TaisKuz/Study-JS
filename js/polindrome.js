@@ -19,23 +19,23 @@ function polindrome() {
     id: "lesson2"
   }, document.body);  
 
-  titlePart2_1 = createUI("p", {className: "titlePart1", 
+  titlePart2_1 = createUI("p", {className: "description", 
     innerHTML: "Write a JavaScript function that checks whether a passed string is palindrome or not?<br>Note: A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run."
   }, containerWrapper2); 
 
   containerWrapTitle1 = createUI("div", {className: "containerWrapTitle"}, containerWrapper2); 
 
-  titlePart2_2 = createUI("p", {className: "titlePart2", 
+  titlePart2_2 = createUI("p", {className: "titleBig", 
     innerHTML: "Input palindrome: "
   }, containerWrapTitle1);
 
   errorMessage1 = createUI("p", {className: "errorMessage"}, containerWrapTitle1);  
 
-  inputText = createUI("input", {type: "text", className: "input-text", 
+  inputText = createUI("input", {type: "text", className: "inputText", 
     placeholder: "Input palindrome here"
   }, containerWrapper2);
 
-  inputBtn = createUI("input", {type: "submit", className: "input-btn", 
+  inputBtn = createUI("input", {type: "submit", className: "inputBtn", 
     value: "Cheсk"
   }, containerWrapper2);
 

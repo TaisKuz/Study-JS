@@ -2,19 +2,28 @@
 
 var   
   date = new Date(),
-  titlePart1_1,
-  containerDate,
-  containerTime,
-  containerWrapper1,
-  intervalID;
+  containerTime;
+	//lesson1 = new Lesson("1");
+
+//lesson1.init = timer;
+
+// проверки на то, выбран ли урок и надо ли его заново отрисовывать
+
+// метод уничтожения урока
 
 function timer() {
+	
+	var
+		titlePart1_1,
+	  intervalID;
+	  containerWrapper1,
+	  containerDate;
 
 	containerWrapper1 = createUI("div", {className: "containerWrapper", 
 		id: "lesson1"
 	}, document.body); 
 
-	titlePart1_1 = createUI("p", {className: "titlePart1", 
+	titlePart1_1 = createUI("p", {className: "description", 
 		innerHTML: "Write a JavaScript program to display the current day and time in the following format.<br>Sample Output : Today is : Friday.<br>Current time is : 4 PM : 50 : 22"
 	}, containerWrapper1);  
 
