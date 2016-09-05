@@ -1,45 +1,53 @@
 "use strict";
 
-var   
-  date = new Date(),
-  containerTime;
-	//lesson1 = new Lesson("1");
+function Timer() {
 
-//lesson1.init = timer;
-
-// проверки на то, выбран ли урок и надо ли его заново отрисовывать
-
-// метод уничтожения урока
-
-function timer() {
-	
-	var
-		titlePart1_1,
-	  intervalID;
-	  containerWrapper1,
-	  containerDate;
-
-	containerWrapper1 = createUI("div", {className: "containerWrapper", 
-		id: "lesson1"
-	}, document.body); 
-
-	titlePart1_1 = createUI("p", {className: "description", 
-		innerHTML: "Write a JavaScript program to display the current day and time in the following format.<br>Sample Output : Today is : Friday.<br>Current time is : 4 PM : 50 : 22"
-	}, containerWrapper1);  
-
-	containerDate = createUI("div", {className: "container-date", 
-		innerHTML:`Today is : ${date.toLocaleString("en-US", { weekday: 'long' })}.`
-	}, containerWrapper1);
-
-	containerTime = createUI("div", {className: "container-time"}, containerWrapper1);
-
-	secondsTimer();
-
-	intervalID = window.setInterval(secondsTimer, 1000);	
 }
 
-function secondsTimer() {
-  date = new Date();
-  containerTime.innerHTML =  `Current time is : ${date.toLocaleString("en-US", { hour: 'numeric' })} : 
+Timer.prototype = Object.create(Lesson.prototype);
+Timer.prototype.constructor = Timer;
+
+
+Timer.prototype.init = function() {
+
+	// this.__proto__.init();
+  //отрисовка урока в браузере
+  var
+	  date = new Date();
+
+	this.containerWrapper = createUI("div", {className: "containerWrapper", 
+		id: "0"
+	}, document.body); 
+
+	this.description = createUI("p", {className: "description", 
+		innerHTML: "Write a JavaScript program to display the current day and time in the following format.<br>Sample Output : Today is : Friday.<br>Current time is : 4 PM : 50 : 22"
+	}, this.containerWrapper);  
+
+	this.containerDate = createUI("div", {className: "container-date", 
+		innerHTML:`Today is : ${date.toLocaleString("en-US", { weekday: 'long' })}.`
+	}, this.containerWrapper);
+
+	this.containerTime = createUI("div", {className: "container-time"}, this.containerWrapper);
+
+	this.intervalID = window.setInterval(this.secondsTimer.bind(this), 1000); 
+
+}
+
+Timer.prototype.secondsTimer = function() {
+  var date = new Date();
+  this.containerTime.innerHTML =  `Current time is : ${date.toLocaleString("en-US", { hour: 'numeric' })} : 
   ${date.getMinutes()} : ${date.getSeconds()}`;
-} 
+}
+
+Timer.prototype.destroy = function() {
+
+	window.clearInterval(this.intervalID);
+	this.containerWrapper.remove();
+	this.description = null;
+	this.containerDate = null;
+	this.containerTime = null;
+	this.intervalID = null;
+}
+
+selectLessons(0, Timer);
+

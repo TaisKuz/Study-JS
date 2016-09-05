@@ -1,64 +1,57 @@
 "use strict";
 
-var
-  inputStr,
-  inputStrVal, 
-  containerWrapTitle2,
-  errorMessage2,
-  containerSubStr;  
+function GenerateStrings() {
 
-function generateStrings() {
+}
 
-  var
-    containerWrapper4,
-    titlePart4_1,
-    titlePart4_2,
-    btnGenerate,
-    subSrtTitle; 
+GenerateStrings.prototype = Object.create(Lesson.prototype);
+GenerateStrings.prototype.constructor = GenerateStrings; 
 
-  containerWrapper4 = createUI("form", {className: "containerWrapper", 
-    id: "lesson3"
+GenerateStrings.prototype.init = function() {
+
+  this.containerWrapper = createUI("form", {className: "containerWrapper", 
+    id: "2"
   }, document.body);  
 
-  titlePart4_1 = createUI("p", {className: "description", 
+  this.description = createUI("p", {className: "description", 
     innerHTML: "Write a JavaScript function that generates all combinations of a string.<br>Example string : 'dog' <br> Expected Output : d,do,dog,o,og,g"
-  }, containerWrapper4); 
+  }, this.containerWrapper); 
 
-  containerWrapTitle2 = createUI("div", {className: "containerWrapTitle"}, containerWrapper4); 
+  this.containerWrapTitle = createUI("div", {className: "containerWrapTitle"}, this.containerWrapper); 
 
-  titlePart4_2 = createUI("p", {className: "titleBig", 
+  this.titleBig = createUI("p", {className: "titleBig", 
     innerHTML: "Input string: "
-  }, containerWrapTitle2);  
+  }, this.containerWrapTitle);  
 
-  errorMessage2 = createUI("p", {className: "errorMessage"}, containerWrapTitle2);  
+  this.errorMessage = createUI("p", {className: "errorMessage"}, this.containerWrapTitle);  
 
-  inputStr = createUI("input", {type: "text", className: "inputSrt", 
+  this.inputStr = createUI("input", {type: "text", className: "inputSrt", 
     placeholder: "Input string here"
-  }, containerWrapper4); 
+  }, this.containerWrapper); 
 
-  btnGenerate = createUI("input", {type: "submit", className: "btnGenerate", 
+  this.btnGenerate = createUI("input", {type: "submit", className: "btnGenerate", 
     value: "Generate sub-strings"
-  }, containerWrapper4);
+  }, this.containerWrapper);
 
-  subSrtTitle = createUI("div", {className: "resultTitle", 
+  this.resultTitle = createUI("div", {className: "resultTitle", 
     innerHTML: "Sub Strings: "
-  }, containerWrapper4);  
+  }, this.containerWrapper);  
 
-  containerSubStr = createUI("div", {className: "containerSubStr"}, containerWrapper4);  
+  this.containerSubStr = createUI("div", {className: "containerSubStr"}, this.containerWrapper);  
 
-  containerWrapper4.onsubmit = subStrings;
-  inputStr.onchange = clearMess;
-  inputStr.onfocus = clearMess;
+  this.containerWrapper.onsubmit = this.subStrings.bind(this);
+  this.inputStr.onchange = clearMess;
+  this.inputStr.onfocus = clearMess;
   
   return false;
 }
 
-function subStrings() {
+GenerateStrings.prototype.subStrings = function() {
 
-  containerSubStr.innerHTML = "";
-  inputStrVal = inputStr.value;
+  this.containerSubStr.innerHTML = "";
+  var inputStrVal = this.inputStr.value;
 
-  if (checkInput(inputStrVal, errorMessage2, inputStr) == true) {
+  if (checkInput(this.inputStrVal, this.errorMessage, this.inputStr) == true) {
 
     var 
       subStr = "",
@@ -74,7 +67,31 @@ function subStrings() {
       }
       subStr = "";
     }
-    containerSubStr.innerHTML = strArr;
+    this.containerSubStr.innerHTML = strArr;
   } 
-  return false;
+
+ return false;
 }
+
+GenerateStrings.prototype.destroy = function() {
+
+  this.containerWrapper.onsubmit = null;
+  this.inputStr.onchange = null;
+  this.inputStr.onfocus = null;
+
+  this.containerWrapper.remove();
+  this.description = null;
+  this.inputStr = null;
+  this.containerWrapTitle = null;
+  this.titleBig = null;
+  this.errorMessage = null;
+  this.btnGenerate = null;
+  this.resultTitle = null;
+  this.containerSubStr = null;
+}
+
+selectLessons(2, GenerateStrings);
+
+
+
+

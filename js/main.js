@@ -1,25 +1,41 @@
 "use strict";
 
+var mainForm = new MainForm();
+
+var lessonClass;
+
 window.onload = function () {
-  var mainForm = new MainForm();
+
   mainForm.init();
 }
 
+function Lesson(id) {
+  this.id = id;
+}
+
+Lesson.prototype.init = function() {
+  //отрисовка урока в браузере
+  //переопределяется в скрипте каждого урока
+}
+
+Lesson.prototype.destroy = function() {
+  //удаление остальный уроков, кроме этого из браузера
+
+}
+
+Lesson.prototype.reStart = function() {
+  //
+}
 
 // ENTRY POINT
 
 function MainForm() {
-  this.currentLessonId = 1;
 
-  this.lessons = ['js/timer.js',
-  'js/polindrome.js',
-  'js/generateStrings.js'];
-
-  this.loadedScripts = {
-      'js/timer.js'          : {isLoaded: false},
-      'js/polindrome.js'     : {isLoaded: false},
-      'js/generateStrings.js': {isLoaded: false}
-  };
+  this.loadedScripts = [
+      {id: 0, class: null, src: 'js/timer.js', isLoaded: false},
+      {id: 1, class: null, src: 'js/polindrome.js', isLoaded: false},
+      {id: 2, class: null, src: 'js/generateStrings.js', isLoaded: false}
+  ];
 }
 
 MainForm.prototype.init = function() {
@@ -55,44 +71,42 @@ MainForm.prototype.setOption = function(lessons, target) {
 
     if (i == 0) { 
       createUI("option", {innerHTML: lessons[i], 
-        selected: "selected", id: i + 1
+        selected: "selected", id: i
       }, target);
     }
 
     else {
-      createUI("option", {innerHTML: lessons[i], id: i + 1}, target);   
+      createUI("option", {innerHTML: lessons[i], id: i}, target);   
     } 
   }
 }
 
-MainForm.prototype.selectLessons = function(lessonId) {
 
-  for (var i = 0; i < this.lessons.length; i++) {
+MainForm.prototype.loadScript = function(scriptId) {
 
-    if(lessonId == (i + 1)) {
-      this.loadScript(this.lessons[i]);
-    }
-  }
-}
-
-
-MainForm.prototype.loadScript = function(scriptToLoad) {
-
-  if (this.loadedScripts[scriptToLoad].isLoaded === false) {
+  if (this.loadedScripts[scriptId].isLoaded == false) {
     this.script = document.createElement('script');
     
     this.script.onload = this.loadHandler.bind(this);
-    this.script.src = scriptToLoad;
-    this.script.path = scriptToLoad;
+    this.script.src = this.loadedScripts[scriptId].src;
+    this.script.id = scriptId;
     this.script.async = false;
     
     document.head.appendChild(this.script);
   }
+  else {
+    console.log('loadedScripts ', mainForm.loadedScripts[scriptId].class);
+
+    selectLessons(mainForm.loadedScripts[scriptId].id, mainForm.loadedScripts[scriptId].class);
+
+  }
+  
 }
 
 MainForm.prototype.loadHandler = function() {
 
-  this.loadedScripts[this.script.path].isLoaded = true;
+  this.loadedScripts[this.script.id].isLoaded = true;
+
 }
 
 
@@ -102,13 +116,29 @@ MainForm.prototype.clickHanler = function() {
   for (var i = 0; i < this.lessonSelect.length; i++) {
 
     if(this.lessonSelect[i].selected) {
-      this.currentLessonId = i + 1;
-      this.selectLessons(this.currentLessonId);
+      this.loadScript(i);
     }
   }
 }
 
+MainForm.prototype.addLesson = function(id, lessonClass) {
 
+  if (mainForm.loadedScripts[id].class == null) {
+      mainForm.loadedScripts[id].class = lessonClass;
+  }
+}
+
+function selectLessons(id, lessonClass) {
+
+  mainForm.addLesson(id, lessonClass);
+
+  if (mainForm.currentLesson) {
+    mainForm.currentLesson.destroy();
+  }
+
+    mainForm.currentLesson = new lessonClass();
+    mainForm.currentLesson.init(); 
+}
 
 
 
@@ -143,8 +173,8 @@ function changeColor(color, bgColor, container) {
 }
 
 function clearMess() {
-  errorMessage1.innerHTML = "";
-  errorMessage2.innerHTML = "";
+  //lesson1.errorMessage.innerHTML = "";
+  //lesson2.errorMessage.innerHTML = "";
   changeColor("black", GRAY, inputText);
   changeColor("black", GRAY, inputStr);
 }
