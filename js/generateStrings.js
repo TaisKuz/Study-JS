@@ -25,11 +25,11 @@ GenerateStrings.prototype.init = function() {
 
   this.errorMessage = createUI("p", {className: "errorMessage"}, this.containerWrapTitle);  
 
-  this.inputStr = createUI("input", {type: "text", className: "inputSrt", 
+  this.inputText = createUI("input", {type: "text", className: "inputSrt", 
     placeholder: "Input string here"
   }, this.containerWrapper); 
 
-  this.btnGenerate = createUI("input", {type: "submit", className: "btnGenerate", 
+  this.btnGenerate = createUI("input", {type: "button", className: "btnGenerate", 
     value: "Generate sub-strings"
   }, this.containerWrapper);
 
@@ -39,23 +39,25 @@ GenerateStrings.prototype.init = function() {
 
   this.containerSubStr = createUI("div", {className: "containerSubStr"}, this.containerWrapper);  
 
-  this.containerWrapper.onsubmit = this.subStrings.bind(this);
-  this.inputStr.onchange = clearMess;
-  this.inputStr.onfocus = clearMess;
-  
-  return false;
+  this.containerWrapper.onclick = this.subStrings.bind(this);
+
+  this.inputText.onchange = this.clearMess.bind(this);
+  this.inputText.onfocus = this.clearMess.bind(this);
+
 }
+
 
 GenerateStrings.prototype.subStrings = function() {
 
   this.containerSubStr.innerHTML = "";
-  var inputStrVal = this.inputStr.value;
+  var inputStrVal = this.inputText.value;
 
-  if (checkInput(this.inputStrVal, this.errorMessage, this.inputStr) == true) {
+  if (this.checkInput(inputStrVal, this.errorMessage, this.inputText) == true) {
 
     var 
       subStr = "",
-      strArr = "";
+      strArr = "",
+      inputTextNoSpaces = inputStrVal.replace(/(^\s+|\s+$)/g,'');
     
     for (var i = 0; i < inputTextNoSpaces.length; i++) {
       for (var j = i; j < inputTextNoSpaces.length; j++) {         
@@ -69,19 +71,18 @@ GenerateStrings.prototype.subStrings = function() {
     }
     this.containerSubStr.innerHTML = strArr;
   } 
-
- return false;
+  return false;
 }
 
 GenerateStrings.prototype.destroy = function() {
 
   this.containerWrapper.onsubmit = null;
-  this.inputStr.onchange = null;
-  this.inputStr.onfocus = null;
+  this.inputText.onchange = null;
+  this.inputText.onfocus = null;
 
   this.containerWrapper.remove();
   this.description = null;
-  this.inputStr = null;
+  this.inputText = null;
   this.containerWrapTitle = null;
   this.titleBig = null;
   this.errorMessage = null;

@@ -31,7 +31,7 @@ Polindrome.prototype.init = function() {
     placeholder: "Input palindrome here"
   }, this.containerWrapper);
 
-  this.inputBtn = createUI("input", {type: "submit", className: "inputBtn", 
+  this.inputBtn = createUI("input", {type: "button", className: "inputBtn", 
     value: "Cheсk"
   }, this.containerWrapper);
 
@@ -41,16 +41,16 @@ Polindrome.prototype.init = function() {
 
   this.containerResult = createUI("div", {className: "containerMessage"}, this.containerWrapper);
 
-  this.inputBtn.onclick = this.checkPolindrome;
-  this.inputText.onchange = clearMess;
-  this.inputText.onfocus = clearMess;
+  this.inputBtn.onclick = this.checkPolindrome.bind(this);
+  this.inputText.onchange = this.clearMess.bind(this);
+  this.inputText.onfocus = this.clearMess.bind(this);
 
-  //return false;
+  return false;
 }
 
-Polindrome.prototype.checkPolindrome = function() {
+Polindrome.prototype.checkPolindrome = function () {
 
-  if (checkInput(this.inputText.value, this.errorMessage, this.inputText) == true) {
+  if (this.checkInput(this.inputText.value, this.errorMessage, this.inputText) == true) {
     var inputTextNoSpaces = this.inputText.value.replace(/(^\s+|\s+$)/g,'');
 
     if (inputTextNoSpaces === inputTextNoSpaces.split('').reverse().join('')) {
@@ -63,13 +63,13 @@ Polindrome.prototype.checkPolindrome = function() {
       changeColor(RED, BG_RED, this.containerResult);
     }
   }
-  //return false;
+  return false;
 }
 
 Polindrome.prototype.destroy = function() {
 
   this.inputBtn.onclick = null;
-  //this.inputText.onchange = null;
+  this.inputText.onchange = null;
   this.inputText.onfocus = null;
 
   this.containerWrapper.remove();

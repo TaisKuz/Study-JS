@@ -10,7 +10,6 @@ Timer.prototype.constructor = Timer;
 
 Timer.prototype.init = function() {
 
-	// this.__proto__.init();
   //отрисовка урока в браузере
   var
 	  date = new Date();

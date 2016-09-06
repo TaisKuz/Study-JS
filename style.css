@@ -7,7 +7,7 @@ body {
 	font-family: 'Arial';
 }
 
-div, form, input[type = "text"], input[type = "button"], input[type = "submit"], 
+div, form, input[type = "text"], input[type = "button"], input[type = "button"], 
 .lessonSelect { 
 	margin: 8px 15px;
 	font-size: 18px;
@@ -23,7 +23,7 @@ input[type = "text"]{
 	background: #fdfdfd;
 }
 
-input[type = "button"], input[type = "submit"] {
+input[type = "button"], input[type = "button"] {
 	background: #b5ff99;
 	border-radius: 10px;
 }

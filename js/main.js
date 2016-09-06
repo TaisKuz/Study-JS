@@ -95,8 +95,6 @@ MainForm.prototype.loadScript = function(scriptId) {
     document.head.appendChild(this.script);
   }
   else {
-    console.log('loadedScripts ', mainForm.loadedScripts[scriptId].class);
-
     selectLessons(mainForm.loadedScripts[scriptId].id, mainForm.loadedScripts[scriptId].class);
 
   }
@@ -172,21 +170,19 @@ function changeColor(color, bgColor, container) {
   container.style.background = bgColor;
 }
 
-function clearMess() {
-  //lesson1.errorMessage.innerHTML = "";
-  //lesson2.errorMessage.innerHTML = "";
-  changeColor("black", GRAY, inputText);
-  changeColor("black", GRAY, inputStr);
+Lesson.prototype.clearMess = function () {
+  this.errorMessage.innerHTML = "";
+  changeColor("black", GRAY, this.inputText);
 }
 
-function checkInput(inputTextValue, messageBox, inputBox) {
+Lesson.prototype.checkInput = function (inputTextValue, messageBox, inputBox) {
 
   var  
     inputTextVal,
     onlySpaces,
     inputTextNoSpaces;
 
-  clearMess();
+  this.clearMess();
   onlySpaces = inputTextValue.replace(/\s+/g,'');
   
   if(inputTextValue === "" || onlySpaces == "") {
@@ -197,7 +193,7 @@ function checkInput(inputTextValue, messageBox, inputBox) {
   else if(inputTextValue.search(/[^a-zA-Zа-яА-я\' ']/) < 0 && onlySpaces !== "")
   {
     inputTextNoSpaces = inputTextValue.replace(/(^\s+|\s+$)/g,'');
-    clearMess();
+    this.clearMess();
     return true;
   }  
   else{
