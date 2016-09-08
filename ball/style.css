@@ -1,0 +1,35 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper{
+	width: 100%;
+	text-align: center;
+	height:1500px;
+
+}
+
+#scene {
+	position: relative;
+	top: 15px;	
+	background: url(img/sceneBg.jpg) no-repeat;
+    background-position: -714px 0px;
+    width: 1050px;
+    height: 450px;
+	margin: 0 auto;
+	border: 5px solid #fff;
+	outline: 30px solid #c7c6c1;
+}
+#ball {
+	position: relative;
+	left: 0px;
+	bottom: 0px;
+	background: url(img/ball.jpg) no-repeat;
+    background-size: 105%;
+    background-position: -3px -27px;
+	width: 150px;
+	height: 150px;
+	border-radius: 50% 50%;
+	border: 5px solid #b2b2ad;
+}
