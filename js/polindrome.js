@@ -1,89 +1,70 @@
 "use strict";
 
+var 
+  inputText,
+  errorMessage1,
+  containerResult;
 
-function Polindrome() {
+  if(!loadCheckInp) loadScript('js/checkInput.js');
+  else polindrome();
 
-}
+function polindrome() {
 
-Polindrome.prototype = Object.create(Lesson.prototype);
-Polindrome.prototype.constructor = Polindrome;
+  var 
+    containerWrapper2,
+    titlePart2_1,
+    containerWrapTitle1,
+    titlePart2_2,
+    titlePart2_3,
+    inputBtn;
 
-Polindrome.prototype.init = function() {
-//отрисовка урока в браузере
+  containerWrapper2 = createUI("form", {className: "containerWrapper"}, document.body);  
 
-  this.containerWrapper = createUI("form", {className: "containerWrapper", 
-    id: "1"
-  }, document.body);  
-
-  this.description = createUI("p", {className: "description", 
+  titlePart2_1 = createUI("p", {className: "titlePart1", 
     innerHTML: "Write a JavaScript function that checks whether a passed string is palindrome or not?<br>Note: A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run."
-  }, this.containerWrapper); 
+  }, containerWrapper2); 
 
-  this.containerWrapTitle = createUI("div", {className: "containerWrapTitle"}, this.containerWrapper); 
+  containerWrapTitle1 = createUI("div", {className: "containerWrapTitle"}, containerWrapper2); 
 
-  this.titleBig = createUI("p", {className: "titleBig", 
+  titlePart2_2 = createUI("p", {className: "titlePart2", 
     innerHTML: "Input palindrome: "
-  }, this.containerWrapTitle);
+  }, containerWrapTitle1);
 
-  this.errorMessage = createUI("p", {className: "errorMessage"}, this.containerWrapTitle);  
+  errorMessage1 = createUI("p", {className: "errorMessage"}, containerWrapTitle1);  
 
-  this.inputText = createUI("input", {type: "text", className: "inputText", 
+  inputText = createUI("input", {type: "text", className: "input-text", 
     placeholder: "Input palindrome here"
-  }, this.containerWrapper);
+  }, containerWrapper2);
 
-  this.inputBtn = createUI("input", {type: "button", className: "inputBtn", 
+  inputBtn = createUI("input", {type: "submit", className: "input-btn", 
     value: "Cheсk"
-  }, this.containerWrapper);
+  }, containerWrapper2);
 
-  this.resultTitle = createUI("div", {className: "resultTitle", 
+  titlePart2_3 = createUI("div", {className: "resultTitle", 
     innerHTML: "Result: "
-  }, this.containerWrapper);  
+  }, containerWrapper2);  
 
-  this.containerResult = createUI("div", {className: "containerMessage"}, this.containerWrapper);
+  containerResult = createUI("div", {className: "containerMessage"}, containerWrapper2);
 
-  this.inputBtn.onclick = this.checkPolindrome.bind(this);
-  this.inputText.onchange = this.clearMess.bind(this);
-  this.inputText.onfocus = this.clearMess.bind(this);
+  containerWrapper2.onsubmit = checkPolindrome;
+  inputText.onchange = clearMess;
+  inputText.onfocus = clearMess;
 
-  return false;
+  loadTask2 = true;
 }
 
-Polindrome.prototype.checkPolindrome = function () {
+function checkPolindrome() {
 
-  if (this.checkInput(this.inputText.value, this.errorMessage, this.inputText) == true) {
-    var inputTextNoSpaces = this.inputText.value.replace(/(^\s+|\s+$)/g,'');
-
+  if (checkInput(inputText.value, errorMessage1, inputText) == true) {
     if (inputTextNoSpaces === inputTextNoSpaces.split('').reverse().join('')) {
-      this.containerResult.innerHTML = "This is polindrome";
-      changeColor(GREEN, BG_GREEN, this.containerResult);
+      containerResult.innerHTML = "This is polindrome";
+      changeColor(GREEN, BG_GREEN, containerResult);
   	}
     else 
     {
-      this.containerResult.innerHTML = "This is NOT a polindrome";
-      changeColor(RED, BG_RED, this.containerResult);
+      containerResult.innerHTML = "This is NOT a polindrome";
+      changeColor(RED, BG_RED, containerResult);
     }
   }
   return false;
 }
-
-Polindrome.prototype.destroy = function() {
-
-  this.inputBtn.onclick = null;
-  this.inputText.onchange = null;
-  this.inputText.onfocus = null;
-
-  this.containerWrapper.remove();
-  this.description = null;
-  this.containerWrapTitle = null;
-
-  this.titleBig = null;
-  this.errorMessage = null;
-  this.inputText = null;
-  this.inputBtn = null;
-  this.resultTitle = null;
-  this.containerResult = null;
-}
-
-selectLessons(1, Polindrome);
-
-

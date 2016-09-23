@@ -1,0 +1,21 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#scene {
+	background: #DFE7FF;
+	overflow: hidden;
+	height: 400px;
+	width: 800px;
+}
+
+#ball {
+	position: absolute;
+	left: 250px;
+	top: 150px;
+	background: -webkit-linear-gradient(top, #d0e4f7 0%,#73b1e7 24%,#0a77d5 50%,#539fe1 79%,#87bcea 100%);
+	width: 100px;
+	height: 100px;
+	border-radius: 50% 50%;
+}
