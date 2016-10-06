@@ -1,68 +1,95 @@
 "use strict";
 
-var 
-  isAnimated = false, // анимировать ли шарик
-  ballModel,
-  SPEED =  2.1999999999999999999999999999,
-  G = 2.199999999999999999999999999;
-
-function BallModel(){
-  this.posX;
-  this.posY;
-  this.ballHeight;
-  this.sceneWidth;
-  this.sceneHeight;
-  this.jumpHeight = 0;
-  this.speed = 1000;
-  this.start;
-  this.startX;
-  this.startY;
-  this.endX;  
-  this.endY;  
-  this.end;
-  this.bottom;
-  this.impulseTotal = 0;
-  this.impulseCurrent = 0;
-  this.shiftX;
-  this.shiftY;
-  this.bottomBorder = false;
-
-
-  //this.heightFall;
-}
-
 (function() {
   var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                               window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
   window.requestAnimationFrame = requestAnimationFrame;
 })();
 
+var 
+  isAnimated = false, // анимировать ли шарик
+  ballModel,
+  G =      2.1, // ускорение свободного падения
+  SPEED =  G + 0.0000000000000000001, // скорость полета вверх по Y, должна быть больше, чем G
+  LEFT = 'Left',
+  RIGHT = 'Right';
+
+function BallModel(){
+
+  //this.ball;
+
+  this.posX; // координаты шара, верхний левый угол
+  this.posY;
+
+  this.shiftX; // сдвиг курсора мыши, относительно координат шара
+  this.shiftY;
+
+  this.speedX = 0; //  вектор скорости по X при броске
+  this.speedY = 0; //  вектор скорости по Y при броске
+
+  this.startTime; 
+  this.startX; // координаты шара, в момент зажатия мышкой
+  this.startY;
+
+  this.endTime;
+  this.endX; // координаты шара, в момент отжатия мышки
+  this.endY;   
+
+  this.ballHeight;
+  this.sceneWidth;
+  this.sceneHeight;
+
+  this.jumpHeight = 0; // макимальная высота прыжка шара
+  this.speed = 1000;
+
+  this.impulseTotal = 0; // импульс прыжка вверх
+  this.impulseCurrent = 0; 
+
+  this.top = 0; 
+  this.right = 0; 
+  this.bottom = 0; // значение координат мача, когда он на дне
+  this.left = 0; 
+
+  this.topBorder = false; 
+  this.rightBorder = false; 
+  this.bottomBorder = false; //мяч достиг дня
+  this.leftBorder = false; 
+}
+
+  var ball;
+
 window.onload = function() {
   
   ballModel = new BallModel();
 
-  var 
-    ball = document.getElementById('ball'),
-    scene = document.getElementById('scene');
+  var scene = document.getElementById('scene');
 
-  scene.style.width = 800 + 'px';
+    ball = document.getElementById('ball');
+
+
+  scene.style.width = 900 + 'px';
   scene.style.height = 400 + 'px';
   ball.style.height = 100 + 'px';
 
   ballModel.sceneWidth = parseInt(scene.style.width);
   ballModel.sceneHeight = parseInt(scene.style.height);
   ballModel.ballHeight = parseInt(ball.style.height);
+
+  ballModel.top = ballModel.ballHeight;
+  ballModel.right = ballModel.sceneWidth - ballModel.ballHeight;
   ballModel.bottom = ballModel.sceneHeight - ballModel.ballHeight;
     
   ball.addEventListener('mousedown', onMouseDown);
   scene.addEventListener('mouseup', onMouseUp);   
   ball.addEventListener('dragstart', onDragStart);
   scene.addEventListener('mouseleave', stopMouse);
+  
 
   requestAnimationFrame(drop); 
 }
 
 function moveTo(e, shiftX, shiftY) {
+
   ballModel.posX = e.pageX;
   ballModel.posY = e.pageY;
 
@@ -73,29 +100,40 @@ function moveTo(e, shiftX, shiftY) {
 }
 
 function checkBorders(left_x, top_y) {
+
   var
     rightBorder = ballModel.sceneWidth - ballModel.ballHeight,
     bottomBorder = ballModel.sceneHeight - ballModel.ballHeight;
 
-  if(top_y < 0 || top_y > bottomBorder){
-    //isAnimated = false;
-    if (top_y < 0 ) top_y = 0;
+  if(top_y < 0 || top_y > bottomBorder) {
+
+    if (top_y < 0 ) {
+      top_y = 0;
+      ballModel.topBorder = true; 
+    }
     else if(top_y > bottomBorder) {
       top_y = bottomBorder;
       ballModel.bottomBorder = true; // мяч достиг дна
-
     }
   }
   
-  if(left_x < 0 || left_x > rightBorder){
-    //isAnimated = false;
-    if (left_x < 0 ) left_x = 0;
-    else if(left_x > rightBorder) left_x = rightBorder;
+  if(left_x < 0 || left_x > rightBorder) {
+
+    if (left_x < 0 ) {
+      left_x = 0;
+      ballModel.leftBorder = true;      
+   }
+    else if(left_x > rightBorder) {
+      left_x = rightBorder;
+      ballModel.rightBorder = true;       
+    }
   }
+
   return {'x': left_x, 'y': top_y };
 }
 
 function getCoords(elem) {
+
   var box = elem.getBoundingClientRect();
 
   return {
@@ -107,9 +145,12 @@ function getCoords(elem) {
 function onMouseDown(e) {
 
   isAnimated = false;
-  ballModel.strat = new Date();
-  ballModel.stratX = e.pageX;
-  ballModel.stratY = e.pageY;
+  
+  ballModel.startTime = new Date();
+
+  ballModel.startTime = performance.now();
+
+
 
   ballModel.posX = e.pageX;
   ballModel.posY = e.pageY;
@@ -118,6 +159,12 @@ function onMouseDown(e) {
 
   ballModel.shiftX = ballModel.posX - coords.left;
   ballModel.shiftY = ballModel.posY - coords.top;
+
+  ballModel.startX = e.pageX -  ballModel.shiftX;
+  ballModel.startY = e.pageY - ballModel.shiftY;
+
+    console.log("DOWN ", ballModel.startX, ballModel.startY, ballModel.shiftX, ballModel.shiftY);
+
 
   scene.addEventListener('mousemove', onMouseMove);
 }
@@ -133,21 +180,24 @@ function onMouseUp(e) {
 
   isAnimated = true;
 
-  ballModel.end = new Date();
+  ballModel.endTime = new Date();
 
-  ballModel.endX = e.pageX;
-  ballModel.endY = e.pageY;
+  ballModel.endX = e.pageX - ballModel.shiftX;
+  ballModel.endY = e.pageY - ballModel.shiftY;
 
-  ballModel.posX = e.pageX;
-  ballModel.posY = e.pageY;
+  console.log("UP ", ballModel.endX, ballModel.endY, ballModel.shiftX, ballModel.shiftY);
+
+  ballModel.posX = e.pageX - ballModel.shiftX;
+  ballModel.posY = e.pageY - - ballModel.shiftY;
   
-  ballModel.start = performance.now();
-
   // вычисляем начальный и текущий импульсы в момент броска
   ballModel.impulseTotal = (ballModel.sceneHeight - ballModel.endY - ballModel.ballHeight) + SPEED;
   ballModel.impulseCurrent = 0;
+ 
+  var t = (ballModel.endTime - ballModel.startTime) / 10000000000 - 100; // время броска
 
-  //requestAnimationFrame(drop);
+  ballModel.speedY = (ballModel.endY - ballModel.startY) / t; //  вектор скорости по Y
+  ballModel.speedX = ((ballModel.endX - ballModel.startX) / t); // вектор скорости по X 
   
   scene.removeEventListener('mousemove', onMouseMove);
   ball.removeEventListener('mouseup', onMouseUp);
@@ -155,96 +205,99 @@ function onMouseUp(e) {
 
 function drop() {
 
-  if(ballModel.impulseTotal <=1){
+  if(ballModel.impulseTotal <= 0.0000001) {
     isAnimated = false;
+    rotate(RIGHT, false);
+    rotate(LEFT, false);
+
+    console.log("nsdfwewefwef");
   }
 
   if (isAnimated) {
+    
 
-    ballModel.posY += G + impulse(); 
-    //ballModel.posX += impulse(x); 
+    ballModel.posY += G + impulse() + ballModel.speedY; 
+    // ballModel.posX += ballModel.speedX; 
+    ballModel.posX += impulseX(); 
 
     var position = checkBorders(ballModel.posX, ballModel.posY);
- 
-
-    if (SPEED > 0) {
-      console.log("падаюююю ballModel.posY "+ ballModel.posY, SPEED);
-    }
-    else{
-      console.log("взлетаюююю ballModel.posY "+ ballModel.posY, SPEED);
-
-    }
-
-
 
     //определяем макс высоту текущего прыжка, количество пх от верхней границы
     ballModel.jumpHeight = ballModel.sceneHeight - ballModel.impulseTotal - ballModel.ballHeight;
-    //достигли дна, но импульс для прыжков еще есть
-    //то прыгаем вверх
     
-    if(ballModel.posY <= ballModel.jumpHeight){
+    if(ballModel.posY <= ballModel.jumpHeight) {
       // если достигли верхней границы прыжка и пора летить вниз
-      console.log("верх ballModel.posY ", ballModel.posY, ballModel.jumpHeight);
-      ballModel.impulseCurrent = ballModel.impulseTotal;
-      ballModel.posY = ballModel.jumpHeight;
       SPEED = Math.abs(SPEED);
+
+      ballModel.posY = ballModel.jumpHeight;
       ballModel.bottomBorder = false;
       ballModel.impulseCurrent = 0;
 
-
-
-
-    console.log("======ВЕРХ==== "+ ballModel.jumpHeight, "speed " + SPEED, ballModel.impulseCurrent, "ballModel.posY ", ballModel.posY);
-   
     }
 
-    if(ballModel.posY > 300 && ballModel.impulseTotal != 0) {
+    if((ballModel.bottomBorder || ballModel.posY > ballModel.bottom) && ballModel.impulseTotal != 0) {
       //и запускаем шар вверх прыгать, если есть импульс тотал != 0
       //импульс карент меняет значение от 0 до тотал и знак в зависимости от того падает шар или взлетает      
       SPEED = -1 * Math.abs(SPEED);
+ 
       ballModel.posY = ballModel.bottom;
-
-      // достигли дна, значит прыгаем в два раза ниже, чем предыдущий прыжок
-      ballModel.impulseTotal = ballModel.impulseTotal / 2;
-
+      // достигли дна, значит прыгаем ниже, чем предыдущий прыжок
+      ballModel.impulseTotal = ballModel.impulseTotal * 0.68;
       ballModel.impulseCurrent = 0;
-      
+      ballModel.bottomBorder = false;
 
+      if (ballModel.speedX >= 0) { 
+        //console.log(RIGHT, ballModel.speedX); 
+        rotate(RIGHT, true);
+                console.log(RIGHT, ballModel.speedX); 
 
-      console.log("-----ДНО----- ballModel.posY "+ ballModel.posY);
-      //ballModel.bottomBorder = false;
+      }
+      else {
+
+        rotate(LEFT, true);
+                console.log(LEFT, ballModel.speedX); 
+
+      }
+
     }
 
+    if (ballModel.rightBorder || ballModel.posX >= ballModel.right) {
+      ballModel.posX = ballModel.right;
+      ballModel.speedX = -1 * Math.abs(ballModel.speedX);
+      ballModel.rightBorder = false;
+      rotate(LEFT, true);
+    }
 
-
-    // if(ballModel.impulseTotal <= 0 && !ballModel.bottomBorder){
-    //   SPEED = Math.abs(SPEED);
-    // }
+    if (ballModel.leftBorder || ballModel.posX <= ballModel.left) {
+      ballModel.posX = ballModel.left;
+      ballModel.speedX = -1 * Math.abs(ballModel.speedX);
+      ballModel.leftBorder = false;
+      rotate(RIGHT, true);
+    }    
 
     ball.style.top = ballModel.posY + 'px'; 
-    //ball.style.left = left_x + 'px';  
+    ball.style.left = ballModel.posX  + 'px';  
   }
 
   requestAnimationFrame(drop);   
 }
 
-function impulse() {
 
-  
-        console.log("impulse " + ballModel.impulseCurrent);
-    return ballModel.impulseCurrent += SPEED;
 
-  
-
+function impulseX() {
+  if (ballModel.speedX == 0) return ballModel.speedX = 0;
+  else if (ballModel.speedX > 0 ) return ballModel.speedX -= 0.01 ;
+    else if (ballModel.speedX < 0 ) return ballModel.speedX += 0.01 ;
 }
 
-// function timing() {
-//   console.log("ballModel.impulseCurrent " + ballModel.impulseCurrent);
-//   return ballModel.impulseCurrent += IMPULSE_STEP;
 
-// }
+function impulse() {
+
+  return ballModel.impulseCurrent += SPEED * 1.5;
+}
 
 function onDragStart() {
+
   return false;
 }    
 
@@ -255,100 +308,67 @@ function stopMouse() {
   ball.removeEventListener('mouseup', onMouseUp);
 }
 
-// function animate(options) {
+function rotate(direction, start){
+  if(start == true)   ball.setAttribute("class", "rotate" + direction);
+ else ball.removeAttribute("class");
+}
 
-//   var start = performance.now();
+// function drop() {
 
-//   requestAnimationFrame(function animate(time) {
+//   if(ballModel.impulseTotal <=1) isAnimated = false;
 
-//     // if (ballModel.endX != ballModel.startX) requestAnimationFrame(drop);
+//   if (isAnimated) {
+
+//     ballModel.posY += G + impulse(); 
+//     //ballModel.posX += impulse(x); 
+
+//     var position = checkBorders(ballModel.posX, ballModel.posY);
+ 
+
+//     // if (SPEED > 0) {
+//     //   console.log("падаюююю ballModel.posY "+ ballModel.posY, SPEED);
+//     // }
+
 //     // else{
+//     //   console.log("взлетаюююю ballModel.posY "+ ballModel.posY, SPEED);
+//     // }
 
+//     //определяем макс высоту текущего прыжка, количество пх от верхней границы
+//     ballModel.jumpHeight = ballModel.sceneHeight - ballModel.impulseTotal - ballModel.ballHeight;
     
-//     // timeFraction от 0 до 1
-//     var timeFraction = (time - start) / options.duration;
-//     if (timeFraction > 1) timeFraction = 1;
+//     if(ballModel.posY <= ballModel.jumpHeight) {
+//       // если достигли верхней границы прыжка и пора летить вниз
+//       SPEED = Math.abs(SPEED);
 
-//     // текущее состояние анимации
-//     var progress = options.timing(timeFraction)
+//       ballModel.posY = ballModel.jumpHeight;
+//       ballModel.bottomBorder = false;
+//       ballModel.impulseCurrent = 0;
 
-//     options.draw(progress);
-
-//     if (timeFraction < 1) {
-//       requestAnimationFrame(animate);
+//     // console.log("верх ballModel.posY ", ballModel.posY, ballModel.jumpHeight);
+//     // console.log("======ВЕРХ==== "+ ballModel.jumpHeight, "speed " + SPEED, ballModel.impulseCurrent, "ballModel.posY ", ballModel.posY);
 //     }
 
-//   });
-// }
+//     if(ballModel.posY > 300 && ballModel.impulseTotal != 0) {
+//       //и запускаем шар вверх прыгать, если есть импульс тотал != 0
+//       //импульс карент меняет значение от 0 до тотал и знак в зависимости от того падает шар или взлетает      
+//       SPEED = -1 * Math.abs(SPEED);
 
-// function bounce(timeFraction) {
-//   for (var a = 0, b = 1, result; 1; a += b, b /= 2) {
-//     if (timeFraction >= (7 - 4 * a) / 11) {
-//       return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
-//     }
-//   }
-// }
-//   // преобразователь в easeOut
-// function makeEaseOut(timing) {
-//   return function(timeFraction) {
-//     return 1 - timing(1 - timeFraction);
-//   }
-// }
-
-// var bounceEaseOut = makeEaseOut(bounce);
-
-
-
-// function drop(time) {
-//   var     speed0 = Math.pow((Math.pow((ballModel.endX - ballModel.startX), 2) + Math.pow((ballModel.endY - ballModel.startY)), 2), 0.5) / (ballModel.end - ballModel.start);
-//     ball.style.top = (ballModel.endY + (G * Math.pow(time/300, 2)) / 2) + 'px';
-//     ball.style.left = ballModel.endX + (speed0 * 100000 * time) + 'px';
-//     console.log(speed0, time, ball.style.top, ball.style.left);
-//     requestAnimationFrame(drop);
-// }
-
-// var onBottom = false;
-// var onTop = false;
-
-
-// function jump(time) {
-
-//   if (isAnimated)
-//   {
-//     var 
-//       progress,
-//       top,
-//       max;
-//        //мяч достиг нижней границы
-
-//     if(onBottom){
-//       progress = (time - ballModel.start) / ballModel.speed;
+//       ballModel.posY = ballModel.bottom;
+//       // достигли дна, значит прыгаем в два раза ниже, чем предыдущий прыжок
+//       ballModel.impulseTotal = ballModel.impulseTotal / 2;
+//       ballModel.impulseCurrent = 0;
       
-//       top = ballModel.bottom - progress * (ballModel.bottom - ballModel.posY);
-//       console.log("1dd "+ progress, onBottom, top);
-      
-//     }
-//     else{
-//       progress = (time - ballModel.start) / ballModel.speed;
-//       if (progress > 1) progress = 1;
-//        top = ballModel.posY + progress * (ballModel.bottom - ballModel.posY); 
-
+//       //console.log("-----ДНО----- ballModel.posY "+ ballModel.posY);
 //     }
 
-//     if (top >= ballModel.bottom) {
-//       onBottom = true;
-
-//       //isAnimated = false;
-//     }
-//     if (top == ballModel.posY) onTop = true;
-
-    
-//     ball.style.top = top + 'px';
-
-//     requestAnimationFrame(jump);
-//       console.log(progress, onBottom, top);
-
+//     ball.style.top = ballModel.posY + 'px'; 
+//     //ball.style.left = left_x + 'px';  
 //   }
+
+//   requestAnimationFrame(drop);   
 // }
+
+
+
 
 
