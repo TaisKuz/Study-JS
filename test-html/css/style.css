@@ -1,0 +1,262 @@
+*{
+	padding: 0;
+	margin: 0;
+	/*outline: 1px solid gray;*/
+	font-family: arial;
+	font-weight: 50;
+}
+
+.main-container-wrapper {
+	width: 1024px;
+	margin: 0 auto;
+	background: -webkit-linear-gradient(-45deg, rgba(31,240,255,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(176,98,243,1) 100%);
+	/*transform: rotate(-60deg);*/
+}
+
+.row-1-logos {
+	text-align: center;
+}
+
+.row-1-logos a,
+.row-1-logos img {
+	margin: 29px 15px 38px 15px;
+}
+
+.row-1-logos a:first-child { /* поправить */
+	width: 207px;
+	height: 53px;
+}
+
+.row-1-logos a:last-child { /* поправить */
+	width: 191.63px;
+	height: 54.21px;
+}
+
+p {
+	color: #fff;
+	text-align: center;
+}
+
+.main-container-wrapper > p {
+	font-size: 37px;
+	line-height: 47px;
+}
+
+.row-2-wrapper {
+	margin: 61px 73px 0 35px;
+}
+
+.column {
+	display: inline-block;
+}
+
+.row-2-wrapper .column-1 img:first-child{
+	margin-right: 20px;
+}
+
+.row-2-wrapper .column-2 {
+	margin: 40px 44px 5px 62px
+}
+
+.row-2-wrapper .column-2,
+.row-2-wrapper .column-2 p {
+	width: 310px;
+}
+
+
+.row-2-wrapper .column-2 > p:first-child,
+.form-phone-email input[type="submit"] {
+	text-transform: uppercase;
+}
+
+.row-2-wrapper .column-2 > p {
+	text-align: left !important;
+}
+
+.row-3 {
+	margin-top: 127px;
+	text-align: center;
+}
+
+.row-3 a img {
+	margin-bottom: 30px;
+}
+
+.row-4,
+.row-2-wrapper, 
+footer,
+.install .btns-wrapper,
+.form-phone-email {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: flex-start;	
+}
+
+.row-2-wrapper{
+	align-items: flex-end;	
+}
+
+.row-4 {
+	padding: 0 20px;
+	margin-bottom: 105px;
+}
+
+.row-4 .column {
+	width: 220px;
+	text-align: center;
+}
+
+.row-4 .column .icon-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 102px;
+	height: 102px;
+	margin: 0 auto;
+}
+
+.row-4 .column img:nth-child[1] {
+	max-width: 70.13px;
+	max-height: 59.37px;
+}
+
+.row-4 .column img:nth-child[2] {
+	max-width: 36.2px;
+	max-height: 72.44px;
+}
+
+.row-4 .column img:nth-child[3] {
+	max-width: 51.76px;
+	max-height: 55.17px;
+}
+
+.row-4 .column img:nth-child[4] {
+	max-width: 51px;
+	max-height: 47.81px;
+}
+
+footer {
+	border-top: 2px solid #fff;
+	padding-bottom: 56px;
+}
+
+footer section {
+ 	margin-top: 51px;
+ 	width: 380px;
+}
+
+.install .btn-app-store {
+	background: url('../img/app-store.svg') no-repeat;
+}
+
+.install .btn-google-play {
+	background: url('../img/google-play.svg') no-repeat;
+}
+
+.install .btn-app-store,
+.install .btn-google-play {
+	background-size: cover;
+	background-position: center;
+	background-color: #000;
+}
+
+.install .btn-app-store,
+.install .btn-google-play, 
+.form-phone-email {
+		border-radius: 6px;
+}
+
+.column-2 .install .btn-app-store{
+	width: 142px;
+	height: 44px;
+	margin-right: 19px;
+}
+
+.column-2 .install .btn-google-play {
+	width: 137.48px;
+	height: 42.33px;
+}
+
+footer .install .btn-app-store {
+	width: 181px;
+	height: 53px;
+	margin-right: 24.3px;
+}
+
+footer .install .btn-google-play {
+	width: 174.74px;
+	height: 51.33px;
+}
+
+.form-phone-email,
+.form-phone-email input {
+	background-color: #fff;
+}
+
+.form-phone-email {
+	margin: 0 auto;
+}
+
+.row-2-wrapper .form-phone-email{
+	width: 304px;
+	height: 48px;
+}
+
+footer .form-phone-email{
+	width: 380px;
+	height: 51px;
+}
+
+.form-phone-email {
+
+	justify-content: space-between;
+	align-items: center;	
+}
+
+
+.form-phone-email input{
+	border: none;
+	text-align: left;
+	padding-left: 10px;
+	margin-right: 15px;
+	color: #808080;
+}
+
+.form-phone-email input[type="submit"]{
+	font-size: 12px;
+	line-height: 14px;
+	border-left: 1px solid #808080;
+	height: 22px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* градиент
+background: rgba(31,240,255,1);
+background: -moz-linear-gradient(-45deg, rgba(31,240,255,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(176,98,243,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(31,240,255,1)), color-stop(79%, rgba(176,98,243,1)), color-stop(85%, rgba(176,98,243,1)), color-stop(100%, rgba(176,98,243,1)));
+background: -webkit-linear-gradient(-45deg, rgba(31,240,255,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(176,98,243,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(31,240,255,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(176,98,243,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(31,240,255,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(176,98,243,1) 100%);
+background: linear-gradient(135deg, rgba(31,240,255,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(176,98,243,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1ff0ff', endColorstr='#b062f3', GradientType=1 );
+*/

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="51px" height="58px" viewBox="0 0 51 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#C3FFF3" offset="0%"></stop>
+            <stop stop-color="#3AF6BB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#34F7D2" offset="0%"></stop>
+            <stop stop-color="#18EAA5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Copy" transform="translate(-603.000000, -1168.000000)">
+            <g id="2part" transform="translate(-1.000000, 859.000000)">
+                <g id="3benefit" transform="translate(523.000000, 287.000000)">
+                    <g id="Page-1" transform="translate(60.000000, 0.000000)">
+                        <path d="M54.0615937,24.5142656 L36.4044375,26.7160313 L36.4044375,39.9369844 L36.4044375,62.5754063 C33.653625,61.5482344 30.0732656,61.9745625 26.9256094,64.0010156 C22.1571094,67.071375 20.1991875,72.630375 22.5531562,76.4179219 C24.9063281,80.2054688 30.6804844,80.7871875 35.4489844,77.7168281 C38.9018437,75.4943438 40.8788906,71.967375 40.8159375,68.7519844 L40.8183281,39.3871406 L54.0615937,37.7352187 L54.0615937,24.5142656 Z" id="Fill-3" fill="url(#linearGradient-1)"></path>
+                        <path d="M71.71875,22.3233375 L71.71875,22.3233375 L71.71875,22.3121813 L54.0615937,24.5139469 L54.0615937,37.7356969 L67.3040625,36.0845719 L67.3040625,58.1611969 C64.5540469,57.134025 60.9736875,57.5603531 57.8260312,59.5868063 C53.0575312,62.6571656 51.0996094,68.2161656 53.4527813,72.0037125 C55.80675,75.7912594 61.5809063,76.3729781 66.3494063,73.3026188 C69.8014687,71.0801344 71.7793125,67.5531656 71.7155625,64.337775 L71.71875,64.337775 L71.71875,22.3233375 Z" id="Fill-5" fill="url(#linearGradient-2)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
