@@ -1,40 +1,52 @@
+@font-face {
+    font-family: "MuseoSans-100";
+    src: url(../fonts/MuseoSans-100.otf);
+}
+
 *{
 	padding: 0;
 	margin: 0;
-	/*outline: 1px solid gray;*/
-	font-family: arial;
-	font-weight: 50;
+}
+
+a {
+	display: inline-block;
+}
+
+a:hover,
+input[type="submit"] {
+	cursor: pointer;
+}
+
+p {
+	color: #fff;
+	text-align: center;
+	font-family: "MuseoSans-100", sans-serif;
+	font-weight: 100;
 }
 
 .main-container-wrapper {
 	width: 1024px;
 	margin: 0 auto;
-	background: -webkit-linear-gradient(-45deg, rgba(31,240,255,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(176,98,243,1) 100%);
-	/*transform: rotate(-60deg);*/
+	background: -webkit-linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%);*/
+	background: -moz-linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%);
 }
 
 .row-1-logos {
 	text-align: center;
 }
 
-.row-1-logos a,
-.row-1-logos img {
-	margin: 29px 15px 38px 15px;
+.row-1-logos a {
+	margin: 26px 42px 40px 23px;
 }
 
-.row-1-logos a:first-child { /* поправить */
+.row-1-logos a:first-child { 
 	width: 207px;
 	height: 53px;
 }
 
-.row-1-logos a:last-child { /* поправить */
+.row-1-logos a:last-child {
 	width: 191.63px;
 	height: 54.21px;
-}
-
-p {
-	color: #fff;
-	text-align: center;
 }
 
 .main-container-wrapper > p {
@@ -51,11 +63,11 @@ p {
 }
 
 .row-2-wrapper .column-1 img:first-child{
-	margin-right: 20px;
+	margin-right: 15px;
 }
 
 .row-2-wrapper .column-2 {
-	margin: 40px 44px 5px 62px
+	margin: 25px 39px 12px 78px;
 }
 
 .row-2-wrapper .column-2,
@@ -63,18 +75,66 @@ p {
 	width: 310px;
 }
 
-
 .row-2-wrapper .column-2 > p:first-child,
 .form-phone-email input[type="submit"] {
 	text-transform: uppercase;
+}
+
+.row-2-wrapper .column-2 > p:first-child {
+	font-size: 22.4px;
+	line-height: 29.6px;
+	margin-bottom: 15.8px;
+}
+
+.row-2-wrapper .column-2 p:nth-child(2) {
+	font-size: 21.28px;
+	line-height: 23.52px;
 }
 
 .row-2-wrapper .column-2 > p {
 	text-align: left !important;
 }
 
+.column-2 .install p,
+.column-2 .get-phone-email p{
+	font-size: 13px;
+	line-height: 16px;
+	letter-spacing: 0.52px;
+}
+
+.column-2 .install p{
+	margin: 42px 0 12px;
+}
+
+.column-2 .get-phone-email p{
+	margin: 29px 0 11px;
+}
+
+.form-phone-email input[type="text"]{
+	height: 26px;
+	padding: 14px 25px 14px 15px;
+	border-radius: 6px; 
+	background-color: transparent;
+}
+
+.form-phone-email input[type="submit"]{
+	margin-right: 20px;
+}
+
+.column-2 .form-phone-email input[type="text"] {
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.column-2 .form-phone-email input[type="submit"]{
+	font-size: 12px;
+	line-height: 15px;
+	border-left: 1px solid #808080;
+		height: 22px;
+}
+
 .row-3 {
-	margin-top: 127px;
+	margin-top: 120px;
 	text-align: center;
 }
 
@@ -82,9 +142,21 @@ p {
 	margin-bottom: 30px;
 }
 
+.row-3 p:nth-child(2) {
+	font-size: 48px;
+	line-height: 57px;
+	margin-bottom: 5px;	
+}
+
+.row-3 p:nth-child(3) {
+	font-size: 27px;
+	line-height: 47px;	
+	margin-bottom: 38px;
+}
+
 .row-4,
 .row-2-wrapper, 
-footer,
+.footer-wrapper,
 .install .btns-wrapper,
 .form-phone-email {
 	display: flex;
@@ -98,7 +170,7 @@ footer,
 }
 
 .row-4 {
-	padding: 0 20px;
+	padding: 0 33px;
 	margin-bottom: 105px;
 }
 
@@ -116,29 +188,51 @@ footer,
 	margin: 0 auto;
 }
 
-.row-4 .column img:nth-child[1] {
-	max-width: 70.13px;
-	max-height: 59.37px;
+.row-4 .column img:nth-child(1) {
+	max-width: 90.13px;
+	max-height: 91px;
 }
 
-.row-4 .column img:nth-child[2] {
+.row-4 .column img:nth-child(2) {
 	max-width: 36.2px;
 	max-height: 72.44px;
 }
 
-.row-4 .column img:nth-child[3] {
+.row-4 .column img:nth-child(3) {
 	max-width: 51.76px;
 	max-height: 55.17px;
 }
 
-.row-4 .column img:nth-child[4] {
+.row-4 .column img:nth-child(4) {
 	max-width: 51px;
 	max-height: 47.81px;
 }
 
-footer {
-	border-top: 2px solid #fff;
+.row-4 .column:nth-child(1) p,
+.row-4 .column:nth-child(4) p{
+	padding: 0 15px;
+}
+
+.row-4 .column p:nth-child(2){
+	font-size: 23px;
+	line-height: 25px;
+	letter-spacing: 0.92px;
+	margin: 37px 0 21px;
+}
+
+.row-4 .column p:nth-child(3){
+	font-size: 13px;
+	line-height: 22px;
+	letter-spacing: 0.52px;
+}
+
+.footer-wrapper {
+	border-top: 1px solid #fff;
 	padding-bottom: 56px;
+}
+
+.footer-wrapper p {
+	margin-bottom: 35px;
 }
 
 footer section {
@@ -167,26 +261,42 @@ footer section {
 		border-radius: 6px;
 }
 
-.column-2 .install .btn-app-store{
-	width: 142px;
-	height: 44px;
-	margin-right: 19px;
+.install .btn-google-play {
+	margin-left: -3px;
 }
 
-.column-2 .install .btn-google-play {
+.column-2 .install .btn-app-store,
+.column-2 .install .btn-app-store a{
+	width: 142px;
+	height: 44px;
+	margin-right: -7px;
+}
+
+.column-2 .install .btn-google-play,
+.column-2 .install .btn-google-play a {
 	width: 137.48px;
 	height: 42.33px;
 }
 
-footer .install .btn-app-store {
+footer .install {
+	margin-right: 93px;
+}
+
+footer .install .btn-app-store,
+footer .install .btn-app-store a {
 	width: 181px;
 	height: 53px;
 	margin-right: 24.3px;
 }
 
-footer .install .btn-google-play {
+footer .install .btn-google-play,
+footer .install .btn-google-play a {
 	width: 174.74px;
 	height: 51.33px;
+}
+
+footer .form-phone-email {
+	margin-left: 5px;
 }
 
 .form-phone-email,
@@ -209,45 +319,51 @@ footer .form-phone-email{
 }
 
 .form-phone-email {
-
-	justify-content: space-between;
-	align-items: center;	
+	justify-content: space-between;	
 }
 
+.form-phone-email,
+.btns-wrapper{
+	align-items: center;
+}
 
 .form-phone-email input{
 	border: none;
 	text-align: left;
-	padding-left: 10px;
-	margin-right: 15px;
+	padding-left: 15px; 
 	color: #808080;
 }
 
-.form-phone-email input[type="submit"]{
-	font-size: 12px;
-	line-height: 14px;
-	border-left: 1px solid #808080;
-	height: 22px;
+footer .form-phone-email input[type="text"] {
+	font-size: 20px;
+	line-height: 23px;
+	height: 23px;
+}
+
+footer .form-phone-email input[type="submit"]{
+	font-size: 15px;
+	line-height: 18px;
+	border-left: 2px solid #808080;
+	height: 27px;
 }
 
 
 
+/*.clearfix {
 
+  height: 220px;
+}
 
+.clearfix:before,
+.clearfix:after{
+	content: "";
+	clear: both;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+footer {
+	position: fixed;
+	bottom: 0;
+}*/
 
 
 /* градиент
