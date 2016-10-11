@@ -8,6 +8,12 @@
 	margin: 0;
 }
 
+body{
+	background: -webkit-linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%);*/
+	background: -moz-linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%);
+
+}
+
 a {
 	display: inline-block;
 }
@@ -24,11 +30,10 @@ p {
 	font-weight: 100;
 }
 
-.main-container-wrapper {
+.main-container-wrapper,
+.footer-wrapper {
 	width: 1024px;
 	margin: 0 auto;
-	background: -webkit-linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%);*/
-	background: -moz-linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%);
 }
 
 .row-1-logos {
@@ -227,7 +232,6 @@ p {
 }
 
 .footer-wrapper {
-	border-top: 1px solid #fff;
 	padding-bottom: 56px;
 }
 
@@ -276,6 +280,10 @@ footer section {
 .column-2 .install .btn-google-play a {
 	width: 137.48px;
 	height: 42.33px;
+}
+
+footer {
+	border-top: 1px solid #fff;
 }
 
 footer .install {
@@ -347,23 +355,10 @@ footer .form-phone-email input[type="submit"]{
 	height: 27px;
 }
 
-
-
-/*.clearfix {
-
-  height: 220px;
+input:focus { 
+	outline: none; 
 }
 
-.clearfix:before,
-.clearfix:after{
-	content: "";
-	clear: both;
-}
-
-footer {
-	position: fixed;
-	bottom: 0;
-}*/
 
 
 /* градиент
