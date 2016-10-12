@@ -1,6 +1,22 @@
 @font-face {
-    font-family: "MuseoSans-100";
-    src: url(../fonts/MuseoSans-100.otf);
+    font-family: "MuseoSansCyrl-300";
+    src: url(../fonts/MuseoSansCyrl-300.otf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "MuseoSansCyrl-300";
+    src: url(../fonts/MuseoSansCyrl-300.otf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "MuseoSansCyrl-100";
+    src: url(../fonts/MuseoSansCyrl-100.otf);
+    font-weight: 100;
+    font-style: normal;
 }
 
 *{
@@ -11,7 +27,6 @@
 body{
 	background: -webkit-linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%);*/
 	background: -moz-linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%);
-
 }
 
 a {
@@ -26,18 +41,28 @@ input[type="submit"] {
 p {
 	color: #fff;
 	text-align: center;
-	font-family: "MuseoSans-100", sans-serif;
-	font-weight: 100;
+}
+
+.main-container-wrapper > p,
+
+.row-3 p:nth-child(2),
+.row-4 .column p:nth-child(2),
+.column-2 .form-phone-email input{
+	font-family: "MuseoSansCyrl-300";
+}
+
+.install p,
+.get-phone-email p,
+.row-2 .column-2 p:nth-child(2),
+.row-3 p:nth-child(3),
+.row-4 .column p:nth-child(3){
+	font-family: "MuseoSansCyrl-100";
 }
 
 .main-container-wrapper,
 .footer-wrapper {
 	width: 1024px;
 	margin: 0 auto;
-}
-
-.row-1-logos {
-	text-align: center;
 }
 
 .row-1-logos a {
@@ -57,9 +82,10 @@ p {
 .main-container-wrapper > p {
 	font-size: 37px;
 	line-height: 47px;
+	letter-spacing: 0.8px;
 }
 
-.row-2-wrapper {
+.row-2 {
 	margin: 61px 73px 0 35px;
 }
 
@@ -67,36 +93,38 @@ p {
 	display: inline-block;
 }
 
-.row-2-wrapper .column-1 img:first-child{
+.row-2 .column-1 img:first-child{
 	margin-right: 15px;
 }
 
-.row-2-wrapper .column-2 {
+.row-2 .column-2 {
 	margin: 25px 39px 12px 78px;
 }
 
-.row-2-wrapper .column-2,
-.row-2-wrapper .column-2 p {
+.row-2 .column-2,
+.row-2 .column-2 p {
 	width: 310px;
 }
 
-.row-2-wrapper .column-2 > p:first-child,
+.row-2 .column-2 > p:first-child,
 .form-phone-email input[type="submit"] {
 	text-transform: uppercase;
 }
 
-.row-2-wrapper .column-2 > p:first-child {
+.row-2 .column-2 > p:first-child {
 	font-size: 22.4px;
 	line-height: 29.6px;
 	margin-bottom: 15.8px;
+	font-family: "MuseoSansCyrl-300";
 }
 
-.row-2-wrapper .column-2 p:nth-child(2) {
+.row-2 .column-2 p:nth-child(2) {
 	font-size: 21.28px;
 	line-height: 23.52px;
+	letter-spacing: 0.2px;
 }
 
-.row-2-wrapper .column-2 > p {
+.row-2 .column-2 > p {
 	text-align: left !important;
 }
 
@@ -159,8 +187,9 @@ p {
 	margin-bottom: 38px;
 }
 
+.row-1-logos,
 .row-4,
-.row-2-wrapper, 
+.row-2, 
 .footer-wrapper,
 .install .btns-wrapper,
 .form-phone-email {
@@ -170,7 +199,12 @@ p {
 	align-items: flex-start;	
 }
 
-.row-2-wrapper{
+.row-1-logos{
+	justify-content: center;
+	align-items: center;	
+}
+
+.row-2{
 	align-items: flex-end;	
 }
 
@@ -316,7 +350,7 @@ footer .form-phone-email {
 	margin: 0 auto;
 }
 
-.row-2-wrapper .form-phone-email{
+.row-2 .form-phone-email{
 	width: 304px;
 	height: 48px;
 }
@@ -358,16 +392,3 @@ footer .form-phone-email input[type="submit"]{
 input:focus { 
 	outline: none; 
 }
-
-
-
-/* градиент
-background: rgba(31,240,255,1);
-background: -moz-linear-gradient(-45deg, rgba(31,240,255,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(176,98,243,1) 100%);
-background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(31,240,255,1)), color-stop(79%, rgba(176,98,243,1)), color-stop(85%, rgba(176,98,243,1)), color-stop(100%, rgba(176,98,243,1)));
-background: -webkit-linear-gradient(-45deg, rgba(31,240,255,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(176,98,243,1) 100%);
-background: -o-linear-gradient(-45deg, rgba(31,240,255,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(176,98,243,1) 100%);
-background: -ms-linear-gradient(-45deg, rgba(31,240,255,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(176,98,243,1) 100%);
-background: linear-gradient(135deg, rgba(31,240,255,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(176,98,243,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1ff0ff', endColorstr='#b062f3', GradientType=1 );
-*/
