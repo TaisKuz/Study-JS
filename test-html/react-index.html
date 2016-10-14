@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>React test html Zvooq</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Что из этого нужно подключать и как определить какие библиотеки нужны-->
+    <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <!-- Что из этого нужно подключать-->
+    <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js" </script>
+
+    <script src="https://unpkg.com/jquery@3.1.0/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/remarkable@1.7.1/dist/remarkable.min.js"></script>
+
+<!--     <script type="text/babel" src="scripts/main.js"></script>
+ -->  
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/babel">
+
+  var AppStoreBtn = React.createClass({ 
+    render: function() {
+      return (
+        <div className="btn-app-store">
+          <a href="https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8" target="_blank"></a>
+        </div>
+      );
+    }           
+  });      
+
+  var GooglePlayBtn = React.createClass({ 
+    render: function() {
+      return (
+        <div className="btn-google-play">
+          <a href="https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en" target="_blank"></a>
+        </div>  
+      );
+    }   
+  });
+
+  var Install = React.createClass({ 
+    render: function() {
+      return (
+        <div className="install">
+          <p>Установить приложение</p>
+          <div className="btns-wrapper">
+            <AppStoreBtn />
+            <GooglePlayBtn />
+          </div>
+        </div>
+      );
+    } 
+  });
+
+  var FormBox = React.createClass({  
+    render: function() {
+      return (
+        <div className="get-phone-email">                
+          <p>Получите ссылку для установки на&nbsp;телефон</p>
+          <form className="form-phone-email">
+            <input 
+              type="text" 
+              placeholder="Телефон или Email"
+              />
+            <input type="submit" value="отправить" />
+          </form>  
+        </div> 
+      );
+    } 
+  }); 
+
+  var InstallBox = React.createClass({ 
+    render: function() {
+      return (
+        <div className="installBox">  
+          <Install />
+          <FormBox />
+        </div>
+      );
+    } 
+  }); 
+
+  var data = [
+    { 
+      src: "cherry", 
+      p1: "Совершенно бесплатно", 
+      p2: "Слушайте любую музыку при наличии интернета!"
+    },
+    {
+      src: "plane", 
+      p1: "Любимые треки всегда с&nbsp;вами", 
+      p2: "Ваша коллекция автоматически сохраняется на&nbsp;компьютере и&nbsp;на&nbsp;телефоне. Берите её&nbsp;с&nbsp;собой и&nbsp;слушайте где угодно."
+    },
+    {
+      src: "notes", 
+      p1: "Музыка для любой ситуации", 
+      p2: "Вам не&nbsp;обязательно быть экспертом в&nbsp;музыке. Наши редакторы создали плейлисты на&nbsp;все случаи жизни"
+    },
+    {
+      src: "heart", 
+      p1: "Рекомендации по\&nbsp;вашему вкусу", 
+      p2: "Вы&nbsp;легко найдёте свою любимую музыку и&nbsp;откроете для себя много нового"
+    }, 
+  ];   
+
+  // ВСЕ 4 КОЛОНКИ
+  var ColumnBox = React.createClass({ 
+    render: function() {
+      var columnNodes = this.props.data.map(function(column) {
+        return (
+          <Column name={column.name} p1={column.p1} p2={column.p2}/>
+        );
+      });
+      return (
+        <div className="row-4">
+          {columnNodes}
+        </div>
+      );
+    }    
+  });
+
+  //КОЛОНКА
+  var Column = React.createClass({ 
+    var columns = this.state.data;
+    var newColumn = columns.concat([column]);
+    this.setState({data: newColumn});        
+      $.ajax({
+        name: this.props.name,
+        p1: this.props.p1,
+        p2: this.props.p2,
+        data: column, 
+      });        
+    },        
+    getInitialState: function() {
+      return {name: 'cherry', p1: 'Совершенно бесплатно', p2: 'Слушайте любую музыку при наличии интернета!'};
+    },
+
+    render: function() {
+      return (
+        <div className="column">
+          <div className="icon-wrapper"> 
+            <img src={"img/icon-" + this.props.name + ".svg"} alt={"icon-" + this.props.name} /> 
+            <p>{this.props.p1}</p> 
+            <p>{this.props.p2}</p>  
+          </div>    
+        </div>
+      );
+    }           
+  });
+      
+  var MainPage = React.createClass({ 
+    getInitialState: function() {
+      return {data: []};
+    },
+    render: function() {
+      return (
+      <div className="mainPage">
+        <div className="main-container-wrapper">
+          <div className="row-1-logos">
+            <a href="http://zvooq.com" target="_blank"> <img src="img/Zvooq-logo.svg" alt="Zvooq-logo" /> </a>
+            <a href="http://www.shazam.com" target="_blank"> <img src="img/Shazam-logo.png" alt="Shazam-logo" /> </a>     
+          </div>
+          <p>Чтобы попробовать новые возможности,<br/>
+            войдите в&nbsp;бесплатное приложение Zvooq</p>
+          <div className="row-2">
+            <div className="column column-1">
+              <img src="img/iphone-white.png" alt="iphone-white" />
+              <img src="img/iphone-black.png" alt="iphone-black" /> 
+            </div>
+            <div className="column column-2">
+              <p>Теперь ваши открытия будут всегда под рукой!</p>
+              <p>Вы&nbsp;сможете Shazamить треки прямо из&nbsp;Zvooq сразу слушать 
+                их&nbsp;и&nbsp;моментально добавлять 
+                в&nbsp;свою коллекцию.</p>
+
+              <InstallBox />
+
+            </div>
+          </div>
+          <div className="row-3">
+            <a href="http://zvooq.com" target="_blank"><img src="img/Zvooq-logo.svg" alt="Zvooq-logo" /></a>
+            <p>Бесплатное приложение,<br/>
+              с которым слушать музыку легко</p>
+            <p>Бесплатное музыкальное приложение &#8470;1&nbsp;в AppStore</p>
+          </div>
+
+          <ColumnBox data={this.state.data}/>
+
+        </div>
+        <div className="footer">
+
+          <InstallBox />
+
+        </div>
+      </div>
+      );
+    }   
+  });
+
+  ReactDOM.render(
+    <MainPage />,
+    document.getElementById('content')
+  );
+
+
+    </script>
+  </body>
+</html>
