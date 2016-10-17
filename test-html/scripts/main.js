@@ -1,46 +1,9 @@
-"use strict";
-
-window.onload = function() {
-
-  var AppStoreBtn = React.createClass({ 
-    render: function() {
-      return (
-        <div className="btn-app-store">
-          <a href="https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8" target="_blank"></a>
-        </div>
-      );
-    }           
-  });
-
-  var GooglePlayBtn= React.createClass({ 
-    render: function() {
-      return (
-        <div className="btn-google-play">
-          <a href="https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en" target="_blank"></a>
-        </div>  
-      );
-    }   
-  });
-
-  var InstallBox = React.createClass({ 
-    render: function() {
-      return (
-        <div className="install">
-          <p>Установить приложение</p>
-          <AppStoreBtn />
-          <GooglePlayBtn />
-        </div>
-      );
-    } 
-  });
-
-  var FormBox = React.createClass({  
+ 
+   var FormBox = React.createClass({  
     render: function() {
       return (
         <div className="get-phone-email">                
-          <p>Получите ссылку<br/>
-          для установки на&nbsp;телефон</p>
-
+          <p>Получите ссылку для установки на&nbsp;телефон</p>
           <form className="form-phone-email">
             <input 
               type="text" 
@@ -51,53 +14,148 @@ window.onload = function() {
         </div> 
       );
     } 
+  }); 
+
+ var btns = [
+    {
+      className: "btn-app-store",
+      href: "https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8"
+    },
+    {
+      className: "btn-google-play",
+      href: "https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en"
+    }
+ ];  
+
+ var InstalBtn = React.createClass({ 
+    getDefaultProps: function () {
+      return {
+        className: "btn-app-store",
+        href: "https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8"
+      };
+    },
+
+    render: function() {
+      return (
+        <div className={this.props.className}>
+          <a href={this.props.href} target="_blank"></a>
+        </div>
+      );
+    }           
+  });      
+
+  var InstallBox = React.createClass({ 
+    getDefaultProps: function () {
+      return {
+        btns: []
+      };
+    },
+    render: function() {
+      var instalBtns = this.props.btns.map((btn, index) => {
+        return (
+            <InstalBtn key={index} className={btn.className} href={btn.href} />
+        );
+      });      
+      return (
+        <div className="installBox">  
+          <div className="install">
+            <p>Установить приложение</p>
+            <div className="btns-wrapper">
+              {instalBtns}
+            </div>
+          </div>
+          <FormBox />
+        </div>
+      );
+    } 
+  }); 
+
+
+
+  var columns = [
+    { 
+      src: "img/icon-cherry.svg",
+      alt: "icon-cherry",
+      title: 'Совершенно бесплатно',
+      description: 'Слушайте любую музыку при наличии интернета!'
+    },
+    {
+      src: "img/icon-plane.svg",
+      alt: "icon-plane",
+      title: 'Любимые треки всегда с&nbsp;вами',
+      description: 'Ваша коллекция автоматически сохраняется на&nbsp;компьютере и\&nbsp;на&nbsp;телефоне. Берите её&nbsp;с&nbsp;собой и&nbsp;слушайте где угодно.'
+    },
+    {
+      src: "img/icon-notes.svg",
+      alt: "icon-notes",
+      title: "Музыка для любой ситуации",
+      description: "Вам не&nbsp;обязательно быть экспертом в&nbsp;музыке. Наши редакторы создали плейлисты на&nbsp;все случаи жизни"
+    },
+    {
+      src: "img/icon-heart.svg",
+      alt: "icon-heart",
+      title: "Рекомендации по&nbsp;вашему вкусу",
+      description: "Вы&nbsp;легко найдёте свою<br/>любимую музыку и&nbsp;откроете<br/>для себя много нового"
+    }
+  ];   
+
+  // ВСЕ 4 КОЛОНКИ
+  var ColumnBox = React.createClass({ 
+
+    getDefaultProps: function () {
+      return {
+        columns: []
+      };
+    },
+
+    render: function() {
+       var columnNodes = this.props.columns.map((column, index) => {
+        return (
+            <Column key={index} src={column.src} alt={column.alt} title={column.title} description={column.description}/>
+        );
+      });
+           
+      return (
+        <div className="row-4">
+          {columnNodes}
+        </div>
+      );
+    }    
   });
 
-  // var columnData = [
-  //   {
-  //   	id: 0, 
-  //     name: "cherry", 
-  //     p1: "Совершенно бесплатно", 
-  //     p2: "Слушайте любую музыку при наличии интернета!"
-  //   },
-  //   {
-  //     id: 1, 
-  //     name: "plane", 
-  //     p1: "Любимые треки всегда с\&nbsp;вами", 
-  //     p2: "Ваша коллекция автоматически сохраняется на\&nbsp;компьютере и\&nbsp;на&nbsp;телефоне. Берите её\&nbsp;с\&nbsp;собой и\&nbsp;слушайте где угодно."
-  //   },
-  //   {
-  //     id: 2, 
-  //     name: "notes", 
-  //     p1: "Музыка для любой ситуации", 
-  //     p2: "Вам не\&nbsp;обязательно быть экспертом в&nbsp;музыке. Наши редакторы создали плейлисты на\&nbsp;все случаи жизни"
-  //   },
-  //   {
-  //     id: 3, 
-  //     name: "heart", 
-  //     p1: "Рекомендации по\&nbsp;вашему вкусу", 
-  //     p2: "Вы\&nbsp;легко найдёте свою любимую музыку и\&nbsp;откроете для себя много нового"
-  //   }, 
-  // ];      
+  function createMarkup(text) { return {__html: text}; };  
 
-  var ColumnBox = React.createClass({ 
-    render: function() {
+  //КОЛОНКА
+  var Column = React.createClass({ 
+
+    getDefaultProps: function () {
+      return {
+        src: 'img/icon-cherry.svg',
+        alt: 'icon-cherry',
+        title: 'Слушайте любую музыку при наличии интернета!',
+        description: 'Совершенно бесплатно'
+      };
+    },
+
+    render: function() { 
 
       return (
         <div className="column">
           <div className="icon-wrapper"> 
-            <img src={"img/icon-" + columnData.name + ".svg"} alt={"icon-" + columnData.name} /> 
-            <p>{columnData.p1}</p> 
-            <p>{columnData.p2}</p>  
-          </div>    
+            <img src={this.props.src} alt={this.props.alt} /> 
+          </div>   
+          <p dangerouslySetInnerHTML={{ __html: this.props.title }} />
+          <p dangerouslySetInnerHTML={{ __html: this.props.description }} />
         </div>
       );
     }           
   });
-
+      
   var MainPage = React.createClass({ 
+
     render: function() {
       return (
+      <div className="mainPage">
         <div className="main-container-wrapper">
           <div className="row-1-logos">
             <a href="http://zvooq.com" target="_blank"> <img src="img/Zvooq-logo.svg" alt="Zvooq-logo" /> </a>
@@ -116,7 +174,7 @@ window.onload = function() {
                 их&nbsp;и&nbsp;моментально добавлять 
                 в&nbsp;свою коллекцию.</p>
 
-
+              <InstallBox btns={btns}/>
 
             </div>
           </div>
@@ -126,20 +184,16 @@ window.onload = function() {
               с которым слушать музыку легко</p>
             <p>Бесплатное музыкальное приложение &#8470;1&nbsp;в AppStore</p>
           </div>
-          <div className="row-4"> 
 
+          <ColumnBox columns={columns}/>
 
-                      
-          </div>
         </div>
+        <div className="footer">
 
-        <footer>
-          <div className="footer-wrapper">
+          <InstallBox btns={btns}/>
 
-
-
-          </div>
-        </footer>
+        </div>
+      </div>
       );
     }   
   });
@@ -149,4 +203,5 @@ window.onload = function() {
     document.getElementById('content')
   );
 
-}
+
+
