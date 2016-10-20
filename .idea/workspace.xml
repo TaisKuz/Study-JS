@@ -2,9 +2,249 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f04b413-4e66-4cb0-9756-3d1be0f523cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React-test/index.html" afterPath="$PROJECT_DIR$/React-test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-html/react-index.html" afterPath="$PROJECT_DIR$/test-html/react-index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-html/scripts/main.js" afterPath="$PROJECT_DIR$/test-html/scripts/main.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/build/react-dom-server.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/build/react-dom-server.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/build/react-dom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/build/react-dom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/build/react-with-addons.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/build/react-with-addons.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/build/react.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/build/react.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/basic-click-counter/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/basic-commonjs/.babelrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/basic-commonjs/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/basic-commonjs/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/basic-commonjs/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/basic-commonjs/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/basic-jsx-external/example.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/basic-jsx-external/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/basic-jsx-harmony/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/basic-jsx-precompile/example.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/basic-jsx-precompile/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/basic-jsx/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/basic/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/fiber/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/jquery-bootstrap/css/example.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/jquery-bootstrap/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/jquery-bootstrap/js/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/jquery-mobile/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/jquery-mobile/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/jquery-mobile/js/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/quadratic/example.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/quadratic/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/shared/css/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/transitions/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/transitions/transition.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/examples/webcomponents/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React-test/src/helloworld.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/.no-sublime-package" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Babel.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Babel.sublime-commands" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Babel.sublime-settings" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Comments (JSX).YAML-tmPreferences" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Comments (JSX).tmPreferences" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Comments.YAML-tmPreferences" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Comments.tmPreferences" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Completion Rules.YAML-tmPreferences" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Completion Rules.tmPreferences" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Default.sublime-commands" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Default.sublime-keymap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Indexed Symbols.YAML-tmPreferences" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Indexed Symbols.tmPreferences" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/JSON.YAML-tmLanguage" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/JSON.tmLanguage" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/JavaScript (Babel).YAML-tmLanguage" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/JavaScript (Babel).sublime-syntax" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/JavaScript (Babel).tmLanguage" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/JavaScript Indent.YAML-tmPreferences" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/JavaScript Indent.tmPreferences" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Main.sublime-menu" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Monokai Phoenix.YAML-tmTheme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Monokai Phoenix.tmTheme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Next.YAML-tmTheme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Next.tmTheme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Regular Expressions (Babel).YAML-tmLanguage" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Regular Expressions (Babel).tmLanguage" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Symbol List Banned.YAML-tmPreferences" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Symbol List Banned.tmPreferences" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Symbol List Function.YAML-tmPreferences" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/Symbol List Function.tmPreferences" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/babel-transform.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/messages/3.0.0.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/messages/4.0.0.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/messages/5.0.0.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/messages/7.1.0.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/messages/8.0.0.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/get-stdin/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/get-stdin/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/get-stdin/readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/example/async.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/example/sync.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/lib/async.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/lib/caller.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/lib/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/lib/core.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/lib/node-modules-paths.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/lib/sync.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/readme.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/dotdot.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/dotdot/abc/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/dotdot/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/faulty_basedir.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/filter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/filter_sync.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/mock.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/mock_sync.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/module_dir.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/module_dir/xmodules/aaa/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/module_dir/ymodules/aaa/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/module_dir/zmodules/bbb/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/module_dir/zmodules/bbb/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/node_path.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/node_path/x/aaa/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/node_path/x/ccc/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/node_path/y/bbb/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/node_path/y/ccc/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/nonstring.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/pathfilter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/pathfilter/deep_ref/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/pathfilter/deep_ref/node_modules/deep/alt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/pathfilter/deep_ref/node_modules/deep/deeper/ref.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/pathfilter/deep_ref/node_modules/deep/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/pathfilter/deep_ref/node_modules/deep/ref.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/precedence.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/precedence/aaa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/precedence/aaa/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/precedence/aaa/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/precedence/bbb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/precedence/bbb/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/bar/node_modules/foo/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/baz/doom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/baz/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/baz/quux.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/biz/node_modules/garply/lib/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/biz/node_modules/garply/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/biz/node_modules/grux/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/biz/node_modules/tiv/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/cup.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/foo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/incorrect_main/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/incorrect_main/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/mug.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/mug.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/other_path/lib/other-lib.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/other_path/root.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/punycode/node_modules/punycode/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/quux/foo/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/without_basedir/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver/without_basedir/node_modules/mymodule.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/resolver_sync.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/subdirs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/subdirs/node_modules/a/b/c/x.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/node_modules/resolve/test/subdirs/node_modules/a/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/samples/js-class.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/samples/js-functions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/samples/js-symbols.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/samples/js-template-strings.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/samples/jsx-attributes.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/samples/jsx-es6.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/samples/jsx-features.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/samples/jsx-full-react-class.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/samples/jsx-tag-name.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/samples/jsx-text.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/screenshots/compare-jsx-comments-etc@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/screenshots/compare-jsx-illegal@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/screenshots/compare-jsx-tight@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/screenshots/compare-react-class@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/screenshots/oceanic-next.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/test/syntax_test_class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/babel-sublime-master/test/syntax_test_strings" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ball new/ballNew.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ball new/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ball new/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ball/ball.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ball/img/ball.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ball/img/sceneBg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ball/js/ball.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ball/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/generateStrings.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/polindrome.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/timer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/main.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/Desktop.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/Museo300-Regular.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/Museo500-Regular.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/Museo700-Regular.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/Museo700-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans-100 2.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans-100.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans-100Italic 2.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans-100Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans-300 2.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans-300.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans-300Italic 2.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans-300Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans-700Italic 2.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans-700Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans-900Italic 2.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans-900Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSansCyrl-100.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSansCyrl-100Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSansCyrl-300.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSansCyrl-300Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSansCyrl-500 2.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSansCyrl-500.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSansCyrl-500Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSansCyrl-700.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSansCyrl-700Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSansCyrl-900.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSansCyrl-900Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans_500 2.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans_500 3.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans_500.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans_500_Italic 2.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans_500_Italic 3.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans_500_Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans_700 2.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans_700.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans_900 2.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/fonts/MuseoSans_900.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/img/Group.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/img/Shape.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/img/Shazam-logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/img/Zvooq-logo.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/img/app-store.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/img/google-play.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/img/icon-cherry.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/img/icon-heart.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/img/icon-notes.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/img/icon-plane.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/img/iphone-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/img/iphone-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/landing_Shazam_fin.sketch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/react-index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/scripts/exemple.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test-html/scripts/main.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Study-JS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,18 +264,7 @@
     <favorites_list name="Study-JS" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test-html/scripts/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="116" column="11" selection-start-line="116" selection-start-column="11" selection-end-line="116" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,10 +288,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="20" />
-    <option name="y" value="43" />
-    <option name="width" value="1400" />
-    <option name="height" value="833" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -97,61 +325,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Study-JS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Study-JS" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Study-JS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Study-JS" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-html" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Study-JS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Study-JS" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-html" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -160,18 +347,13 @@
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -206,33 +388,35 @@
       <option name="presentableId" value="Default" />
       <updated>1476701855027</updated>
       <workItem from="1476701857732" duration="1371000" />
+      <workItem from="1476800839508" duration="731000" />
+      <workItem from="1476868241155" duration="4000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1371000" />
+    <option name="totallyTimeSpent" value="2106000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="43" width="1400" height="833" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1952079" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -251,13 +435,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test-html/scripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="116" column="11" selection-start-line="116" selection-start-column="11" selection-end-line="116" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test-html/scripts/main.js" />
+    <entry file="file://$PROJECT_DIR$/test-html/scripts/main.js" />
   </component>
 </project>

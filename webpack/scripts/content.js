@@ -1,0 +1,1 @@
+module.exports = "It works wew from content.js.";
