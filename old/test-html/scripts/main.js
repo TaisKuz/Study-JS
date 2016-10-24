@@ -204,4 +204,6 @@
   );
 
 
+//dangerouslySetInnerHTML={{ __html: this.props.loginBtnText }}
+
 

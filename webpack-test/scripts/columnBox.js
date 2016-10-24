@@ -1,4 +1,4 @@
-var Column = require('./column.js');
+import { Column } from './column.js';
 
 var ColumnBox = React.createClass({
     getDefaultProps: function () {
@@ -22,4 +22,4 @@ var ColumnBox = React.createClass({
     }
 });
 
-module.exports = ColumnBox;
+export { ColumnBox };

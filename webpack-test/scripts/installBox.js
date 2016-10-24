@@ -1,5 +1,5 @@
-var InstallBtn = require('./installBtn.js');
-var FormBox = require('./formBox.js');
+import { InstallBtn } from './installBtn.js';
+import { FormBox } from './formBox.js';
 
 var InstallBox = React.createClass({
     getDefaultProps: function () {
@@ -27,4 +27,4 @@ var InstallBox = React.createClass({
     }
 });
 
-module.exports = InstallBox;
+export { InstallBox };

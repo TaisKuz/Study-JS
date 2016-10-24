@@ -15,4 +15,4 @@ var InstallBtn = React.createClass({
     }
 });
 
-module.exports = InstallBtn;
+export { InstallBtn };

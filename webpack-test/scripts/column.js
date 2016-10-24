@@ -22,4 +22,4 @@ var Column = React.createClass({
     }
 });
 
-module.exports = Column;
+export { Column };

@@ -12,4 +12,4 @@ var FormBox = React.createClass({
     }
 });
 
-module.exports = FormBox;
+export { FormBox };

@@ -1,43 +1,44 @@
-require("./../css/style.css");
+import './../css/style.css';
 
-var InstallBox = require('./installBox.js');
-var ColumnBox = require('./columnBox.js');
+import { InstallBox } from './installBox.js';
+import { ColumnBox } from './columnBox.js';
+import { Banner } from './banner.js';
 
 var btns = [
     {
-        className: " btn-app-store",
-        href: "https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8"
+        className: ' btn-app-store',
+        href: 'https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8'
     },
     {
-        className: " btn-google-play",
-        href: "https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en"
+        className: ' btn-google-play',
+        href: 'https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en'
     }
 ];
 
 var columns = [
     {
-        src: "/img/icon-cherry.svg",
-        alt: "icon-cherry",
+        src: '/img/icon-cherry.svg',
+        alt: 'icon-cherry',
         title: 'Совершенно бесплатно',
         description: 'Слушайте любую музыку при наличии интернета!'
     },
     {
-        src: "/img/icon-plane.svg",
-        alt: "icon-plane",
+        src: '/img/icon-plane.svg',
+        alt: 'icon-plane',
         title: 'Любимые треки всегда с&nbsp;вами',
         description: 'Ваша коллекция автоматически сохраняется на&nbsp;компьютере и\&nbsp;на&nbsp;телефоне. Берите её&nbsp;с&nbsp;собой и&nbsp;слушайте где угодно.'
     },
     {
-        src: "/img/icon-notes.svg",
-        alt: "icon-notes",
-        title: "Музыка для любой ситуации",
-        description: "Вам не&nbsp;обязательно быть экспертом в&nbsp;музыке. Наши редакторы создали плейлисты на&nbsp;все случаи жизни"
+        src: '/img/icon-notes.svg',
+        alt: 'icon-notes',
+        title: 'Музыка для любой ситуации',
+        description: 'Вам не&nbsp;обязательно быть экспертом в&nbsp;музыке. Наши редакторы создали плейлисты на&nbsp;все случаи жизни'
     },
     {
-        src: "/img/icon-heart.svg",
-        alt: "icon-heart",
-        title: "Рекомендации по&nbsp;вашему вкусу",
-        description: "Вы&nbsp;легко найдёте свою<br/>любимую музыку и&nbsp;откроете<br/>для себя много нового"
+        src: '/img/icon-heart.svg',
+        alt: 'icon-heart',
+        title: 'Рекомендации по&nbsp;вашему вкусу',
+        description: 'Вы&nbsp;легко найдёте свою<br/>любимую музыку и&nbsp;откроете<br/>для себя много нового'
     }
 ];
 
@@ -78,6 +79,7 @@ var MainPage = React.createClass({
                     <InstallBox btns={btns}/>
 
                 </div>
+                <Banner />
             </div>
         );
     }
