@@ -1,4 +1,5 @@
 import { LoginForm } from './loginForm.js';
+import { LoginHeader } from './loginHeader.js';
 
 var inputs = [
     {
@@ -15,9 +16,9 @@ var LoginSms = React.createClass({
         return (
             <div className="loginSms">
 
-                стрелочка возврата на главную форму<br/>
+                <LoginHeader onClick={this.props.onClickBack}/>
                 форма регистрации по Sms
-                <LoginForm inputs={inputs} btnClassName="btnsLogin btnLightBlue" loginBtnText="Продолжить" />
+                <LoginForm inputs={inputs} btnClassName="btnsLogin btnLightBlue" loginBtnText="Продолжить" type="submit" />
             </div>
         );
     }

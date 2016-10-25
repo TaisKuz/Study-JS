@@ -1,5 +1,6 @@
 import { LoginBtn } from './loginBtn.js';
 
+
 var LoginMain = React.createClass({
 
     getDefaultProps: function () {
@@ -12,23 +13,25 @@ var LoginMain = React.createClass({
     render: function() {
         var socialBtns = this.props.socialBtns.map((btn, index) => {
             return (
-                <LoginBtn key={index} className={btn.className} loginBtnText={btn.loginBtnText} />
+                <LoginBtn key={index} className={btn.className} loginBtnText={btn.loginBtnText} onClick={btn.onClick}/>
             );
         });
 
         var emailBtns = this.props.emailBtns.map((btns, index) => {
             return (
-                <LoginBtn key={index} className={btns.className} loginBtnText={btns.loginBtnText} />
+                <LoginBtn key={index} className={btns.className} loginBtnText={btns.loginBtnText} onClick={btns.onClick}/>
             );
         });
 
         return (
             <div className="loginMain">
-                <p>Чтобы продолжить, войдите любым удобным для вас способом:</p>
-                {socialBtns}
-                <div className="btnStriper"></div>
-                {emailBtns}
-                <p className="loginMain-links">Регистрируясь, вы соглашаетесь с <a href="http://zvooq.com/about/terms" target="_blank">Условиями обслуживания</a> и <a href="http://zvooq.com/about/privacy" target="_blank">Правилами хранения личной информации</a></p>
+                <div className="loginTitle">Чтобы продолжить, войдите любым удобным для вас способом:</div>
+                <div className="loginBtns-content">
+                    {socialBtns}
+                    <div className="btnStriper"></div>
+                    {emailBtns}
+                    <p className="loginMain-links">Регистрируясь, вы соглашаетесь с <a href="http://zvooq.com/about/terms" target="_blank">Условиями обслуживания</a> и <a href="http://zvooq.com/about/privacy" target="_blank">Правилами хранения личной информации</a></p>
+                </div>
             </div>
         );
     }

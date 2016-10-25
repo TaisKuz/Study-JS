@@ -1,4 +1,5 @@
 import { LoginForm } from './loginForm.js';
+import { LoginHeader } from './loginHeader.js';
 
 var inputs = [
     {
@@ -21,9 +22,9 @@ var LoginEmail = React.createClass({
         return (
             <div className="loginEmail">
 
-                стрелочка возврата на главную форму<br/>
-                форма регистрации по e-mail
-                <LoginForm inputs={inputs} btnClassName="btnsLogin btnLightBlue" loginBtnText="Зарегистрироваться или войти"  />
+                <LoginHeader onClick={this.props.onClickBack}/>
+
+                <LoginForm inputs={inputs} btnClassName="btnsLogin btnLightBlue" loginBtnText="Зарегистрироваться или войти" type="submit" />
             </div>
         );
     }

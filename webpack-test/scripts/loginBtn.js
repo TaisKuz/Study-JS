@@ -9,7 +9,7 @@ var LoginBtn = React.createClass({
 
     render: function() {
         return (
-            <button className={this.props.className} dangerouslySetInnerHTML={{ __html: this.props.loginBtnText }}>
+            <button className={this.props.className} dangerouslySetInnerHTML={{ __html: this.props.loginBtnText }} type={this.props.type} onClick={this.props.onClick}>
             </button>
         );
     }
