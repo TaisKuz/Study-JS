@@ -42,7 +42,21 @@ var columns = [
     }
 ];
 
+var banner;
+
 var MainPage = React.createClass({
+
+    getInitialState: function() {
+        return banner = <Banner className="banner-hide"/>;
+    },
+
+    handleClickSingIn: function() {
+        this.setState( banner = <Banner className="banner-show" onClickOut={this.handleClickBanner} onClickIn={this.handleClickSingIn}/> )
+    },
+    handleClickBanner: function() {
+        this.setState( banner = <Banner className="banner-hide"/> )
+    },
+
     render() {
         return (
             <div className="mainPage">
@@ -51,7 +65,7 @@ var MainPage = React.createClass({
                         <a href="http://zvooq.com" target="_blank"> <img src="/img/Zvooq-logo.svg" alt="Zvooq-logo" /> </a>
                         <a href="http://www.shazam.com" target="_blank"> <img src="/img/Shazam-logo.png" alt="Shazam-logo" /> </a>
                     </div>
-                    <p>Чтобы попробовать новые возможности,<br/>войдите в&nbsp;бесплатное приложение Zvooq</p>
+                    <div className="pageTitle">Чтобы попробовать новые возможности,<br/><div className="singIn" onClick={this.handleClickSingIn}>войдите</div> в&nbsp;бесплатное приложение Zvooq</div>
 
                     <div className="row-2">
                         <div className="column column-1">
@@ -79,7 +93,7 @@ var MainPage = React.createClass({
                     <InstallBox btns={btns}/>
 
                 </div>
-                <Banner />
+                {banner}
             </div>
         );
     }

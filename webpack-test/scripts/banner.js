@@ -14,6 +14,12 @@ var Banner = React.createClass({
     windowWidth: 700,
     windowHeight: 510,
 
+    getDefaultProps: function () {
+        return {
+            className: "banner-hide"
+        };
+    },
+
     getInitialState: function() {
         socialBtns = [
             {
@@ -68,8 +74,8 @@ var Banner = React.createClass({
 
     render: function() {
         return (
-            <div className="banner">
-                <div className="loginWhite">
+            <div className={this.props.className} onClick={this.props.onClickOut}>
+                <div className="loginWhite" onClick={this.props.onClickIn}>
                     {loginContent}
                 </div>
             </div>

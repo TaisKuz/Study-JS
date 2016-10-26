@@ -23,6 +23,10 @@ input {
     border:none;
 }
 
+button.btnsLogin:hover {
+    opacity: .9;
+}
+
 body,
 #content{
     background: -webkit-linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%);
@@ -39,7 +43,8 @@ div.loginEmail-forgot {
     cursor: pointer;
 }
 
-p {
+p,
+.pageTitle {
     color: #fff;
     text-align: center;
 }
@@ -49,7 +54,7 @@ p {
     height: 100%;
 }
 
-.main-container-wrapper > p,
+.pageTitle,
 .row-3 p:nth-child(2),
 .row-4 .column p:nth-child(2),
 .column-2 .form-phone-email input{
@@ -86,10 +91,21 @@ p {
     height: 54.21px;
 }
 
-.main-container-wrapper > p {
+.pageTitle {
     font-size: 37px;
     line-height: 47px;
     letter-spacing: 0.8px;
+}
+
+.singIn:hover {
+    color: deeppink;
+    opacity: .9;
+    border-radius: 4px;
+}
+
+.singIn {
+    display: inline;
+    cursor: pointer;
 }
 
 .row-2 {
@@ -398,7 +414,7 @@ button:focus{
     outline: none;
 }
 
-.banner {
+.banner-show {
     z-index: 10001;
     overflow: auto;
     top: 0;
@@ -408,7 +424,11 @@ button:focus{
     position: fixed !important;
     background-color: rgba(0,0,0,0.5);
     text-align: center;
+    cursor: pointer;
+}
 
+.banner-hide {
+    display: none;
 }
 
 .loginWhite {
@@ -417,6 +437,7 @@ button:focus{
     width: 320px;
     min-height: 381px;
     background-color: #fff;
+    cursor: default;
 }
 
 .btnsLogin {

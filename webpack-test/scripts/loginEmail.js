@@ -6,13 +6,11 @@ var inputs = [
         className: "loginInput",
         type: "email",
         placeholder: "Ваш email",
-        value: ""
     },
     {
         className: "loginInput",
         type: "password",
         placeholder: "Выберите или введите пароль",
-        value: ""
     }
 ];
 
