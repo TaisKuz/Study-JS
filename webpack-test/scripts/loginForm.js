@@ -14,14 +14,13 @@ var LoginForm = React.createClass({
 
         var inputs = this.props.inputs.map((input, index) => {
             return (
-                <input key={index} className={input.className} value={input.value} placeholder={input.placeholder} />
+                <input key={index} className={input.className} value={input.value} placeholder={input.placeholder} type={input.type} spellcheck="false"/>
             );
         });
 
         return (
             <div className="loginForm">
                 {inputs}
-
                 <LoginBtn className={this.props.btnClassName} type="submit" loginBtnText={this.props.loginBtnText}/>
             </div>
         );

@@ -30,7 +30,7 @@ var LoginMain = React.createClass({
                     {socialBtns}
                     <div className="btnStriper"></div>
                     {emailBtns}
-                    <p className="loginMain-links">Регистрируясь, вы соглашаетесь с <a href="http://zvooq.com/about/terms" target="_blank">Условиями обслуживания</a> и <a href="http://zvooq.com/about/privacy" target="_blank">Правилами хранения личной информации</a></p>
+                    <p className="loginMain-links">Регистрируясь, вы соглашаетесь с <a href="http://zvooq.com/about/terms" target="_blank">Условиями</a><br/><a href="http://zvooq.com/about/terms" target="_blank">обслуживания</a> и <a href="http://zvooq.com/about/privacy" target="_blank">Правилами хранения личной</a><br/><a href="http://zvooq.com/about/privacy" target="_blank">информации</a></p>
                 </div>
             </div>
         );

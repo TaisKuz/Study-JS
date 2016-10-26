@@ -12,12 +12,13 @@
     font-style: normal;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-button{
+button,
+input {
     outline: none;
     border:none;
 }
@@ -33,7 +34,8 @@ a {
 }
 
 a:hover,
-input[type="submit"] {
+input[type="submit"],
+div.loginEmail-forgot {
     cursor: pointer;
 }
 
@@ -58,7 +60,8 @@ p {
 .get-phone-email p,
 .row-2 .column-2 p:nth-child(2),
 .row-3 p:nth-child(3),
-.row-4 .column p:nth-child(3){
+.row-4 .column p:nth-child(3),
+.btnsLogin {
     font-family: "MuseoSansCyrl-100";
 }
 
@@ -390,7 +393,8 @@ p {
     height: 27px;
 }
 
-input:focus {
+input:focus,
+button:focus{
     outline: none;
 }
 
@@ -401,9 +405,10 @@ input:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    position: absolute !important;
+    position: fixed !important;
     background-color: rgba(0,0,0,0.5);
     text-align: center;
+
 }
 
 .loginWhite {
@@ -419,9 +424,10 @@ input:focus {
     height: 50px;
     width: 100%;
     border-radius: 4px;
-    font: 300 15px/18px MuseoSansCyrl-300;
+    font: 100 15px/18px "MuseoSansCyrl-100";
     color: #fff;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .btnLoginVk,
@@ -448,6 +454,7 @@ input:focus {
 .btn-email, .btn-sms {
     display: inline-block;
     width: 135px !important;
+    margin-top: 0;
 }
 .btn-email{
     float: left;
@@ -458,7 +465,7 @@ input:focus {
 
 .btn-sms small{
     pointer-events: none;
-    font: 500 13px/15px "MuseoSansCyrl-300";
+    font: 100 13px/15px "MuseoSansCyrl-100";
     opacity: 0.6;
 }
 
@@ -481,7 +488,7 @@ input:focus {
 .loginMain .loginMain-links,
 .loginMain-links a{
     text-align: center;
-    font: 300 11px/1.1 "MuseoSansCyrl-300",Arial,sans-serif;
+    font: 100 11px/1.1 "MuseoSansCyrl-100",Arial,sans-serif;
     color: #ccc;
 }
 
@@ -498,7 +505,7 @@ input:focus {
     position: relative;
     height: 39px;
     padding-top: 21px;
-    font: 300 18px "MuseoSansCyrl-300";
+    font: 100 18px "MuseoSansCyrl-100";
     text-align: center;
     background-color: #f1f1f1;
     color: #4d4d4d;
@@ -512,5 +519,87 @@ input:focus {
     height: 100%;
     top: 0;
     left: 0;
+}
+
+.loginForm {
+    margin: .75em 0 1em;
+}
+
+.loginForm input[type="password"] {
+    margin-bottom: 20px;
+}
+
+input.loginInput {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 1px #f1f1f1;
+    color: #7c7c7c;
+    font: 100 15px/17px "MuseoSansCyrl-100";
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+
+.loginEmail-content {
+    padding: 20px 20px 25px;
+}
+
+.loginEmail-forgot {
+    display: inline-block;
+    margin-top: 20px;
+    color: #7c7c7c;
+    font: 100 15px/1.2 "MuseoSansCyrl-100";
+    text-align: center;
+}
+
+.loginSms-content,
+.emailPasForgot-content {
+    padding: 20px 20px 120px;
+}
+
+@keyframes popup {
+    from {
+        margin-left: 285px;
+    }
+    to {
+        margin-left: 293px;
+    }
+}
+
+@-webkit-keyframes popup {
+    from {
+        margin-left: 287px;
+    }
+    to {
+        margin-left: 293px;
+    }
+}
+
+.loginSms-note{
+    position: relative;
+    width: 160px;
+    height: 90px;
+    padding: 20px;
+    margin: -130px 0 0 293px;
+    top: -20px;
+    color: #fff;
+    background-color: #717578;
+    animation: popup .2s;
+    font: 100 15px/1.2 "MuseoSansCyrl-100";
+    text-align: left;
+}
+
+.loginSms-note:after {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 58px;
+    left: -5px;
+    content: '';
+    background-color: #717578;
+    transform: rotate(45deg);
+    border-radius: 2px;
 }
 
