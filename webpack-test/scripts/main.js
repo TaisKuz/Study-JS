@@ -42,20 +42,7 @@ var columns = [
     }
 ];
 
-var banner;
-
 var MainPage = React.createClass({
-
-    getInitialState: function() {
-        return banner = <Banner className="banner-hide"/>;
-    },
-
-    handleClickSingIn: function() {
-        this.setState( banner = <Banner className="banner-show" onClickOut={this.handleClickBanner} onClickIn={this.handleClickSingIn}/> )
-    },
-    handleClickBanner: function() {
-        this.setState( banner = <Banner className="banner-hide"/> )
-    },
 
     render() {
         return (
@@ -93,7 +80,7 @@ var MainPage = React.createClass({
                     <InstallBox btns={btns}/>
 
                 </div>
-                {banner}
+                <Banner />
             </div>
         );
     }

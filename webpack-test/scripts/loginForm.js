@@ -1,10 +1,10 @@
 import { LoginBtn } from './loginBtn.js';
 
-var LoginForm = React.createClass({
+export var LoginForm = React.createClass({
 
     getDefaultProps: function () {
         return {
-            btnClassName: "btnsLogin btnLightBlue",
+            typebtn: 4,
             loginBtnText: "Продолжить",
             inputs: []
         };
@@ -14,17 +14,15 @@ var LoginForm = React.createClass({
 
         var inputs = this.props.inputs.map((input, index) => {
             return (
-                <input key={index} className={input.className} value={input.value} placeholder={input.placeholder} required type={input.type} spellcheck="false" />
+                <input key={index} className={input.className} defaultValue={input.defaultValue} placeholder={input.placeholder} required type={input.type} />
             );
         });
 
         return (
             <div className="loginForm">
                 {inputs}
-                <LoginBtn className={this.props.btnClassName} type="submit" loginBtnText={this.props.loginBtnText}/>
+                <LoginBtn typebtn={this.props.typebtn} type="submit" loginBtnText={this.props.loginBtnText}/>
             </div>
         );
     }
 });
-
-export { LoginForm };
