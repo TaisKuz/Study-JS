@@ -9,12 +9,16 @@ var inputs = [
     }
 ];
 
-var EmailPasForgot = React.createClass({
-
+export var EmailPasForgot = React.createClass({
+    getInitialState: function() {
+        return {
+            onPageClick: () => {}
+        };
+    },
     render: function() {
         return (
             <div className="emailPasForgot">
-                <LoginHeader onClick={this.props.onClickBack} text="Забыли пароль?"/>
+                <LoginHeader clickHandler={() => {this.props.onPageClick(0)}} text="Забыли пароль?"/>
                 <div className="emailPasForgot-content">
                     <LoginForm inputs={inputs} btnClassName="btnsLogin btnLightBlue" loginBtnText="Восстановить пароль" type="submit"/>
                 </div>
@@ -22,5 +26,3 @@ var EmailPasForgot = React.createClass({
         );
     }
 });
-
-export { EmailPasForgot };

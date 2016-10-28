@@ -30,16 +30,13 @@ export var LoginMain = React.createClass({
             onPageClick: () => {}
         };
     },
-    clickHandler() {
 
-    },
     render: function() {
         var socialBtns = this.props.socialBtns.map((item, index) => {
             return (
                 <LoginBtn
                     key={index}
                     loginBtnText={item.loginBtnText}
-                    onClick={this.clickHandler}
                     typebtn={item.typebtn}
                 />
             );

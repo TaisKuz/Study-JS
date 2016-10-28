@@ -4,7 +4,7 @@ import { LoginHeader } from './loginHeader.js';
 var inputs = [
     {
         className: "loginInput",
-        type: "phone",
+        type: "tel",
         placeholder: "none",
         defaultValue: "+7"
     }
