@@ -20,7 +20,7 @@ export var EmailPasForgot = React.createClass({
             <div className="emailPasForgot">
                 <LoginHeader clickHandler={() => {this.props.onPageClick(0)}} text="Забыли пароль?"/>
                 <div className="emailPasForgot-content">
-                    <LoginForm inputs={inputs} btnClassName="btnsLogin btnLightBlue" loginBtnText="Восстановить пароль" type="submit"/>
+                    <LoginForm inputs={inputs} typebtn={6} type="submit"/>
                 </div>
             </div>
         );

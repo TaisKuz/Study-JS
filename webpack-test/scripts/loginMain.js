@@ -5,24 +5,16 @@ export var LoginMain = React.createClass({
     getDefaultProps: function () {
         return {
             socialBtns: [
-                {
-                    loginBtnText: 'Войти с помощью Вконтакте',
-                    typebtn: 0
-
-                },
-                {
-                    loginBtnText: 'Войти с помощью Facebook',
-                    typebtn: 1
-                }],
+                { typebtn: 0 },
+                { typebtn: 1 }
+            ],
 
             emailBtns: [
                 {
-                    loginBtnText: 'Через email',
                     typebtn: 2,
                     id: 1
                 },
                 {
-                    loginBtnText: "По коду в SMS</br><small>(бесплатно)</small>",
                     typebtn: 3,
                     id: 2
                 }
@@ -34,17 +26,13 @@ export var LoginMain = React.createClass({
     render: function() {
         var socialBtns = this.props.socialBtns.map((item, index) => {
             return (
-                <LoginBtn
-                    key={index}
-                    loginBtnText={item.loginBtnText}
-                    typebtn={item.typebtn}
-                />
+                <LoginBtn key={index} typebtn={item.typebtn} />
             );
         });
 
         var emailBtns = this.props.emailBtns.map((item, index) => {
             return (
-                <LoginBtn key={index} typebtn={item.typebtn} loginBtnText={item.loginBtnText}
+                <LoginBtn key={index} typebtn={item.typebtn}
                     onClick={() => { this.props.onPageClick(item.id) }}
                 />
             );

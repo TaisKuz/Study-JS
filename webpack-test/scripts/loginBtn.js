@@ -10,10 +10,25 @@ export var LoginBtn = React.createClass({
                 'btnLoginFb',
                 'btn-email btnLightBlue',
                 'btn-sms btnLightBlue',
+                'btnLightBlue',
+                'btnLightBlue',
                 'btnLightBlue'
             ],
-            loginBtnText: 'Войти с помощью Вконтакте',
             typebtn: 0
+        };
+    },
+
+    getInitialState: function() {
+        return {
+            text: [
+                'Войти с помощью Вконтакте',
+                'Войти с помощью Facebook',
+                'Через email',
+                "По коду в SMS</br><small>(бесплатно)</small>",
+                "Зарегистрироваться или войти",
+                "Продолжить",
+                "Восстановить пароль"
+            ]
         };
     },
 
@@ -29,7 +44,7 @@ export var LoginBtn = React.createClass({
 
     render: function() {
 
-        // var test = this.props.text || this.state.text[this.props.type];
+        var btnText = this.props.text || this.state.text[this.props.typebtn];
         var onClickBtn;
 
         if (this.props.typebtn === 0) {onClickBtn = this.vkClickHandler;}
@@ -39,7 +54,7 @@ export var LoginBtn = React.createClass({
         return (
             <button
                 className={"btnsLogin " + this.props.classNames[this.props.typebtn]}
-                dangerouslySetInnerHTML={{ __html: this.props.loginBtnText }}
+                dangerouslySetInnerHTML={{ __html: btnText }}
                 type={this.props.type}
                 onClick={onClickBtn}
             />
@@ -52,5 +67,7 @@ export const BUTTONS_TYPE = {
     FB: 1,
     EMAIL: 2,
     SMS: 3,
-    BLUE: 4
+    EMAIL_IN: 4,
+    SMS_IN: 5,
+    PASSWORD_FORGOT: 6
 };

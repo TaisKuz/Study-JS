@@ -22217,7 +22217,7 @@
 /* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
+	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -22227,26 +22227,17 @@
 	var _loginBtn = __webpack_require__(185);
 
 	var LoginMain = exports.LoginMain = React.createClass({
-	    displayName: 'LoginMain',
+	    displayName: "LoginMain",
 
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            socialBtns: [{
-	                loginBtnText: 'Войти с помощью Вконтакте',
-	                typebtn: 0
-
-	            }, {
-	                loginBtnText: 'Войти с помощью Facebook',
-	                typebtn: 1
-	            }],
+	            socialBtns: [{ typebtn: 0 }, { typebtn: 1 }],
 
 	            emailBtns: [{
-	                loginBtnText: 'Через email',
 	                typebtn: 2,
 	                id: 1
 	            }, {
-	                loginBtnText: "По коду в SMS</br><small>(бесплатно)</small>",
 	                typebtn: 3,
 	                id: 2
 	            }],
@@ -22258,15 +22249,11 @@
 	        var _this = this;
 
 	        var socialBtns = this.props.socialBtns.map(function (item, index) {
-	            return React.createElement(_loginBtn.LoginBtn, {
-	                key: index,
-	                loginBtnText: item.loginBtnText,
-	                typebtn: item.typebtn
-	            });
+	            return React.createElement(_loginBtn.LoginBtn, { key: index, typebtn: item.typebtn });
 	        });
 
 	        var emailBtns = this.props.emailBtns.map(function (item, index) {
-	            return React.createElement(_loginBtn.LoginBtn, { key: index, typebtn: item.typebtn, loginBtnText: item.loginBtnText,
+	            return React.createElement(_loginBtn.LoginBtn, { key: index, typebtn: item.typebtn,
 	                onClick: function onClick() {
 	                    _this.props.onPageClick(item.id);
 	                }
@@ -22274,45 +22261,45 @@
 	        });
 
 	        return React.createElement(
-	            'div',
-	            { className: 'loginMain' },
+	            "div",
+	            { className: "loginMain" },
 	            React.createElement(
-	                'div',
-	                { className: 'loginTitle' },
-	                '\u0427\u0442\u043E\u0431\u044B \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C, \u0432\u043E\u0439\u0434\u0438\u0442\u0435 \u043B\u044E\u0431\u044B\u043C \u0443\u0434\u043E\u0431\u043D\u044B\u043C \u0434\u043B\u044F \u0432\u0430\u0441 \u0441\u043F\u043E\u0441\u043E\u0431\u043E\u043C:'
+	                "div",
+	                { className: "loginTitle" },
+	                "\u0427\u0442\u043E\u0431\u044B \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C, \u0432\u043E\u0439\u0434\u0438\u0442\u0435 \u043B\u044E\u0431\u044B\u043C \u0443\u0434\u043E\u0431\u043D\u044B\u043C \u0434\u043B\u044F \u0432\u0430\u0441 \u0441\u043F\u043E\u0441\u043E\u0431\u043E\u043C:"
 	            ),
 	            React.createElement(
-	                'div',
-	                { className: 'loginBtns-content' },
+	                "div",
+	                { className: "loginBtns-content" },
 	                socialBtns,
-	                React.createElement('div', { className: 'btnStriper' }),
+	                React.createElement("div", { className: "btnStriper" }),
 	                emailBtns,
 	                React.createElement(
-	                    'p',
-	                    { className: 'loginMain-links' },
-	                    '\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u0443\u044F\u0441\u044C, \u0432\u044B \u0441\u043E\u0433\u043B\u0430\u0448\u0430\u0435\u0442\u0435\u0441\u044C \u0441 ',
+	                    "p",
+	                    { className: "loginMain-links" },
+	                    "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u0443\u044F\u0441\u044C, \u0432\u044B \u0441\u043E\u0433\u043B\u0430\u0448\u0430\u0435\u0442\u0435\u0441\u044C \u0441 ",
 	                    React.createElement(
-	                        'a',
-	                        { href: 'http://zvooq.com/about/terms', target: '_blank' },
-	                        '\u0423\u0441\u043B\u043E\u0432\u0438\u044F\u043C\u0438'
+	                        "a",
+	                        { href: "http://zvooq.com/about/terms", target: "_blank" },
+	                        "\u0423\u0441\u043B\u043E\u0432\u0438\u044F\u043C\u0438"
 	                    ),
-	                    React.createElement('br', null),
+	                    React.createElement("br", null),
 	                    React.createElement(
-	                        'a',
-	                        { href: 'http://zvooq.com/about/terms', target: '_blank' },
-	                        '\u043E\u0431\u0441\u043B\u0443\u0436\u0438\u0432\u0430\u043D\u0438\u044F'
+	                        "a",
+	                        { href: "http://zvooq.com/about/terms", target: "_blank" },
+	                        "\u043E\u0431\u0441\u043B\u0443\u0436\u0438\u0432\u0430\u043D\u0438\u044F"
 	                    ),
-	                    ' \u0438',
+	                    " \u0438",
 	                    React.createElement(
-	                        'a',
-	                        { href: 'http://zvooq.com/about/privacy', target: '_blank' },
-	                        '\u041F\u0440\u0430\u0432\u0438\u043B\u0430\u043C\u0438 \u0445\u0440\u0430\u043D\u0435\u043D\u0438\u044F \u043B\u0438\u0447\u043D\u043E\u0439'
+	                        "a",
+	                        { href: "http://zvooq.com/about/privacy", target: "_blank" },
+	                        "\u041F\u0440\u0430\u0432\u0438\u043B\u0430\u043C\u0438 \u0445\u0440\u0430\u043D\u0435\u043D\u0438\u044F \u043B\u0438\u0447\u043D\u043E\u0439"
 	                    ),
-	                    React.createElement('br', null),
+	                    React.createElement("br", null),
 	                    React.createElement(
-	                        'a',
-	                        { href: 'http://zvooq.com/about/privacy', target: '_blank' },
-	                        '\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438'
+	                        "a",
+	                        { href: "http://zvooq.com/about/privacy", target: "_blank" },
+	                        "\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438"
 	                    )
 	                )
 	            )
@@ -22339,9 +22326,14 @@
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            classNames: ['btnLoginVk', 'btnLoginFb', 'btn-email btnLightBlue', 'btn-sms btnLightBlue', 'btnLightBlue'],
-	            loginBtnText: 'Войти с помощью Вконтакте',
+	            classNames: ['btnLoginVk', 'btnLoginFb', 'btn-email btnLightBlue', 'btn-sms btnLightBlue', 'btnLightBlue', 'btnLightBlue', 'btnLightBlue'],
 	            typebtn: 0
+	        };
+	    },
+
+	    getInitialState: function getInitialState() {
+	        return {
+	            text: ['Войти с помощью Вконтакте', 'Войти с помощью Facebook', 'Через email', "По коду в SMS</br><small>(бесплатно)</small>", "Зарегистрироваться или войти", "Продолжить", "Восстановить пароль"]
 	        };
 	    },
 
@@ -22355,7 +22347,7 @@
 
 	    render: function render() {
 
-	        // var test = this.props.text || this.state.text[this.props.type];
+	        var btnText = this.props.text || this.state.text[this.props.typebtn];
 	        var onClickBtn;
 
 	        if (this.props.typebtn === 0) {
@@ -22364,7 +22356,7 @@
 
 	        return React.createElement('button', {
 	            className: "btnsLogin " + this.props.classNames[this.props.typebtn],
-	            dangerouslySetInnerHTML: { __html: this.props.loginBtnText },
+	            dangerouslySetInnerHTML: { __html: btnText },
 	            type: this.props.type,
 	            onClick: onClickBtn
 	        });
@@ -22376,7 +22368,9 @@
 	    FB: 1,
 	    EMAIL: 2,
 	    SMS: 3,
-	    BLUE: 4
+	    EMAIL_IN: 4,
+	    SMS_IN: 5,
+	    PASSWORD_FORGOT: 6
 	};
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
@@ -22425,7 +22419,7 @@
 	            React.createElement(
 	                'div',
 	                { className: 'loginEmail-content' },
-	                React.createElement(_loginForm.LoginForm, { inputs: inputs, typebtn: 4, loginBtnText: '\u0417\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F \u0438\u043B\u0438 \u0432\u043E\u0439\u0442\u0438', type: 'submit' }),
+	                React.createElement(_loginForm.LoginForm, { inputs: inputs, typebtn: 4, type: 'submit' }),
 	                React.createElement(
 	                    'div',
 	                    { className: 'loginEmail-forgot',
@@ -22554,7 +22548,7 @@
 	            React.createElement(
 	                'div',
 	                { className: 'loginSms-content' },
-	                React.createElement(_loginForm.LoginForm, { inputs: inputs, typebtn: 4, loginBtnText: '\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C', type: 'submit' }),
+	                React.createElement(_loginForm.LoginForm, { inputs: inputs, typebtn: 5, type: 'submit' }),
 	                React.createElement(
 	                    'div',
 	                    { className: 'loginSms-note' },
@@ -22612,7 +22606,7 @@
 	            React.createElement(
 	                'div',
 	                { className: 'emailPasForgot-content' },
-	                React.createElement(_loginForm.LoginForm, { inputs: inputs, btnClassName: 'btnsLogin btnLightBlue', loginBtnText: '\u0412\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u043F\u0430\u0440\u043E\u043B\u044C', type: 'submit' })
+	                React.createElement(_loginForm.LoginForm, { inputs: inputs, typebtn: 6, type: 'submit' })
 	            )
 	        );
 	    }

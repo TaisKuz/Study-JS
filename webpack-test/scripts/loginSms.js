@@ -21,7 +21,7 @@ export var LoginSms = React.createClass({
             <div className="loginSms">
                 <LoginHeader clickHandler={() => {this.props.onPageClick(0)}} text="Вход по номеру"/>
                 <div className="loginSms-content">
-                    <LoginForm inputs={inputs} typebtn={4} loginBtnText="Продолжить" type="submit" />
+                    <LoginForm inputs={inputs} typebtn={5} type="submit" />
                     <div className="loginSms-note">
                         Введите ваш номер телефона<br/><br/>
                         Пример для России:<br/>+79991234567
