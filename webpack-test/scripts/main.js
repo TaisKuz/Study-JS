@@ -43,22 +43,15 @@ var columns = [
 ];
 
 var MainPage = React.createClass({
-    getDefaultProps: function () {
-        return {
-            bannerClass: "banner-hide"
-        }
-    },
+
     getInitialState: function() {
         return {
-            bannerClass: "banner-hide"
+            showBanner: false
         };
     },
 
-    handleClickSingIn: function(){
-        this.setState({ bannerClass: "banner-show" });
-    },
-    handleClickBannerClose: function(){
-        this.setState({ bannerClass: "banner-hide" });
+    bannerHandler: function(){
+        this.setState({ showBanner: !this.state.showBanner });
     },
 
     render() {
@@ -70,7 +63,8 @@ var MainPage = React.createClass({
                         <a href="http://www.shazam.com" target="_blank"> <img src="/img/Shazam-logo.png" alt="Shazam-logo" /> </a>
                     </div>
                     <div className="pageTitle">Чтобы попробовать новые возможности,<br/>
-                        <div className="singIn" onClick={this.handleClickSingIn}>войдите </div>
+                        <div className="singIn"
+                             onClick={this.bannerHandler}>войдите </div>
                         в&nbsp;бесплатное приложение Zvooq</div>
 
                     <div className="row-2">
@@ -99,7 +93,7 @@ var MainPage = React.createClass({
                     <InstallBox btns={btns}/>
 
                 </div>
-                <Banner className={this.state.bannerClass} onClickClose={this.handleClickBannerClose}/>
+                {this.state.showBanner && <Banner onClickClose={this.bannerHandler} />}
             </div>
         );
     }

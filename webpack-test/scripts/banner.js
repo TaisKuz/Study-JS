@@ -1,3 +1,5 @@
+import './../css/banner.css';
+
 import { LoginMain } from './loginMain.js';
 import { LoginEmail } from './loginEmail.js';
 import { LoginSms } from './loginSms.js';
@@ -6,7 +8,7 @@ import { EmailPasForgot } from './emailPasForgot.js';
 export var Banner = React.createClass({
     getInitialState: function() {
         return {
-          currentView: 0
+            currentView: 0
         };
     },
 
@@ -30,7 +32,7 @@ export var Banner = React.createClass({
         let Page = this.props.views[this.state.currentView];
 
         return (
-            <div className={this.props.className}>
+            <div className="banner-show">
                 <div className="banner-gray">
                     <div className="banner-scroller">
                         <div className="banner-pointer" onClick={this.props.onClickClose}></div>

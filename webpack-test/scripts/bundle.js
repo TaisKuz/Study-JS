@@ -87,22 +87,15 @@
 	var MainPage = React.createClass({
 	    displayName: 'MainPage',
 
-	    getDefaultProps: function getDefaultProps() {
-	        return {
-	            bannerClass: "banner-hide"
-	        };
-	    },
+
 	    getInitialState: function getInitialState() {
 	        return {
-	            bannerClass: "banner-hide"
+	            showBanner: false
 	        };
 	    },
 
-	    handleClickSingIn: function handleClickSingIn() {
-	        this.setState({ bannerClass: "banner-show" });
-	    },
-	    handleClickBannerClose: function handleClickBannerClose() {
-	        this.setState({ bannerClass: "banner-hide" });
+	    bannerHandler: function bannerHandler() {
+	        this.setState({ showBanner: !this.state.showBanner });
 	    },
 
 	    render: function render() {
@@ -137,7 +130,8 @@
 	                    React.createElement('br', null),
 	                    React.createElement(
 	                        'div',
-	                        { className: 'singIn', onClick: this.handleClickSingIn },
+	                        { className: 'singIn',
+	                            onClick: this.bannerHandler },
 	                        '\u0432\u043E\u0439\u0434\u0438\u0442\u0435 '
 	                    ),
 	                    '\u0432\xA0\u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435 Zvooq'
@@ -195,7 +189,7 @@
 	                { className: 'footer' },
 	                React.createElement(_installBox.InstallBox, { btns: btns })
 	            ),
-	            React.createElement(_banner.Banner, { className: this.state.bannerClass, onClickClose: this.handleClickBannerClose })
+	            this.state.showBanner && React.createElement(_banner.Banner, { onClickClose: this.bannerHandler })
 	        );
 	    }
 	});
@@ -21605,7 +21599,7 @@
 
 
 	// module
-	exports.push([module.id, "@font-face {\n    font-family: \"MuseoSansCyrl-300\";\n    src: url(/../fonts/MuseoSansCyrl-300.otf);\n    font-weight: 300;\n    font-style: normal;\n}\n\n@font-face {\n    font-family: \"MuseoSansCyrl-100\";\n    src: url(/../fonts/MuseoSansCyrl-100.otf);\n    font-weight: 100;\n    font-style: normal;\n}\n\n* {\n    padding: 0;\n    margin: 0;\n}\n\nbutton,\ninput {\n    outline: none;\n    border:none;\n}\n\nbutton.btnsLogin:hover {\n    opacity: .9;\n}\n\nbody,\n#content{\n    background: -webkit-linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%);\n    background: -moz-linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%);\n}\n\na {\n    display: inline-block;\n}\n\na:hover,\ninput[type=\"submit\"],\ndiv.loginEmail-forgot {\n    cursor: pointer;\n}\n\np,\n.pageTitle {\n    color: #fff;\n    text-align: center;\n}\n\n.mainPage {\n    width:100%;\n    height: 100%;\n}\n\n.pageTitle,\n.row-3 p:nth-child(2),\n.row-4 .column p:nth-child(2),\n.column-2 .form-phone-email input{\n    font-family: \"MuseoSansCyrl-300\";\n}\n\n.install p,\n.get-phone-email p,\n.row-2 .column-2 p:nth-child(2),\n.row-3 p:nth-child(3),\n.row-4 .column p:nth-child(3),\n.btnsLogin {\n    font-family: \"MuseoSansCyrl-100\";\n}\n\n.main-container-wrapper,\n.footer .installBox{\n    width: 1024px;\n    margin: 0 auto;\n    height: 100%;\n}\n\n.row-1-logos a {\n    margin: 26px 42px 40px 23px;\n}\n\n.row-1-logos a:first-child {\n    width: 207px;\n    height: 53px;\n}\n\n.row-1-logos a:last-child {\n    width: 191.63px;\n    height: 54.21px;\n}\n\n.pageTitle {\n    font-size: 37px;\n    line-height: 47px;\n    letter-spacing: 0.8px;\n}\n\n.singIn:hover {\n    color: deeppink;\n    opacity: .9;\n    border-radius: 4px;\n}\n\n.singIn {\n    display: inline;\n    cursor: pointer;\n}\n\n.row-2 {\n    margin: 61px 73px 0 35px;\n}\n\n.column {\n    display: inline-block;\n}\n\n.row-2 .column-1 img:first-child{\n    margin-right: 15px;\n}\n\n.row-2 .column-2 {\n    margin: 25px 39px 12px 78px;\n}\n\n.row-2 .column-2,\n.row-2 .column-2 p {\n    width: 310px;\n}\n\n.row-2 .column-2 > p:first-child,\n.form-phone-email input[type=\"submit\"] {\n    text-transform: uppercase;\n}\n\n.row-2 .column-2 > p:first-child {\n    font-size: 22.4px;\n    line-height: 29.6px;\n    margin-bottom: 15.8px;\n    font-family: \"MuseoSansCyrl-300\";\n}\n\n.row-2 .column-2 p:nth-child(2) {\n    font-size: 21.28px;\n    line-height: 23.52px;\n    letter-spacing: 0.2px;\n}\n\n.row-2 .column-2 > p {\n    text-align: left !important;\n}\n\n.column-2 .install p,\n.column-2 .get-phone-email p{\n    font-size: 13px;\n    line-height: 16px;\n    letter-spacing: 0.52px;\n}\n\n.column-2 .install p{\n    margin: 42px 0 12px;\n}\n\n.column-2 .get-phone-email p{\n    margin: 29px 0 11px;\n}\n\n.form-phone-email input[type=\"text\"]{\n    height: 26px;\n    padding: 14px 25px 14px 15px;\n    border-radius: 6px;\n    background-color: transparent;\n}\n\n.form-phone-email input[type=\"submit\"]{\n    margin-right: 20px;\n}\n\n.column-2 .form-phone-email input[type=\"text\"] {\n    font-size: 16px;\n    line-height: 18px;\n}\n\n.column-2 .form-phone-email input[type=\"submit\"]{\n    font-size: 12px;\n    line-height: 15px;\n    border-left: 1px solid #808080;\n    height: 22px;\n}\n\n.row-3 {\n    margin-top: 120px;\n    text-align: center;\n}\n\n.row-3 a img {\n    margin-bottom: 30px;\n}\n\n.row-3 p:nth-child(2) {\n    font-size: 48px;\n    line-height: 57px;\n    margin-bottom: 5px;\n}\n\n.row-3 p:nth-child(3) {\n    font-size: 27px;\n    line-height: 47px;\n    margin-bottom: 38px;\n}\n\n.row-1-logos,\n.row-4,\n.row-2,\n.footer .installBox,\n.install .btns-wrapper,\n.form-phone-email {\n    display: flex;\n    flex-wrap: nowrap;\n    justify-content: space-around;\n    align-items: flex-start;\n}\n\n.row-1-logos{\n    justify-content: center;\n    align-items: center;\n}\n\n.row-2{\n    align-items: flex-end;\n}\n\n.row-4 {\n    padding: 0 33px;\n    margin-bottom: 105px;\n}\n\n.row-4 .column {\n    width: 220px;\n    text-align: center;\n}\n\n.row-4 .column .icon-wrapper {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 102px;\n    height: 102px;\n    margin: 0 auto;\n}\n\n.row-4 .column img:nth-child(1) {\n    max-width: 90.13px;\n    max-height: 91px;\n}\n\n.row-4 .column img:nth-child(2) {\n    max-width: 36.2px;\n    max-height: 72.44px;\n}\n\n.row-4 .column img:nth-child(3) {\n    max-width: 51.76px;\n    max-height: 55.17px;\n}\n\n.row-4 .column img:nth-child(4) {\n    max-width: 51px;\n    max-height: 47.81px;\n}\n\n.row-4 .column p:nth-child(2){\n    font-size: 23px;\n    line-height: 25px;\n    letter-spacing: 0.92px;\n    margin: 37px 0 21px;\n}\n\n.row-4 .column p:nth-child(3){\n    font-size: 13px;\n    line-height: 22px;\n    letter-spacing: 0.52px;\n    width: 225px;\n}\n\n.footer .installBox {\n    padding-bottom: 56px;\n}\n\n.footer .installBox p {\n    margin-bottom: 35px;\n}\n\n.footer .get-phone-email,\n.footer .install {\n    margin-top: 51px;\n    width: 380px;\n}\n\n.install .btn-app-store {\n    background: url(/../img/app-store.svg) no-repeat !important;\n}\n\n.install .btn-google-play {\n    background: url(/../img/google-play.svg) no-repeat !important;\n}\n\n.install .btn-app-store,\n.install .btn-google-play {\n    background: #000 center;\n    background-size: cover;\n}\n\n.install .btn-app-store,\n.install .btn-google-play,\n.form-phone-email {\n    border-radius: 6px;\n}\n\n.install .btn-google-play {\n    margin-left: -3px;\n}\n\n.column-2 .install .btn-app-store,\n.column-2 .install .btn-app-store a{\n    width: 142px;\n    height: 44px;\n    margin-right: -7px;\n}\n\n.column-2 .install .btn-google-play,\n.column-2 .install .btn-google-play a {\n    width: 137.48px;\n    height: 42.33px;\n}\n\n.footer {\n    border-top: 1px solid #fff;\n    width:100%;\n}\n\n.footer .install {\n    margin-right: 93px;\n}\n\n.footer .install .btn-app-store,\n.footer .install .btn-app-store a {\n    width: 181px;\n    height: 53px;\n    margin-right: 24.3px;\n}\n\n.footer .install .btn-google-play,\n.footer .install .btn-google-play a {\n    width: 174.74px;\n    height: 51.33px;\n}\n\n.footer .form-phone-email {\n    margin-left: 5px;\n}\n\n.form-phone-email,\n.form-phone-email input {\n    background-color: #fff;\n}\n\n.form-phone-email {\n    margin: 0 auto;\n}\n\n.row-2 .form-phone-email{\n    width: 304px;\n    height: 48px;\n}\n\n.footer .form-phone-email{\n    width: 380px;\n    height: 51px;\n}\n\n.form-phone-email {\n    justify-content: space-between;\n}\n\n.form-phone-email,\n.btns-wrapper{\n    align-items: center;\n}\n\n.form-phone-email input{\n    border: none;\n    text-align: left;\n    padding-left: 15px;\n    color: #808080;\n}\n\n.footer .form-phone-email input[type=\"text\"] {\n    font-size: 20px;\n    line-height: 23px;\n    height: 23px;\n}\n\n.footer .form-phone-email input[type=\"submit\"]{\n    font-size: 15px;\n    line-height: 18px;\n    border-left: 2px solid #808080;\n    height: 27px;\n}\n\ninput:focus,\nbutton:focus{\n    outline: none;\n}\n.banner-gray{\n    overflow: auto;\n    -webkit-overflow-scrolling: touch;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: absolute !important;\n    background-color: rgba(0,0,0,0.5);\n}\n\n.banner-show {\n    z-index: 1001;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: fixed !important;\n}\n\n.banner-pointer{\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: fixed !important;\n    cursor: pointer;\n}\n\n.banner-hide {\n    display: none;\n}\n\n.banner-scroller {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n}\n\n.loginWhite {\n    z-index: 10040;\n    width: 320px;\n    min-height: 381px;\n    cursor: default;\n    position: relative;\n    top: 100px;\n    margin: 0 auto 100px;\n    border-radius: 3px;\n    background: #fff;\n    transition: transform 0.6s;\n    transition-property: transform;\n    transition-duration: 0.6s;\n    transition-timing-function: initial;\n    transition-delay: initial;\n}\n\n.btnsLogin {\n    display: block;\n    height: 50px;\n    width: 100%;\n    border-radius: 4px;\n    font: 100 15px/18px \"MuseoSansCyrl-100\";\n    color: #fff;\n    cursor: pointer;\n    margin-top: 10px;\n}\n\n.btnLoginVk,\n.btnLoginFb {\n    margin-bottom: 10px;\n    padding-left: 54px;\n    position: relative;\n    text-align: left;\n}\n\n.btnLoginVk {\n    background: url(/../img/vkontakte.svg) 19px 50%/15px no-repeat #356ca1;\n}\n\n\n.btnLoginFb {\n    background: url(/../img/facebook.svg) 22px 50%/10px no-repeat #475e97;\n}\n\n.btnLightBlue {\n    background-color: #4baeec;\n}\n\n.btn-email, .btn-sms {\n    display: inline-block;\n    width: 135px !important;\n    margin-top: 0;\n}\n.btn-email{\n    float: left;\n}\n.btn-sms {\n    margin-left: 10px;\n}\n\n.btn-sms small{\n    pointer-events: none;\n    font: 100 13px/15px \"MuseoSansCyrl-100\";\n    opacity: 0.6;\n}\n\n.btnStriper{\n    border-top: 1px solid #e6e6e6;\n    margin: 20px auto;\n}\n\n.loginMain .loginTitle {\n    font: 300 20px/28px \"MuseoSansCyrl-300\";\n    color: #080808;\n    padding: 30px 0 5px;\n    text-align: center;\n}\n\n.loginMain .loginBtns-content {\n    padding: 25px 20px 20px;\n}\n\n.loginMain .loginMain-links,\n.loginMain-links a{\n    text-align: center;\n    font: 100 11px/1.1 \"MuseoSansCyrl-100\",Arial,sans-serif;\n    color: #ccc;\n}\n\n.loginMain .loginMain-links {\n    margin-top: 20px;\n}\n\n.loginMain .loginMain-links a {\n    color: #ccc !important;\n    text-decoration: underline !important;\n}\n\n.loginHeader {\n    position: relative;\n    height: 39px;\n    padding-top: 21px;\n    font: 100 18px \"MuseoSansCyrl-100\";\n    text-align: center;\n    background-color: #f1f1f1;\n    color: #4d4d4d;\n}\n\n.loginHeader-back {\n    background: url(/../img/back.svg) 20px 50% no-repeat;\n    position: absolute;\n    cursor: pointer;\n    width: 65px;\n    height: 100%;\n    top: 0;\n    left: 0;\n}\n\n.loginForm {\n    margin: .75em 0 1em;\n}\n\n.loginForm input[type=\"password\"] {\n    margin-bottom: 20px;\n}\n\ninput.loginInput {\n    display: block;\n    width: 100%;\n    height: 50px;\n    padding: 0 15px;\n    margin-bottom: 10px;\n    box-sizing: border-box;\n    box-shadow: inset 0 0 0 1px #f1f1f1;\n    color: #7c7c7c;\n    font: 100 15px/17px \"MuseoSansCyrl-100\";\n    -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\n\n.loginEmail-content {\n    padding: 20px 20px 25px;\n    text-align: center;\n}\n\n.loginEmail-forgot {\n    display: inline-block;\n    margin-top: 20px;\n    color: #7c7c7c;\n    font: 100 15px/1.2 \"MuseoSansCyrl-100\";\n    text-align: center;\n}\n\n.loginSms-content,\n.emailPasForgot-content {\n    padding: 20px 20px 120px;\n}\n\n@keyframes popup {\n    from {\n        margin-left: 285px;\n    }\n    to {\n        margin-left: 293px;\n    }\n}\n\n@-webkit-keyframes popup {\n    from {\n        margin-left: 287px;\n    }\n    to {\n        margin-left: 293px;\n    }\n}\n\n.loginSms-note{\n    position: relative;\n    width: 160px;\n    height: 90px;\n    padding: 20px;\n    margin: -130px 0 0 293px;\n    top: -20px;\n    color: #fff;\n    background-color: #717578;\n    animation: popup .2s;\n    font: 100 15px/1.2 \"MuseoSansCyrl-100\";\n    text-align: left;\n}\n\n.loginSms-note:after {\n    position: absolute;\n    width: 12px;\n    height: 12px;\n    top: 58px;\n    left: -5px;\n    content: '';\n    background-color: #717578;\n    transform: rotate(45deg);\n    border-radius: 2px;\n}\n\n", ""]);
+	exports.push([module.id, "@font-face {\n    font-family: \"MuseoSansCyrl-300\";\n    src: url(/../fonts/MuseoSansCyrl-300.otf);\n    font-weight: 300;\n    font-style: normal;\n}\n\n@font-face {\n    font-family: \"MuseoSansCyrl-100\";\n    src: url(/../fonts/MuseoSansCyrl-100.otf);\n    font-weight: 100;\n    font-style: normal;\n}\n\n* {\n    padding: 0;\n    margin: 0;\n}\n\nbutton,\ninput {\n    outline: none;\n    border:none;\n}\n\ninput:focus,\nbutton:focus{\n    outline: none;\n}\n\nbody,\n#content{\n    background: -webkit-linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%);\n    background: -moz-linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%);\n}\n\na {\n    display: inline-block;\n}\n\na:hover,\ninput[type=\"submit\"],\ndiv.loginEmail-forgot {\n    cursor: pointer;\n}\n\np,\n.pageTitle {\n    color: #fff;\n    text-align: center;\n}\n\n.mainPage {\n    width:100%;\n    height: 100%;\n}\n\n.pageTitle,\n.row-3 p:nth-child(2),\n.row-4 .column p:nth-child(2),\n.column-2 .form-phone-email input{\n    font-family: \"MuseoSansCyrl-300\";\n}\n\n.install p,\n.get-phone-email p,\n.row-2 .column-2 p:nth-child(2),\n.row-3 p:nth-child(3),\n.row-4 .column p:nth-child(3),\n.btnsLogin {\n    font-family: \"MuseoSansCyrl-100\";\n}\n\n.main-container-wrapper,\n.footer .installBox{\n    width: 1024px;\n    margin: 0 auto;\n    height: 100%;\n}\n\n.row-1-logos a {\n    margin: 26px 42px 40px 23px;\n}\n\n.row-1-logos a:first-child {\n    width: 207px;\n    height: 53px;\n}\n\n.row-1-logos a:last-child {\n    width: 191.63px;\n    height: 54.21px;\n}\n\n.pageTitle {\n    font-size: 37px;\n    line-height: 47px;\n    letter-spacing: 0.8px;\n}\n\n.singIn:hover {\n    color: deeppink;\n    opacity: .9;\n    border-radius: 4px;\n}\n\n.singIn {\n    display: inline;\n    cursor: pointer;\n}\n\n.row-2 {\n    margin: 61px 73px 0 35px;\n}\n\n.column {\n    display: inline-block;\n}\n\n.row-2 .column-1 img:first-child{\n    margin-right: 15px;\n}\n\n.row-2 .column-2 {\n    margin: 25px 39px 12px 78px;\n}\n\n.row-2 .column-2,\n.row-2 .column-2 p {\n    width: 310px;\n}\n\n.row-2 .column-2 > p:first-child,\n.form-phone-email input[type=\"submit\"] {\n    text-transform: uppercase;\n}\n\n.row-2 .column-2 > p:first-child {\n    font-size: 22.4px;\n    line-height: 29.6px;\n    margin-bottom: 15.8px;\n    font-family: \"MuseoSansCyrl-300\";\n}\n\n.row-2 .column-2 p:nth-child(2) {\n    font-size: 21.28px;\n    line-height: 23.52px;\n    letter-spacing: 0.2px;\n}\n\n.row-2 .column-2 > p {\n    text-align: left !important;\n}\n\n.column-2 .install p,\n.column-2 .get-phone-email p{\n    font-size: 13px;\n    line-height: 16px;\n    letter-spacing: 0.52px;\n}\n\n.column-2 .install p{\n    margin: 42px 0 12px;\n}\n\n.column-2 .get-phone-email p{\n    margin: 29px 0 11px;\n}\n\n.form-phone-email input[type=\"text\"]{\n    height: 26px;\n    padding: 14px 25px 14px 15px;\n    border-radius: 6px;\n    background-color: transparent;\n}\n\n.form-phone-email input[type=\"submit\"]{\n    margin-right: 20px;\n}\n\n.column-2 .form-phone-email input[type=\"text\"] {\n    font-size: 16px;\n    line-height: 18px;\n}\n\n.column-2 .form-phone-email input[type=\"submit\"]{\n    font-size: 12px;\n    line-height: 15px;\n    border-left: 1px solid #808080;\n    height: 22px;\n}\n\n.row-3 {\n    margin-top: 120px;\n    text-align: center;\n}\n\n.row-3 a img {\n    margin-bottom: 30px;\n}\n\n.row-3 p:nth-child(2) {\n    font-size: 48px;\n    line-height: 57px;\n    margin-bottom: 5px;\n}\n\n.row-3 p:nth-child(3) {\n    font-size: 27px;\n    line-height: 47px;\n    margin-bottom: 38px;\n}\n\n.row-1-logos,\n.row-4,\n.row-2,\n.footer .installBox,\n.install .btns-wrapper,\n.form-phone-email {\n    display: flex;\n    flex-wrap: nowrap;\n    justify-content: space-around;\n    align-items: flex-start;\n}\n\n.row-1-logos{\n    justify-content: center;\n    align-items: center;\n}\n\n.row-2{\n    align-items: flex-end;\n}\n\n.row-4 {\n    padding: 0 33px;\n    margin-bottom: 105px;\n}\n\n.row-4 .column {\n    width: 220px;\n    text-align: center;\n}\n\n.row-4 .column .icon-wrapper {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 102px;\n    height: 102px;\n    margin: 0 auto;\n}\n\n.row-4 .column img:nth-child(1) {\n    max-width: 90.13px;\n    max-height: 91px;\n}\n\n.row-4 .column img:nth-child(2) {\n    max-width: 36.2px;\n    max-height: 72.44px;\n}\n\n.row-4 .column img:nth-child(3) {\n    max-width: 51.76px;\n    max-height: 55.17px;\n}\n\n.row-4 .column img:nth-child(4) {\n    max-width: 51px;\n    max-height: 47.81px;\n}\n\n.row-4 .column p:nth-child(2){\n    font-size: 23px;\n    line-height: 25px;\n    letter-spacing: 0.92px;\n    margin: 37px 0 21px;\n}\n\n.row-4 .column p:nth-child(3){\n    font-size: 13px;\n    line-height: 22px;\n    letter-spacing: 0.52px;\n    width: 225px;\n}\n\n.footer .installBox {\n    padding-bottom: 56px;\n}\n\n.footer .installBox p {\n    margin-bottom: 35px;\n}\n\n.footer .get-phone-email,\n.footer .install {\n    margin-top: 51px;\n    width: 380px;\n}\n\n.install .btn-app-store {\n    background: url(/../img/app-store.svg) no-repeat !important;\n}\n\n.install .btn-google-play {\n    background: url(/../img/google-play.svg) no-repeat !important;\n}\n\n.install .btn-app-store,\n.install .btn-google-play {\n    background: #000 center;\n    background-size: cover;\n}\n\n.install .btn-app-store,\n.install .btn-google-play,\n.form-phone-email {\n    border-radius: 6px;\n}\n\n.install .btn-google-play {\n    margin-left: -3px;\n}\n\n.column-2 .install .btn-app-store,\n.column-2 .install .btn-app-store a{\n    width: 142px;\n    height: 44px;\n    margin-right: -7px;\n}\n\n.column-2 .install .btn-google-play,\n.column-2 .install .btn-google-play a {\n    width: 137.48px;\n    height: 42.33px;\n}\n\n.footer {\n    border-top: 1px solid #fff;\n    width:100%;\n}\n\n.footer .install {\n    margin-right: 93px;\n}\n\n.footer .install .btn-app-store,\n.footer .install .btn-app-store a {\n    width: 181px;\n    height: 53px;\n    margin-right: 24.3px;\n}\n\n.footer .install .btn-google-play,\n.footer .install .btn-google-play a {\n    width: 174.74px;\n    height: 51.33px;\n}\n\n.footer .form-phone-email {\n    margin-left: 5px;\n}\n\n.form-phone-email,\n.form-phone-email input {\n    background-color: #fff;\n}\n\n.form-phone-email {\n    margin: 0 auto;\n}\n\n.row-2 .form-phone-email{\n    width: 304px;\n    height: 48px;\n}\n\n.footer .form-phone-email{\n    width: 380px;\n    height: 51px;\n}\n\n.form-phone-email {\n    justify-content: space-between;\n}\n\n.form-phone-email,\n.btns-wrapper{\n    align-items: center;\n}\n\n.form-phone-email input{\n    border: none;\n    text-align: left;\n    padding-left: 15px;\n    color: #808080;\n}\n\n.footer .form-phone-email input[type=\"text\"] {\n    font-size: 20px;\n    line-height: 23px;\n    height: 23px;\n}\n\n.footer .form-phone-email input[type=\"submit\"]{\n    font-size: 15px;\n    line-height: 18px;\n    border-left: 2px solid #808080;\n    height: 27px;\n}\n\n", ""]);
 
 	// exports
 
@@ -22124,13 +22118,15 @@
 	});
 	exports.Banner = undefined;
 
-	var _loginMain = __webpack_require__(182);
+	__webpack_require__(182);
 
-	var _loginEmail = __webpack_require__(184);
+	var _loginMain = __webpack_require__(184);
 
-	var _loginSms = __webpack_require__(187);
+	var _loginEmail = __webpack_require__(186);
 
-	var _emailPasForgot = __webpack_require__(188);
+	var _loginSms = __webpack_require__(189);
+
+	var _emailPasForgot = __webpack_require__(190);
 
 	var Banner = exports.Banner = React.createClass({
 	    displayName: 'Banner',
@@ -22157,7 +22153,7 @@
 
 	        return React.createElement(
 	            'div',
-	            { className: this.props.className },
+	            { className: 'banner-show' },
 	            React.createElement(
 	                'div',
 	                { className: 'banner-gray' },
@@ -22181,6 +22177,46 @@
 /* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(183);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./banner.css", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./banner.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 183 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "button.btnsLogin:hover {\n    opacity: .9;\n}\n\n.banner-gray{\n    overflow: auto;\n    -webkit-overflow-scrolling: touch;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: absolute !important;\n    background-color: rgba(0,0,0,0.5);\n}\n\n.banner-show {\n    z-index: 1001;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: fixed !important;\n}\n\n.banner-pointer{\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: fixed !important;\n    cursor: pointer;\n}\n\n.banner-scroller {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n}\n\n.loginWhite {\n    z-index: 10040;\n    width: 320px;\n    min-height: 381px;\n    cursor: default;\n    position: relative;\n    top: 100px;\n    margin: 0 auto 100px;\n    border-radius: 3px;\n    background: #fff;\n    transition: transform 0.6s;\n    transition-property: transform;\n    transition-duration: 0.6s;\n    transition-timing-function: initial;\n    transition-delay: initial;\n}\n\n.btnsLogin {\n    display: block;\n    height: 50px;\n    width: 100%;\n    border-radius: 4px;\n    font: 100 15px/18px \"MuseoSansCyrl-100\";\n    color: #fff;\n    cursor: pointer;\n    margin-top: 10px;\n}\n\n.btnLoginVk,\n.btnLoginFb {\n    margin-bottom: 10px;\n    padding-left: 54px;\n    position: relative;\n    text-align: left;\n}\n\n.btnLoginVk {\n    background: url(/../img/vkontakte.svg) 19px 50%/15px no-repeat #356ca1;\n}\n\n\n.btnLoginFb {\n    background: url(/../img/facebook.svg) 22px 50%/10px no-repeat #475e97;\n}\n\n.btnLightBlue {\n    background-color: #4baeec;\n}\n\n.btn-email, .btn-sms {\n    display: inline-block;\n    width: 135px !important;\n    margin-top: 0;\n}\n.btn-email{\n    float: left;\n}\n.btn-sms {\n    margin-left: 10px;\n}\n\n.btn-sms small{\n    pointer-events: none;\n    font: 100 13px/15px \"MuseoSansCyrl-100\";\n    opacity: 0.6;\n}\n\n.btnStriper{\n    border-top: 1px solid #e6e6e6;\n    margin: 20px auto;\n}\n\n.loginMain .loginTitle {\n    font: 300 20px/28px \"MuseoSansCyrl-300\";\n    color: #080808;\n    padding: 30px 0 5px;\n    text-align: center;\n}\n\n.loginMain .loginBtns-content {\n    padding: 25px 20px 20px;\n}\n\n.loginMain .loginMain-links,\n.loginMain-links a{\n    text-align: center;\n    font: 100 11px/1.1 \"MuseoSansCyrl-100\",Arial,sans-serif;\n    color: #ccc;\n}\n\n.loginMain .loginMain-links {\n    margin-top: 20px;\n}\n\n.loginMain .loginMain-links a {\n    color: #ccc !important;\n    text-decoration: underline !important;\n}\n\n.loginHeader {\n    position: relative;\n    height: 39px;\n    padding-top: 21px;\n    font: 100 18px \"MuseoSansCyrl-100\";\n    text-align: center;\n    background-color: #f1f1f1;\n    color: #4d4d4d;\n}\n\n.loginHeader-back {\n    background: url(/../img/back.svg) 20px 50% no-repeat;\n    position: absolute;\n    cursor: pointer;\n    width: 65px;\n    height: 100%;\n    top: 0;\n    left: 0;\n}\n\n.loginForm {\n    margin: .75em 0 1em;\n}\n\n.loginForm input[type=\"password\"] {\n    margin-bottom: 20px;\n}\n\ninput.loginInput {\n    display: block;\n    width: 100%;\n    height: 50px;\n    padding: 0 15px;\n    margin-bottom: 10px;\n    box-sizing: border-box;\n    box-shadow: inset 0 0 0 1px #f1f1f1;\n    color: #7c7c7c;\n    font: 100 15px/17px \"MuseoSansCyrl-100\";\n    -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\n\n.loginEmail-content {\n    padding: 20px 20px 25px;\n    text-align: center;\n}\n\n.loginEmail-forgot {\n    display: inline-block;\n    margin-top: 20px;\n    color: #7c7c7c;\n    font: 100 15px/1.2 \"MuseoSansCyrl-100\";\n    text-align: center;\n}\n\n.loginSms-content,\n.emailPasForgot-content {\n    padding: 20px 20px 120px;\n}\n\n@keyframes popup {\n    from {\n        margin-left: 285px;\n    }\n    to {\n        margin-left: 293px;\n    }\n}\n\n@-webkit-keyframes popup {\n    from {\n        margin-left: 287px;\n    }\n    to {\n        margin-left: 293px;\n    }\n}\n\n.loginSms-note{\n    position: relative;\n    width: 160px;\n    height: 90px;\n    padding: 20px;\n    margin: -130px 0 0 293px;\n    top: -20px;\n    color: #fff;\n    background-color: #717578;\n    animation: popup .2s;\n    font: 100 15px/1.2 \"MuseoSansCyrl-100\";\n    text-align: left;\n}\n\n.loginSms-note:after {\n    position: absolute;\n    width: 12px;\n    height: 12px;\n    top: 58px;\n    left: -5px;\n    content: '';\n    background-color: #717578;\n    transform: rotate(45deg);\n    border-radius: 2px;\n}", ""]);
+
+	// exports
+
+
+/***/ },
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -22188,7 +22224,7 @@
 	});
 	exports.LoginMain = undefined;
 
-	var _loginBtn = __webpack_require__(183);
+	var _loginBtn = __webpack_require__(185);
 
 	var LoginMain = exports.LoginMain = React.createClass({
 	    displayName: 'LoginMain',
@@ -22286,7 +22322,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 183 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22309,11 +22345,11 @@
 	        };
 	    },
 
-	    handleClickVk: function handleClickVk() {
+	    vkClickHandler: function vkClickHandler() {
 	        window.open("https://oauth.vk.com/authorize?client_id=3715258&scope=friends,audio,offline,email&response_type=code&redirect_uri=http://zvooq.com/external_systems/vkontakte/oauth_callback", "about:blank", "VK | Login").resizeTo(this.windowWidth, this.windowHeight);
 	    },
 
-	    handleClickFb: function handleClickFb() {
+	    fbClickHandler: function fbClickHandler() {
 	        window.open("https://www.facebook.com/login.php?skip_api_login=1&api_key=111609062204510&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv2.3%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Fzvooq.com%252Fexternal_systems%252Ffacebook%252Foauth_callback%252FXYHeN488zNVARKNXJLOCjJ4Zsoc.eyJtZXRhIjogeyJyYW5kb20iOiAiMmU1Yzc4Y2Q1NWQ5ZWM3YyIsICJleHBpcmVzIjogMTQ3NzQwMDgyNH0sICJkYXRhIjogeyJjbWQiOiAibG9naW4ifX0%252F%26display%3Dpopup%26scope%3Demail%252Cpublic_profile%252Cpublish_actions%252Cuser_birthday%252Cuser_friends%252Cuser_location%252Cuser_likes%26client_id%3D111609062204510%26ret%3Dlogin%26logger_id%3Da5238a98-98ee-4160-a714-4fe99476c621&cancel_url=http%3A%2F%2Fzvooq.com%2Fexternal_systems%2Ffacebook%2Foauth_callback%2FXYHeN488zNVARKNXJLOCjJ4Zsoc.eyJtZXRhIjogeyJyYW5kb20iOiAiMmU1Yzc4Y2Q1NWQ5ZWM3YyIsICJleHBpcmVzIjogMTQ3NzQwMDgyNH0sICJkYXRhIjogeyJjbWQiOiAibG9naW4ifX0%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=popup&locale=en_GB&logger_id=a5238a98-98ee-4160-a714-4fe99476c621", "about:blank", "Facebook").resizeTo(this.windowWidth, this.windowHeight);
 	    },
 
@@ -22321,9 +22357,10 @@
 
 	        // var test = this.props.text || this.state.text[this.props.type];
 	        var onClickBtn;
+
 	        if (this.props.typebtn === 0) {
-	            onClickBtn = this.handleClickVk;
-	        } else if (this.props.typebtn === 1) onClickBtn = this.handleClickFb;else onClickBtn = this.props.onClick;
+	            onClickBtn = this.vkClickHandler;
+	        } else if (this.props.typebtn === 1) onClickBtn = this.fbClickHandler;else onClickBtn = this.props.onClick;
 
 	        return React.createElement('button', {
 	            className: "btnsLogin " + this.props.classNames[this.props.typebtn],
@@ -22344,7 +22381,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 184 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22354,9 +22391,9 @@
 	});
 	exports.LoginEmail = undefined;
 
-	var _loginForm = __webpack_require__(185);
+	var _loginForm = __webpack_require__(187);
 
-	var _loginHeader = __webpack_require__(186);
+	var _loginHeader = __webpack_require__(188);
 
 	var inputs = [{
 	    className: "loginInput",
@@ -22405,7 +22442,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 185 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
@@ -22415,7 +22452,7 @@
 	});
 	exports.LoginForm = undefined;
 
-	var _loginBtn = __webpack_require__(183);
+	var _loginBtn = __webpack_require__(185);
 
 	var LoginForm = exports.LoginForm = React.createClass({
 	    displayName: "LoginForm",
@@ -22446,7 +22483,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 186 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
@@ -22476,7 +22513,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 187 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22486,9 +22523,9 @@
 	});
 	exports.LoginSms = undefined;
 
-	var _loginForm = __webpack_require__(185);
+	var _loginForm = __webpack_require__(187);
 
-	var _loginHeader = __webpack_require__(186);
+	var _loginHeader = __webpack_require__(188);
 
 	var inputs = [{
 	    className: "loginInput",
@@ -22535,7 +22572,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 188 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22545,9 +22582,9 @@
 	});
 	exports.EmailPasForgot = undefined;
 
-	var _loginForm = __webpack_require__(185);
+	var _loginForm = __webpack_require__(187);
 
-	var _loginHeader = __webpack_require__(186);
+	var _loginHeader = __webpack_require__(188);
 
 	var inputs = [{
 	    className: "loginInput",
