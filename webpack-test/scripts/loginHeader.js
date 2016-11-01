@@ -1,3 +1,5 @@
+import './../stylus/loginHeader.styl';
+
 export var LoginHeader = React.createClass({
     getDefaultProps: function () {
         return {

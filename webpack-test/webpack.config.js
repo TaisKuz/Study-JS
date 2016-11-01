@@ -13,8 +13,12 @@ module.exports = {
         loaders: [
             { test: /\.css$/, exclude: /\.useable\.css$/, loader: "style!css" },
             { test: /\.useable\.css$/, loader: "style/useable!css" },
-            { test: /\.js$/, exclude: /node_modules/, loader: 'babel', query: { presets: [ 'es2015', 'react' ] } }
-        ]
+            { test: /\.js$/, exclude: /node_modules/, loader: 'babel', query: { presets: [ 'es2015', 'react' ] } },
+            { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' }
+        ],
+        resolve: {
+            extensions: ['', '.js', '.styl']
+        }
     },
     plugins: [
         new webpack.ProvidePlugin({

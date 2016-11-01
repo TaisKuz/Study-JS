@@ -1,3 +1,5 @@
+import './../stylus/loginForm.styl';
+
 import { LoginBtn } from './loginBtn.js';
 
 export var LoginForm = React.createClass({

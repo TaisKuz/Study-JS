@@ -1,4 +1,6 @@
-import './../css/banner.css';
+import './../css/banner.css'; //comment it later
+
+import './../stylus/banner.styl';
 
 import { LoginMain } from './loginMain.js';
 import { LoginEmail } from './loginEmail.js';

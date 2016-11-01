@@ -48,11 +48,19 @@
 
 	__webpack_require__(172);
 
-	var _installBox = __webpack_require__(176);
+	__webpack_require__(176);
 
-	var _columnBox = __webpack_require__(179);
+	__webpack_require__(178);
 
-	var _banner = __webpack_require__(181);
+	__webpack_require__(180);
+
+	__webpack_require__(182);
+
+	var _installBox = __webpack_require__(184);
+
+	var _columnBox = __webpack_require__(193);
+
+	var _banner = __webpack_require__(199);
 
 	var btns = [{
 	    className: ' btn-app-store',
@@ -60,7 +68,7 @@
 	}, {
 	    className: ' btn-google-play',
 	    href: 'https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en'
-	}];
+	}]; //comment it later
 
 	var columns = [{
 	    src: '/img/icon-cherry.svg',
@@ -101,13 +109,13 @@
 	    render: function render() {
 	        return React.createElement(
 	            'div',
-	            { className: 'mainPage' },
+	            { className: 'mainPage  main' },
 	            React.createElement(
 	                'div',
-	                { className: 'main-container-wrapper' },
+	                { className: 'main-container-wrapper  main-containerWrapper' },
 	                React.createElement(
 	                    'div',
-	                    { className: 'row-1-logos' },
+	                    { className: 'row-1-logos  main-row-1' },
 	                    React.createElement(
 	                        'a',
 	                        { href: 'http://zvooq.com', target: '_blank' },
@@ -125,12 +133,12 @@
 	                ),
 	                React.createElement(
 	                    'div',
-	                    { className: 'pageTitle' },
+	                    { className: 'pageTitle  main-pageTitle' },
 	                    '\u0427\u0442\u043E\u0431\u044B \u043F\u043E\u043F\u0440\u043E\u0431\u043E\u0432\u0430\u0442\u044C \u043D\u043E\u0432\u044B\u0435 \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u0438,',
 	                    React.createElement('br', null),
 	                    React.createElement(
 	                        'div',
-	                        { className: 'singIn',
+	                        { className: 'singIn  main-singIn',
 	                            onClick: this.bannerHandler },
 	                        '\u0432\u043E\u0439\u0434\u0438\u0442\u0435 '
 	                    ),
@@ -138,16 +146,16 @@
 	                ),
 	                React.createElement(
 	                    'div',
-	                    { className: 'row-2' },
+	                    { className: 'row-2  main-row-2' },
 	                    React.createElement(
 	                        'div',
-	                        { className: 'column column-1' },
+	                        { className: 'column column-1  main-column main-column-1' },
 	                        React.createElement('img', { src: '/img/iphone-white.png', alt: 'iphone-white' }),
 	                        React.createElement('img', { src: '/img/iphone-black.png', alt: 'iphone-black' })
 	                    ),
 	                    React.createElement(
 	                        'div',
-	                        { className: 'column column-2' },
+	                        { className: 'column column-2  main-column main-column-2' },
 	                        React.createElement(
 	                            'p',
 	                            null,
@@ -163,7 +171,7 @@
 	                ),
 	                React.createElement(
 	                    'div',
-	                    { className: 'row-3' },
+	                    { className: 'row-3  main-row-3' },
 	                    React.createElement(
 	                        'a',
 	                        { href: 'http://zvooq.com', target: '_blank' },
@@ -186,7 +194,7 @@
 	            ),
 	            React.createElement(
 	                'div',
-	                { className: 'footer' },
+	                { className: 'footer  main-footer' },
 	                React.createElement(_installBox.InstallBox, { btns: btns })
 	            ),
 	            this.state.showBanner && React.createElement(_banner.Banner, { onClickClose: this.bannerHandler })
@@ -194,7 +202,7 @@
 	    }
 	});
 
-	ReactDOM.render(React.createElement(MainPage, null), document.getElementById('content'));
+	ReactDOM.render(React.createElement(MainPage, null), document.getElementById('page-content'));
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(34)))
 
 /***/ },
@@ -21599,7 +21607,7 @@
 
 
 	// module
-	exports.push([module.id, "@font-face {\n    font-family: \"MuseoSansCyrl-300\";\n    src: url(/../fonts/MuseoSansCyrl-300.otf);\n    font-weight: 300;\n    font-style: normal;\n}\n\n@font-face {\n    font-family: \"MuseoSansCyrl-100\";\n    src: url(/../fonts/MuseoSansCyrl-100.otf);\n    font-weight: 100;\n    font-style: normal;\n}\n\n* {\n    padding: 0;\n    margin: 0;\n}\n\nbutton,\ninput {\n    outline: none;\n    border:none;\n}\n\ninput:focus,\nbutton:focus{\n    outline: none;\n}\n\nbody,\n#content{\n    background: -webkit-linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%);\n    background: -moz-linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%);\n}\n\na {\n    display: inline-block;\n}\n\na:hover,\ninput[type=\"submit\"],\ndiv.loginEmail-forgot {\n    cursor: pointer;\n}\n\np,\n.pageTitle {\n    color: #fff;\n    text-align: center;\n}\n\n.mainPage {\n    width:100%;\n    height: 100%;\n}\n\n.pageTitle,\n.row-3 p:nth-child(2),\n.row-4 .column p:nth-child(2),\n.column-2 .form-phone-email input{\n    font-family: \"MuseoSansCyrl-300\";\n}\n\n.install p,\n.get-phone-email p,\n.row-2 .column-2 p:nth-child(2),\n.row-3 p:nth-child(3),\n.row-4 .column p:nth-child(3),\n.btnsLogin {\n    font-family: \"MuseoSansCyrl-100\";\n}\n\n.main-container-wrapper,\n.footer .installBox{\n    width: 1024px;\n    margin: 0 auto;\n    height: 100%;\n}\n\n.row-1-logos a {\n    margin: 26px 42px 40px 23px;\n}\n\n.row-1-logos a:first-child {\n    width: 207px;\n    height: 53px;\n}\n\n.row-1-logos a:last-child {\n    width: 191.63px;\n    height: 54.21px;\n}\n\n.pageTitle {\n    font-size: 37px;\n    line-height: 47px;\n    letter-spacing: 0.8px;\n}\n\n.singIn:hover {\n    color: deeppink;\n    opacity: .9;\n    border-radius: 4px;\n}\n\n.singIn {\n    display: inline;\n    cursor: pointer;\n}\n\n.row-2 {\n    margin: 61px 73px 0 35px;\n}\n\n.column {\n    display: inline-block;\n}\n\n.row-2 .column-1 img:first-child{\n    margin-right: 15px;\n}\n\n.row-2 .column-2 {\n    margin: 25px 39px 12px 78px;\n}\n\n.row-2 .column-2,\n.row-2 .column-2 p {\n    width: 310px;\n}\n\n.row-2 .column-2 > p:first-child,\n.form-phone-email input[type=\"submit\"] {\n    text-transform: uppercase;\n}\n\n.row-2 .column-2 > p:first-child {\n    font-size: 22.4px;\n    line-height: 29.6px;\n    margin-bottom: 15.8px;\n    font-family: \"MuseoSansCyrl-300\";\n}\n\n.row-2 .column-2 p:nth-child(2) {\n    font-size: 21.28px;\n    line-height: 23.52px;\n    letter-spacing: 0.2px;\n}\n\n.row-2 .column-2 > p {\n    text-align: left !important;\n}\n\n.column-2 .install p,\n.column-2 .get-phone-email p{\n    font-size: 13px;\n    line-height: 16px;\n    letter-spacing: 0.52px;\n}\n\n.column-2 .install p{\n    margin: 42px 0 12px;\n}\n\n.column-2 .get-phone-email p{\n    margin: 29px 0 11px;\n}\n\n.form-phone-email input[type=\"text\"]{\n    height: 26px;\n    padding: 14px 25px 14px 15px;\n    border-radius: 6px;\n    background-color: transparent;\n}\n\n.form-phone-email input[type=\"submit\"]{\n    margin-right: 20px;\n}\n\n.column-2 .form-phone-email input[type=\"text\"] {\n    font-size: 16px;\n    line-height: 18px;\n}\n\n.column-2 .form-phone-email input[type=\"submit\"]{\n    font-size: 12px;\n    line-height: 15px;\n    border-left: 1px solid #808080;\n    height: 22px;\n}\n\n.row-3 {\n    margin-top: 120px;\n    text-align: center;\n}\n\n.row-3 a img {\n    margin-bottom: 30px;\n}\n\n.row-3 p:nth-child(2) {\n    font-size: 48px;\n    line-height: 57px;\n    margin-bottom: 5px;\n}\n\n.row-3 p:nth-child(3) {\n    font-size: 27px;\n    line-height: 47px;\n    margin-bottom: 38px;\n}\n\n.row-1-logos,\n.row-4,\n.row-2,\n.footer .installBox,\n.install .btns-wrapper,\n.form-phone-email {\n    display: flex;\n    flex-wrap: nowrap;\n    justify-content: space-around;\n    align-items: flex-start;\n}\n\n.row-1-logos{\n    justify-content: center;\n    align-items: center;\n}\n\n.row-2{\n    align-items: flex-end;\n}\n\n.row-4 {\n    padding: 0 33px;\n    margin-bottom: 105px;\n}\n\n.row-4 .column {\n    width: 220px;\n    text-align: center;\n}\n\n.row-4 .column .icon-wrapper {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 102px;\n    height: 102px;\n    margin: 0 auto;\n}\n\n.row-4 .column img:nth-child(1) {\n    max-width: 90.13px;\n    max-height: 91px;\n}\n\n.row-4 .column img:nth-child(2) {\n    max-width: 36.2px;\n    max-height: 72.44px;\n}\n\n.row-4 .column img:nth-child(3) {\n    max-width: 51.76px;\n    max-height: 55.17px;\n}\n\n.row-4 .column img:nth-child(4) {\n    max-width: 51px;\n    max-height: 47.81px;\n}\n\n.row-4 .column p:nth-child(2){\n    font-size: 23px;\n    line-height: 25px;\n    letter-spacing: 0.92px;\n    margin: 37px 0 21px;\n}\n\n.row-4 .column p:nth-child(3){\n    font-size: 13px;\n    line-height: 22px;\n    letter-spacing: 0.52px;\n    width: 225px;\n}\n\n.footer .installBox {\n    padding-bottom: 56px;\n}\n\n.footer .installBox p {\n    margin-bottom: 35px;\n}\n\n.footer .get-phone-email,\n.footer .install {\n    margin-top: 51px;\n    width: 380px;\n}\n\n.install .btn-app-store {\n    background: url(/../img/app-store.svg) no-repeat !important;\n}\n\n.install .btn-google-play {\n    background: url(/../img/google-play.svg) no-repeat !important;\n}\n\n.install .btn-app-store,\n.install .btn-google-play {\n    background: #000 center;\n    background-size: cover;\n}\n\n.install .btn-app-store,\n.install .btn-google-play,\n.form-phone-email {\n    border-radius: 6px;\n}\n\n.install .btn-google-play {\n    margin-left: -3px;\n}\n\n.column-2 .install .btn-app-store,\n.column-2 .install .btn-app-store a{\n    width: 142px;\n    height: 44px;\n    margin-right: -7px;\n}\n\n.column-2 .install .btn-google-play,\n.column-2 .install .btn-google-play a {\n    width: 137.48px;\n    height: 42.33px;\n}\n\n.footer {\n    border-top: 1px solid #fff;\n    width:100%;\n}\n\n.footer .install {\n    margin-right: 93px;\n}\n\n.footer .install .btn-app-store,\n.footer .install .btn-app-store a {\n    width: 181px;\n    height: 53px;\n    margin-right: 24.3px;\n}\n\n.footer .install .btn-google-play,\n.footer .install .btn-google-play a {\n    width: 174.74px;\n    height: 51.33px;\n}\n\n.footer .form-phone-email {\n    margin-left: 5px;\n}\n\n.form-phone-email,\n.form-phone-email input {\n    background-color: #fff;\n}\n\n.form-phone-email {\n    margin: 0 auto;\n}\n\n.row-2 .form-phone-email{\n    width: 304px;\n    height: 48px;\n}\n\n.footer .form-phone-email{\n    width: 380px;\n    height: 51px;\n}\n\n.form-phone-email {\n    justify-content: space-between;\n}\n\n.form-phone-email,\n.btns-wrapper{\n    align-items: center;\n}\n\n.form-phone-email input{\n    border: none;\n    text-align: left;\n    padding-left: 15px;\n    color: #808080;\n}\n\n.footer .form-phone-email input[type=\"text\"] {\n    font-size: 20px;\n    line-height: 23px;\n    height: 23px;\n}\n\n.footer .form-phone-email input[type=\"submit\"]{\n    font-size: 15px;\n    line-height: 18px;\n    border-left: 2px solid #808080;\n    height: 27px;\n}\n\n", ""]);
+	exports.push([module.id, "\n\n/* ------------------------------------------  */\n.row-2 .column-2 > p {\n    text-align: left !important;\n}\n\n.column-2 .install p,\n.column-2 .get-phone-email p{\n    font-size: 13px;\n    line-height: 16px;\n    letter-spacing: 0.52px;\n}\n\n.column-2 .install p{\n    margin: 42px 0 12px;\n}\n\n.column-2 .get-phone-email p{\n    margin: 29px 0 11px;\n}\n\n.form-phone-email input[type=\"text\"]{\n    height: 26px;\n    padding: 14px 25px 14px 15px;\n    border-radius: 6px;\n    background-color: transparent;\n}\n\n.form-phone-email input[type=\"submit\"]{\n    margin-right: 20px;\n}\n\n.column-2 .form-phone-email input[type=\"text\"] {\n    font-size: 16px;\n    line-height: 18px;\n}\n\n.column-2 .form-phone-email input[type=\"submit\"]{\n    font-size: 12px;\n    line-height: 15px;\n    border-left: 1px solid #808080;\n    height: 22px;\n}\n\n.row-3 {\n    margin-top: 120px;\n    text-align: center;\n}\n\n.row-3 a img {\n    margin-bottom: 30px;\n}\n\n.row-3 p:nth-child(2) {\n    font-size: 48px;\n    line-height: 57px;\n    margin-bottom: 5px;\n}\n\n.row-3 p:nth-child(3) {\n    font-size: 27px;\n    line-height: 47px;\n    margin-bottom: 38px;\n}\n\n.row-1-logos,\n.row-4,\n.row-2,\n.footer .installBox,\n.install .btns-wrapper,\n.form-phone-email {\n    display: flex;\n    flex-wrap: nowrap;\n    justify-content: space-around;\n    align-items: flex-start;\n}\n\n.row-1-logos{\n    justify-content: center;\n    align-items: center;\n}\n\n.row-2{\n    align-items: flex-end;\n}\n\n.row-4 {\n    padding: 0 33px;\n    margin-bottom: 105px;\n}\n\n.row-4 .column {\n    width: 220px;\n    text-align: center;\n}\n\n.row-4 .column .icon-wrapper {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 102px;\n    height: 102px;\n    margin: 0 auto;\n}\n\n.row-4 .column img:nth-child(1) {\n    max-width: 90.13px;\n    max-height: 91px;\n}\n\n.row-4 .column img:nth-child(2) {\n    max-width: 36.2px;\n    max-height: 72.44px;\n}\n\n.row-4 .column img:nth-child(3) {\n    max-width: 51.76px;\n    max-height: 55.17px;\n}\n\n.row-4 .column img:nth-child(4) {\n    max-width: 51px;\n    max-height: 47.81px;\n}\n\n.row-4 .column p:nth-child(2){\n    font-size: 23px;\n    line-height: 25px;\n    letter-spacing: 0.92px;\n    margin: 37px 0 21px;\n}\n\n.row-4 .column p:nth-child(3){\n    font-size: 13px;\n    line-height: 22px;\n    letter-spacing: 0.52px;\n    width: 225px;\n}\n\n.footer .installBox {\n    padding-bottom: 56px;\n}\n\n.footer .installBox p {\n    margin-bottom: 35px;\n}\n\n.footer .get-phone-email,\n.footer .install {\n    margin-top: 51px;\n    width: 380px;\n}\n\n.install .btn-app-store {\n    background: url(/../img/app-store.svg) no-repeat !important;\n}\n\n.install .btn-google-play {\n    background: url(/../img/google-play.svg) no-repeat !important;\n}\n\n.install .btn-app-store,\n.install .btn-google-play {\n    background: #000 center;\n    background-size: cover;\n}\n\n.install .btn-app-store,\n.install .btn-google-play,\n.form-phone-email {\n    border-radius: 6px;\n}\n\n.install .btn-google-play {\n    margin-left: -3px;\n}\n\n.column-2 .install .btn-app-store,\n.column-2 .install .btn-app-store a{\n    width: 142px;\n    height: 44px;\n    margin-right: -7px;\n}\n\n.column-2 .install .btn-google-play,\n.column-2 .install .btn-google-play a {\n    width: 137.48px;\n    height: 42.33px;\n}\n\n.footer {\n    border-top: 1px solid #fff;\n    width:100%;\n}\n\n.footer .install {\n    margin-right: 93px;\n}\n\n.footer .install .btn-app-store,\n.footer .install .btn-app-store a {\n    width: 181px;\n    height: 53px;\n    margin-right: 24.3px;\n}\n\n.footer .install .btn-google-play,\n.footer .install .btn-google-play a {\n    width: 174.74px;\n    height: 51.33px;\n}\n\n.footer .form-phone-email {\n    margin-left: 5px;\n}\n\n.form-phone-email,\n.form-phone-email input {\n    background-color: #fff;\n}\n\n.form-phone-email {\n    margin: 0 auto;\n}\n\n.row-2 .form-phone-email{\n    width: 304px;\n    height: 48px;\n}\n\n.footer .form-phone-email{\n    width: 380px;\n    height: 51px;\n}\n\n.form-phone-email {\n    justify-content: space-between;\n}\n\n.form-phone-email,\n.btns-wrapper{\n    align-items: center;\n}\n\n.form-phone-email input{\n    border: none;\n    text-align: left;\n    padding-left: 15px;\n    color: #808080;\n}\n\n.footer .form-phone-email input[type=\"text\"] {\n    font-size: 20px;\n    line-height: 23px;\n    height: 23px;\n}\n\n.footer .form-phone-email input[type=\"submit\"]{\n    font-size: 15px;\n    line-height: 18px;\n    border-left: 2px solid #808080;\n    height: 27px;\n}\n\n", ""]);
 
 	// exports
 
@@ -21916,6 +21924,166 @@
 /* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(177);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./MuseoSansCyrl-normal.styl", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./MuseoSansCyrl-normal.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 177 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "@font-face {\n  font-family: \"museoSansCyrl-normal\";\n  src: url(\"/../fonts/MuseoSansCyrl-300.otf\");\n  font-weight: 300;\n  font-style: normal;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(179);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./MuseoSansCyrl-thin.styl", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./MuseoSansCyrl-thin.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "@font-face {\n  font-family: \"museoSansCyrl-thin\";\n  src: url(\"/../fonts/MuseoSansCyrl-100.otf\");\n  font-weight: 100;\n  font-style: normal;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 180 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(181);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./reset.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./reset.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "a,\na:hover,\na:focus,\ninput,\ninput:focus,\nselect,\nselect:focus,\ntextarea,\ntextarea:focus {\n  outline: none;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\ninput[type=\"search\"]::-webkit-search-decoration,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  cursor: pointer;\n  -webkit-appearance: button;\n  background-color: transparent;\n}\nhtml {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n}\nbody,\nhtml,\np,\nb,\ninput,\nbutton,\nh1,\nh2,\nh3 {\n  margin: 0;\n  padding: 0;\n  border: none;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\ninput {\n  background-color: transparent;\n  -webkit-appearance: none;\n}\nbutton:focus {\n  outline: none;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 182 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(183);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./main.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./main.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 183 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "body,\n#page-content {\n  background: linear-gradient(-45deg, #5fe4ed 0%, #b062f3 79%, #b062f3 85%, #764e9c 100%);\n}\na {\n  display: inline-block;\n}\na:hover {\n  cursor: pointer;\n}\np {\n  color: #fff;\n}\n.main {\n  width: 100%;\n}\n.main,\n.main-containerWrapper,\n.main-footer {\n  height: 100%;\n}\n.main-containerWrapper,\n.main-footer {\n  width: 1024px;\n  margin: 0 auto;\n}\n.main-pageTitle {\n  color: #fff;\n  text-align: center;\n  font-size: 37px;\n  line-height: 47px;\n  letter-spacing: 0.8px;\n}\n.main-row-1 a {\n  margin: 26px 42px 40px 23px;\n}\n.main-row-1 a:first-child {\n  width: 207px;\n  height: 53px;\n}\n.main-row-1 a:last-child {\n  width: 191.63px;\n  height: 54.21px;\n}\n.main-pageTitle,\n.main-row-3 p:nth-child(2) {\n  font-family: \"MuseoSansCyrl-normal\";\n}\n.main-row-2 {\n  margin: 61px 73px 0 35px;\n}\n.main-row-2 .main-column-2 p:nth-child(2),\n.main-row-3 p:nth-child(3) {\n  font-family: \"MuseoSansCyrl-thin\";\n}\n.main-column {\n  display: inline-block;\n}\n.main-column-1 img:first-child {\n  margin-right: 15px;\n}\n.main-column-2 {\n  margin: 25px 39px 12px 78px;\n}\n.main-column-2,\n.main-column-2 p {\n  width: 310px;\n}\n.main-column-2 > p:first-child {\n  text-transform: uppercase;\n  font-size: 22.4px;\n  line-height: 29.6px;\n  margin-bottom: 15.8px;\n  font-family: \"MuseoSansCyrl-normal\";\n}\n.main-column-2 p:nth-child(2) {\n  font-size: 21.28px;\n  line-height: 23.52px;\n  letter-spacing: 0.2px;\n}\n.main-singIn {\n  cursor: pointer;\n  display: inline;\n}\n.main-singIn:hover {\n  color: #ff1493;\n  opacity: 0.9;\n  border-radius: 4px;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -21923,9 +22091,11 @@
 	});
 	exports.InstallBox = undefined;
 
-	var _installBtn = __webpack_require__(177);
+	__webpack_require__(185);
 
-	var _formBox = __webpack_require__(178);
+	var _installBtn = __webpack_require__(187);
+
+	var _formBox = __webpack_require__(190);
 
 	var InstallBox = React.createClass({
 	    displayName: 'InstallBox',
@@ -21965,7 +22135,47 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 177 */
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(186);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./installBox.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./installBox.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".installBox {\n  width: 1024px;\n  margin: 0 auto;\n  height: 100%;\n}\n.installBox .install p {\n  font-family: \"MuseoSansCyrl-thin\";\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
@@ -21973,6 +22183,10 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	exports.InstallBtn = undefined;
+
+	__webpack_require__(188);
+
 	var InstallBtn = React.createClass({
 	    displayName: "InstallBtn",
 
@@ -21996,7 +22210,47 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 178 */
+/* 188 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(189);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./installBtn.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./installBtn.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 189 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
@@ -22004,13 +22258,17 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	exports.FormBox = undefined;
+
+	__webpack_require__(191);
+
 	var FormBox = React.createClass({
 	    displayName: "FormBox",
 
 	    render: function render() {
 	        return React.createElement(
 	            "div",
-	            { className: "get-phone-email" },
+	            { className: "get-phone-email    formBox" },
 	            React.createElement(
 	                "p",
 	                null,
@@ -22018,9 +22276,9 @@
 	            ),
 	            React.createElement(
 	                "form",
-	                { className: "form-phone-email" },
-	                React.createElement("input", { type: "text", placeholder: "\u0422\u0435\u043B\u0435\u0444\u043E\u043D \u0438\u043B\u0438 Email" }),
-	                React.createElement("input", { type: "submit", value: "\u043E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C" })
+	                { className: "form-phone-email     phoneEmail-form" },
+	                React.createElement("input", { className: "     phoneEmail-form__input", type: "text", placeholder: "\u0422\u0435\u043B\u0435\u0444\u043E\u043D \u0438\u043B\u0438 Email" }),
+	                React.createElement("input", { className: "     phoneEmail-form__inputSubmit", type: "submit", value: "\u043E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C" })
 	            )
 	        );
 	    }
@@ -22030,20 +22288,62 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 179 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(192);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./formBox.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./formBox.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 192 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".formBox .phoneEmail-form p {\n  font-family: \"MuseoSansCyrl-thin\";\n}\n.formBox .phoneEmail-form .phoneEmail-form__inputSubmit {\n  text-transform: uppercase;\n}\n.formBox .phoneEmail-form .phoneEmail-form__input,\n.formBox .phoneEmail-form .phoneEmail-form__inputSubmit {\n  font-family: \"MuseoSansCyrl-normal\";\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 193 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 	exports.ColumnBox = undefined;
 
-	var _column = __webpack_require__(180);
+	__webpack_require__(194);
+
+	var _column = __webpack_require__(196);
 
 	var ColumnBox = React.createClass({
-	    displayName: "ColumnBox",
+	    displayName: 'ColumnBox',
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
@@ -22057,8 +22357,8 @@
 	        });
 
 	        return React.createElement(
-	            "div",
-	            { className: "row-4" },
+	            'div',
+	            { className: 'row-4    columnBox' },
 	            columnNodes
 	        );
 	    }
@@ -22068,7 +22368,47 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 180 */
+/* 194 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(195);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./columnBox.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./columnBox.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 195 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22076,6 +22416,10 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	exports.Column = undefined;
+
+	__webpack_require__(197);
+
 	var Column = React.createClass({
 	    displayName: 'Column',
 
@@ -22108,7 +22452,47 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 181 */
+/* 197 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(198);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./column.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./column.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 198 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".column {\n  display: inline-block;\n}\n.column p:nth-child(2) {\n  font-family: \"MuseoSansCyrl-normal\";\n}\n.column p:nth-child(3) {\n  font-family: \"MuseoSansCyrl-thin\";\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22118,15 +22502,17 @@
 	});
 	exports.Banner = undefined;
 
-	__webpack_require__(182);
+	__webpack_require__(200);
 
-	var _loginMain = __webpack_require__(184);
+	__webpack_require__(202);
 
-	var _loginEmail = __webpack_require__(186);
+	var _loginMain = __webpack_require__(204);
 
-	var _loginSms = __webpack_require__(189);
+	var _loginEmail = __webpack_require__(210);
 
-	var _emailPasForgot = __webpack_require__(190);
+	var _loginSms = __webpack_require__(219);
+
+	var _emailPasForgot = __webpack_require__(222);
 
 	var Banner = exports.Banner = React.createClass({
 	    displayName: 'Banner',
@@ -22170,17 +22556,17 @@
 	            )
 	        );
 	    }
-	});
+	}); //comment it later
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 182 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(183);
+	var content = __webpack_require__(201);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(175)(content, {});
@@ -22200,7 +22586,7 @@
 	}
 
 /***/ },
-/* 183 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(174)();
@@ -22208,26 +22594,68 @@
 
 
 	// module
-	exports.push([module.id, "button.btnsLogin:hover {\n    opacity: .9;\n}\n\n.banner-gray{\n    overflow: auto;\n    -webkit-overflow-scrolling: touch;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: absolute !important;\n    background-color: rgba(0,0,0,0.5);\n}\n\n.banner-show {\n    z-index: 1001;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: fixed !important;\n}\n\n.banner-pointer{\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: fixed !important;\n    cursor: pointer;\n}\n\n.banner-scroller {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n}\n\n.loginWhite {\n    z-index: 10040;\n    width: 320px;\n    min-height: 381px;\n    cursor: default;\n    position: relative;\n    top: 100px;\n    margin: 0 auto 100px;\n    border-radius: 3px;\n    background: #fff;\n    transition: transform 0.6s;\n    transition-property: transform;\n    transition-duration: 0.6s;\n    transition-timing-function: initial;\n    transition-delay: initial;\n}\n\n.btnsLogin {\n    display: block;\n    height: 50px;\n    width: 100%;\n    border-radius: 4px;\n    font: 100 15px/18px \"MuseoSansCyrl-100\";\n    color: #fff;\n    cursor: pointer;\n    margin-top: 10px;\n}\n\n.btnLoginVk,\n.btnLoginFb {\n    margin-bottom: 10px;\n    padding-left: 54px;\n    position: relative;\n    text-align: left;\n}\n\n.btnLoginVk {\n    background: url(/../img/vkontakte.svg) 19px 50%/15px no-repeat #356ca1;\n}\n\n\n.btnLoginFb {\n    background: url(/../img/facebook.svg) 22px 50%/10px no-repeat #475e97;\n}\n\n.btnLightBlue {\n    background-color: #4baeec;\n}\n\n.btn-email, .btn-sms {\n    display: inline-block;\n    width: 135px !important;\n    margin-top: 0;\n}\n.btn-email{\n    float: left;\n}\n.btn-sms {\n    margin-left: 10px;\n}\n\n.btn-sms small{\n    pointer-events: none;\n    font: 100 13px/15px \"MuseoSansCyrl-100\";\n    opacity: 0.6;\n}\n\n.btnStriper{\n    border-top: 1px solid #e6e6e6;\n    margin: 20px auto;\n}\n\n.loginMain .loginTitle {\n    font: 300 20px/28px \"MuseoSansCyrl-300\";\n    color: #080808;\n    padding: 30px 0 5px;\n    text-align: center;\n}\n\n.loginMain .loginBtns-content {\n    padding: 25px 20px 20px;\n}\n\n.loginMain .loginMain-links,\n.loginMain-links a{\n    text-align: center;\n    font: 100 11px/1.1 \"MuseoSansCyrl-100\",Arial,sans-serif;\n    color: #ccc;\n}\n\n.loginMain .loginMain-links {\n    margin-top: 20px;\n}\n\n.loginMain .loginMain-links a {\n    color: #ccc !important;\n    text-decoration: underline !important;\n}\n\n.loginHeader {\n    position: relative;\n    height: 39px;\n    padding-top: 21px;\n    font: 100 18px \"MuseoSansCyrl-100\";\n    text-align: center;\n    background-color: #f1f1f1;\n    color: #4d4d4d;\n}\n\n.loginHeader-back {\n    background: url(/../img/back.svg) 20px 50% no-repeat;\n    position: absolute;\n    cursor: pointer;\n    width: 65px;\n    height: 100%;\n    top: 0;\n    left: 0;\n}\n\n.loginForm {\n    margin: .75em 0 1em;\n}\n\n.loginForm input[type=\"password\"] {\n    margin-bottom: 20px;\n}\n\ninput.loginInput {\n    display: block;\n    width: 100%;\n    height: 50px;\n    padding: 0 15px;\n    margin-bottom: 10px;\n    box-sizing: border-box;\n    box-shadow: inset 0 0 0 1px #f1f1f1;\n    color: #7c7c7c;\n    font: 100 15px/17px \"MuseoSansCyrl-100\";\n    -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\n\n.loginEmail-content {\n    padding: 20px 20px 25px;\n    text-align: center;\n}\n\n.loginEmail-forgot {\n    display: inline-block;\n    margin-top: 20px;\n    color: #7c7c7c;\n    font: 100 15px/1.2 \"MuseoSansCyrl-100\";\n    text-align: center;\n}\n\n.loginSms-content,\n.emailPasForgot-content {\n    padding: 20px 20px 120px;\n}\n\n@keyframes popup {\n    from {\n        margin-left: 285px;\n    }\n    to {\n        margin-left: 293px;\n    }\n}\n\n@-webkit-keyframes popup {\n    from {\n        margin-left: 287px;\n    }\n    to {\n        margin-left: 293px;\n    }\n}\n\n.loginSms-note{\n    position: relative;\n    width: 160px;\n    height: 90px;\n    padding: 20px;\n    margin: -130px 0 0 293px;\n    top: -20px;\n    color: #fff;\n    background-color: #717578;\n    animation: popup .2s;\n    font: 100 15px/1.2 \"MuseoSansCyrl-100\";\n    text-align: left;\n}\n\n.loginSms-note:after {\n    position: absolute;\n    width: 12px;\n    height: 12px;\n    top: 58px;\n    left: -5px;\n    content: '';\n    background-color: #717578;\n    transform: rotate(45deg);\n    border-radius: 2px;\n}", ""]);
+	exports.push([module.id, "", ""]);
 
 	// exports
 
 
 /***/ },
-/* 184 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(203);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./banner.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./banner.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 203 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 204 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 	exports.LoginMain = undefined;
 
-	var _loginBtn = __webpack_require__(185);
+	__webpack_require__(205);
+
+	var _loginBtn = __webpack_require__(207);
 
 	var LoginMain = exports.LoginMain = React.createClass({
-	    displayName: "LoginMain",
+	    displayName: 'LoginMain',
 
 
 	    getDefaultProps: function getDefaultProps() {
@@ -22261,45 +22689,45 @@
 	        });
 
 	        return React.createElement(
-	            "div",
-	            { className: "loginMain" },
+	            'div',
+	            { className: 'loginMain' },
 	            React.createElement(
-	                "div",
-	                { className: "loginTitle" },
-	                "\u0427\u0442\u043E\u0431\u044B \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C, \u0432\u043E\u0439\u0434\u0438\u0442\u0435 \u043B\u044E\u0431\u044B\u043C \u0443\u0434\u043E\u0431\u043D\u044B\u043C \u0434\u043B\u044F \u0432\u0430\u0441 \u0441\u043F\u043E\u0441\u043E\u0431\u043E\u043C:"
+	                'div',
+	                { className: 'loginTitle' },
+	                '\u0427\u0442\u043E\u0431\u044B \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C, \u0432\u043E\u0439\u0434\u0438\u0442\u0435 \u043B\u044E\u0431\u044B\u043C \u0443\u0434\u043E\u0431\u043D\u044B\u043C \u0434\u043B\u044F \u0432\u0430\u0441 \u0441\u043F\u043E\u0441\u043E\u0431\u043E\u043C:'
 	            ),
 	            React.createElement(
-	                "div",
-	                { className: "loginBtns-content" },
+	                'div',
+	                { className: 'loginBtns-content' },
 	                socialBtns,
-	                React.createElement("div", { className: "btnStriper" }),
+	                React.createElement('div', { className: 'btnStriper' }),
 	                emailBtns,
 	                React.createElement(
-	                    "p",
-	                    { className: "loginMain-links" },
-	                    "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u0443\u044F\u0441\u044C, \u0432\u044B \u0441\u043E\u0433\u043B\u0430\u0448\u0430\u0435\u0442\u0435\u0441\u044C \u0441 ",
+	                    'p',
+	                    { className: 'loginMain-links' },
+	                    '\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u0443\u044F\u0441\u044C, \u0432\u044B \u0441\u043E\u0433\u043B\u0430\u0448\u0430\u0435\u0442\u0435\u0441\u044C \u0441 ',
 	                    React.createElement(
-	                        "a",
-	                        { href: "http://zvooq.com/about/terms", target: "_blank" },
-	                        "\u0423\u0441\u043B\u043E\u0432\u0438\u044F\u043C\u0438"
+	                        'a',
+	                        { href: 'http://zvooq.com/about/terms', target: '_blank' },
+	                        '\u0423\u0441\u043B\u043E\u0432\u0438\u044F\u043C\u0438'
 	                    ),
-	                    React.createElement("br", null),
+	                    React.createElement('br', null),
 	                    React.createElement(
-	                        "a",
-	                        { href: "http://zvooq.com/about/terms", target: "_blank" },
-	                        "\u043E\u0431\u0441\u043B\u0443\u0436\u0438\u0432\u0430\u043D\u0438\u044F"
+	                        'a',
+	                        { href: 'http://zvooq.com/about/terms', target: '_blank' },
+	                        '\u043E\u0431\u0441\u043B\u0443\u0436\u0438\u0432\u0430\u043D\u0438\u044F'
 	                    ),
-	                    " \u0438",
+	                    ' \u0438',
 	                    React.createElement(
-	                        "a",
-	                        { href: "http://zvooq.com/about/privacy", target: "_blank" },
-	                        "\u041F\u0440\u0430\u0432\u0438\u043B\u0430\u043C\u0438 \u0445\u0440\u0430\u043D\u0435\u043D\u0438\u044F \u043B\u0438\u0447\u043D\u043E\u0439"
+	                        'a',
+	                        { href: 'http://zvooq.com/about/privacy', target: '_blank' },
+	                        '\u041F\u0440\u0430\u0432\u0438\u043B\u0430\u043C\u0438 \u0445\u0440\u0430\u043D\u0435\u043D\u0438\u044F \u043B\u0438\u0447\u043D\u043E\u0439'
 	                    ),
-	                    React.createElement("br", null),
+	                    React.createElement('br', null),
 	                    React.createElement(
-	                        "a",
-	                        { href: "http://zvooq.com/about/privacy", target: "_blank" },
-	                        "\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438"
+	                        'a',
+	                        { href: 'http://zvooq.com/about/privacy', target: '_blank' },
+	                        '\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438'
 	                    )
 	                )
 	            )
@@ -22309,7 +22737,47 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 185 */
+/* 205 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(206);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginMain.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginMain.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 206 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22317,6 +22785,10 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	exports.BUTTONS_TYPE = exports.LoginBtn = undefined;
+
+	__webpack_require__(208);
+
 	var LoginBtn = exports.LoginBtn = React.createClass({
 	    displayName: 'LoginBtn',
 
@@ -22355,7 +22827,7 @@
 	        } else if (this.props.typebtn === 1) onClickBtn = this.fbClickHandler;else onClickBtn = this.props.onClick;
 
 	        return React.createElement('button', {
-	            className: "btnsLogin " + this.props.classNames[this.props.typebtn],
+	            className: "btnsLogin      loginBtn" + this.props.classNames[this.props.typebtn],
 	            dangerouslySetInnerHTML: { __html: btnText },
 	            type: this.props.type,
 	            onClick: onClickBtn
@@ -22375,7 +22847,47 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 186 */
+/* 208 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(209);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginBtn.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginBtn.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 209 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".loginBtn {\n  font-family: \"MuseoSansCyrl-thin\";\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22385,9 +22897,11 @@
 	});
 	exports.LoginEmail = undefined;
 
-	var _loginForm = __webpack_require__(187);
+	__webpack_require__(211);
 
-	var _loginHeader = __webpack_require__(188);
+	var _loginForm = __webpack_require__(213);
+
+	var _loginHeader = __webpack_require__(216);
 
 	var inputs = [{
 	    className: "loginInput",
@@ -22436,20 +22950,62 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 187 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(212);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginEmail.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginEmail.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 212 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".loginEmail-forgot {\n  cursor: pointer;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 213 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 	exports.LoginForm = undefined;
 
-	var _loginBtn = __webpack_require__(185);
+	__webpack_require__(214);
+
+	var _loginBtn = __webpack_require__(207);
 
 	var LoginForm = exports.LoginForm = React.createClass({
-	    displayName: "LoginForm",
+	    displayName: 'LoginForm',
 
 
 	    getDefaultProps: function getDefaultProps() {
@@ -22463,21 +23019,61 @@
 	    render: function render() {
 
 	        var inputs = this.props.inputs.map(function (input, index) {
-	            return React.createElement("input", { key: index, className: input.className, defaultValue: input.defaultValue, placeholder: input.placeholder, required: true, type: input.type });
+	            return React.createElement('input', { key: index, className: input.className, defaultValue: input.defaultValue, placeholder: input.placeholder, required: true, type: input.type });
 	        });
 
 	        return React.createElement(
-	            "div",
-	            { className: "loginForm" },
+	            'div',
+	            { className: 'loginForm' },
 	            inputs,
-	            React.createElement(_loginBtn.LoginBtn, { typebtn: this.props.typebtn, type: "submit", loginBtnText: this.props.loginBtnText })
+	            React.createElement(_loginBtn.LoginBtn, { typebtn: this.props.typebtn, type: 'submit', loginBtnText: this.props.loginBtnText })
 	        );
 	    }
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 188 */
+/* 214 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(215);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginForm.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginForm.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 215 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
@@ -22485,6 +23081,10 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	exports.LoginHeader = undefined;
+
+	__webpack_require__(217);
+
 	var LoginHeader = exports.LoginHeader = React.createClass({
 	    displayName: "LoginHeader",
 
@@ -22507,7 +23107,47 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 189 */
+/* 217 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(218);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginHeader.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginHeader.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 218 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22517,9 +23157,11 @@
 	});
 	exports.LoginSms = undefined;
 
-	var _loginForm = __webpack_require__(187);
+	__webpack_require__(220);
 
-	var _loginHeader = __webpack_require__(188);
+	var _loginForm = __webpack_require__(213);
+
+	var _loginHeader = __webpack_require__(216);
 
 	var inputs = [{
 	    className: "loginInput",
@@ -22566,7 +23208,47 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 190 */
+/* 220 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(221);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginSms.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginSms.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 221 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22576,9 +23258,11 @@
 	});
 	exports.EmailPasForgot = undefined;
 
-	var _loginForm = __webpack_require__(187);
+	__webpack_require__(223);
 
-	var _loginHeader = __webpack_require__(188);
+	var _loginForm = __webpack_require__(213);
+
+	var _loginHeader = __webpack_require__(216);
 
 	var inputs = [{
 	    className: "loginInput",
@@ -22612,6 +23296,46 @@
 	    }
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ },
+/* 223 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(224);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./emailPasForgot.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./emailPasForgot.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 224 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
 
 /***/ }
 /******/ ]);

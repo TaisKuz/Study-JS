@@ -1,3 +1,5 @@
+import './../stylus/column.styl';
+
 var Column = React.createClass({
 
     getDefaultProps: function () {

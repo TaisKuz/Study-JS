@@ -1,3 +1,5 @@
+import './../stylus/loginMain.styl';
+
 import { LoginBtn, BUTTONS_TYPE } from './loginBtn.js';
 
 export var LoginMain = React.createClass({

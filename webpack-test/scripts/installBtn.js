@@ -1,3 +1,5 @@
+import './../stylus/installBtn.styl';
+
 var InstallBtn = React.createClass({
     getDefaultProps: function () {
         return {

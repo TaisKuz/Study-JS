@@ -1,3 +1,5 @@
+import './../stylus/installBox.styl';
+
 import { InstallBtn } from './installBtn.js';
 import { FormBox } from './formBox.js';
 

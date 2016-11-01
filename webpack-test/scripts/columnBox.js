@@ -1,3 +1,5 @@
+import './../stylus/columnBox.styl';
+
 import { Column } from './column.js';
 
 var ColumnBox = React.createClass({
@@ -15,7 +17,7 @@ var ColumnBox = React.createClass({
         });
 
         return (
-            <div className="row-4">
+            <div className="row-4    columnBox">
                 {columnNodes}
             </div>
         );

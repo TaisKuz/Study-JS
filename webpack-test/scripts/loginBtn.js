@@ -1,3 +1,5 @@
+import './../stylus/loginBtn.styl';
+
 export var LoginBtn = React.createClass({
 
     windowWidth: 700,
@@ -53,7 +55,7 @@ export var LoginBtn = React.createClass({
 
         return (
             <button
-                className={"btnsLogin " + this.props.classNames[this.props.typebtn]}
+                className={"btnsLogin      loginBtn" + this.props.classNames[this.props.typebtn]}
                 dangerouslySetInnerHTML={{ __html: btnText }}
                 type={this.props.type}
                 onClick={onClickBtn}

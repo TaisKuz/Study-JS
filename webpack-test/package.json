@@ -5,7 +5,25 @@
   "scripts": {
     "test": "webpack",
     "webpack": "webpack && webpack-dev-server --progress --colors",
-    "bundle": "webpack ./scripts/main.js bundle.js"
+    "bundle": "webpack ./scripts/main.js bundle.js",
+    "stylus": "stylus ./stylus/main.styl --out ./css --compress",
+    "w1": "stylus --watch ./stylus/main.styl --out ./css --compress ",
+    "w2": "stylus --watch ./stylus/banner.styl --out ./css --compress ",
+    "w3": "stylus --watch ./stylus/column.styl --out ./css --compress ",
+    "w4": "stylus --watch ./stylus/columnBox.styl --out ./css --compress ",
+    "w5": "stylus --watch ./stylus/emailPasForgot.styl --out ./css --compress ",
+    "w6": "stylus --watch ./stylus/formBox.styl --out ./css --compress ",
+    "w7": "stylus --watch ./stylus/installBox.styl --out ./css --compress ",
+    "w8": "stylus --watch ./stylus/installBtn.styl --out ./css --compress ",
+    "w9": "stylus --watch ./stylus/loginBtn.styl --out ./css --compress ",
+    "w10": "stylus --watch ./stylus/loginEmail.styl --out ./css --compress ",
+    "w11": "stylus --watch ./stylus/loginForm.styl --out ./css --compress ",
+    "w12": "stylus --watch ./stylus/loginHeader.styl --out ./css --compress ",
+    "w13": "stylus --watch ./stylus/loginMain.styl --out ./css --compress ",
+    "w14": "stylus --watch ./stylus/loginSms.styl --out ./css --compress ",
+    "w15": "stylus --watch ./stylus/reset.styl --out ./css --compress ",
+    "w16": "stylus --watch ./stylus/fonts/museoSansCyrl-normal.styl --out ./css/fonts --compress ",
+    "w17": "stylus --watch ./stylus/fonts/museoSansCyrl-thin.styl --out ./css/fonts --compress "
   },
   "author": "taiska",
   "license": "ISC",
@@ -18,6 +36,8 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.3.1",
     "webpack": "^1.13.2"
   }
 }
