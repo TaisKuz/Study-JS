@@ -7,7 +7,7 @@ import './../stylus/main.styl';
 
 import { InstallBox } from './installBox.js';
 import { ColumnBox } from './columnBox.js';
-import { Banner } from './banner.js';
+import { LoginPopup } from './loginPopup/loginPopup.js';
 
 var btns = [
     {
@@ -51,12 +51,12 @@ var MainPage = React.createClass({
 
     getInitialState: function() {
         return {
-            showBanner: false
+            showLoginPopup: false
         };
     },
 
-    bannerHandler: function(){
-        this.setState({ showBanner: !this.state.showBanner });
+    loginPopupHandler: function(){
+        this.setState({ showLoginPopup: !this.state.showLoginPopup });
     },
 
     render() {
@@ -69,7 +69,7 @@ var MainPage = React.createClass({
                     </div>
                     <div className="pageTitle  main-pageTitle">Чтобы попробовать новые возможности,<br/>
                         <div className="singIn  main-singIn"
-                             onClick={this.bannerHandler}>войдите </div>
+                             onClick={this.loginPopupHandler}>войдите </div>
                         в&nbsp;бесплатное приложение Zvooq</div>
 
                     <div className="row-2  main-row-2">
@@ -93,12 +93,12 @@ var MainPage = React.createClass({
                     <ColumnBox columns={columns}/>
 
                 </div>
-                <div className="footer  main-footer">
+                <div className="footer as footer">
 
-                    <InstallBox btns={btns}/>
+                    <InstallBox btns={btns} insideFooter={true}/>
 
                 </div>
-                {this.state.showBanner && <Banner onClickClose={this.bannerHandler} />}
+                {this.state.showLoginPopup && <LoginPopup onClickClose={this.loginPopupHandler} />}
             </div>
         );
     }

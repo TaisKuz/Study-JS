@@ -1,11 +1,10 @@
-import './../stylus/emailPasForgot.styl';
+import './../../stylus/loginPopup/emailPasForgot.styl';
 
 import { LoginForm } from './loginForm.js';
 import { LoginHeader } from './loginHeader.js';
 
 var inputs = [
     {
-        className: "loginInput",
         type: "email",
         placeholder: "Ваш email"
     }

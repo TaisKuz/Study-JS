@@ -60,7 +60,7 @@
 
 	var _columnBox = __webpack_require__(193);
 
-	var _banner = __webpack_require__(199);
+	var _loginPopup = __webpack_require__(199);
 
 	var btns = [{
 	    className: ' btn-app-store',
@@ -98,12 +98,12 @@
 
 	    getInitialState: function getInitialState() {
 	        return {
-	            showBanner: false
+	            showLoginPopup: false
 	        };
 	    },
 
-	    bannerHandler: function bannerHandler() {
-	        this.setState({ showBanner: !this.state.showBanner });
+	    loginPopupHandler: function loginPopupHandler() {
+	        this.setState({ showLoginPopup: !this.state.showLoginPopup });
 	    },
 
 	    render: function render() {
@@ -139,7 +139,7 @@
 	                    React.createElement(
 	                        'div',
 	                        { className: 'singIn  main-singIn',
-	                            onClick: this.bannerHandler },
+	                            onClick: this.loginPopupHandler },
 	                        '\u0432\u043E\u0439\u0434\u0438\u0442\u0435 '
 	                    ),
 	                    '\u0432\xA0\u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435 Zvooq'
@@ -194,10 +194,10 @@
 	            ),
 	            React.createElement(
 	                'div',
-	                { className: 'footer  main-footer' },
-	                React.createElement(_installBox.InstallBox, { btns: btns })
+	                { className: 'footer as footer' },
+	                React.createElement(_installBox.InstallBox, { btns: btns, insideFooter: true })
 	            ),
-	            this.state.showBanner && React.createElement(_banner.Banner, { onClickClose: this.bannerHandler })
+	            this.state.showLoginPopup && React.createElement(_loginPopup.LoginPopup, { onClickClose: this.loginPopupHandler })
 	        );
 	    }
 	});
@@ -22075,7 +22075,7 @@
 
 
 	// module
-	exports.push([module.id, "body,\n#page-content {\n  background: linear-gradient(-45deg, #5fe4ed 0%, #b062f3 79%, #b062f3 85%, #764e9c 100%);\n}\na {\n  display: inline-block;\n}\na:hover {\n  cursor: pointer;\n}\np {\n  color: #fff;\n}\n.main {\n  width: 100%;\n}\n.main,\n.main-containerWrapper,\n.main-footer {\n  height: 100%;\n}\n.main-containerWrapper,\n.main-footer {\n  width: 1024px;\n  margin: 0 auto;\n}\n.main-pageTitle {\n  color: #fff;\n  text-align: center;\n  font-size: 37px;\n  line-height: 47px;\n  letter-spacing: 0.8px;\n}\n.main-row-1 a {\n  margin: 26px 42px 40px 23px;\n}\n.main-row-1 a:first-child {\n  width: 207px;\n  height: 53px;\n}\n.main-row-1 a:last-child {\n  width: 191.63px;\n  height: 54.21px;\n}\n.main-pageTitle,\n.main-row-3 p:nth-child(2) {\n  font-family: \"MuseoSansCyrl-normal\";\n}\n.main-row-2 {\n  margin: 61px 73px 0 35px;\n}\n.main-row-2 .main-column-2 p:nth-child(2),\n.main-row-3 p:nth-child(3) {\n  font-family: \"MuseoSansCyrl-thin\";\n}\n.main-column {\n  display: inline-block;\n}\n.main-column-1 img:first-child {\n  margin-right: 15px;\n}\n.main-column-2 {\n  margin: 25px 39px 12px 78px;\n}\n.main-column-2,\n.main-column-2 p {\n  width: 310px;\n}\n.main-column-2 > p:first-child {\n  text-transform: uppercase;\n  font-size: 22.4px;\n  line-height: 29.6px;\n  margin-bottom: 15.8px;\n  font-family: \"MuseoSansCyrl-normal\";\n}\n.main-column-2 p:nth-child(2) {\n  font-size: 21.28px;\n  line-height: 23.52px;\n  letter-spacing: 0.2px;\n}\n.main-singIn {\n  cursor: pointer;\n  display: inline;\n}\n.main-singIn:hover {\n  color: #ff1493;\n  opacity: 0.9;\n  border-radius: 4px;\n}\n", ""]);
+	exports.push([module.id, "body,\n#page-content {\n  background: linear-gradient(-45deg, #5fe4ed 0%, #b062f3 79%, #b062f3 85%, #764e9c 100%);\n}\na {\n  display: inline-block;\n}\na:hover {\n  cursor: pointer;\n}\np {\n  color: #fff;\n}\n.main {\n  width: 100%;\n}\n.main,\n.main-containerWrapper,\n.main .footer {\n  height: 100%;\n}\n.main-containerWrapper,\n.main .footer {\n  width: 1024px;\n  margin: 0 auto;\n}\n.main-pageTitle {\n  color: #fff;\n  text-align: center;\n  font-size: 37px;\n  line-height: 47px;\n  letter-spacing: 0.8px;\n}\n.main-row-1 a {\n  margin: 26px 42px 40px 23px;\n}\n.main-row-1 a:first-child {\n  width: 207px;\n  height: 53px;\n}\n.main-row-1 a:last-child {\n  width: 191.63px;\n  height: 54.21px;\n}\n.main-pageTitle,\n.main-row-3 p:nth-child(2) {\n  font-family: \"MuseoSansCyrl-normal\";\n}\n.main-row-2 {\n  margin: 61px 73px 0 35px;\n}\n.main-row-2 .main-column-2 p:nth-child(2),\n.main-row-3 p:nth-child(3) {\n  font-family: \"MuseoSansCyrl-thin\";\n}\n.main-column {\n  display: inline-block;\n}\n.main-column-1 img:first-child {\n  margin-right: 15px;\n}\n.main-column-2 {\n  margin: 25px 39px 12px 78px;\n}\n.main-column-2,\n.main-column-2 p {\n  width: 310px;\n}\n.main-column-2 > p:first-child {\n  text-transform: uppercase;\n  font-size: 22.4px;\n  line-height: 29.6px;\n  margin-bottom: 15.8px;\n  font-family: \"MuseoSansCyrl-normal\";\n}\n.main-column-2 p:nth-child(2) {\n  font-size: 21.28px;\n  line-height: 23.52px;\n  letter-spacing: 0.2px;\n}\n.main-singIn {\n  cursor: pointer;\n  display: inline;\n}\n.main-singIn:hover {\n  color: #ff1493;\n  opacity: 0.9;\n  border-radius: 4px;\n}\n", ""]);
 
 	// exports
 
@@ -22102,10 +22102,12 @@
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            btns: []
+	            btns: [],
+	            insideFooter: false
 	        };
 	    },
 	    render: function render() {
+	        var footerClass = this.props.insideFooter ? " footer__install" : "";
 	        var installBtns = this.props.btns.map(function (btn, index) {
 	            return React.createElement(_installBtn.InstallBtn, { key: index, className: btn.className, href: btn.href });
 	        });
@@ -22114,7 +22116,7 @@
 	            { className: 'installBox' },
 	            React.createElement(
 	                'div',
-	                { className: 'install' },
+	                { className: "install " + footerClass },
 	                React.createElement(
 	                    'p',
 	                    null,
@@ -22122,11 +22124,11 @@
 	                ),
 	                React.createElement(
 	                    'div',
-	                    { className: 'btns-wrapper' },
+	                    { className: 'btns-wrapper  as install-btnsWrapper' },
 	                    installBtns
 	                )
 	            ),
-	            React.createElement(_formBox.FormBox, null)
+	            React.createElement(_formBox.FormBox, { insideFooter: this.props.insideFooter })
 	        );
 	    }
 	});
@@ -22200,7 +22202,7 @@
 	    render: function render() {
 	        return React.createElement(
 	            "div",
-	            { className: this.props.className },
+	            { className: "installBtn " + this.props.className },
 	            React.createElement("a", { href: this.props.href, target: "_blank" })
 	        );
 	    }
@@ -22265,10 +22267,16 @@
 	var FormBox = React.createClass({
 	    displayName: "FormBox",
 
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            insideFooter: false
+	        };
+	    },
 	    render: function render() {
+	        var footerClass = this.props.insideFooter ? " footer__formBox" : "";
 	        return React.createElement(
 	            "div",
-	            { className: "get-phone-email    formBox" },
+	            { className: "get-phone-email  as   formBox " + footerClass },
 	            React.createElement(
 	                "p",
 	                null,
@@ -22276,9 +22284,9 @@
 	            ),
 	            React.createElement(
 	                "form",
-	                { className: "form-phone-email     phoneEmail-form" },
-	                React.createElement("input", { className: "     phoneEmail-form__input", type: "text", placeholder: "\u0422\u0435\u043B\u0435\u0444\u043E\u043D \u0438\u043B\u0438 Email" }),
-	                React.createElement("input", { className: "     phoneEmail-form__inputSubmit", type: "submit", value: "\u043E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C" })
+	                { className: "form-phone-email  as   phoneEmail-form" },
+	                React.createElement("input", { className: "  as   phoneEmail-form__input", type: "text", placeholder: "\u0422\u0435\u043B\u0435\u0444\u043E\u043D \u0438\u043B\u0438 Email" }),
+	                React.createElement("input", { className: "  as   phoneEmail-form__inputSubmit", type: "submit", value: "\u043E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C" })
 	            )
 	        );
 	    }
@@ -22358,7 +22366,7 @@
 
 	        return React.createElement(
 	            'div',
-	            { className: 'row-4    columnBox' },
+	            { className: 'row-4   as columnBox' },
 	            columnNodes
 	        );
 	    }
@@ -22500,7 +22508,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.Banner = undefined;
+	exports.LoginPopup = undefined;
 
 	__webpack_require__(200);
 
@@ -22514,8 +22522,8 @@
 
 	var _emailPasForgot = __webpack_require__(222);
 
-	var Banner = exports.Banner = React.createClass({
-	    displayName: 'Banner',
+	var LoginPopup = exports.LoginPopup = React.createClass({
+	    displayName: 'LoginPopup',
 
 	    getInitialState: function getInitialState() {
 	        return {
@@ -22539,17 +22547,17 @@
 
 	        return React.createElement(
 	            'div',
-	            { className: 'banner-show' },
+	            { className: 'banner-show       as loginPopup loginPopup_up banner' },
 	            React.createElement(
 	                'div',
-	                { className: 'banner-gray' },
+	                { className: 'banner-gray    as banner-inner' },
 	                React.createElement(
 	                    'div',
 	                    { className: 'banner-scroller' },
 	                    React.createElement('div', { className: 'banner-pointer', onClick: this.props.onClickClose }),
 	                    React.createElement(
 	                        'div',
-	                        { className: 'loginWhite' },
+	                        { className: 'loginWhite       as banner-window' },
 	                        React.createElement(Page, { onPageClick: this.pageClickHandler })
 	                    )
 	                )
@@ -22575,8 +22583,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./banner.css", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./banner.css");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./loginPopup.css", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./loginPopup.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22594,7 +22602,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, "\nbutton.btnsLogin:hover {\n    opacity: .9;\n}\n\n.banner-gray{\n    overflow: auto;\n    -webkit-overflow-scrolling: touch;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: absolute !important;\n    background-color: rgba(0,0,0,0.5);\n}\n\n.banner-show {\n    z-index: 1001;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: fixed !important;\n}\n\n.banner-pointer{\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: fixed !important;\n    cursor: pointer;\n}\n\n.banner-scroller {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n}\n\n.loginWhite {\n    z-index: 10040;\n    width: 320px;\n    min-height: 381px;\n    cursor: default;\n    position: relative;\n    top: 100px;\n    margin: 0 auto 100px;\n    border-radius: 3px;\n    background: #fff;\n    transition: transform 0.6s;\n    transition-property: transform;\n    transition-duration: 0.6s;\n    transition-timing-function: initial;\n    transition-delay: initial;\n}\n\n.btnsLogin {\n    display: block;\n    height: 50px;\n    width: 100%;\n    border-radius: 4px;\n    font: 100 15px/18px \"MuseoSansCyrl-100\";\n    color: #fff;\n    cursor: pointer;\n    margin-top: 10px;\n}\n\n.btnLoginVk,\n.btnLoginFb {\n    margin-bottom: 10px;\n    padding-left: 54px;\n    position: relative;\n    text-align: left;\n}\n\n.btnLoginVk {\n    background: url(/../img/vkontakte.svg) 19px 50%/15px no-repeat #356ca1;\n}\n\n\n.btnLoginFb {\n    background: url(/../img/facebook.svg) 22px 50%/10px no-repeat #475e97;\n}\n\n.btnLightBlue {\n    background-color: #4baeec;\n}\n\n.btn-email, .btn-sms {\n    display: inline-block;\n    width: 135px !important;\n    margin-top: 0;\n}\n.btn-email{\n    float: left;\n}\n.btn-sms {\n    margin-left: 10px;\n}\n\n.btn-sms small{\n    pointer-events: none;\n    font: 100 13px/15px \"MuseoSansCyrl-100\";\n    opacity: 0.6;\n}\n\n.btnStriper{\n    border-top: 1px solid #e6e6e6;\n    margin: 20px auto;\n}\n\n.loginMain .loginTitle {\n    font: 300 20px/28px \"MuseoSansCyrl-300\";\n    color: #080808;\n    padding: 30px 0 5px;\n    text-align: center;\n}\n\n.loginMain .loginBtns-content {\n    padding: 25px 20px 20px;\n}\n\n.loginMain .loginMain-links,\n.loginMain-links a{\n    text-align: center;\n    font: 100 11px/1.1 \"MuseoSansCyrl-100\",Arial,sans-serif;\n    color: #ccc;\n}\n\n.loginMain .loginMain-links {\n    margin-top: 20px;\n}\n\n.loginMain .loginMain-links a {\n    color: #ccc !important;\n    text-decoration: underline !important;\n}\n\n.loginHeader {\n    position: relative;\n    height: 39px;\n    padding-top: 21px;\n    font: 100 18px \"MuseoSansCyrl-100\";\n    text-align: center;\n    background-color: #f1f1f1;\n    color: #4d4d4d;\n}\n\n.loginHeader-back {\n    background: url(/../img/back.svg) 20px 50% no-repeat;\n    position: absolute;\n    cursor: pointer;\n    width: 65px;\n    height: 100%;\n    top: 0;\n    left: 0;\n}\n\n.loginForm {\n    margin: .75em 0 1em;\n}\n\n.loginForm input[type=\"password\"] {\n    margin-bottom: 20px;\n}\n\ninput.loginInput {\n    display: block;\n    width: 100%;\n    height: 50px;\n    padding: 0 15px;\n    margin-bottom: 10px;\n    box-sizing: border-box;\n    box-shadow: inset 0 0 0 1px #f1f1f1;\n    color: #7c7c7c;\n    font: 100 15px/17px \"MuseoSansCyrl-100\";\n    -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\n\n.loginEmail-content {\n    padding: 20px 20px 25px;\n    text-align: center;\n}\n\n.loginEmail-forgot {\n    display: inline-block;\n    margin-top: 20px;\n    color: #7c7c7c;\n    font: 100 15px/1.2 \"MuseoSansCyrl-100\";\n    text-align: center;\n}\n\n.loginSms-content,\n.emailPasForgot-content {\n    padding: 20px 20px 120px;\n}\n\n@keyframes popup {\n    from {\n        margin-left: 285px;\n    }\n    to {\n        margin-left: 293px;\n    }\n}\n\n@-webkit-keyframes popup {\n    from {\n        margin-left: 287px;\n    }\n    to {\n        margin-left: 293px;\n    }\n}\n\n.loginSms-note{\n    position: relative;\n    width: 160px;\n    height: 90px;\n    padding: 20px;\n    margin: -130px 0 0 293px;\n    top: -20px;\n    color: #fff;\n    background-color: #717578;\n    animation: popup .2s;\n    font: 100 15px/1.2 \"MuseoSansCyrl-100\";\n    text-align: left;\n}\n\n.loginSms-note:after {\n    position: absolute;\n    width: 12px;\n    height: 12px;\n    top: 58px;\n    left: -5px;\n    content: '';\n    background-color: #717578;\n    transform: rotate(45deg);\n    border-radius: 2px;\n}\n", ""]);
 
 	// exports
 
@@ -22615,8 +22623,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./banner.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./banner.styl");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginPopup.styl", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginPopup.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22752,8 +22760,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginMain.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginMain.styl");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginMain.styl", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginMain.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22798,7 +22806,9 @@
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            classNames: ['btnLoginVk', 'btnLoginFb', 'btn-email btnLightBlue', 'btn-sms btnLightBlue', 'btnLightBlue', 'btnLightBlue', 'btnLightBlue'],
+	            classNames: ['btnLoginVk as btn-Vk', //////////////////as
+	            'btnLoginFb as btn-Fb', //////////////////as
+	            'btn-email btnLightBlue', 'btn-sms btnLightBlue', 'btnLightBlue', 'btnLightBlue', 'btnLightBlue'],
 	            typebtn: 0
 	        };
 	    },
@@ -22827,7 +22837,7 @@
 	        } else if (this.props.typebtn === 1) onClickBtn = this.fbClickHandler;else onClickBtn = this.props.onClick;
 
 	        return React.createElement('button', {
-	            className: "btnsLogin      loginBtn" + this.props.classNames[this.props.typebtn],
+	            className: "btnsLogin  as    loginBtn" + this.props.classNames[this.props.typebtn],
 	            dangerouslySetInnerHTML: { __html: btnText },
 	            type: this.props.type,
 	            onClick: onClickBtn
@@ -22862,8 +22872,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginBtn.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginBtn.styl");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginBtn.styl", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginBtn.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22965,8 +22975,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginEmail.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginEmail.styl");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginEmail.styl", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginEmail.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23017,7 +23027,6 @@
 	    },
 
 	    render: function render() {
-
 	        var inputs = this.props.inputs.map(function (input, index) {
 	            return React.createElement('input', { key: index, className: input.className, defaultValue: input.defaultValue, placeholder: input.placeholder, required: true, type: input.type });
 	        });
@@ -23048,8 +23057,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginForm.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginForm.styl");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginForm.styl", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginForm.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23099,7 +23108,7 @@
 	        return React.createElement(
 	            "div",
 	            { className: "loginHeader" },
-	            React.createElement("button", { className: "loginHeader-back", type: "button", onClick: this.props.clickHandler }),
+	            React.createElement("button", { className: "loginHeader-back as loginHeader-back__button ", type: "button", onClick: this.props.clickHandler }),
 	            this.props.text
 	        );
 	    }
@@ -23122,8 +23131,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginHeader.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginHeader.styl");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginHeader.styl", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginHeader.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23223,8 +23232,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginSms.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./loginSms.styl");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginSms.styl", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginSms.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23313,8 +23322,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./emailPasForgot.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./emailPasForgot.styl");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./emailPasForgot.styl", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./emailPasForgot.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});

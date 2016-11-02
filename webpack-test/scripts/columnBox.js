@@ -17,7 +17,7 @@ var ColumnBox = React.createClass({
         });
 
         return (
-            <div className="row-4    columnBox">
+            <div className="row-4   as columnBox">
                 {columnNodes}
             </div>
         );

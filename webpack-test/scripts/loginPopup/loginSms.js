@@ -1,11 +1,10 @@
-import './../stylus/loginSms.styl';
+import './../../stylus/loginPopup/loginSms.styl';
 
 import { LoginForm } from './loginForm.js';
 import { LoginHeader } from './loginHeader.js';
 
 var inputs = [
     {
-        className: "loginInput",
         type: "tel",
         placeholder: "none",
         defaultValue: "+7"

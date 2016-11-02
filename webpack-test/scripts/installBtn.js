@@ -10,7 +10,7 @@ var InstallBtn = React.createClass({
 
     render: function() {
         return (
-            <div className={this.props.className}>
+            <div className={"installBtn "+ this.props.className}>
                 <a href={this.props.href} target="_blank"></a>
             </div>
         );

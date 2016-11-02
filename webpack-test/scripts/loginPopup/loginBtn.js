@@ -1,4 +1,4 @@
-import './../stylus/loginBtn.styl';
+import './../../stylus/loginPopup/loginBtn.styl';
 
 export var LoginBtn = React.createClass({
 
@@ -8,13 +8,13 @@ export var LoginBtn = React.createClass({
     getDefaultProps: function () {
         return {
             classNames: [
-                'btnLoginVk',
-                'btnLoginFb',
-                'btn-email btnLightBlue',
-                'btn-sms btnLightBlue',
-                'btnLightBlue',
-                'btnLightBlue',
-                'btnLightBlue'
+                'btnLoginVk                 as loginBtn__vk ', //////////////////as
+                'btnLoginFb                 as loginBtn__fb ',  //////////////////as
+                'btn-email btnLightBlue     as loginBtn__email loginBtn_color_lightBlue loginBtn_size_s ', //////////////////as
+                'btn-sms btnLightBlue       as loginBtn__sms   loginBtn_color_lightBlue loginBtn_size_s ', //////////////////as
+                'btnLightBlue               as loginBtn_color_lightBlue ',
+                'btnLightBlue               as loginBtn_color_lightBlue ',
+                'btnLightBlue               as loginBtn_color_lightBlue '
             ],
             typebtn: 0
         };
@@ -55,7 +55,7 @@ export var LoginBtn = React.createClass({
 
         return (
             <button
-                className={"btnsLogin      loginBtn" + this.props.classNames[this.props.typebtn]}
+                className={"btnsLogin  as    loginBtn " + this.props.classNames[this.props.typebtn] + " loginBtn__" + this.props.type}
                 dangerouslySetInnerHTML={{ __html: btnText }}
                 type={this.props.type}
                 onClick={onClickBtn}

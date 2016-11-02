@@ -1,4 +1,4 @@
-import './../stylus/loginMain.styl';
+import './../../stylus/loginPopup/loginMain.styl';
 
 import { LoginBtn, BUTTONS_TYPE } from './loginBtn.js';
 

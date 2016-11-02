@@ -1,13 +1,13 @@
-import './../css/banner.css'; //comment it later
+import './../../css/loginPopup/loginPopup.css'; //comment it later
 
-import './../stylus/banner.styl';
+import './../../stylus/loginPopup/loginPopup.styl';
 
 import { LoginMain } from './loginMain.js';
 import { LoginEmail } from './loginEmail.js';
 import { LoginSms } from './loginSms.js';
 import { EmailPasForgot } from './emailPasForgot.js';
 
-export var Banner = React.createClass({
+export var LoginPopup = React.createClass({
     getInitialState: function() {
         return {
             currentView: 0
@@ -34,11 +34,11 @@ export var Banner = React.createClass({
         let Page = this.props.views[this.state.currentView];
 
         return (
-            <div className="banner-show">
-                <div className="banner-gray">
+            <div className="banner-show       as loginPopup loginPopup_up banner">
+                <div className="banner-gray    as banner-inner">
                     <div className="banner-scroller">
                         <div className="banner-pointer" onClick={this.props.onClickClose}></div>
-                        <div className="loginWhite">
+                        <div className="loginWhite       as banner-window">
                             <Page onPageClick={this.pageClickHandler} />
                         </div>
                     </div>
