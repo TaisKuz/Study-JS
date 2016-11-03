@@ -7,25 +7,25 @@ var InstallBox = React.createClass({
     getDefaultProps: function () {
         return {
             btns: [],
-            insideFooter: false
+            positionClass: "footer__"
         };
     },
     render: function() {
-        var footerClass = this.props.insideFooter? " footer__install" : "";
+
         var installBtns = this.props.btns.map((btn, index) => {
             return (
-                <InstallBtn key={index} className={btn.className} href={btn.href} />
+                <InstallBtn key={index} className={btn.className} href={btn.href} positionClass={this.props.positionClass} />
             );
         });
         return (
-            <div className="installBox">
-                <div className={"install" + footerClass} >
+            <div className={"installBox " + " " + this.props.positionClass + "installBox"}>
+                <div className={"install" + " " + this.props.positionClass + "install"} >
                     <p>Установить приложение</p>
                     <div className="btns-wrapper  as install-btnsWrapper">
                         {installBtns}
                     </div>
                 </div>
-                <FormBox insideFooter={this.props.insideFooter}/>
+                <FormBox positionClass={this.props.positionClass}/>
             </div>
         );
     }

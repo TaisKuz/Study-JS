@@ -15,10 +15,10 @@ var Column = React.createClass({
         return (
             <div className="column">
                 <div className="icon-wrapper">
-                    <img src={this.props.src} alt={this.props.alt} />
+                    <img className={this.props.alt} src={this.props.src} alt={this.props.alt} />
                 </div>
-                <p dangerouslySetInnerHTML={{ __html: this.props.title }} />
-                <p dangerouslySetInnerHTML={{ __html: this.props.description }} />
+                <p className="column__title" dangerouslySetInnerHTML={{ __html: this.props.title }} />
+                <p className="column__description" dangerouslySetInnerHTML={{ __html: this.props.description }} />
             </div>
         );
     }

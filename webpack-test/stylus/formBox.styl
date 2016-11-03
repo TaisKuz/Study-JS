@@ -1,11 +1,68 @@
 .formBox
   & .phoneEmail-form
-    p
-      font-family: "MuseoSansCyrl-thin"
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-between
+    align-items: center
+    border-radius: 6px
+    margin: 0 auto
 
-    & .phoneEmail-form__inputSubmit
+  & .phoneEmail-form  p
+      font-family: "MuseoSansCyrl-thin"
+      font-size: 13px
+      line-height: 16px
+      letter-spacing: 0.52px
+
+    & .phoneEmail-form__submit
       text-transform: uppercase
+      margin-right: 20px
+
+    & .phoneEmail-form__input
+      height: 26px
+      padding: 14px 25px 14px 15px
+      border-radius: 6px
+      background-color: transparent
 
     & .phoneEmail-form__input,
-    & .phoneEmail-form__inputSubmit
+    & .phoneEmail-form__submit
       font-family: "MuseoSansCyrl-normal"
+      background-color: #fff
+      text-align: left
+      padding-left: 15px
+      color: #808080
+
+  // HEADER -------------------------
+  &.header__formBox
+    & .phoneEmail-form
+      width: 304px
+      height: 48px
+    & .phoneEmail-form  p
+      margin: 29px 0 11px
+
+    & .phoneEmail-form__submit
+      font-size: 12px
+      line-height: 15px
+      border-left: 1px solid #808080
+      height: 22px
+
+    & .phoneEmail-form__input
+      font-size: 16px
+      line-height: 18px
+
+  // FOOTER -------------------------
+  &.footer__formBox
+    margin-top: 51px
+    margin-left: 5px
+    width: 380px
+    & .phoneEmail-form
+      width: 380px
+      height: 51px
+      & .phoneEmail-form__input
+        font-size: 20px
+        line-height: 23px
+        height: 23px
+      & .phoneEmail-form__submit
+        font-size: 15px
+        line-height: 18px
+        border-left: 2px solid #808080
+        height: 27px

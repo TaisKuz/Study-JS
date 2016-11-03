@@ -1,4 +1,3 @@
-body-gradient =  -45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%
 main-text-color = #fff
 borderRadius = 4px
 singIn__hover-color = deeppink
@@ -12,11 +11,11 @@ singIn__hover-color = deeppink
 //linear-gradient()
 //  vendor('linear-gradient', arguments)
 
-// global selectors
+//-------- global selectors
 
 body
 #page-content
-  background: linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%)
+  background: -webkit-linear-gradient(-45deg, rgba(95,228,237,1) 0%, rgba(176,98,243,1) 79%, rgba(176,98,243,1) 85%, rgba(118,78,156,1) 100%)
 
 a
   display: inline-block
@@ -26,7 +25,7 @@ a
 p
   color: main-text-color
 
-//------
+//------ global selectors end
 
 .main
   width: 100%
@@ -48,6 +47,15 @@ p
     line-height: 47px;
     letter-spacing: 0.8px;
 
+  &-row-1,
+  &-row-2
+    display: flex
+    flex-wrap: nowrap
+
+  &-row-1
+    justify-content: center
+    align-items: center
+
   &-row-1 a
     margin: 26px 42px 40px 23px
     &:first-child
@@ -63,6 +71,8 @@ p
 
   &-row-2
     margin: 61px 73px 0 35px
+    align-items: flex-end
+    justify-content: space-around
 
   &-row-2 &-column-2 p:nth-child(2),
   &-row-3 p:nth-child(3)
@@ -80,6 +90,8 @@ p
     &,
     p
       width: 310px
+    & > p
+      text-align: left !important;
     & > p:first-child
       text-transform: uppercase
       font-size: 22.4px
@@ -99,22 +111,20 @@ p
       opacity: .9
       border-radius: borderRadius
 
-//---
+  &-row-3
+    margin-top: 120px
+    text-align: center
+    & a img
+      margin-bottom: 30px
+    & p:nth-child(2)
+      font-size: 48px
+      line-height: 57px
+      margin-bottom: 5px
+    & p:nth-child(3)
+      font-size: 27px
+      line-height: 47px
+      margin-bottom: 38px
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .footer
+    border-top: 1px solid #fff
+    width:100%

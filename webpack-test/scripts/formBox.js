@@ -3,13 +3,12 @@ import './../stylus/formBox.styl';
 var FormBox = React.createClass({
     getDefaultProps: function () {
         return {
-            insideFooter: false
+            positionClass: "footer__"
         };
     },
     render: function() {
-        var footerClass = this.props.insideFooter? " footer__formBox" : "";
         return (
-            <div className={"get-phone-email  as   formBox" + footerClass}>
+            <div className={"get-phone-email  as   formBox" + " " + this.props.positionClass + "formBox"}>
                 <p>Получите ссылку для установки на&nbsp;телефон</p>
                 <form className="form-phone-email  as   phoneEmail-form">
                     <input className="  as   phoneEmail-form__input" type="text" placeholder="Телефон или Email" />
