@@ -20,8 +20,8 @@ var InstallBox = React.createClass({
         return (
             <div className={"installBox " + " " + this.props.positionClass + "installBox"}>
                 <div className={"install" + " " + this.props.positionClass + "install"} >
-                    <p>Установить приложение</p>
-                    <div className="btns-wrapper  as install-btnsWrapper">
+                    <p className="install__title">Установить приложение</p>
+                    <div className="install-btnsWrapper">
                         {installBtns}
                     </div>
                 </div>

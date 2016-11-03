@@ -25,7 +25,7 @@ var columns = [
         src: '/img/icon-cherry.svg',
         alt: 'icon-cherry',
         title: 'Совершенно бесплатно',
-        description: 'Слушайте любую музыку при наличии интернета!'
+        description: 'Слушайте любую музыку<br/>при наличии интернета!'
     },
     {
         src: '/img/icon-plane.svg',
@@ -61,30 +61,30 @@ var MainPage = React.createClass({
 
     render() {
         return (
-            <div className="mainPage    as main">
-                <div className="main-container-wrapper     as main-containerWrapper">
-                    <div className="row-1-logos          as main-row-1">
+            <div className="main">
+                <div className="main-containerWrapper">
+                    <div className="main-row-1">
                         <a href="http://zvooq.com" target="_blank"> <img src="/img/Zvooq-logo.svg" alt="Zvooq-logo" /> </a>
                         <a href="http://www.shazam.com" target="_blank"> <img src="/img/Shazam-logo.png" alt="Shazam-logo" /> </a>
                     </div>
-                    <div className="pageTitle      as main-pageTitle">Чтобы попробовать новые возможности,<br/>
-                        <div className="singIn     as main-singIn"
+                    <div className="main-pageTitle">Чтобы попробовать новые возможности,<br/>
+                        <div className="main-singIn"
                              onClick={this.loginPopupHandler}>войдите </div>
                         в&nbsp;бесплатное приложение Zvooq</div>
 
-                    <div className="row-2       as main-row-2">
-                        <div className="column column-1      as main-column main-column-1">
+                    <div className="main-row-2">
+                        <div className="main-column main-column-1">
                             <img src="/img/iphone-white.png" alt="iphone-white" />
                             <img src="/img/iphone-black.png" alt="iphone-black" />
                         </div>
-                        <div className="column column-2      as main-column main-column-2">
+                        <div className="main-column main-column-2">
                             <p>Теперь ваши открытия будут всегда под рукой!</p>
                             <p>Вы&nbsp;сможете Shazamить треки прямо из&nbsp;Zvooq сразу слушать их&nbsp;и&nbsp;моментально добавлять в&nbsp;свою коллекцию.</p>
 
                             <InstallBox btns={btns} positionClass="header__"/>
                         </div>
                     </div>
-                    <div className="row-3     as  main-row-3">
+                    <div className="main-row-3">
                         <a href="http://zvooq.com" target="_blank"><img src="/img/Zvooq-logo.svg" alt="Zvooq-logo" /></a>
                         <p>Бесплатное приложение,<br/>с которым слушать музыку легко</p>
                         <p>Бесплатное музыкальное приложение &#8470;1&nbsp;в AppStore</p>
@@ -93,7 +93,7 @@ var MainPage = React.createClass({
                     <ColumnBox columns={columns}/>
 
                 </div>
-                <div className="footer     as footer">
+                <div className="footer">
 
                     <InstallBox btns={btns} positionClass="footer__"/>
 

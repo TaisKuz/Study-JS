@@ -72,7 +72,7 @@
 	    src: '/img/icon-cherry.svg',
 	    alt: 'icon-cherry',
 	    title: 'Совершенно бесплатно',
-	    description: 'Слушайте любую музыку при наличии интернета!'
+	    description: 'Слушайте любую музыку<br/>при наличии интернета!'
 	}, {
 	    src: '/img/icon-plane.svg',
 	    alt: 'icon-plane',
@@ -107,13 +107,13 @@
 	    render: function render() {
 	        return React.createElement(
 	            'div',
-	            { className: 'mainPage    as main' },
+	            { className: 'main' },
 	            React.createElement(
 	                'div',
-	                { className: 'main-container-wrapper     as main-containerWrapper' },
+	                { className: 'main-containerWrapper' },
 	                React.createElement(
 	                    'div',
-	                    { className: 'row-1-logos          as main-row-1' },
+	                    { className: 'main-row-1' },
 	                    React.createElement(
 	                        'a',
 	                        { href: 'http://zvooq.com', target: '_blank' },
@@ -131,12 +131,12 @@
 	                ),
 	                React.createElement(
 	                    'div',
-	                    { className: 'pageTitle      as main-pageTitle' },
+	                    { className: 'main-pageTitle' },
 	                    '\u0427\u0442\u043E\u0431\u044B \u043F\u043E\u043F\u0440\u043E\u0431\u043E\u0432\u0430\u0442\u044C \u043D\u043E\u0432\u044B\u0435 \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u0438,',
 	                    React.createElement('br', null),
 	                    React.createElement(
 	                        'div',
-	                        { className: 'singIn     as main-singIn',
+	                        { className: 'main-singIn',
 	                            onClick: this.loginPopupHandler },
 	                        '\u0432\u043E\u0439\u0434\u0438\u0442\u0435 '
 	                    ),
@@ -144,16 +144,16 @@
 	                ),
 	                React.createElement(
 	                    'div',
-	                    { className: 'row-2       as main-row-2' },
+	                    { className: 'main-row-2' },
 	                    React.createElement(
 	                        'div',
-	                        { className: 'column column-1      as main-column main-column-1' },
+	                        { className: 'main-column main-column-1' },
 	                        React.createElement('img', { src: '/img/iphone-white.png', alt: 'iphone-white' }),
 	                        React.createElement('img', { src: '/img/iphone-black.png', alt: 'iphone-black' })
 	                    ),
 	                    React.createElement(
 	                        'div',
-	                        { className: 'column column-2      as main-column main-column-2' },
+	                        { className: 'main-column main-column-2' },
 	                        React.createElement(
 	                            'p',
 	                            null,
@@ -169,7 +169,7 @@
 	                ),
 	                React.createElement(
 	                    'div',
-	                    { className: 'row-3     as  main-row-3' },
+	                    { className: 'main-row-3' },
 	                    React.createElement(
 	                        'a',
 	                        { href: 'http://zvooq.com', target: '_blank' },
@@ -192,7 +192,7 @@
 	            ),
 	            React.createElement(
 	                'div',
-	                { className: 'footer     as footer' },
+	                { className: 'footer' },
 	                React.createElement(_installBox.InstallBox, { btns: btns, positionClass: 'footer__' })
 	            ),
 	            this.state.showLoginPopup && React.createElement(_loginPopup.LoginPopup, { onClickClose: this.loginPopupHandler })
@@ -22033,7 +22033,7 @@
 
 
 	// module
-	exports.push([module.id, "body,\n#page-content {\n  background: -webkit-linear-gradient(-45deg, #5fe4ed 0%, #b062f3 79%, #b062f3 85%, #764e9c 100%);\n}\na {\n  display: inline-block;\n}\na:hover {\n  cursor: pointer;\n}\np {\n  color: #fff;\n}\n.main {\n  width: 100%;\n}\n.main,\n.main-containerWrapper,\n.main .footer {\n  height: 100%;\n}\n.main-containerWrapper,\n.main .footer {\n  width: 1024px;\n  margin: 0 auto;\n}\n.main-pageTitle {\n  color: #fff;\n  text-align: center;\n  font-size: 37px;\n  line-height: 47px;\n  letter-spacing: 0.8px;\n}\n.main-row-1,\n.main-row-2 {\n  display: flex;\n  flex-wrap: nowrap;\n}\n.main-row-1 {\n  justify-content: center;\n  align-items: center;\n}\n.main-row-1 a {\n  margin: 26px 42px 40px 23px;\n}\n.main-row-1 a:first-child {\n  width: 207px;\n  height: 53px;\n}\n.main-row-1 a:last-child {\n  width: 191.63px;\n  height: 54.21px;\n}\n.main-pageTitle,\n.main-row-3 p:nth-child(2) {\n  font-family: \"MuseoSansCyrl-normal\";\n}\n.main-row-2 {\n  margin: 61px 73px 0 35px;\n  align-items: flex-end;\n  justify-content: space-around;\n}\n.main-row-2 .main-column-2 p:nth-child(2),\n.main-row-3 p:nth-child(3) {\n  font-family: \"MuseoSansCyrl-thin\";\n}\n.main-column {\n  display: inline-block;\n}\n.main-column-1 img:first-child {\n  margin-right: 15px;\n}\n.main-column-2 {\n  margin: 25px 39px 12px 78px;\n}\n.main-column-2,\n.main-column-2 p {\n  width: 310px;\n}\n.main-column-2 > p {\n  text-align: left !important;\n}\n.main-column-2 > p:first-child {\n  text-transform: uppercase;\n  font-size: 22.4px;\n  line-height: 29.6px;\n  margin-bottom: 15.8px;\n  font-family: \"MuseoSansCyrl-normal\";\n}\n.main-column-2 p:nth-child(2) {\n  font-size: 21.28px;\n  line-height: 23.52px;\n  letter-spacing: 0.2px;\n}\n.main-singIn {\n  cursor: pointer;\n  display: inline;\n}\n.main-singIn:hover {\n  color: #ff1493;\n  opacity: 0.9;\n  border-radius: 4px;\n}\n.main-row-3 {\n  margin-top: 120px;\n  text-align: center;\n}\n.main-row-3 a img {\n  margin-bottom: 30px;\n}\n.main-row-3 p:nth-child(2) {\n  font-size: 48px;\n  line-height: 57px;\n  margin-bottom: 5px;\n}\n.main-row-3 p:nth-child(3) {\n  font-size: 27px;\n  line-height: 47px;\n  margin-bottom: 38px;\n}\n.main .footer {\n  border-top: 1px solid #fff;\n  width: 100%;\n}\n", ""]);
+	exports.push([module.id, "body,\n#page-content {\n  background: -webkit-linear-gradient(-45deg, #5fe4ed 0%, #b062f3 79%, #b062f3 85%, #764e9c 100%);\n}\na {\n  display: inline-block;\n}\na:hover {\n  cursor: pointer;\n}\np {\n  color: #fff;\n  text-align: center;\n}\n.main {\n  width: 100%;\n}\n.main,\n.main-containerWrapper,\n.main .footer {\n  height: 100%;\n}\n.main-containerWrapper,\n.main .footer {\n  width: 1024px;\n  margin: 0 auto;\n}\n.main-pageTitle {\n  color: #fff;\n  text-align: center;\n  font-size: 37px;\n  line-height: 47px;\n  letter-spacing: 0.8px;\n}\n.main-row-1,\n.main-row-2 {\n  display: flex;\n  flex-wrap: nowrap;\n}\n.main-row-1 {\n  justify-content: center;\n  align-items: center;\n}\n.main-row-1 a {\n  margin: 26px 42px 40px 23px;\n}\n.main-row-1 a:first-child {\n  width: 207px;\n  height: 53px;\n}\n.main-row-1 a:last-child {\n  width: 191.63px;\n  height: 54.21px;\n}\n.main-pageTitle,\n.main-row-3 p:nth-child(2) {\n  font-family: \"MuseoSansCyrl-normal\";\n}\n.main-row-2 {\n  margin: 61px 73px 0 35px;\n  align-items: flex-end;\n  justify-content: space-around;\n}\n.main-row-2 .main-column-2 p:nth-child(2),\n.main-row-3 p:nth-child(3) {\n  font-family: \"MuseoSansCyrl-thin\";\n}\n.main-column {\n  display: inline-block;\n}\n.main-column-1 img:first-child {\n  margin-right: 15px;\n}\n.main-column-2 {\n  margin: 25px 39px 12px 78px;\n}\n.main-column-2,\n.main-column-2 p {\n  width: 310px;\n}\n.main-column-2 > p {\n  text-align: left !important;\n}\n.main-column-2 > p:first-child {\n  text-transform: uppercase;\n  font-size: 22.4px;\n  line-height: 29.6px;\n  margin-bottom: 15.8px;\n  font-family: \"MuseoSansCyrl-normal\";\n}\n.main-column-2 p:nth-child(2) {\n  font-size: 21.28px;\n  line-height: 23.52px;\n  letter-spacing: 0.2px;\n}\n.main-singIn {\n  cursor: pointer;\n  display: inline;\n}\n.main-singIn:hover {\n  color: #ff1493;\n  opacity: 0.9;\n  border-radius: 4px;\n}\n.main-row-3 {\n  margin-top: 120px;\n  text-align: center;\n}\n.main-row-3 a img {\n  margin-bottom: 30px;\n}\n.main-row-3 p:nth-child(2) {\n  font-size: 48px;\n  line-height: 57px;\n  margin-bottom: 5px;\n}\n.main-row-3 p:nth-child(3) {\n  font-size: 27px;\n  line-height: 47px;\n  margin-bottom: 38px;\n}\n.main .footer {\n  border-top: 1px solid #fff;\n  width: 100%;\n}\n", ""]);
 
 	// exports
 
@@ -22078,12 +22078,12 @@
 	                { className: "install" + " " + this.props.positionClass + "install" },
 	                React.createElement(
 	                    'p',
-	                    null,
+	                    { className: 'install__title' },
 	                    '\u0423\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435'
 	                ),
 	                React.createElement(
 	                    'div',
-	                    { className: 'btns-wrapper  as install-btnsWrapper' },
+	                    { className: 'install-btnsWrapper' },
 	                    installBtns
 	                )
 	            ),
@@ -22130,7 +22130,7 @@
 
 
 	// module
-	exports.push([module.id, ".installBox {\n  width: 1024px;\n  margin: 0 auto;\n  height: 100%;\n}\n.installBox .install p {\n  font-family: \"MuseoSansCyrl-thin\";\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: 0.52px;\n}\n.installBox .install .install-btnsWrapper {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: center;\n}\n.installBox.header__installBox .install p {\n  margin: 42px 0 12px;\n}\n.installBox.footer__installBox {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: flex-start;\n  padding-bottom: 56px;\n}\n.installBox.footer__installBox p {\n  margin-bottom: 35px;\n}\n.installBox.footer__installBox .install {\n  margin-top: 51px;\n  margin-right: 93px;\n  width: 380px;\n}\n", ""]);
+	exports.push([module.id, ".installBox .install .install__title {\n  font-family: \"MuseoSansCyrl-thin\";\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: 0.52px;\n}\n.installBox .install .install-btnsWrapper {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: center;\n}\n.installBox.header__installBox .install .install__title {\n  margin: 42px 0 12px;\n}\n.installBox.footer__installBox {\n  width: 1024px;\n  margin: 0 auto;\n  height: 100%;\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: flex-start;\n  padding-bottom: 56px;\n}\n.installBox.footer__installBox p {\n  margin-bottom: 35px;\n}\n.installBox.footer__installBox .install {\n  margin-top: 51px;\n  margin-right: 93px;\n  width: 380px;\n}\n.installBox.footer__installBox .install .install__title {\n  font-size: 15px;\n  line-height: 18px;\n  letter-spacing: 0.6px;\n}\n", ""]);
 
 	// exports
 
@@ -22206,7 +22206,7 @@
 
 
 	// module
-	exports.push([module.id, ".installBtn.btn-app-store {\n  background: url(\"/../img/app-store.svg\") no-repeat !important;\n}\n.installBtn.btn-google-play {\n  background: url(\"/../img/google-play.svg\") no-repeat !important;\n  margin-left: -3px;\n}\n.installBtn.btn-app-store,\n.installBtn.btn-google-play {\n  background: #000 center;\n  background-size: cover;\n  border-radius: 6px;\n}\n.installBtn.header__installBtn.btn-app-store,\n.installBtn.header__installBtn.btn-app-store a {\n  width: 142px;\n  height: 44px;\n  margin-right: -7px;\n}\n.installBtn.header__installBtn.btn-google-play,\n.installBtn.header__installBtn.btn-google-play a {\n  width: 137.48px;\n  height: 42.33px;\n}\n.installBtn.footer__installBtn.btn-app-store,\n.installBtn.footer__installBtn.btn-app-store a {\n  width: 181px;\n  height: 53px;\n  margin-right: 24.3px;\n}\n.installBtn.footer__installBtn.btn-google-play,\n.installBtn.footer__installBtn.btn-google-play a {\n  width: 174.74px;\n  height: 51.33px;\n}\n", ""]);
+	exports.push([module.id, ".installBtn.btn-app-store {\n  background-image: url(\"/../img/app-store.svg\") !important;\n}\n.installBtn.btn-google-play {\n  background-image: url(\"/../img/google-play.svg\") !important;\n  margin-left: -3px;\n}\n.installBtn.btn-app-store,\n.installBtn.btn-google-play {\n  background-color: #000;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  border-radius: 6px;\n}\n.installBtn.header__installBtn.btn-app-store,\n.installBtn.header__installBtn.btn-app-store a {\n  width: 142px;\n  height: 44px;\n  margin-right: -7px;\n}\n.installBtn.header__installBtn.btn-google-play,\n.installBtn.header__installBtn.btn-google-play a {\n  width: 137.48px;\n  height: 42.33px;\n}\n.installBtn.footer__installBtn.btn-app-store,\n.installBtn.footer__installBtn.btn-app-store a {\n  width: 181px;\n  height: 53px;\n  margin-right: 24.3px;\n}\n.installBtn.footer__installBtn.btn-google-play,\n.installBtn.footer__installBtn.btn-google-play a {\n  width: 174.74px;\n  height: 51.33px;\n}\n", ""]);
 
 	// exports
 
@@ -22235,17 +22235,17 @@
 	    render: function render() {
 	        return React.createElement(
 	            "div",
-	            { className: "get-phone-email  as   formBox" + " " + this.props.positionClass + "formBox" },
+	            { className: "formBox" + " " + this.props.positionClass + "formBox" },
 	            React.createElement(
 	                "p",
-	                null,
+	                { className: "formBox__title" },
 	                "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u0435 \u0441\u0441\u044B\u043B\u043A\u0443 \u0434\u043B\u044F \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0438 \u043D\u0430\xA0\u0442\u0435\u043B\u0435\u0444\u043E\u043D"
 	            ),
 	            React.createElement(
 	                "form",
-	                { className: "form-phone-email  as   phoneEmail-form" },
-	                React.createElement("input", { className: "  as   phoneEmail-form__input", type: "text", placeholder: "\u0422\u0435\u043B\u0435\u0444\u043E\u043D \u0438\u043B\u0438 Email" }),
-	                React.createElement("input", { className: "  as   phoneEmail-form__submit", type: "submit", value: "\u043E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C" })
+	                { className: "phoneEmail-form" },
+	                React.createElement("input", { className: "phoneEmail-form__input", type: "text", placeholder: "\u0422\u0435\u043B\u0435\u0444\u043E\u043D \u0438\u043B\u0438 Email" }),
+	                React.createElement("input", { className: "phoneEmail-form__submit", type: "submit", value: "\u043E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C" })
 	            )
 	        );
 	    }
@@ -22289,7 +22289,7 @@
 
 
 	// module
-	exports.push([module.id, ".formBox .phoneEmail-form {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  align-items: center;\n  border-radius: 6px;\n  margin: 0 auto;\n}\n.formBox .phoneEmail-form p {\n  font-family: \"MuseoSansCyrl-thin\";\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: 0.52px;\n}\n.formBox .phoneEmail-form__submit {\n  text-transform: uppercase;\n  margin-right: 20px;\n}\n.formBox .phoneEmail-form__input {\n  height: 26px;\n  padding: 14px 25px 14px 15px;\n  border-radius: 6px;\n  background-color: transparent;\n}\n.formBox .phoneEmail-form__input,\n.formBox .phoneEmail-form__submit {\n  font-family: \"MuseoSansCyrl-normal\";\n  background-color: #fff;\n  text-align: left;\n  padding-left: 15px;\n  color: #808080;\n}\n.formBox.header__formBox .phoneEmail-form {\n  width: 304px;\n  height: 48px;\n}\n.formBox.header__formBox .phoneEmail-form p {\n  margin: 29px 0 11px;\n}\n.formBox.header__formBox .phoneEmail-form__submit {\n  font-size: 12px;\n  line-height: 15px;\n  border-left: 1px solid #808080;\n  height: 22px;\n}\n.formBox.header__formBox .phoneEmail-form__input {\n  font-size: 16px;\n  line-height: 18px;\n}\n.formBox.footer__formBox {\n  margin-top: 51px;\n  margin-left: 5px;\n  width: 380px;\n}\n.formBox.footer__formBox .phoneEmail-form {\n  width: 380px;\n  height: 51px;\n}\n.formBox.footer__formBox .phoneEmail-form .phoneEmail-form__input {\n  font-size: 20px;\n  line-height: 23px;\n  height: 23px;\n}\n.formBox.footer__formBox .phoneEmail-form .phoneEmail-form__submit {\n  font-size: 15px;\n  line-height: 18px;\n  border-left: 2px solid #808080;\n  height: 27px;\n}\n", ""]);
+	exports.push([module.id, ".formBox .formBox__title {\n  font-family: \"MuseoSansCyrl-thin\";\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: 0.52px;\n}\n.formBox .phoneEmail-form {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  align-items: center;\n  border-radius: 6px;\n  margin: 0 auto;\n}\n.formBox .phoneEmail-form {\n  background-color: #fff;\n}\n.formBox .phoneEmail-form .phoneEmail-form__submit {\n  text-transform: uppercase;\n  margin-right: 20px;\n  background-color: #fff;\n}\n.formBox .phoneEmail-form .phoneEmail-form__input {\n  height: 26px;\n  padding: 14px 25px 14px 15px;\n  border-radius: 6px;\n  background-color: transparent;\n}\n.formBox .phoneEmail-form .phoneEmail-form__input,\n.formBox .phoneEmail-form .phoneEmail-form__submit {\n  font-family: \"MuseoSansCyrl-normal\";\n  text-align: left;\n  padding-left: 15px;\n  color: #808080;\n}\n.formBox.header__formBox .formBox__title {\n  margin: 29px 0 11px;\n}\n.formBox.header__formBox .phoneEmail-form {\n  width: 304px;\n  height: 48px;\n}\n.formBox.header__formBox .phoneEmail-form__submit {\n  font-size: 12px;\n  line-height: 15px;\n  border-left: 1px solid #808080;\n  height: 22px;\n}\n.formBox.header__formBox .phoneEmail-form__input {\n  font-size: 16px;\n  line-height: 18px;\n}\n.formBox.footer__formBox {\n  margin-top: 51px;\n  margin-left: 5px;\n  width: 380px;\n}\n.formBox.footer__formBox .formBox__title {\n  font-size: 15px;\n  line-height: 18px;\n  letter-spacing: 0.6px;\n}\n.formBox.footer__formBox .phoneEmail-form {\n  width: 380px;\n  height: 51px;\n}\n.formBox.footer__formBox .phoneEmail-form .phoneEmail-form__input {\n  font-size: 20px;\n  line-height: 23px;\n  height: 23px;\n}\n.formBox.footer__formBox .phoneEmail-form .phoneEmail-form__submit {\n  font-size: 15px;\n  line-height: 18px;\n  border-left: 2px solid #808080;\n  height: 27px;\n}\n", ""]);
 
 	// exports
 
@@ -22325,7 +22325,7 @@
 
 	        return React.createElement(
 	            'div',
-	            { className: 'row-4   as columnBox' },
+	            { className: 'columnBox' },
 	            columnNodes
 	        );
 	    }
@@ -22453,7 +22453,7 @@
 
 
 	// module
-	exports.push([module.id, ".column {\n  display: inline-block;\n}\n.column__title {\n  font-family: \"MuseoSansCyrl-normal\";\n  font-size: 23px;\n  line-height: 25px;\n  letter-spacing: 0.92px;\n  margin: 37px 0 21px;\n}\n.column__description {\n  font-family: \"MuseoSansCyrl-thin\";\n  font-size: 13px;\n  line-height: 22px;\n  letter-spacing: 0.52px;\n  width: 225px;\n}\n.column .icon-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 102px;\n  height: 102px;\n  margin: 0 auto;\n}\n.column .icon-wrapper .icon-cherry {\n  max-width: 90.13px;\n  max-height: 91px;\n}\n.column .icon-wrapper .icon-plane {\n  max-width: 36.2px;\n  max-height: 72.44px;\n}\n.column .icon-wrapper .icon-notes {\n  max-width: 51.76px;\n  max-height: 55.17px;\n}\n.column .icon-wrapper .icon-heart {\n  max-width: 51px;\n  max-height: 47.81px;\n}\n", ""]);
+	exports.push([module.id, ".column {\n  display: inline-block;\n  width: 220px;\n  text-align: center;\n}\n.column__title {\n  font-family: \"MuseoSansCyrl-normal\";\n  font-size: 23px;\n  line-height: 25px;\n  letter-spacing: 0.92px;\n  margin: 37px 0 21px;\n}\n.column__description {\n  font-family: \"MuseoSansCyrl-thin\";\n  font-size: 13px;\n  line-height: 22px;\n  letter-spacing: 0.52px;\n  width: 225px;\n}\n.column .icon-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 102px;\n  height: 102px;\n  margin: 0 auto;\n}\n.column .icon-wrapper .icon-cherry,\n.column .icon-wrapper .icon-plane,\n.column .icon-wrapper .icon-heart {\n  max-width: 90.13px;\n  max-height: 91px;\n}\n.column .icon-wrapper .icon-notes {\n  max-width: 51.76px;\n  max-height: 55.17px;\n}\n", ""]);
 
 	// exports
 
@@ -22561,7 +22561,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, "\nbutton.btnsLogin:hover {\n    opacity: .9;\n}\n\n.banner-gray{\n    overflow: auto;\n    -webkit-overflow-scrolling: touch;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: absolute !important;\n    background-color: rgba(0,0,0,0.5);\n}\n\n.banner-show {\n    z-index: 1001;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: fixed !important;\n}\n\n.banner-pointer{\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: fixed !important;\n    cursor: pointer;\n}\n\n.banner-scroller {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n}\n\n.loginWhite {\n    z-index: 10040;\n    width: 320px;\n    min-height: 381px;\n    cursor: default;\n    position: relative;\n    top: 100px;\n    margin: 0 auto 100px;\n    border-radius: 3px;\n    background: #fff;\n    transition: transform 0.6s;\n    transition-property: transform;\n    transition-duration: 0.6s;\n    transition-timing-function: initial;\n    transition-delay: initial;\n}\n\n.btnsLogin {\n    display: block;\n    height: 50px;\n    width: 100%;\n    border-radius: 4px;\n    font: 100 15px/18px \"MuseoSansCyrl-100\";\n    color: #fff;\n    cursor: pointer;\n    margin-top: 10px;\n}\n\n.btnLoginVk,\n.btnLoginFb {\n    margin-bottom: 10px;\n    padding-left: 54px;\n    position: relative;\n    text-align: left;\n}\n\n.btnLoginVk {\n    background: url(/../img/loginPopup/vkontakte.svg) 19px 50%/15px no-repeat #356ca1;\n}\n\n\n.btnLoginFb {\n    background: url(/../img/loginPopup/facebook.svg) 22px 50%/10px no-repeat #475e97;\n}\n\n.btnLightBlue {\n    background-color: #4baeec;\n}\n\n.btn-email, .btn-sms {\n    display: inline-block;\n    width: 135px !important;\n    margin-top: 0;\n}\n.btn-email{\n    float: left;\n}\n.btn-sms {\n    margin-left: 10px;\n}\n\n.btn-sms small{\n    pointer-events: none;\n    font: 100 13px/15px \"MuseoSansCyrl-100\";\n    opacity: 0.6;\n}\n\n.btnStriper{\n    border-top: 1px solid #e6e6e6;\n    margin: 20px auto;\n}\n\n.loginMain .loginTitle {\n    font: 300 20px/28px \"MuseoSansCyrl-300\";\n    color: #080808;\n    padding: 30px 0 5px;\n    text-align: center;\n}\n\n.loginMain .loginBtns-content {\n    padding: 25px 20px 20px;\n}\n\n.loginMain .loginMain-links,\n.loginMain-links a{\n    text-align: center;\n    font: 100 11px/1.1 \"MuseoSansCyrl-100\",Arial,sans-serif;\n    color: #ccc;\n}\n\n.loginMain .loginMain-links {\n    margin-top: 20px;\n}\n\n.loginMain .loginMain-links a {\n    color: #ccc !important;\n    text-decoration: underline !important;\n}\n\n.loginHeader {\n    position: relative;\n    height: 39px;\n    padding-top: 21px;\n    font: 100 18px \"MuseoSansCyrl-100\";\n    text-align: center;\n    background-color: #f1f1f1;\n    color: #4d4d4d;\n}\n\n.loginHeader-back {\n    background: url(/../img/loginPopup/back.svg) 20px 50% no-repeat;\n    position: absolute;\n    cursor: pointer;\n    width: 65px;\n    height: 100%;\n    top: 0;\n    left: 0;\n}\n\n.loginForm {\n    margin: .75em 0 1em;\n}\n\n.loginForm input[type=\"password\"] {\n    margin-bottom: 20px;\n}\n\ninput.loginInput {\n    display: block;\n    width: 100%;\n    height: 50px;\n    padding: 0 15px;\n    margin-bottom: 10px;\n    box-sizing: border-box;\n    box-shadow: inset 0 0 0 1px #f1f1f1;\n    color: #7c7c7c;\n    font: 100 15px/17px \"MuseoSansCyrl-100\";\n    -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\n\n.loginEmail-content {\n    padding: 20px 20px 25px;\n    text-align: center;\n}\n\n.loginEmail-forgot {\n    display: inline-block;\n    margin-top: 20px;\n    color: #7c7c7c;\n    font: 100 15px/1.2 \"MuseoSansCyrl-100\";\n    text-align: center;\n}\n\n.loginSms-content,\n.emailPasForgot-content {\n    padding: 20px 20px 120px;\n}\n\n@keyframes popup {\n    from {\n        margin-left: 285px;\n    }\n    to {\n        margin-left: 293px;\n    }\n}\n\n@-webkit-keyframes popup {\n    from {\n        margin-left: 287px;\n    }\n    to {\n        margin-left: 293px;\n    }\n}\n\n.loginSms-note{\n    position: relative;\n    width: 160px;\n    height: 90px;\n    padding: 20px;\n    margin: -130px 0 0 293px;\n    top: -20px;\n    color: #fff;\n    background-color: #717578;\n    animation: popup .2s;\n    font: 100 15px/1.2 \"MuseoSansCyrl-100\";\n    text-align: left;\n}\n\n.loginSms-note:after {\n    position: absolute;\n    width: 12px;\n    height: 12px;\n    top: 58px;\n    left: -5px;\n    content: '';\n    background-color: #717578;\n    transform: rotate(45deg);\n    border-radius: 2px;\n}\n", ""]);
 
 	// exports
 
@@ -22988,7 +22988,7 @@
 	    render: function render() {
 	        var loginForm = "loginForm";
 	        var inputs = this.props.inputs.map(function (input, index) {
-	            return React.createElement('input', { key: index, className: loginForm + "__input was loginInput", defaultValue: input.defaultValue, placeholder: input.placeholder, required: true, type: input.type });
+	            return React.createElement('input', { key: index, className: loginForm + "__input     was loginInput", defaultValue: input.defaultValue, placeholder: input.placeholder, required: true, type: input.type });
 	        });
 
 	        return React.createElement(

@@ -1,4 +1,10 @@
 .formBox
+  & &__title
+    font-family: "MuseoSansCyrl-thin"
+    font-size: 13px
+    line-height: 16px
+    letter-spacing: 0.52px
+
   & .phoneEmail-form
     display: flex
     flex-wrap: nowrap
@@ -7,15 +13,13 @@
     border-radius: 6px
     margin: 0 auto
 
-  & .phoneEmail-form  p
-      font-family: "MuseoSansCyrl-thin"
-      font-size: 13px
-      line-height: 16px
-      letter-spacing: 0.52px
+  & .phoneEmail-form
+    background-color: #fff
 
     & .phoneEmail-form__submit
       text-transform: uppercase
       margin-right: 20px
+      background-color: #fff
 
     & .phoneEmail-form__input
       height: 26px
@@ -26,18 +30,18 @@
     & .phoneEmail-form__input,
     & .phoneEmail-form__submit
       font-family: "MuseoSansCyrl-normal"
-      background-color: #fff
       text-align: left
       padding-left: 15px
       color: #808080
 
   // HEADER -------------------------
   &.header__formBox
+    & .formBox__title
+      margin: 29px 0 11px
+
     & .phoneEmail-form
       width: 304px
       height: 48px
-    & .phoneEmail-form  p
-      margin: 29px 0 11px
 
     & .phoneEmail-form__submit
       font-size: 12px
@@ -54,6 +58,12 @@
     margin-top: 51px
     margin-left: 5px
     width: 380px
+
+    & .formBox__title
+      font-size: 15px
+      line-height: 18px
+      letter-spacing: 0.6px
+
     & .phoneEmail-form
       width: 380px
       height: 51px
