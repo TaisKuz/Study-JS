@@ -1,11 +1,70 @@
 
+button.btnsLogin:hover {
+    opacity: .9;
+}
 
+.banner-gray{
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute !important;
+    background-color: rgba(0,0,0,0.5);
+}
 
+.banner-show {
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed !important;
+}
 
+.banner-pointer{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed !important;
+    cursor: pointer;
+}
 
+.banner-scroller {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
+.loginWhite {
+    z-index: 10040;
+    width: 320px;
+    min-height: 381px;
+    cursor: default;
+    position: relative;
+    top: 100px;
+    margin: 0 auto 100px;
+    border-radius: 3px;
+    background: #fff;
+    transition: transform 0.6s;
+    transition-property: transform;
+    transition-duration: 0.6s;
+    transition-timing-function: initial;
+    transition-delay: initial;
+}
 
-
+.btnsLogin {
+    display: block;
+    height: 50px;
+    width: 100%;
+    border-radius: 4px;
+    font: 100 15px/18px "MuseoSansCyrl-100";
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
 
 .btnLoginVk,
 .btnLoginFb {
