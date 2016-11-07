@@ -34,11 +34,11 @@ export var LoginPopup = React.createClass({
         let Page = this.props.views[this.state.currentView];
 
         return (
-            <div className="banner-show       as loginPopup loginPopup_up banner">
-                <div className="banner-gray    as banner-inner">
+            <div className="loginPopup loginPopup_up banner">
+                <div className="banner-inner">
                     <div className="banner-scroller">
                         <div className="banner-pointer" onClick={this.props.onClickClose}></div>
-                        <div className="loginWhite       as banner-window">
+                        <div className="banner-window">
                             <Page onPageClick={this.pageClickHandler} />
                         </div>
                     </div>

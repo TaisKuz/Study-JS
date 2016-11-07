@@ -7,26 +7,7 @@
 
 
 
-.btnLoginVk,
-.btnLoginFb {
-    margin-bottom: 10px;
-    padding-left: 54px;
-    position: relative;
-    text-align: left;
-}
 
-.btnLoginVk {
-    background: url(/../img/vkontakte.svg) 19px 50%/15px no-repeat #356ca1;
-}
-
-
-.btnLoginFb {
-    background: url(/../img/facebook.svg) 22px 50%/10px no-repeat #475e97;
-}
-
-.btnLightBlue {
-    background-color: #4baeec;
-}
 
 .btn-email, .btn-sms {
     display: inline-block;

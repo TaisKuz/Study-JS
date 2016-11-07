@@ -26,7 +26,7 @@ export var LoginEmail = React.createClass({
                 <LoginHeader clickHandler={() => {this.props.onPageClick(0)}}/>
                 <div className="loginEmail-content">
                     <LoginForm inputs={inputs} typebtn={4} type="submit" />
-                    <div className="loginEmail-forgot      as loginEmail__forgot-button"
+                    <div className="loginEmail__forgot-button"
                          onClick={() => {this.props.onPageClick(3)}}
                     >Забыли пароль?</div>
                 </div>

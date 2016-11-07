@@ -1,0 +1,40 @@
+lightGray = #717578
+
+// keyframes надо выносить в отдильный файл?
+@keyframes popup {
+  from {
+    margin-left: 285px;
+  }
+  to {
+    margin-left: 293px;
+  }
+}
+
+.loginSms
+  &-content
+    padding: 20px 20px 120px
+
+  &-note
+    position: relative
+    width: 160px
+    height: 90px
+    padding: 20px
+    margin: -130px 0 0 293px
+    top: -20px
+    color: #fff
+    background-color: lightGray
+    animation: popup .2s
+    font: 100 15px/1.2 "MuseoSansCyrl-thin"
+    text-align: left
+
+    &:after
+      position: absolute
+      width: 12px
+      height: 12px
+      top: 58px
+      left: -5px
+      content: ''
+      background-color: lightGray
+      transform: rotate(45deg)
+      border-radius: 2px
+

@@ -16,7 +16,7 @@ export var LoginForm = React.createClass({
         var loginForm = "loginForm";
         var inputs = this.props.inputs.map((input, index) => {
             return (
-                <input key={index} className={loginForm + "__input     was loginInput"} defaultValue={input.defaultValue} placeholder={input.placeholder} required type={input.type} />
+                <input key={index} className={loginForm + "__input"} defaultValue={input.defaultValue} placeholder={input.placeholder} required type={input.type} />
             );
         });
 

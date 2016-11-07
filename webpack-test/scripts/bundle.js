@@ -22506,17 +22506,17 @@
 
 	        return React.createElement(
 	            'div',
-	            { className: 'banner-show       as loginPopup loginPopup_up banner' },
+	            { className: 'loginPopup loginPopup_up banner' },
 	            React.createElement(
 	                'div',
-	                { className: 'banner-gray    as banner-inner' },
+	                { className: 'banner-inner' },
 	                React.createElement(
 	                    'div',
 	                    { className: 'banner-scroller' },
 	                    React.createElement('div', { className: 'banner-pointer', onClick: this.props.onClickClose }),
 	                    React.createElement(
 	                        'div',
-	                        { className: 'loginWhite       as banner-window' },
+	                        { className: 'banner-window' },
 	                        React.createElement(Page, { onPageClick: this.pageClickHandler })
 	                    )
 	                )
@@ -22561,7 +22561,7 @@
 
 
 	// module
-	exports.push([module.id, "\nbutton.btnsLogin:hover {\n    opacity: .9;\n}\n\n.banner-gray{\n    overflow: auto;\n    -webkit-overflow-scrolling: touch;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: absolute !important;\n    background-color: rgba(0,0,0,0.5);\n}\n\n.banner-show {\n    z-index: 1001;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: fixed !important;\n}\n\n.banner-pointer{\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    position: fixed !important;\n    cursor: pointer;\n}\n\n.banner-scroller {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n}\n\n.loginWhite {\n    z-index: 10040;\n    width: 320px;\n    min-height: 381px;\n    cursor: default;\n    position: relative;\n    top: 100px;\n    margin: 0 auto 100px;\n    border-radius: 3px;\n    background: #fff;\n    transition: transform 0.6s;\n    transition-property: transform;\n    transition-duration: 0.6s;\n    transition-timing-function: initial;\n    transition-delay: initial;\n}\n\n.btnsLogin {\n    display: block;\n    height: 50px;\n    width: 100%;\n    border-radius: 4px;\n    font: 100 15px/18px \"MuseoSansCyrl-100\";\n    color: #fff;\n    cursor: pointer;\n    margin-top: 10px;\n}\n\n.btnLoginVk,\n.btnLoginFb {\n    margin-bottom: 10px;\n    padding-left: 54px;\n    position: relative;\n    text-align: left;\n}\n\n.btnLoginVk {\n    background: url(/../img/loginPopup/vkontakte.svg) 19px 50%/15px no-repeat #356ca1;\n}\n\n\n.btnLoginFb {\n    background: url(/../img/loginPopup/facebook.svg) 22px 50%/10px no-repeat #475e97;\n}\n\n.btnLightBlue {\n    background-color: #4baeec;\n}\n\n.btn-email, .btn-sms {\n    display: inline-block;\n    width: 135px !important;\n    margin-top: 0;\n}\n.btn-email{\n    float: left;\n}\n.btn-sms {\n    margin-left: 10px;\n}\n\n.btn-sms small{\n    pointer-events: none;\n    font: 100 13px/15px \"MuseoSansCyrl-100\";\n    opacity: 0.6;\n}\n\n.btnStriper{\n    border-top: 1px solid #e6e6e6;\n    margin: 20px auto;\n}\n\n.loginMain .loginTitle {\n    font: 300 20px/28px \"MuseoSansCyrl-300\";\n    color: #080808;\n    padding: 30px 0 5px;\n    text-align: center;\n}\n\n.loginMain .loginBtns-content {\n    padding: 25px 20px 20px;\n}\n\n.loginMain .loginMain-links,\n.loginMain-links a{\n    text-align: center;\n    font: 100 11px/1.1 \"MuseoSansCyrl-100\",Arial,sans-serif;\n    color: #ccc;\n}\n\n.loginMain .loginMain-links {\n    margin-top: 20px;\n}\n\n.loginMain .loginMain-links a {\n    color: #ccc !important;\n    text-decoration: underline !important;\n}\n\n.loginHeader {\n    position: relative;\n    height: 39px;\n    padding-top: 21px;\n    font: 100 18px \"MuseoSansCyrl-100\";\n    text-align: center;\n    background-color: #f1f1f1;\n    color: #4d4d4d;\n}\n\n.loginHeader-back {\n    background: url(/../img/loginPopup/back.svg) 20px 50% no-repeat;\n    position: absolute;\n    cursor: pointer;\n    width: 65px;\n    height: 100%;\n    top: 0;\n    left: 0;\n}\n\n.loginForm {\n    margin: .75em 0 1em;\n}\n\n.loginForm input[type=\"password\"] {\n    margin-bottom: 20px;\n}\n\ninput.loginInput {\n    display: block;\n    width: 100%;\n    height: 50px;\n    padding: 0 15px;\n    margin-bottom: 10px;\n    box-sizing: border-box;\n    box-shadow: inset 0 0 0 1px #f1f1f1;\n    color: #7c7c7c;\n    font: 100 15px/17px \"MuseoSansCyrl-100\";\n    -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\n\n.loginEmail-content {\n    padding: 20px 20px 25px;\n    text-align: center;\n}\n\n.loginEmail-forgot {\n    display: inline-block;\n    margin-top: 20px;\n    color: #7c7c7c;\n    font: 100 15px/1.2 \"MuseoSansCyrl-100\";\n    text-align: center;\n}\n\n.loginSms-content,\n.emailPasForgot-content {\n    padding: 20px 20px 120px;\n}\n\n@keyframes popup {\n    from {\n        margin-left: 285px;\n    }\n    to {\n        margin-left: 293px;\n    }\n}\n\n@-webkit-keyframes popup {\n    from {\n        margin-left: 287px;\n    }\n    to {\n        margin-left: 293px;\n    }\n}\n\n.loginSms-note{\n    position: relative;\n    width: 160px;\n    height: 90px;\n    padding: 20px;\n    margin: -130px 0 0 293px;\n    top: -20px;\n    color: #fff;\n    background-color: #717578;\n    animation: popup .2s;\n    font: 100 15px/1.2 \"MuseoSansCyrl-100\";\n    text-align: left;\n}\n\n.loginSms-note:after {\n    position: absolute;\n    width: 12px;\n    height: 12px;\n    top: 58px;\n    left: -5px;\n    content: '';\n    background-color: #717578;\n    transform: rotate(45deg);\n    border-radius: 2px;\n}\n", ""]);
+	exports.push([module.id, ".loginPopup.loginPopup_up{z-index:1001;top:0;left:0;width:100%;height:100%;position:fixed !important}.loginPopup.loginPopup_up .banner-inner{overflow:auto;-webkit-overflow-scrolling:touch;top:0;left:0;width:100%;height:100%;position:absolute !important;background-color:rgba(0,0,0,0.5)}.loginPopup.loginPopup_up .banner-pointer{top:0;left:0;width:100%;height:100%;position:fixed !important;cursor:pointer}.loginPopup.loginPopup_up .banner-scroller{position:absolute;width:100%;height:100%}.loginPopup.loginPopup_up .banner-window{z-index:10040;width:320px;min-height:381px;cursor:default;position:relative;top:100px;margin:0 auto 100px;border-radius:3px;background:#fff;transition:transform .6s;transition-property:transform;transition-duration:.6s;transition-timing-function:initial;transition-delay:initial}", ""]);
 
 	// exports
 
@@ -22601,7 +22601,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".loginPopup.loginPopup_up {\n  z-index: 1001;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: fixed !important;\n}\n.loginPopup.loginPopup_up .banner-inner {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: absolute !important;\n  background-color: rgba(0,0,0,0.5);\n}\n.loginPopup.loginPopup_up .banner-pointer {\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: fixed !important;\n  cursor: pointer;\n}\n.loginPopup.loginPopup_up .banner-scroller {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n.loginPopup.loginPopup_up .banner-window {\n  z-index: 10040;\n  width: 320px;\n  min-height: 381px;\n  cursor: default;\n  position: relative;\n  top: 100px;\n  margin: 0 auto 100px;\n  border-radius: 3px;\n  background: #fff;\n  transition: transform 0.6s;\n  transition-property: transform;\n  transition-duration: 0.6s;\n  transition-timing-function: initial;\n  transition-delay: initial;\n}\n", ""]);
 
 	// exports
 
@@ -22738,7 +22738,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".loginMain .loginTitle {\n  font: 300 20px/28px \"MuseoSansCyrl-normal\";\n  color: #080808;\n  padding: 30px 0 5px;\n  text-align: center;\n}\n.loginMain .loginBtns-content {\n  padding: 25px 20px 20px;\n}\n.loginMain .btnStriper {\n  border-top: 1px solid #e6e6e6;\n  margin: 20px auto;\n}\n.loginMain .loginMain-links,\n.loginMain .loginMain-links a {\n  text-align: center;\n  font: 100 11px/1.1 \"MuseoSansCyrl-thin\", Arial, sans-serif;\n  color: #ccc !important;\n}\n.loginMain .loginMain-links {\n  margin-top: 20px;\n}\n.loginMain .loginMain-links a {\n  text-decoration: underline !important;\n}\n", ""]);
 
 	// exports
 
@@ -22765,11 +22765,7 @@
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            classNames: ['btnLoginVk                 as loginBtn__vk ', //////////////////as
-	            'btnLoginFb                 as loginBtn__fb ', //////////////////as
-	            'btn-email btnLightBlue     as loginBtn__email loginBtn_color_lightBlue loginBtn_size_s ', //////////////////as
-	            'btn-sms btnLightBlue       as loginBtn__sms   loginBtn_color_lightBlue loginBtn_size_s ', //////////////////as
-	            'btnLightBlue               as loginBtn_color_lightBlue ', 'btnLightBlue               as loginBtn_color_lightBlue ', 'btnLightBlue               as loginBtn_color_lightBlue '],
+	            classNames: [' loginBtn__vk ', ' loginBtn__fb ', ' loginBtn__email loginBtn_color_lightBlue loginBtn_size_s ', ' loginBtn__sms loginBtn_color_lightBlue loginBtn_size_s ', ' loginBtn_color_lightBlue ', ' loginBtn_color_lightBlue ', ' loginBtn_color_lightBlue '],
 	            typebtn: 0
 	        };
 	    },
@@ -22798,7 +22794,7 @@
 	        } else if (this.props.typebtn === 1) onClickBtn = this.fbClickHandler;else onClickBtn = this.props.onClick;
 
 	        return React.createElement('button', {
-	            className: "btnsLogin  as    loginBtn " + this.props.classNames[this.props.typebtn] + " loginBtn__" + this.props.type,
+	            className: "loginBtn " + this.props.classNames[this.props.typebtn] + " loginBtn__" + this.props.type,
 	            dangerouslySetInnerHTML: { __html: btnText },
 	            type: this.props.type,
 	            onClick: onClickBtn
@@ -22852,7 +22848,7 @@
 
 
 	// module
-	exports.push([module.id, ".loginBtn {\n  font-family: \"MuseoSansCyrl-thin\";\n}\n", ""]);
+	exports.push([module.id, ".loginBtn {\n  display: block;\n  height: 50px;\n  width: 100%;\n  border-radius: 4px;\n  font: 100 15px/18px \"MuseoSansCyrl-thin\";\n  color: #fff;\n  cursor: pointer;\n  margin-top: 10px;\n}\n.loginBtn:hover {\n  opacity: 0.9;\n}\n.loginBtn__vk {\n  background-image: url(\"/../../img/loginPopup/vkontakte.svg\");\n  background-position: 19px 50%;\n  background-size: 15px;\n  background-color: #356ca1;\n}\n.loginBtn__fb {\n  background-image: url(\"/../../img/loginPopup/facebook.svg\");\n  background-position: 22px 50%;\n  background-size: 10px;\n  background-color: #475e97;\n}\n.loginBtn__vk,\n.loginBtn__fb {\n  margin-bottom: 10px;\n  padding-left: 54px;\n  position: relative;\n  text-align: left;\n  background-repeat: no-repeat;\n}\n.loginBtn_color_lightBlue {\n  background-color: #4baeec;\n}\n.loginBtn__email,\n.loginBtn__sms {\n  display: inline-block;\n  margin-top: 0;\n}\n.loginBtn_size_s {\n  width: 135px !important;\n}\n.loginBtn__email {\n  float: left;\n}\n.loginBtn__sms {\n  margin-left: 10px;\n}\n.loginBtn__sms small {\n  pointer-events: none;\n  font: 100 13px/15px \"MuseoSansCyrl-thin\";\n  opacity: 0.6;\n}\n", ""]);
 
 	// exports
 
@@ -22905,7 +22901,7 @@
 	                React.createElement(_loginForm.LoginForm, { inputs: inputs, typebtn: 4, type: 'submit' }),
 	                React.createElement(
 	                    'div',
-	                    { className: 'loginEmail-forgot      as loginEmail__forgot-button',
+	                    { className: 'loginEmail__forgot-button',
 	                        onClick: function onClick() {
 	                            _this.props.onPageClick(3);
 	                        }
@@ -22953,7 +22949,7 @@
 
 
 	// module
-	exports.push([module.id, ".loginEmail-forgot {\n  cursor: pointer;\n}\n", ""]);
+	exports.push([module.id, ".loginEmail__forgot-button {\n  cursor: pointer;\n  display: inline-block;\n  margin-top: 20px;\n  color: #7c7c7c;\n  font: 100 15px/1.2 \"MuseoSansCyrl-thin\";\n  text-align: center;\n}\n.loginEmail-content {\n  padding: 20px 20px 25px;\n  text-align: center;\n}\n", ""]);
 
 	// exports
 
@@ -22988,7 +22984,7 @@
 	    render: function render() {
 	        var loginForm = "loginForm";
 	        var inputs = this.props.inputs.map(function (input, index) {
-	            return React.createElement('input', { key: index, className: loginForm + "__input     was loginInput", defaultValue: input.defaultValue, placeholder: input.placeholder, required: true, type: input.type });
+	            return React.createElement('input', { key: index, className: loginForm + "__input", defaultValue: input.defaultValue, placeholder: input.placeholder, required: true, type: input.type });
 	        });
 
 	        return React.createElement(
@@ -23036,7 +23032,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".loginForm {\n  margin: 0.75em 0 1em;\n}\n.loginForm__input {\n  display: block;\n  width: 100%;\n  height: 50px;\n  padding: 0 15px;\n  margin-bottom: 10px;\n  box-sizing: border-box;\n  box-shadow: inset 0 0 0 1px #f1f1f1;\n  color: #7c7c7c;\n  font: 100 15px/17px \"MuseoSansCyrl-thin\";\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\n.loginForm input[type=\"password\"] {\n  margin-bottom: 20px;\n}\n", ""]);
 
 	// exports
 
@@ -23068,7 +23064,7 @@
 	        return React.createElement(
 	            "div",
 	            { className: "loginHeader" },
-	            React.createElement("button", { className: "loginHeader-back as loginHeader-back__button ", type: "button", onClick: this.props.clickHandler }),
+	            React.createElement("button", { className: "loginHeader-back__button ", type: "button", onClick: this.props.clickHandler }),
 	            this.props.text
 	        );
 	    }
@@ -23110,7 +23106,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".loginHeader {\n  position: relative;\n  height: 39px;\n  padding-top: 21px;\n  font: 100 18px \"MuseoSansCyrl-thin\";\n  text-align: center;\n  background-color: #f1f1f1;\n  color: #4d4d4d;\n}\n.loginHeader-back__button {\n  background: url(\"/../../img/loginPopup/back.svg\") 20px 50% no-repeat;\n  position: absolute;\n  cursor: pointer;\n  width: 65px;\n  height: 100%;\n  top: 0;\n  left: 0;\n}\n", ""]);
 
 	// exports
 
@@ -23210,7 +23206,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".loginSms-content {\n  padding: 20px 20px 120px;\n}\n.loginSms-note {\n  position: relative;\n  width: 160px;\n  height: 90px;\n  padding: 20px;\n  margin: -130px 0 0 293px;\n  top: -20px;\n  color: #fff;\n  background-color: #717578;\n  animation: popup 0.2s;\n  font: 100 15px/1.2 \"MuseoSansCyrl-thin\";\n  text-align: left;\n}\n.loginSms-note:after {\n  position: absolute;\n  width: 12px;\n  height: 12px;\n  top: 58px;\n  left: -5px;\n  content: '';\n  background-color: #717578;\n  transform: rotate(45deg);\n  border-radius: 2px;\n}\n@-moz-keyframes popup {\n  from {\n    margin-left: 285px;\n  }\n  to {\n    margin-left: 293px;\n  }\n}\n@-webkit-keyframes popup {\n  from {\n    margin-left: 285px;\n  }\n  to {\n    margin-left: 293px;\n  }\n}\n@-o-keyframes popup {\n  from {\n    margin-left: 285px;\n  }\n  to {\n    margin-left: 293px;\n  }\n}\n@keyframes popup {\n  from {\n    margin-left: 285px;\n  }\n  to {\n    margin-left: 293px;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -23299,7 +23295,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".emailPasForgot-content {\n  padding: 20px 20px 120px;\n}\n", ""]);
 
 	// exports
 
