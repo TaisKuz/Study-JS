@@ -1,0 +1,43 @@
+{
+  "name": "webpack-test",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "webpack",
+    "webpack": "webpack && webpack-dev-server --progress --colors",
+    "bundle": "webpack ./scripts/main.js bundle.js",
+    "stylus": "stylus ./stylus/main.styl --out ./css --compress",
+    "w1": "stylus --watch ./stylus/main.styl --out ./css --compress ",
+    "w2": "stylus --watch ./stylus/loginPopup/loginPopup.styl --out ./css/loginPopup --compress ",
+    "w3": "stylus --watch ./stylus/column.styl --out ./css --compress ",
+    "w4": "stylus --watch ./stylus/columnBox.styl --out ./css --compress ",
+    "w5": "stylus --watch ./stylus/loginPopup/emailPasForgot.styl --out ./css/loginPopup --compress ",
+    "w6": "stylus --watch ./stylus/formBox.styl --out ./css --compress ",
+    "w7": "stylus --watch ./stylus/installBox.styl --out ./css --compress ",
+    "w8": "stylus --watch ./stylus/installBtn.styl --out ./css --compress ",
+    "w9": "stylus --watch ./stylus/loginPopup/loginBtn.styl --out ./css/loginPopup --compress ",
+    "w10": "stylus --watch ./stylus/loginPopup/loginEmail.styl --out ./css/loginPopup --compress ",
+    "w11": "stylus --watch ./stylus/loginPopup/loginForm.styl --out ./css/loginPopup --compress ",
+    "w12": "stylus --watch ./stylus/loginPopup/loginHeader.styl --out ./css/loginPopup --compress ",
+    "w13": "stylus --watch ./stylus/loginPopup/loginMain.styl --out ./css/loginPopup --compress ",
+    "w14": "stylus --watch ./stylus/loginPopup/loginSms.styl --out ./css/loginPopup --compress ",
+    "w15": "stylus --watch ./stylus/reset.styl --out ./css --compress ",
+    "w16": "stylus --watch ./stylus/fonts/museoSansCyrl-normal.styl --out ./css/fonts --compress ",
+    "w17": "stylus --watch ./stylus/fonts/museoSansCyrl-thin.styl --out ./css/fonts --compress "
+  },
+  "author": "taiska",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.3.1",
+    "webpack": "^1.13.2"
+  }
+}

@@ -1,0 +1,241 @@
+
+button.btnsLogin:hover {
+    opacity: .9;
+}
+
+.banner-gray{
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute !important;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.banner-show {
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed !important;
+}
+
+.banner-pointer{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed !important;
+    cursor: pointer;
+}
+
+.banner-scroller {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.loginWhite {
+    z-index: 10040;
+    width: 320px;
+    min-height: 381px;
+    cursor: default;
+    position: relative;
+    top: 100px;
+    margin: 0 auto 100px;
+    border-radius: 3px;
+    background: #fff;
+    transition: transform 0.6s;
+    transition-property: transform;
+    transition-duration: 0.6s;
+    transition-timing-function: initial;
+    transition-delay: initial;
+}
+
+.btnsLogin {
+    display: block;
+    height: 50px;
+    width: 100%;
+    border-radius: 4px;
+    font: 100 15px/18px "MuseoSansCyrl-100";
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btnLoginVk,
+.btnLoginFb {
+    margin-bottom: 10px;
+    padding-left: 54px;
+    position: relative;
+    text-align: left;
+}
+
+.btnLoginVk {
+    background: url(/../img/vkontakte.svg) 19px 50%/15px no-repeat #356ca1;
+}
+
+
+.btnLoginFb {
+    background: url(/../img/facebook.svg) 22px 50%/10px no-repeat #475e97;
+}
+
+.btnLightBlue {
+    background-color: #4baeec;
+}
+
+.btn-email, .btn-sms {
+    display: inline-block;
+    width: 135px !important;
+    margin-top: 0;
+}
+.btn-email{
+    float: left;
+}
+.btn-sms {
+    margin-left: 10px;
+}
+
+.btn-sms small{
+    pointer-events: none;
+    font: 100 13px/15px "MuseoSansCyrl-100";
+    opacity: 0.6;
+}
+
+.btnStriper{
+    border-top: 1px solid #e6e6e6;
+    margin: 20px auto;
+}
+
+.loginMain .loginTitle {
+    font: 300 20px/28px "MuseoSansCyrl-300";
+    color: #080808;
+    padding: 30px 0 5px;
+    text-align: center;
+}
+
+.loginMain .loginBtns-content {
+    padding: 25px 20px 20px;
+}
+
+.loginMain .loginMain-links,
+.loginMain-links a{
+    text-align: center;
+    font: 100 11px/1.1 "MuseoSansCyrl-100",Arial,sans-serif;
+    color: #ccc;
+}
+
+.loginMain .loginMain-links {
+    margin-top: 20px;
+}
+
+.loginMain .loginMain-links a {
+    color: #ccc !important;
+    text-decoration: underline !important;
+}
+
+.loginHeader {
+    position: relative;
+    height: 39px;
+    padding-top: 21px;
+    font: 100 18px "MuseoSansCyrl-100";
+    text-align: center;
+    background-color: #f1f1f1;
+    color: #4d4d4d;
+}
+
+.loginHeader-back {
+    background: url(/../img/back.svg) 20px 50% no-repeat;
+    position: absolute;
+    cursor: pointer;
+    width: 65px;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.loginForm {
+    margin: .75em 0 1em;
+}
+
+.loginForm input[type="password"] {
+    margin-bottom: 20px;
+}
+
+input.loginInput {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 1px #f1f1f1;
+    color: #7c7c7c;
+    font: 100 15px/17px "MuseoSansCyrl-100";
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+
+.loginEmail-content {
+    padding: 20px 20px 25px;
+    text-align: center;
+}
+
+.loginEmail-forgot {
+    display: inline-block;
+    margin-top: 20px;
+    color: #7c7c7c;
+    font: 100 15px/1.2 "MuseoSansCyrl-100";
+    text-align: center;
+}
+
+.loginSms-content,
+.emailPasForgot-content {
+    padding: 20px 20px 120px;
+}
+
+@keyframes popup {
+    from {
+        margin-left: 285px;
+    }
+    to {
+        margin-left: 293px;
+    }
+}
+
+@-webkit-keyframes popup {
+    from {
+        margin-left: 287px;
+    }
+    to {
+        margin-left: 293px;
+    }
+}
+
+.loginSms-note{
+    position: relative;
+    width: 160px;
+    height: 90px;
+    padding: 20px;
+    margin: -130px 0 0 293px;
+    top: -20px;
+    color: #fff;
+    background-color: #717578;
+    animation: popup .2s;
+    font: 100 15px/1.2 "MuseoSansCyrl-100";
+    text-align: left;
+}
+
+.loginSms-note:after {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 58px;
+    left: -5px;
+    content: '';
+    background-color: #717578;
+    transform: rotate(45deg);
+    border-radius: 2px;
+}
