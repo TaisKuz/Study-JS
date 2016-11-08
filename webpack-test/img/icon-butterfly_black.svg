@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="18px" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 18</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="98.9496971%" id="linearGradient-1">
+            <stop stop-color="#A6FBFF" offset="0%"></stop>
+            <stop stop-color="#4AF6FF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M9,11.8888889 C8.25976244,13.1471315 6.89121917,15 5,15 C2.70817141,15 1.49455937,10.7078378 5.8,8.77777778 C1.26697731,10.0493577 1.16162408,5.93331883 1,4.88888889 C0.737160191,1.00049446 2.17997511,0.87283196 2.6,1 C6.55294471,1.8237414 9,8.00029618 9,8 L9,11.8888889 Z M9,11.8888889 C9.74023777,13.1471315 11.1087814,15 13,15 C15.2918304,15 16.5054427,10.7078378 12.2,8.77777778 C16.7330249,10.0493577 16.8383781,5.93331883 17,4.88888889 C17.2628421,1.00049446 15.8199315,0.87283196 15.4,1 C11.447056,1.8237414 9,8.00029618 9,8 L9,11.8888889 Z" id="path-2"></path>
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1.5" y="-1.5" width="19.0635139" height="17.0289761">
+            <rect x="-0.53175758" y="-0.528976073" width="19.0635139" height="17.0289761" fill="white"></rect>
+            <use xlink:href="#path-2" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Android_2" transform="translate(-30.000000, -2529.000000)">
+            <g id="Group-18" transform="translate(31.000000, 2530.000000)">
+                <g id="Fill-1">
+                    <use fill-opacity="0" fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <use stroke="#000000" mask="url(#mask-3)" stroke-width="3" xlink:href="#path-2"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

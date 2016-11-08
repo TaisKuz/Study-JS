@@ -1,12 +1,15 @@
-import './../stylus/fonts/MuseoSansCyrl-normal.styl';
-import './../stylus/fonts/MuseoSansCyrl-thin.styl';
+import './../stylus/fonts/Roboto/Roboto-BoldItalic.styl';
+import './../stylus/fonts/Roboto/Roboto-Medium.styl';
+import './../stylus/fonts/Roboto/Roboto-Bold.styl';
+import './../stylus/fonts/Roboto/Roboto-Regular.styl';
+import './../stylus/fonts/Roboto/Roboto-Black.styl';
+
+
 import './../stylus/reset.styl';
 import './../stylus/variables.styl';
 
 import './../stylus/ios.styl';
 import './../stylus/android.styl';
-
-//import './../stylus/main.styl';
 
 // href="https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en"
 
@@ -16,60 +19,70 @@ var MainPage = React.createClass({
         return (
             <div className="main">
                 <div className="main-containerWrapper">
-                    <div className="main__mini-phones main__mini-phones_ios">
-                        <img src="/img/miniPhone1.svg" alt="" ></img>
-                        <img src="/img/miniPhone2.svg" alt="" ></img>
-                        <img src="/img/miniPhone3.svg" alt="" ></img>
-                        <img src="/img/miniPhone4.svg" alt="" ></img>
-                        <img src="/img/miniPhone5.svg" alt="" ></img>
-                    </div>
                     <div className="main__mini-phones main__mini-phones_android">
-                        <img src="/img/miniPhone6.svg" alt="" ></img>
-                        <img src="/img/miniPhone7.svg" alt="" ></img>
-                        <img src="/img/miniPhone8.svg" alt="" ></img>
-                        <img src="/img/miniPhone9.svg" alt="" ></img>
+                        <img src="/img/miniPhone1.jpg" alt="" />
+                        <img src="/img/miniPhone2.jpg" alt="" />
+                        <img src="/img/miniPhone3.jpg" alt="" />
+                        <img src="/img/miniPhone4.jpg" alt="" />
+                        <img src="/img/miniPhone5.jpg" alt="" />
                     </div>
-                    <div className="main__best-stiсker main__best-stiсker_up">
+                    <div className="main__mini-phones main__mini-phones_ios">
+                        <img src="/img/miniPhone6.jpg" alt="" />
+                        <img src="/img/miniPhone7.jpg" alt="" />
+                        <img src="/img/miniPhone8.jpg" alt="" />
+                        <img src="/img/miniPhone9.jpg" alt="" />
+                    </div>
+                     {/*only ios*/}
+                    <div className="main__best-stiсker main__best-stiсker_up ios">
                         Лучшее<br/>
                         музыкальное<br/>
                         приложение<br/><br/>
                         <p className="AppStore">App Store</p>
                         2015
                     </div>
-                    <div className="main-top">
-                        <div className="main-content">
-                            <a href="http://zvooq.com" target="_blank"> <img src="/img/Zvooq-logo.svg" alt="Zvooq-logo" /> </a>
-                            <div className="main-top__title-Zvooq">Zvooq</div>
-                            <div className="main-top__title-number1">музыкальное приложение №1</div>
 
-                            <div className="installBtn installBtn_top">
-                                <a href="https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8" target="_blank"></a>
+                    <div className="main-top">
+                        <div className="main-top_gradient"></div>
+                        <div className="main-content">
+                            <img className="zvooq-logo" src="/img/zvooq-logo.jpg" alt="Zvooq-logo" />
+                            <div className="main-top__title-Zvooq">Zvooq</div>
+                            <div className="main-top__title-number1">музыкальное приложение &#8470;&nbsp;1</div>
+
+                            {/*googlePlayBtn appStoreBtn*/}
+                            <div className="installBtn installBtn_top googlePlayBtn">
+                                <a href="https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8" target="_blank" />
                             </div>
 
-                            <div className="main__title-music" >Включить<br/>музыку<br/>легко!</div>
-                            <img src="/img/icon-notes.svg" alt="icon-notes"></img>
-                            <div className="main-top__title-listenFree" >Слушайте всё бесплатно и без регистрации</div>
-                            <div className="main-top__title-torrents">Больше не нужны торренты, социальные сети или пиратские приложения-однодневки.</div>
-                            <div className="main-top__title-trial">В бесплатном режме можно слушать всю музыку бесконечно долго и в любом объеме.</div>
-                            <div className="main-group25">
+                            <div className="main-top__title-music" >
+                                Включить<br/>музыку<br/>легко!
+                                <div className="icon-note"></div>
+                            </div>
+
+                            <div className="main-top__title-listenFree" >Слушайте всё бесплатно и&nbsp;без регистрации</div>
+                            <div className="main-top__title-torrents">Больше не&nbsp;нужны торренты, социальные сети или пиратские приложения-однодневки.</div>
+                            <div className="main-top__title-trial">В&nbsp;бесплатном режме можно слушать всю музыку бесконечно долго и&nbsp;в&nbsp;любом объеме.</div>
+                            <div className="main-top-group25">
                                 <div className="main-top-group25__title-25">25</div>
                                 <div className="main-top-group25__title-million">миллионов треков</div>
                             </div>
+
                             <div className="main-top-playGroup">
                                 <div className="play-home"></div>
                                 <div className="play-vk"></div>
                                 <div className="play-training"></div>
                             </div>
-                            <div className="main-top__title-thousand">Тысячи готовых плейлистов для любого случая в жизни</div>
-                            <div className="main-top__title-oneClick">Одним нажатием включайте готовые плейлисты: когда весело или грутсно, чтобы не скучать в пробках или метро, выложиться в спортзале или сфокусироваться на работе.</div>
+                            <div className="main-top__title-thousand">Тысячи готовых плейлистов для любого случая в&nbsp;жизни</div>
+                            <div className="main-top__title-oneClick">Одним нажатием включайте готовые плейлисты: когда весело или грутсно,
+                                чтобы не&nbsp;скучать в&nbsp;пробках или метро, выложиться в&nbsp;спортзале или сфокусироваться на&nbsp;работе.</div>
                             <div className="main-top-heartWaves"></div>
                             <div className="main-top__title-smart">Умная Коллекция для вашей музыки</div>
-                            <div className="main-top__title-allULike">Все, что вам понравится, можно сохранять в Коллецию, которая сама превращает свалку из любимой музыки в место, где вы ещё быстрее найдете всё, что нужно.</div>
+                            <div className="main-top__title-allULike">Все, что вам понравится, можно сохранять в&nbsp;Коллецию,
+                                которая сама превращает свалку из&nbsp;любимой музыки в&nbsp;место, где вы&nbsp;ещё быстрее найдете всё, что нужно.</div>
                             <div className="main-top__title-etc">...а также</div>
                             <div className="main-top-functionsGroup">
                                 <div className="functionsGroup__item">
                                     <div className="functionsGroup__item-icon icon-star_color"></div>
-                                    <div className="functionsGroup__item-title">Популярная музыка и новинки в одном месте</div>
+                                    <div className="functionsGroup__item-title">Популярная музыка и&nbsp;новинки в&nbsp;одном месте</div>
                                 </div>
                                 <div className="functionsGroup__item">
                                     <div className="functionsGroup__item-icon icon-butterfly_color"></div>
@@ -83,10 +96,12 @@ var MainPage = React.createClass({
                                     <div className="functionsGroup__item-icon icon-cloud_color"></div>
                                     <div className="functionsGroup__item-title">Кэширование, чтобы слушать музыку без помех</div>
                                 </div>
-                                <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-lightning"></div>
+                                        {/*only android*/}
+                                <div className="functionsGroup__item android">
+                                    <div className="functionsGroup__item-icon icon-lightning_color"></div>
                                     <div className="functionsGroup__item-title">Сжатие мобиьного трафика</div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -124,7 +139,7 @@ var MainPage = React.createClass({
                             <div className="main-tryIt__title-free">Это бесплатно</div>
 
                             <div className="installBtn installBtn_tryIt">
-                                <a href="https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8" target="_blank"></a>
+                                <a href="https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8" target="_blank" />
                             </div>
 
                         </div>
@@ -150,14 +165,13 @@ var MainPage = React.createClass({
                                 </div>
                             </div>
                             <div className="main-links">
-                                <a className="main-links_bold" href="http://zvooq.com" target="_blank">У меня есть промокод</a>
-                                <a className="main-links_normal" herf="http://zvooq.com" target="_blank">Стать нашим партнером</a>
-                                <a className="main-links_normal" herf="http://zvooq.com" target="_blank">Работать у нас</a>
-                                <a className="main-links_normal" herf="http://zvooq.com" target="_blank">Пообщаться с нашим support</a>
+                                <a className="main-links_bold" href="http://zvooq.com/code" target="_blank">У&nbsp;меня есть промокод</a>
+                                <a className="main-links_normal" href="http://zvooq.com" target="_blank">Стать нашим партнером</a>
+                                <a className="main-links_normal" href="http://dreamindustries.co/wanted/" target="_blank">Работать у&nbsp;нас</a>
+                                <a className="main-links_normal" href="http://zvooq.com" target="_blank">Пообщаться с&nbsp;нашим support</a>
 
-                                <a className="main-links_normal ios" herf="http://zvooq.com" target="_blank">Zvooq для <em>ios</em></a>
-                                <a className="main-links_normal android" herf="http://zvooq.com" target="_blank">Zvooq для <em>Android</em></a>
-                                
+                                <a className="main-links_normal ios" href="http://zvooq.com" target="_blank">Zvooq для <em>ios</em></a>
+                                <a className="main-links_normal android" href="http://zvooq.com" target="_blank">Zvooq для <em>Android</em></a>
                             </div>
                         </div>
                     </div>
