@@ -44,370 +44,339 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(React, ReactDOM) {'use strict';
+	/* WEBPACK VAR INJECTION */(function(React, ReactDOM) {"use strict";
 
 	__webpack_require__(172);
 
-	__webpack_require__(176);
-
-	__webpack_require__(178);
-
-	__webpack_require__(180);
-
-	__webpack_require__(182);
-
-	__webpack_require__(184);
-
-	__webpack_require__(186);
-
-	__webpack_require__(188);
-
-	__webpack_require__(190);
-
 	// href="https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en"
-
-	var MainPage = React.createClass({
-	    displayName: 'MainPage',
+	//переименовать в андройд и ios сделать отдельными компонентами
+	// импорт стиля только один, все шрифты и остальное импортить внутри css
+	var MainAndroid = React.createClass({
+	    displayName: "MainAndroid",
 	    render: function render() {
 	        return React.createElement(
-	            'div',
-	            { className: 'main' },
+	            "div",
+	            { className: "main" },
 	            React.createElement(
-	                'div',
-	                { className: 'main-containerWrapper' },
+	                "div",
+	                { className: "main-containerWrapper" },
 	                React.createElement(
-	                    'div',
-	                    { className: 'main__mini-phones main__mini-phones_android' },
-	                    React.createElement('img', { src: '/img/miniPhone1.jpg', alt: '' }),
-	                    React.createElement('img', { src: '/img/miniPhone2.jpg', alt: '' }),
-	                    React.createElement('img', { src: '/img/miniPhone3.jpg', alt: '' }),
-	                    React.createElement('img', { src: '/img/miniPhone4.jpg', alt: '' }),
-	                    React.createElement('img', { src: '/img/miniPhone5.jpg', alt: '' })
+	                    "div",
+	                    { className: "main__mini-phones main__mini-phones_android" },
+	                    React.createElement("img", { src: "/img/miniPhone1.jpg", alt: "" }),
+	                    React.createElement("img", { src: "/img/miniPhone2.jpg", alt: "" }),
+	                    React.createElement("img", { src: "/img/miniPhone3.jpg", alt: "" }),
+	                    React.createElement("img", { src: "/img/miniPhone4.jpg", alt: "" }),
+	                    React.createElement("img", { src: "/img/miniPhone5.jpg", alt: "" })
 	                ),
 	                React.createElement(
-	                    'div',
-	                    { className: 'main__mini-phones main__mini-phones_ios' },
-	                    React.createElement('img', { src: '/img/miniPhone6.jpg', alt: '' }),
-	                    React.createElement('img', { src: '/img/miniPhone7.jpg', alt: '' }),
-	                    React.createElement('img', { src: '/img/miniPhone8.jpg', alt: '' }),
-	                    React.createElement('img', { src: '/img/miniPhone9.jpg', alt: '' })
+	                    "div",
+	                    { className: "main__mini-phones main__mini-phones_ios" },
+	                    React.createElement("img", { src: "/img/miniPhone6.jpg", alt: "" }),
+	                    React.createElement("img", { src: "/img/miniPhone7.jpg", alt: "" }),
+	                    React.createElement("img", { src: "/img/miniPhone8.jpg", alt: "" }),
+	                    React.createElement("img", { src: "/img/miniPhone9.jpg", alt: "" })
 	                ),
 	                React.createElement(
-	                    'div',
-	                    { className: 'main__best-sti\u0441ker main__best-sti\u0441ker_up ios' },
-	                    '\u041B\u0443\u0447\u0448\u0435\u0435',
-	                    React.createElement('br', null),
-	                    '\u043C\u0443\u0437\u044B\u043A\u0430\u043B\u044C\u043D\u043E\u0435',
-	                    React.createElement('br', null),
-	                    '\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435',
-	                    React.createElement('br', null),
-	                    React.createElement('br', null),
+	                    "div",
+	                    { className: "main-top" },
+	                    React.createElement("div", { className: "main-top_gradient" }),
 	                    React.createElement(
-	                        'p',
-	                        { className: 'AppStore' },
-	                        'App Store'
-	                    ),
-	                    '2015'
-	                ),
-	                React.createElement(
-	                    'div',
-	                    { className: 'main-top' },
-	                    React.createElement('div', { className: 'main-top_gradient' }),
-	                    React.createElement(
-	                        'div',
-	                        { className: 'main-content' },
-	                        React.createElement('img', { className: 'zvooq-logo', src: '/img/zvooq-logo.jpg', alt: 'Zvooq-logo' }),
+	                        "div",
+	                        { className: "main-content" },
+	                        React.createElement("img", { className: "zvooq-logo", src: "/img/android/zvooq-logo_android.png", alt: "Zvooq-logo" }),
+	                        React.createElement("div", { className: "main-top__title-Zvooq" }),
 	                        React.createElement(
-	                            'div',
-	                            { className: 'main-top__title-Zvooq' },
-	                            'Zvooq'
+	                            "div",
+	                            { className: "installBtn installBtn_top googlePlayBtn" },
+	                            React.createElement("a", { href: "https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en", target: "_blank" })
 	                        ),
 	                        React.createElement(
-	                            'div',
-	                            { className: 'main-top__title-number1' },
-	                            '\u043C\u0443\u0437\u044B\u043A\u0430\u043B\u044C\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435 \u2116\xA01'
+	                            "div",
+	                            { className: "main-top__title-music" },
+	                            "\u0412\u043A\u043B\u044E\u0447\u0438\u0442\u044C",
+	                            React.createElement("br", null),
+	                            "\u043C\u0443\u0437\u044B\u043A\u0443",
+	                            React.createElement("br", null),
+	                            "\u043B\u0435\u0433\u043A\u043E!",
+	                            React.createElement("div", { className: "icon-note" })
 	                        ),
 	                        React.createElement(
-	                            'div',
-	                            { className: 'installBtn installBtn_top googlePlayBtn' },
-	                            React.createElement('a', { href: 'https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8', target: '_blank' })
+	                            "div",
+	                            { className: "main-top__title-listenFree" },
+	                            "\u0421\u043B\u0443\u0448\u0430\u0439\u0442\u0435 \u0432\u0441\u0451 \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E \u0438\xA0\u0431\u0435\u0437 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438"
 	                        ),
 	                        React.createElement(
-	                            'div',
-	                            { className: 'main-top__title-music' },
-	                            '\u0412\u043A\u043B\u044E\u0447\u0438\u0442\u044C',
-	                            React.createElement('br', null),
-	                            '\u043C\u0443\u0437\u044B\u043A\u0443',
-	                            React.createElement('br', null),
-	                            '\u043B\u0435\u0433\u043A\u043E!',
-	                            React.createElement('div', { className: 'icon-note' })
+	                            "div",
+	                            { className: "main-top__title-torrents" },
+	                            "\u0411\u043E\u043B\u044C\u0448\u0435 \u043D\u0435\xA0\u043D\u0443\u0436\u043D\u044B \u0442\u043E\u0440\u0440\u0435\u043D\u0442\u044B, \u0441\u043E\u0446\u0438\u0430\u043B\u044C\u043D\u044B\u0435 \u0441\u0435\u0442\u0438 \u0438\u043B\u0438 \u043F\u0438\u0440\u0430\u0442\u0441\u043A\u0438\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F-\u043E\u0434\u043D\u043E\u0434\u043D\u0435\u0432\u043A\u0438."
 	                        ),
 	                        React.createElement(
-	                            'div',
-	                            { className: 'main-top__title-listenFree' },
-	                            '\u0421\u043B\u0443\u0448\u0430\u0439\u0442\u0435 \u0432\u0441\u0451 \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E \u0438\xA0\u0431\u0435\u0437 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438'
+	                            "div",
+	                            { className: "main-top__title-trial" },
+	                            "\u0412\xA0\u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u043C \u0440\u0435\u0436\u043C\u0435 \u043C\u043E\u0436\u043D\u043E \u0441\u043B\u0443\u0448\u0430\u0442\u044C \u0432\u0441\u044E \u043C\u0443\u0437\u044B\u043A\u0443 \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u043E \u0434\u043E\u043B\u0433\u043E \u0438\xA0\u0432\xA0\u043B\u044E\u0431\u043E\u043C \u043E\u0431\u044A\u0435\u043C\u0435."
 	                        ),
 	                        React.createElement(
-	                            'div',
-	                            { className: 'main-top__title-torrents' },
-	                            '\u0411\u043E\u043B\u044C\u0448\u0435 \u043D\u0435\xA0\u043D\u0443\u0436\u043D\u044B \u0442\u043E\u0440\u0440\u0435\u043D\u0442\u044B, \u0441\u043E\u0446\u0438\u0430\u043B\u044C\u043D\u044B\u0435 \u0441\u0435\u0442\u0438 \u0438\u043B\u0438 \u043F\u0438\u0440\u0430\u0442\u0441\u043A\u0438\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F-\u043E\u0434\u043D\u043E\u0434\u043D\u0435\u0432\u043A\u0438.'
-	                        ),
-	                        React.createElement(
-	                            'div',
-	                            { className: 'main-top__title-trial' },
-	                            '\u0412\xA0\u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u043C \u0440\u0435\u0436\u043C\u0435 \u043C\u043E\u0436\u043D\u043E \u0441\u043B\u0443\u0448\u0430\u0442\u044C \u0432\u0441\u044E \u043C\u0443\u0437\u044B\u043A\u0443 \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u043E \u0434\u043E\u043B\u0433\u043E \u0438\xA0\u0432\xA0\u043B\u044E\u0431\u043E\u043C \u043E\u0431\u044A\u0435\u043C\u0435.'
-	                        ),
-	                        React.createElement(
-	                            'div',
-	                            { className: 'main-top-group25' },
+	                            "div",
+	                            { className: "main-top-group25" },
 	                            React.createElement(
-	                                'div',
-	                                { className: 'main-top-group25__title-25' },
-	                                '25'
+	                                "div",
+	                                { className: "main-top-group25__title-25" },
+	                                "25"
 	                            ),
 	                            React.createElement(
-	                                'div',
-	                                { className: 'main-top-group25__title-million' },
-	                                '\u043C\u0438\u043B\u043B\u0438\u043E\u043D\u043E\u0432 \u0442\u0440\u0435\u043A\u043E\u0432'
+	                                "div",
+	                                { className: "main-top-group25__title-million" },
+	                                "\u043C\u0438\u043B\u043B\u0438\u043E\u043D\u043E\u0432 \u0442\u0440\u0435\u043A\u043E\u0432"
 	                            )
 	                        ),
 	                        React.createElement(
-	                            'div',
-	                            { className: 'main-top-playGroup' },
-	                            React.createElement('div', { className: 'play-home' }),
-	                            React.createElement('div', { className: 'play-vk' }),
-	                            React.createElement('div', { className: 'play-training' })
+	                            "div",
+	                            { className: "main-top-playGroup" },
+	                            React.createElement("div", { className: "play-home" }),
+	                            React.createElement("div", { className: "play-vk" }),
+	                            React.createElement("div", { className: "play-training" })
 	                        ),
 	                        React.createElement(
-	                            'div',
-	                            { className: 'main-top__title-thousand' },
-	                            '\u0422\u044B\u0441\u044F\u0447\u0438 \u0433\u043E\u0442\u043E\u0432\u044B\u0445 \u043F\u043B\u0435\u0439\u043B\u0438\u0441\u0442\u043E\u0432 \u0434\u043B\u044F \u043B\u044E\u0431\u043E\u0433\u043E \u0441\u043B\u0443\u0447\u0430\u044F \u0432\xA0\u0436\u0438\u0437\u043D\u0438'
+	                            "div",
+	                            { className: "main-top__title-thousand" },
+	                            "\u0422\u044B\u0441\u044F\u0447\u0438 \u0433\u043E\u0442\u043E\u0432\u044B\u0445 \u043F\u043B\u0435\u0439\u043B\u0438\u0441\u0442\u043E\u0432 \u0434\u043B\u044F \u043B\u044E\u0431\u043E\u0433\u043E \u0441\u043B\u0443\u0447\u0430\u044F \u0432\xA0\u0436\u0438\u0437\u043D\u0438"
 	                        ),
 	                        React.createElement(
-	                            'div',
-	                            { className: 'main-top__title-oneClick' },
-	                            '\u041E\u0434\u043D\u0438\u043C \u043D\u0430\u0436\u0430\u0442\u0438\u0435\u043C \u0432\u043A\u043B\u044E\u0447\u0430\u0439\u0442\u0435 \u0433\u043E\u0442\u043E\u0432\u044B\u0435 \u043F\u043B\u0435\u0439\u043B\u0438\u0441\u0442\u044B: \u043A\u043E\u0433\u0434\u0430 \u0432\u0435\u0441\u0435\u043B\u043E \u0438\u043B\u0438 \u0433\u0440\u0443\u0442\u0441\u043D\u043E, \u0447\u0442\u043E\u0431\u044B \u043D\u0435\xA0\u0441\u043A\u0443\u0447\u0430\u0442\u044C \u0432\xA0\u043F\u0440\u043E\u0431\u043A\u0430\u0445 \u0438\u043B\u0438 \u043C\u0435\u0442\u0440\u043E, \u0432\u044B\u043B\u043E\u0436\u0438\u0442\u044C\u0441\u044F \u0432\xA0\u0441\u043F\u043E\u0440\u0442\u0437\u0430\u043B\u0435 \u0438\u043B\u0438 \u0441\u0444\u043E\u043A\u0443\u0441\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F \u043D\u0430\xA0\u0440\u0430\u0431\u043E\u0442\u0435.'
+	                            "div",
+	                            { className: "main-top__title-oneClick" },
+	                            "\u041E\u0434\u043D\u0438\u043C \u043D\u0430\u0436\u0430\u0442\u0438\u0435\u043C \u0432\u043A\u043B\u044E\u0447\u0430\u0439\u0442\u0435 \u0433\u043E\u0442\u043E\u0432\u044B\u0435 \u043F\u043B\u0435\u0439\u043B\u0438\u0441\u0442\u044B: \u043A\u043E\u0433\u0434\u0430 \u0432\u0435\u0441\u0435\u043B\u043E \u0438\u043B\u0438 \u0433\u0440\u0443\u0442\u0441\u043D\u043E, \u0447\u0442\u043E\u0431\u044B \u043D\u0435\xA0\u0441\u043A\u0443\u0447\u0430\u0442\u044C \u0432\xA0\u043F\u0440\u043E\u0431\u043A\u0430\u0445 \u0438\u043B\u0438 \u043C\u0435\u0442\u0440\u043E, \u0432\u044B\u043B\u043E\u0436\u0438\u0442\u044C\u0441\u044F \u0432\xA0\u0441\u043F\u043E\u0440\u0442\u0437\u0430\u043B\u0435 \u0438\u043B\u0438 \u0441\u0444\u043E\u043A\u0443\u0441\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F \u043D\u0430\xA0\u0440\u0430\u0431\u043E\u0442\u0435."
 	                        ),
-	                        React.createElement('div', { className: 'main-top-heartWaves' }),
+	                        React.createElement("div", { className: "main-top-heartWaves" }),
 	                        React.createElement(
-	                            'div',
-	                            { className: 'main-top__title-smart' },
-	                            '\u0423\u043C\u043D\u0430\u044F \u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u044F \u0434\u043B\u044F \u0432\u0430\u0448\u0435\u0439 \u043C\u0443\u0437\u044B\u043A\u0438'
-	                        ),
-	                        React.createElement(
-	                            'div',
-	                            { className: 'main-top__title-allULike' },
-	                            '\u0412\u0441\u0435, \u0447\u0442\u043E \u0432\u0430\u043C \u043F\u043E\u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F, \u043C\u043E\u0436\u043D\u043E \u0441\u043E\u0445\u0440\u0430\u043D\u044F\u0442\u044C \u0432\xA0\u041A\u043E\u043B\u043B\u0435\u0446\u0438\u044E, \u043A\u043E\u0442\u043E\u0440\u0430\u044F \u0441\u0430\u043C\u0430 \u043F\u0440\u0435\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0441\u0432\u0430\u043B\u043A\u0443 \u0438\u0437\xA0\u043B\u044E\u0431\u0438\u043C\u043E\u0439 \u043C\u0443\u0437\u044B\u043A\u0438 \u0432\xA0\u043C\u0435\u0441\u0442\u043E, \u0433\u0434\u0435 \u0432\u044B\xA0\u0435\u0449\u0451 \u0431\u044B\u0441\u0442\u0440\u0435\u0435 \u043D\u0430\u0439\u0434\u0435\u0442\u0435 \u0432\u0441\u0451, \u0447\u0442\u043E \u043D\u0443\u0436\u043D\u043E.'
+	                            "div",
+	                            { className: "main-top__title-smart" },
+	                            "\u0423\u043C\u043D\u0430\u044F \u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u044F \u0434\u043B\u044F \u0432\u0430\u0448\u0435\u0439 \u043C\u0443\u0437\u044B\u043A\u0438"
 	                        ),
 	                        React.createElement(
-	                            'div',
-	                            { className: 'main-top__title-etc' },
-	                            '...\u0430 \u0442\u0430\u043A\u0436\u0435'
+	                            "div",
+	                            { className: "main-top__title-allULike" },
+	                            "\u0412\u0441\u0435, \u0447\u0442\u043E \u0432\u0430\u043C \u043F\u043E\u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F, \u043C\u043E\u0436\u043D\u043E \u0441\u043E\u0445\u0440\u0430\u043D\u044F\u0442\u044C \u0432\xA0\u041A\u043E\u043B\u043B\u0435\u0446\u0438\u044E, \u043A\u043E\u0442\u043E\u0440\u0430\u044F \u0441\u0430\u043C\u0430 \u043F\u0440\u0435\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0441\u0432\u0430\u043B\u043A\u0443 \u0438\u0437\xA0\u043B\u044E\u0431\u0438\u043C\u043E\u0439 \u043C\u0443\u0437\u044B\u043A\u0438 \u0432\xA0\u043C\u0435\u0441\u0442\u043E, \u0433\u0434\u0435 \u0432\u044B\xA0\u0435\u0449\u0451 \u0431\u044B\u0441\u0442\u0440\u0435\u0435 \u043D\u0430\u0439\u0434\u0435\u0442\u0435 \u0432\u0441\u0451, \u0447\u0442\u043E \u043D\u0443\u0436\u043D\u043E."
 	                        ),
 	                        React.createElement(
-	                            'div',
-	                            { className: 'main-top-functionsGroup' },
+	                            "div",
+	                            { className: "main-top__title-etc" },
+	                            "...\u0430 \u0442\u0430\u043A\u0436\u0435"
+	                        ),
+	                        React.createElement(
+	                            "div",
+	                            { className: "main-top-functionsGroup" },
 	                            React.createElement(
-	                                'div',
-	                                { className: 'functionsGroup__item' },
-	                                React.createElement('div', { className: 'functionsGroup__item-icon icon-star_color' }),
+	                                "div",
+	                                { className: "functionsGroup__item" },
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-star_color" }),
 	                                React.createElement(
-	                                    'div',
-	                                    { className: 'functionsGroup__item-title' },
-	                                    '\u041F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u0430\u044F \u043C\u0443\u0437\u044B\u043A\u0430 \u0438\xA0\u043D\u043E\u0432\u0438\u043D\u043A\u0438 \u0432\xA0\u043E\u0434\u043D\u043E\u043C \u043C\u0435\u0441\u0442\u0435'
+	                                    "div",
+	                                    { className: "functionsGroup__item-title" },
+	                                    "\u041F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u0430\u044F \u043C\u0443\u0437\u044B\u043A\u0430 \u0438\xA0\u043D\u043E\u0432\u0438\u043D\u043A\u0438 \u0432\xA0\u043E\u0434\u043D\u043E\u043C \u043C\u0435\u0441\u0442\u0435"
 	                                )
 	                            ),
 	                            React.createElement(
-	                                'div',
-	                                { className: 'functionsGroup__item' },
-	                                React.createElement('div', { className: 'functionsGroup__item-icon icon-butterfly_color' }),
+	                                "div",
+	                                { className: "functionsGroup__item" },
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-butterfly_color" }),
 	                                React.createElement(
-	                                    'div',
-	                                    { className: 'functionsGroup__item-title' },
-	                                    '\u041F\u043E\u0438\u0441\u043A, \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u0432\u0430\u0441 \u043F\u043E\u043D\u0438\u043C\u0430\u0435\u0442'
+	                                    "div",
+	                                    { className: "functionsGroup__item-title" },
+	                                    "\u041F\u043E\u0438\u0441\u043A, \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u0432\u0430\u0441 \u043F\u043E\u043D\u0438\u043C\u0430\u0435\u0442"
 	                                )
 	                            ),
 	                            React.createElement(
-	                                'div',
-	                                { className: 'functionsGroup__item' },
-	                                React.createElement('div', { className: 'functionsGroup__item-icon icon-shazam_color' }),
+	                                "div",
+	                                { className: "functionsGroup__item" },
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-shazam_color" }),
 	                                React.createElement(
-	                                    'div',
-	                                    { className: 'functionsGroup__item-title' },
-	                                    '\u0423\u0434\u043E\u0431\u043D\u043E\u0435 \u043F\u0440\u043E\u0441\u043B\u0443\u0448\u0438\u0432\u0430\u043D\u0438\u0435 \u0441\u0432\u043E\u0438\u0445 Shazam\u043E\u0432'
+	                                    "div",
+	                                    { className: "functionsGroup__item-title" },
+	                                    "\u0423\u0434\u043E\u0431\u043D\u043E\u0435 \u043F\u0440\u043E\u0441\u043B\u0443\u0448\u0438\u0432\u0430\u043D\u0438\u0435 \u0441\u0432\u043E\u0438\u0445 Shazam\u043E\u0432"
 	                                )
 	                            ),
 	                            React.createElement(
-	                                'div',
-	                                { className: 'functionsGroup__item' },
-	                                React.createElement('div', { className: 'functionsGroup__item-icon icon-cloud_color' }),
+	                                "div",
+	                                { className: "functionsGroup__item" },
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-cloud_color" }),
 	                                React.createElement(
-	                                    'div',
-	                                    { className: 'functionsGroup__item-title' },
-	                                    '\u041A\u044D\u0448\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435, \u0447\u0442\u043E\u0431\u044B \u0441\u043B\u0443\u0448\u0430\u0442\u044C \u043C\u0443\u0437\u044B\u043A\u0443 \u0431\u0435\u0437 \u043F\u043E\u043C\u0435\u0445'
+	                                    "div",
+	                                    { className: "functionsGroup__item-title" },
+	                                    "\u041A\u044D\u0448\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435, \u0447\u0442\u043E\u0431\u044B \u0441\u043B\u0443\u0448\u0430\u0442\u044C \u043C\u0443\u0437\u044B\u043A\u0443 \u0431\u0435\u0437 \u043F\u043E\u043C\u0435\u0445"
 	                                )
 	                            ),
 	                            React.createElement(
-	                                'div',
-	                                { className: 'functionsGroup__item android' },
-	                                React.createElement('div', { className: 'functionsGroup__item-icon icon-lightning_color' }),
+	                                "div",
+	                                { className: "functionsGroup__item android" },
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-lightning_color" }),
 	                                React.createElement(
-	                                    'div',
-	                                    { className: 'functionsGroup__item-title' },
-	                                    '\u0421\u0436\u0430\u0442\u0438\u0435 \u043C\u043E\u0431\u0438\u044C\u043D\u043E\u0433\u043E \u0442\u0440\u0430\u0444\u0438\u043A\u0430'
+	                                    "div",
+	                                    { className: "functionsGroup__item-title" },
+	                                    "\u0421\u0436\u0430\u0442\u0438\u0435 \u043C\u043E\u0431\u0438\u044C\u043D\u043E\u0433\u043E \u0442\u0440\u0430\u0444\u0438\u043A\u0430"
 	                                )
 	                            )
 	                        )
 	                    )
 	                ),
 	                React.createElement(
-	                    'div',
-	                    { className: 'main-premium' },
+	                    "div",
+	                    { className: "main-premium" },
 	                    React.createElement(
-	                        'div',
-	                        { className: 'main-content' },
-	                        React.createElement('div', { className: 'icon-cherry' }),
+	                        "div",
+	                        { className: "main-content" },
+	                        React.createElement("div", { className: "icon-cherry" }),
 	                        React.createElement(
-	                            'div',
-	                            { className: 'main-premium__title' },
-	                            '\u041F\u0440\u0435\u043C\u0438\u0443\u043C- \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u0438:'
+	                            "div",
+	                            { className: "main-premium__title" },
+	                            "\u041F\u0440\u0435\u043C\u0438\u0443\u043C- \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u0438:"
 	                        ),
 	                        React.createElement(
-	                            'div',
-	                            { className: 'main-premium-functionsGroup' },
+	                            "div",
+	                            { className: "main-premium-functionsGroup" },
 	                            React.createElement(
-	                                'div',
-	                                { className: 'functionsGroup__item' },
-	                                React.createElement('div', { className: 'functionsGroup__item-icon icon-download_black' }),
-	                                React.createElement('div', { className: 'functionsGroup__item-title' })
-	                            ),
-	                            React.createElement(
-	                                'div',
-	                                { className: 'functionsGroup__item' },
-	                                React.createElement('div', { className: 'functionsGroup__item-icon icon-plane_black' }),
-	                                React.createElement('div', { className: 'functionsGroup__item-title' })
-	                            ),
-	                            React.createElement(
-	                                'div',
-	                                { className: 'functionsGroup__item' },
-	                                React.createElement('div', { className: 'functionsGroup__item-icon icon-rewind_black' }),
-	                                React.createElement('div', { className: 'functionsGroup__item-title' })
-	                            ),
-	                            React.createElement(
-	                                'div',
-	                                { className: 'functionsGroup__item' },
-	                                React.createElement('div', { className: 'functionsGroup__item-icon icon-diamond_black' }),
-	                                React.createElement('div', { className: 'functionsGroup__item-title' })
-	                            ),
-	                            React.createElement(
-	                                'div',
-	                                { className: 'functionsGroup__item' },
-	                                React.createElement('div', { className: 'functionsGroup__item-icon icon-butterfly_black' }),
-	                                React.createElement('div', { className: 'functionsGroup__item-title' })
-	                            )
-	                        )
-	                    )
-	                ),
-	                React.createElement(
-	                    'div',
-	                    { className: 'main-tryIt' },
-	                    React.createElement(
-	                        'div',
-	                        { className: 'main-content' },
-	                        React.createElement(
-	                            'div',
-	                            { className: 'main-tryIt__title-try' },
-	                            '\u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435!'
-	                        ),
-	                        React.createElement(
-	                            'div',
-	                            { className: 'main-tryIt__title-free' },
-	                            '\u042D\u0442\u043E \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E'
-	                        ),
-	                        React.createElement(
-	                            'div',
-	                            { className: 'installBtn installBtn_tryIt' },
-	                            React.createElement('a', { href: 'https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8', target: '_blank' })
-	                        )
-	                    )
-	                ),
-	                React.createElement(
-	                    'div',
-	                    { className: 'main-partners' },
-	                    React.createElement(
-	                        'div',
-	                        { className: 'main-content' },
-	                        React.createElement(
-	                            'div',
-	                            { className: 'main-partners__title' },
-	                            '\u041E\u0441\u043E\u0431\u044B\u0435 \u0443\u0441\u043B\u043E\u0432\u0438\u044F \u0434\u043B\u044F \u043A\u043B\u0438\u0435\u043D\u0442\u043E\u0432 \u043D\u0430\u0448\u0438\u0445 \u043F\u0430\u0440\u0442\u043D\u0435\u0440\u043E\u0432'
-	                        ),
-	                        React.createElement(
-	                            'div',
-	                            { className: 'main-partners-table' },
-	                            React.createElement(
-	                                'div',
-	                                { className: 'partners__row partners__row_1' },
-	                                React.createElement('div', { className: 'partners__item icon-beeline' }),
-	                                React.createElement('div', { className: 'partners__item icon-tele2' }),
-	                                React.createElement('div', { className: 'partners__item icon-kiivstar' })
-	                            ),
-	                            React.createElement(
-	                                'div',
-	                                { className: 'partners__row partners__row_2 partners__row_android' },
-	                                React.createElement('div', { className: 'partners__item icon-leEco' }),
-	                                React.createElement('div', { className: 'partners__item icon-julmart' }),
-	                                React.createElement('div', { className: 'partners__item icon-huawel' })
-	                            ),
-	                            React.createElement(
-	                                'div',
-	                                { className: 'partners__row partners__row_3' },
-	                                React.createElement('div', { className: 'partners__item icon-kitKat' }),
-	                                React.createElement('div', { className: 'partners__item icon-deliveryClub' }),
-	                                React.createElement('div', { className: 'partners__item icon-bud' })
-	                            )
-	                        ),
-	                        React.createElement(
-	                            'div',
-	                            { className: 'main-links' },
-	                            React.createElement(
-	                                'a',
-	                                { className: 'main-links_bold', href: 'http://zvooq.com/code', target: '_blank' },
-	                                '\u0423\xA0\u043C\u0435\u043D\u044F \u0435\u0441\u0442\u044C \u043F\u0440\u043E\u043C\u043E\u043A\u043E\u0434'
-	                            ),
-	                            React.createElement(
-	                                'a',
-	                                { className: 'main-links_normal', href: 'http://zvooq.com', target: '_blank' },
-	                                '\u0421\u0442\u0430\u0442\u044C \u043D\u0430\u0448\u0438\u043C \u043F\u0430\u0440\u0442\u043D\u0435\u0440\u043E\u043C'
-	                            ),
-	                            React.createElement(
-	                                'a',
-	                                { className: 'main-links_normal', href: 'http://dreamindustries.co/wanted/', target: '_blank' },
-	                                '\u0420\u0430\u0431\u043E\u0442\u0430\u0442\u044C \u0443\xA0\u043D\u0430\u0441'
-	                            ),
-	                            React.createElement(
-	                                'a',
-	                                { className: 'main-links_normal', href: 'http://zvooq.com', target: '_blank' },
-	                                '\u041F\u043E\u043E\u0431\u0449\u0430\u0442\u044C\u0441\u044F \u0441\xA0\u043D\u0430\u0448\u0438\u043C support'
-	                            ),
-	                            React.createElement(
-	                                'a',
-	                                { className: 'main-links_normal ios', href: 'http://zvooq.com', target: '_blank' },
-	                                'Zvooq \u0434\u043B\u044F ',
+	                                "div",
+	                                { className: "functionsGroup__item" },
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-download_black" }),
 	                                React.createElement(
-	                                    'em',
+	                                    "div",
+	                                    { className: "functionsGroup__item-title" },
+	                                    "\u0421\u043A\u0430\u0447\u0438\u0432\u0430\u043D\u0438\u0435 \u043C\u0443\u0437\u044B\u043A\u0438 \u0432\xA0\u0442\u0435\u043B\u0435\u0444\u043E\u043D"
+	                                )
+	                            ),
+	                            React.createElement(
+	                                "div",
+	                                { className: "functionsGroup__item" },
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-plane_black" }),
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "functionsGroup__item-title" },
+	                                    "\u041F\u0440\u043E\u0441\u043B\u0443\u0448\u0438\u0432\u0430\u043D\u0438\u0435 \u0431\u0435\u0437 \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u0430"
+	                                )
+	                            ),
+	                            React.createElement(
+	                                "div",
+	                                { className: "functionsGroup__item" },
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-rewind_black" }),
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "functionsGroup__item-title" },
+	                                    "\u0411\u0435\u0437\u043B\u0438\u043C\u0438\u0442\u043D\u0430\u044F \u043F\u0435\u0440\u0435\u043C\u043E\u0442\u043A\u0430"
+	                                )
+	                            ),
+	                            React.createElement(
+	                                "div",
+	                                { className: "functionsGroup__item" },
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-diamond_black" }),
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "functionsGroup__item-title" },
+	                                    "\u041C\u0443\u0437\u044B\u043A\u0430 \u0432\xA0\u0432\u044B\u0441\u043E\u043A\u043E\u043C \u043A\u0430\u0447\u0441\u0442\u0432\u0435"
+	                                )
+	                            ),
+	                            React.createElement(
+	                                "div",
+	                                { className: "functionsGroup__item" },
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-butterfly_black" }),
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "functionsGroup__item-title" },
+	                                    "\u041D\u0438\u043A\u0430\u043A\u043E\u0439 \u0440\u0435\u043A\u043B\u0430\u043C\u044B"
+	                                )
+	                            )
+	                        )
+	                    )
+	                ),
+	                React.createElement(
+	                    "div",
+	                    { className: "main-tryIt" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "main-content" },
+	                        React.createElement(
+	                            "div",
+	                            { className: "main-tryIt__title-try" },
+	                            "\u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435!"
+	                        ),
+	                        React.createElement(
+	                            "div",
+	                            { className: "main-tryIt__title-free" },
+	                            "\u042D\u0442\u043E \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E"
+	                        ),
+	                        React.createElement(
+	                            "div",
+	                            { className: "installBtn installBtn_tryIt googlePlayBtn" },
+	                            React.createElement("a", { href: "https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en", target: "_blank" })
+	                        )
+	                    )
+	                ),
+	                React.createElement(
+	                    "div",
+	                    { className: "main-partners" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "main-content" },
+	                        React.createElement(
+	                            "div",
+	                            { className: "main-partners__title" },
+	                            "\u041E\u0441\u043E\u0431\u044B\u0435 \u0443\u0441\u043B\u043E\u0432\u0438\u044F \u0434\u043B\u044F \u043A\u043B\u0438\u0435\u043D\u0442\u043E\u0432 \u043D\u0430\u0448\u0438\u0445 \u043F\u0430\u0440\u0442\u043D\u0435\u0440\u043E\u0432"
+	                        ),
+	                        React.createElement(
+	                            "div",
+	                            { className: "main-partners-table" },
+	                            React.createElement(
+	                                "div",
+	                                { className: "partners__row partners__row_1" },
+	                                React.createElement("div", { className: "partners__item icon-beeline" }),
+	                                React.createElement("div", { className: "partners__item icon-tele2" }),
+	                                React.createElement("div", { className: "partners__item icon-kiivstar" })
+	                            ),
+	                            React.createElement(
+	                                "div",
+	                                { className: "partners__row partners__row_2 partners__row_android" },
+	                                React.createElement("div", { className: "partners__item icon-leEco" }),
+	                                React.createElement("div", { className: "partners__item icon-julmart" }),
+	                                React.createElement("div", { className: "partners__item icon-huawel" })
+	                            ),
+	                            React.createElement(
+	                                "div",
+	                                { className: "partners__row partners__row_3" },
+	                                React.createElement("div", { className: "partners__item icon-kitKat" }),
+	                                React.createElement("div", { className: "partners__item icon-deliveryClub" }),
+	                                React.createElement("div", { className: "partners__item icon-bud" })
+	                            )
+	                        ),
+	                        React.createElement(
+	                            "div",
+	                            { className: "main-links" },
+	                            React.createElement(
+	                                "a",
+	                                { className: "main-links_bold", href: "http://zvooq.com/code", target: "_blank" },
+	                                "\u0423\xA0\u043C\u0435\u043D\u044F \u0435\u0441\u0442\u044C \u043F\u0440\u043E\u043C\u043E\u043A\u043E\u0434"
+	                            ),
+	                            React.createElement(
+	                                "a",
+	                                { className: "main-links_normal", href: "http://zvooq.com", target: "_blank" },
+	                                "\u0421\u0442\u0430\u0442\u044C \u043D\u0430\u0448\u0438\u043C \u043F\u0430\u0440\u0442\u043D\u0435\u0440\u043E\u043C"
+	                            ),
+	                            React.createElement(
+	                                "a",
+	                                { className: "main-links_normal", href: "http://dreamindustries.co/wanted/", target: "_blank" },
+	                                "\u0420\u0430\u0431\u043E\u0442\u0430\u0442\u044C \u0443\xA0\u043D\u0430\u0441"
+	                            ),
+	                            React.createElement(
+	                                "a",
+	                                { className: "main-links_normal", href: "http://zvooq.com", target: "_blank" },
+	                                "\u041F\u043E\u043E\u0431\u0449\u0430\u0442\u044C\u0441\u044F \u0441\xA0\u043D\u0430\u0448\u0438\u043C support"
+	                            ),
+	                            React.createElement(
+	                                "a",
+	                                { className: "main-links_normal android", href: "mailto:saveme@zvooq.com", target: "_blank" },
+	                                "Zvooq \u0434\u043B\u044F ",
+	                                React.createElement(
+	                                    "em",
 	                                    null,
-	                                    'ios'
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'a',
-	                                { className: 'main-links_normal android', href: 'http://zvooq.com', target: '_blank' },
-	                                'Zvooq \u0434\u043B\u044F ',
-	                                React.createElement(
-	                                    'em',
-	                                    null,
-	                                    'Android'
+	                                    "Android"
 	                                )
 	                            )
 	                        )
@@ -418,7 +387,7 @@
 	    }
 	});
 
-	ReactDOM.render(React.createElement(MainPage, null), document.getElementById('page-content'));
+	ReactDOM.render(React.createElement(MainAndroid, null), document.getElementById('page-content'));
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(34)))
 
 /***/ },
@@ -21804,8 +21773,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./Roboto-BoldItalic.styl", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./Roboto-BoldItalic.styl");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./android.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./android.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -21823,7 +21792,7 @@
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: \"Roboto-BoldItalic\";\n  src: url(\"/../../fonts/Roboto/Roboto-BoldItalic.ttf\");\n  font-weight: 900;\n  font-style: italic;\n}\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: \"Roboto-BoldItalic\";\n  src: url(\"/../../fonts/Roboto/Roboto-BoldItalic.ttf\");\n  font-weight: 900;\n  font-style: italic;\n}\n@font-face {\n  font-family: \"Roboto-Medium\";\n  src: url(\"/../../fonts/Roboto/Roboto-Medium.ttf\");\n  font-weight: 500;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"Roboto-Bold\";\n  src: url(\"/../../fonts/Roboto/Roboto-Bold.ttf\");\n  font-weight: 900;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"Roboto-Regular\";\n  src: url(\"/../../fonts/Roboto/Roboto-Regular.ttf\");\n  font-weight: 400;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"Roboto-Black\";\n  src: url(\"/../../fonts/Roboto/Roboto-Black.ttf\");\n  font-weight: 600;\n  font-style: normal;\n}\na,\na:hover,\na:focus,\ninput,\ninput:focus,\nselect,\nselect:focus,\ntextarea,\ntextarea:focus {\n  outline: none;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\ninput[type=\"search\"]::-webkit-search-decoration,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  cursor: pointer;\n  -webkit-appearance: button;\n  background-color: transparent;\n}\nhtml {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n}\nbody,\nhtml,\np,\nb,\ninput,\nbutton,\nh1,\nh2,\nh3 {\n  margin: 0;\n  padding: 0;\n  border: none;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\ninput {\n  background-color: transparent;\n  -webkit-appearance: none;\n}\nbutton:focus {\n  outline: none;\n}\n@media screen and (max-width: 510px) {\n  .main {\n    background-color: #000;\n    color: #fff;\n    z-index: 1;\n  }\n  .main-containerWrapper {\n    width: 100%;\n    height: 100%;\n  }\n  .main-content {\n    margin: 0 30px;\n  }\n  .main-top {\n    padding-top: 131px;\n    text-align: left;\n  }\n  .main-top_gradient {\n    background: linear-gradient(top, #482bd8 0%, #e5e5e5 71%);\n    width: 100%;\n    height: 982px;\n    position: absolute;\n    z-index: 2;\n  }\n  .main-top .zvooq-logo {\n    width: 68.65px;\n    height: 68.65px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n  }\n  .main-top__title-Zvooq {\n    background-image: url(\"/../img/title-Zvooq.svg\");\n    background-repeat: no-repeat;\n    background-position: center;\n    background-size: cover;\n    width: 137px;\n    height: 71px;\n    z-index: 3;\n    margin-bottom: 29px;\n  }\n  .main-top .installBtn.installBtn_top.googlePlayBtn {\n    background-color: #000;\n    background-image: url(\"/../img/android/googlePlayBtn.jpg\");\n    background-repeat: no-repeat;\n    background-position: center;\n    background-size: cover;\n    border-radius: 4px;\n    width: 203px;\n    height: 60px;\n    margin-bottom: 31px;\n  }\n  .main-top__title-music {\n    position: relative;\n    font-family: \"Roboto-Bold\";\n    font-size: 50px;\n    line-height: 45px;\n    margin-bottom: 33px;\n    text-align: left;\n  }\n  .main-top__title-music .icon-note {\n    position: absolute;\n    top: 53px;\n    right: 186px;\n    background-image: url(\"/../img/icon-note.svg\");\n    background-repeat: no-repeat;\n    width: 32px;\n    height: 37px;\n  }\n  .main-top__title-listenFree {\n    font-family: \"Roboto-Bold\";\n    font-size: 25px;\n    line-height: 28px;\n    margin-bottom: 10px;\n    text-align: left;\n  }\n  .main-top__title-torrents,\n  .main-top__title-trial {\n    font-family: \"Roboto-Regular\";\n    font-size: 14px;\n    line-height: 19px;\n    text-align: left;\n  }\n  .main-top__title-torrents {\n    margin-bottom: 10px;\n  }\n  .main-top-group25 {\n    text-align: center;\n    position: relative;\n  }\n  .main-top-group25__title-25 {\n    color: #e93889;\n    font-family: \"Roboto-Black\";\n    font-size: 250px;\n    line-height: 45px;\n    text-align: center;\n  }\n  .main-top-group25__title-million {\n    z-index: 10000;\n    position: absolute;\n    top: 50%;\n    color: #fff;\n    font-family: \"Roboto-Bold\";\n    font-size: 25px;\n    line-height: 28px;\n    text-align: center;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -22134,326 +22103,6 @@
 		if(oldSrc)
 			URL.revokeObjectURL(oldSrc);
 	}
-
-
-/***/ },
-/* 176 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(177);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(175)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./Roboto-Medium.styl", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./Roboto-Medium.styl");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 177 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(174)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "@font-face {\n  font-family: \"Roboto-Medium\";\n  src: url(\"/../../fonts/Roboto/Roboto-Medium.ttf\");\n  font-weight: 500;\n  font-style: normal;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 178 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(179);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(175)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./Roboto-Bold.styl", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./Roboto-Bold.styl");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 179 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(174)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "@font-face {\n  font-family: \"Roboto-Bold\";\n  src: url(\"/../../fonts/Roboto/Roboto-Bold.ttf\");\n  font-weight: 900;\n  font-style: normal;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 180 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(181);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(175)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./Roboto-Regular.styl", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./Roboto-Regular.styl");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 181 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(174)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "@font-face {\n  font-family: \"Roboto-Regular\";\n  src: url(\"/../../fonts/Roboto/Roboto-Regular.ttf\");\n  font-weight: 400;\n  font-style: normal;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 182 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(183);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(175)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./Roboto-Black.styl", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/stylus-loader/index.js!./Roboto-Black.styl");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 183 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(174)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "@font-face {\n  font-family: \"Roboto-Black\";\n  src: url(\"/../../fonts/Roboto/Roboto-Black.ttf\");\n  font-weight: 600;\n  font-style: normal;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 184 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(185);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(175)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./reset.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./reset.styl");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 185 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(174)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "a,\na:hover,\na:focus,\ninput,\ninput:focus,\nselect,\nselect:focus,\ntextarea,\ntextarea:focus {\n  outline: none;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\ninput[type=\"search\"]::-webkit-search-decoration,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  cursor: pointer;\n  -webkit-appearance: button;\n  background-color: transparent;\n}\nhtml {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n}\nbody,\nhtml,\np,\nb,\ninput,\nbutton,\nh1,\nh2,\nh3 {\n  margin: 0;\n  padding: 0;\n  border: none;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\ninput {\n  background-color: transparent;\n  -webkit-appearance: none;\n}\nbutton:focus {\n  outline: none;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 186 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(187);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(175)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./variables.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./variables.styl");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 187 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(174)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
-
-/***/ },
-/* 188 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(189);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(175)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./ios.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./ios.styl");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 189 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(174)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
-
-/***/ },
-/* 190 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(191);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(175)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./android.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./android.styl");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 191 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(174)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".main {\n  background-color: #000;\n  color: #fff;\n}\n.main-containerWrapper {\n  width: 100%;\n  height: 100%;\n}\n.main-content {\n  margin: 0 30px;\n}\n.main-top {\n  padding-top: 131px;\n  text-align: left;\n}\n.main-top_gradient {\n  background: linear-gradient(top, #482bd8 0%, #e5e5e5 71%);\n  width: 100%;\n  height: 982px;\n  position: absolute;\n  z-index: 2;\n}\n.main-top .zvooq-logo {\n  width: 68.65px;\n  heith: 68.65px;\n  border-radius: 4px;\n  margin-bottom: 20px;\n}\n.main-top__title-Zvooq {\n  font-family: \"Roboto-BoldItalic\";\n  font-size: 50px;\n  line-height: 50px;\n  margin-bottom: 5px;\n  text-align: left;\n}\n.main-top__title-number1 {\n  font-family: \"Roboto-Medium\";\n  font-size: 20px;\n  line-height: 18px;\n  margin-bottom: 29px;\n  text-align: left;\n}\n.main-top .installBtn.installBtn_top.googlePlayBtn {\n  background-color: #000;\n  background-image: url(\"/../img/android/googlePlayBtn.jpg\");\n  background-repeat: no-repeat;\n  background-position: center;\n  border-radius: 4px;\n  width: 203px;\n  heith: 60px;\n  margin-bottom: 31px;\n}\n.main-top__title-music {\n  position: relative;\n  font-family: \"Roboto-Bold\";\n  font-size: 50px;\n  line-height: 45px;\n  margin-bottom: 33px;\n  text-align: left;\n}\n.main-top__title-music .icon-note {\n  position: absolute;\n  top: 53px;\n  right: 186px;\n  background-image: url(\"/../img/icon-note.svg\");\n  background-repeat: no-repeat;\n  width: 32px;\n  height: 37px;\n}\n.main-top__title-listenFree {\n  font-family: \"Roboto-Bold\";\n  font-size: 25px;\n  line-height: 28px;\n  margin-bottom: 10px;\n  text-align: left;\n}\n.main-top__title-torrents,\n.main-top__title-trial {\n  font-family: \"Roboto-Regular\";\n  font-size: 14px;\n  line-height: 19px;\n  text-align: left;\n}\n.main-top__title-torrents {\n  margin-bottom: 10px;\n}\n.main-top-group25 {\n  text-align: center;\n  position: relative;\n}\n.main-top-group25__title-25 {\n  color: #e93889;\n  font-family: \"Roboto-Black\";\n  font-size: 250px;\n  line-height: 45px;\n  text-align: center;\n}\n.main-top-group25__title-million {\n  z-index: 10000;\n  position: absolute;\n  top: 50%;\n  color: #fff;\n  font-family: \"Roboto-Bold\";\n  font-size: 25px;\n  line-height: 28px;\n  text-align: center;\n}\n", ""]);
-
-	// exports
 
 
 /***/ }
