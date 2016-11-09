@@ -10,17 +10,16 @@ var MainIos = React.createClass({
             <div className="main">
                 <div className="main-containerWrapper">
 
-                    <div className="main__mini-phones main__mini-phones_ios"></div>
-
-                    <div className="main__best-stiсker main__best-stiсker_up">
-                        Лучшее<br/>
-                        музыкальное<br/>
-                        приложение<br/><br/>
-                        <p className="AppStore">App Store</p>
-                        2015
-                    </div>
-
                     <div className="main-top">
+                        <div className="main__mini-phones main__mini-phones_ios"></div>
+
+                        <div className="main__best-stiсker main__best-stiсker_up">
+                            Лучшее<br/>
+                            музыкальное<br/>
+                            приложение<br/><br/>
+                            <p className="AppStore">App Store</p>
+                            2015
+                        </div>
                         <div className="main-top_gradient"></div>
                         <div className="main-content">
                             <img className="zvooq-logo" src="/img/ios/zvooq-logo_ios.svg" alt="Zvooq-logo" />
@@ -59,20 +58,20 @@ var MainIos = React.createClass({
                             <div className="main-top__title-etc">...а также</div>
                             <div className="main-top-functionsGroup">
                                 <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-star_color"></div>
-                                    <div className="functionsGroup__item-title">Популярная музыка и&nbsp;новинки в&nbsp;одном месте</div>
+                                    <div className="item_inline functionsGroup__item-icon icon-star_color"></div>
+                                    <div className="item_inline functionsGroup__item-title">Популярная музыка и&nbsp;новинки в&nbsp;одном месте</div>
                                 </div>
                                 <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-butterfly_color"></div>
-                                    <div className="functionsGroup__item-title">Поиск, который вас понимает</div>
+                                    <div className="item_inline functionsGroup__item-icon icon-butterfly_color"></div>
+                                    <div className="item_inline functionsGroup__item-title">Поиск, который вас понимает</div>
                                 </div>
                                 <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-shazam_color"></div>
-                                    <div className="functionsGroup__item-title">Удобное прослушивание своих Shazamов</div>
+                                    <div className="item_inline functionsGroup__item-icon icon-shazam_color"></div>
+                                    <div className="item_inline functionsGroup__item-title">Удобное прослушивание своих Shazamов</div>
                                 </div>
                                 <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-cloud_color"></div>
-                                    <div className="functionsGroup__item-title">Кэширование, чтобы слушать музыку без помех</div>
+                                    <div className="item_inline functionsGroup__item-icon icon-cloud_color"></div>
+                                    <div className="item_inline functionsGroup__item-title">Кэширование, чтобы слушать музыку без помех</div>
                                 </div>
                             </div>
                         </div>
@@ -83,24 +82,24 @@ var MainIos = React.createClass({
                             <div className="main-premium__title">Премиум- возможности:</div>
                             <div className="main-premium-functionsGroup">
                                 <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-download_black"></div>
+                                    <div className="item_inline functionsGroup__item-icon icon-download_black"></div>
                                     <div className="functionsGroup__item-title">Скачивание музыки в&nbsp;телефон</div>
                                 </div>
                                 <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-plane_black"></div>
-                                    <div className="functionsGroup__item-title">Прослушивание без интернета</div>
+                                    <div className="item_inline functionsGroup__item-icon icon-plane_black"></div>
+                                    <div className="item_inline functionsGroup__item-title">Прослушивание без интернета</div>
                                 </div>
                                 <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-diamond_black"></div>
-                                    <div className="functionsGroup__item-title">Музыка в&nbsp;высоком качстве</div>
+                                    <div className="item_inline functionsGroup__item-icon icon-diamond_black"></div>
+                                    <div className="item_inline functionsGroup__item-title">Музыка в&nbsp;высоком качстве</div>
                                 </div>
                                 <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-rewind_black"></div>
-                                    <div className="functionsGroup__item-title">Безлимитная перемотка</div>
+                                    <div className="item_inline functionsGroup__item-icon icon-rewind_black"></div>
+                                    <div className="item_inline functionsGroup__item-title">Безлимитная перемотка</div>
                                 </div>
                                 <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-butterfly_black"></div>
-                                    <div className="functionsGroup__item-title">Никакой рекламы</div>
+                                    <div className="item_inline functionsGroup__item-icon icon-butterfly_black"></div>
+                                    <div className="item_inline functionsGroup__item-title">Никакой рекламы</div>
                                 </div>
                             </div>
                         </div>
@@ -119,28 +118,16 @@ var MainIos = React.createClass({
                     <div className="main-partners">
                         <div className="main-content">
                             <div className="main-partners__title">Особые условия для клиентов наших партнеров</div>
-                            <div className="main-partners-table">
-                                // заменить все вектором
-                                <div className="partners__row partners__row_1">
-                                    <div className="partners__item icon-beeline"></div>
-                                    <div className="partners__item icon-tele2"></div>
-                                    <div className="partners__item icon-kiivstar"></div>
-                                </div>
-                                <div className="partners__row partners__row_3">
-                                    <div className="partners__item icon-kitKat"></div>
-                                    <div className="partners__item icon-deliveryClub"></div>
-                                    <div className="partners__item icon-bud"></div>
-                                </div>
-                                //------------------------
-                            </div>
+
+                            <div className="main-partners__table"></div>
 
                             <div className="main-links">
                                 <a className="main-links_bold" href="http://zvooq.com/code" target="_blank">У&nbsp;меня есть промокод</a>
                                 <a className="main-links_normal" href="http://zvooq.com" target="_blank">Стать нашим партнером</a>
                                 <a className="main-links_normal" href="http://dreamindustries.co/wanted/" target="_blank">Работать у&nbsp;нас</a>
-                                <a className="main-links_normal" href="http://zvooq.com" target="_blank">Пообщаться с&nbsp;нашим support</a>
+                                <a className="main-links_normal" href="mailto:helpme@zvooq.com" target="_blank">Пообщаться с&nbsp;нашим support</a>
 
-                                <a className="main-links_normal ios" href="mailto:helpme@zvooq.com" target="_blank">Zvooq для <em>ios</em></a>
+                                <a className="main-links__normal android" href="https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en" target="_blank">Zvooq для Android</a>
                             </div>
                         </div>
                     </div>
