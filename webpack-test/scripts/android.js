@@ -1,8 +1,5 @@
 import './../stylus/android.styl';
 
-// href="https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en"
-//переименовать в андройд и ios сделать отдельными компонентами
-// импорт стиля только один, все шрифты и остальное импортить внутри css
 var MainAndroid = React.createClass({
 
     render() {
@@ -12,8 +9,8 @@ var MainAndroid = React.createClass({
                     <div className="main-top">
                         <div className="main-top__mini-phones"></div>
                         <div className="main-top_gradient"></div>
-                        <div className="main-content">
 
+                        <div className="main-content">
                             <img className="zvooq-logo" src="/img/android/zvooq-logo_android.png" alt="Zvooq-logo" />
                             <div className="main-top__title-Zvooq"></div>
 
