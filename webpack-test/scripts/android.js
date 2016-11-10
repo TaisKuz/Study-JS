@@ -110,7 +110,6 @@ var MainAndroid = React.createClass({
                         </div>
                     </div>
                     <div className="main-tryIt">
-                        <div className="main-tryIt_gradient"></div>
                         <div className="main-content">
                             <div className="main-tryIt__title-try">Попробуйте!</div>
                             <div className="main-tryIt__title-free">Это бесплатно</div>
@@ -131,7 +130,7 @@ var MainAndroid = React.createClass({
                                 <a className="main-links_normal" href="http://dreamindustries.co/wanted/" target="_blank">Работать у&nbsp;нас</a>
                                 <a className="main-links_normal" href="mailto:saveme@zvooq.com" target="_blank">Пообщаться с&nbsp;нашим support</a>
 
-                                <a className="main-links__normal ios" href="https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8" target="_blank">Zvooq для <em>ios</em></a>
+                                <a className="main-links__normal" href="https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8" target="_blank">Zvooq для iOS</a>
                             </div>
                         </div>
                     </div>
