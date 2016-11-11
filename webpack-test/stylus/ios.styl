@@ -13,6 +13,11 @@
     color: #fff
     z-index 0
 
+    &-containerWrapper
+      width: 100%
+      height 100%
+      overflow hidden
+
     & .installBtn.appStoreBtn
       background-color #000
       background-image url("/../img/ios/appStoreBtn.png")
@@ -25,10 +30,6 @@
 
     & .item_inline
       display inline-block
-
-    &-containerWrapper
-      width: 100%
-      height 100%
 
     &-content
       margin: 0 30px
@@ -44,12 +45,12 @@
         position absolute
         background-image url("/../img/ios/mini-phones_ios.png")
         background-repeat no-repeat
-        background-position 99px -127px
-        background-size 78%
-        background-color transparent
-        width 427px
-        height 451px
-        right 0px
+        background-position: -89px -128px
+        background-size: 100%
+        background-color: transparent
+        width: 488px
+        height: 537px
+        left: 0px
         top 0px
         z-index 3
 
@@ -76,9 +77,8 @@
         z-index 5
 
         & .stiсker-text
-          font-family: "SFUIDisplay-Thin"
-          font-size: 13px
-          letter-spacing: 1px
+          font-family: "SFUIDisplay-Regular"
+          font-size: 14px
           line-height: 19px
           text-align: center
           margin-top: 38px
@@ -92,7 +92,7 @@
         width 59px
         height 59px
         border-radius 4px
-        margin-bottom 20px
+        margin-bottom 24px
         margin-top: 125px
         z-index 7
 
@@ -101,9 +101,9 @@
         background-repeat no-repeat
         background-position center
         background-size cover
-        width 145px
-        height 74px
-        margin-bottom 29px
+        width 150px
+        height 76px
+        margin-bottom 28px
         z-index 7
 
       & .installBtn.installBtn_top.appStoreBtn
@@ -113,10 +113,9 @@
       &__title-music
         position relative
         font-family: "SFUIDisplay-Heavy"
-        font-size: 47px
+        font-size: 50px
         line-height 45px
-        letter-spacing: 2px
-        margin-bottom 33px
+        margin-bottom 34px
         text-align: left
         z-index 7
 
@@ -132,23 +131,20 @@
           z-index 8
 
       &__title-listenFree
-        font-family: "SFUIDisplay-Regular"
-        font-size: 24px
+        font-family: "SFUIDisplay-Heavy"
+        font-size: 25px
         line-height 28px
-        margin-bottom: 10px
+        margin-bottom: 13.28px
         text-align: left
         z-index 7
 
       &__title-torrents,
       &__title-trial
-        font-family: "SFUIDisplay-Thin"
+        font-family: "SFUIDisplay-Regular"
         font-weight 100
         font-size: 14px
         line-height 19px
         text-align: left
-        z-index 7
-
-      &__title-torrents
         margin-bottom: 10px
         z-index 7
 
@@ -172,7 +168,7 @@
           top 42%
           width 100%
           color #fff
-          font-family "SFUIDisplay-Regular"
+          font-family "SFUIDisplay-Heavy"
           font-size 25px
           line-height 28px
           text-align center
@@ -219,19 +215,18 @@
 
       &__title-thousand
         margin-top -10px
-        margin-bottom 13px
-        font-family "SFUIDisplay-Regular"
+        margin-bottom 7px
+        font-family "SFUIDisplay-Heavy"
         font-size 25px
         line-height 28px
         text-align left
 
       &__title-oneClick
-        font-family "SFUIDisplay-Thin"
+        font-family "SFUIDisplay-Regular"
         font-size 14px
         line-height 19px
         text-align left
         margin-bottom 10px
-
         z-index 10
 
       &-heartWaves
@@ -246,26 +241,26 @@
         z-index 6
 
       &__title-smart
-        font-family "SFUIDisplay-Regular"
+        font-family "SFUIDisplay-Heavy"
         font-size 25px
         line-height 28px
         text-align left
-        margin-bottom 16px
+        margin-bottom 10px
         z-index 10
 
       &__title-allULike
-        font-family "SFUIDisplay-Thin"
+        font-family "SFUIDisplay-Regular"
         font-size 14px
         line-height 19px
         text-align left
-        margin-bottom 35px
+        margin-bottom 26px
 
       &__title-etc
-        font-family "SFUIDisplay-Regular"
+        font-family "SFUIDisplay-Heavy"
         font-size 25px
         line-height 28px
         text-align left
-        margin-bottom 12px
+        margin-bottom 15px
 
       &-functionsGroup
         margin-right -30px
@@ -273,7 +268,7 @@
 
         & .functionsGroup__item
           border-bottom 1px solid #4A4A4A
-          padding 8px 0
+          padding 6px 0
           display flex
           align-items flex-start
 
@@ -281,10 +276,9 @@
             border-bottom none
 
           &-title
-            font-family "SFUIDisplay-Thin"
+            font-family "SFUIDisplay-Regular"
             font-size 14px
             line-height 19px
-            letter-spacing 1px
             text-align left
 
           &-icon
@@ -318,7 +312,7 @@
       position relative
       background-color #fff
       width 97.5%
-      padding 32px 0 5px
+      padding 27px 0 5px
       border-radius 10px
       margin 0 auto
       z-index 3
@@ -336,10 +330,10 @@
         border-radius 50%
 
       &__title
-        margin-top 11px
-        margin-bottom 25px
+        margin-top 17px
+        margin-bottom 27px
         color #000
-        font-family "SFUIDisplay-Bold"
+        font-family "SFUIDisplay-Heavy"
         font-size 25px
         line-height 28px
         text-align left
@@ -356,8 +350,7 @@
           color #000
           font-family "SFUIDisplay-Regular"
           font-size 16px
-          line-height 24px
-          opacity .87
+          line-height 20px
 
         &-icon
           margin-right 15px
@@ -395,27 +388,28 @@
       background-repeat no-repeat
       background-position -5px -96px
       background-size 104%
-      padding: 87px 0 24px
+      padding: 72px 0 25px
       margin-top -40px
       z-index 1
 
       &__title-try
-        font-family "SFUIDisplay-Regular"
+        font-family "SFUIDisplay-Heavy"
         font-size 25px
         line-height 28px
         text-align left
         margin-bottom 4px
 
       &__title-free
-        font-family "SFUIDisplay-Thin"
+        font-family "SFUIDisplay-Regular"
         font-size 14px
         line-height 19px
-        margin-bottom 25px
+        margin-bottom 21px
+
 
     &-partners
       background-color #2C2C2C
       width 100%
-      padding 25px 0 30px
+      padding 25px 0 45px
 
       &__title
         color #817E82
@@ -423,7 +417,7 @@
         font-size 25px
         line-height 28px
         text-align left
-        margin-bottom 11px
+        margin-bottom 9px
 
       &__table
         background-image url("/../img/ios/icons-partners-ios.png")
@@ -432,24 +426,25 @@
         background-size cover
         width 262px
         height 175px
-        margin-bottom 22px
+        margin-bottom 19px
 
       & a
         display block
-        text-decoration underline
-        margin-bottom 16px
         color #9B9B9B
+
+      & .main-links_bold
+        font-family "SFUIDisplay-Regular"
+        font-size 18px
+        line-height 19px
+        text-align left
+        margin-bottom 18px
+        color #fff
 
       & .main-links_normal
         font-family "SFUIDisplay-Regular"
         font-weight 100
         font-size 14px
         line-height 19px
+        margin-bottom 14px
         text-align left
 
-      & .main-links_bold
-        font-family "SFUIDisplay-Thin"
-        font-size 18px
-        line-height 19px
-        text-align left
-        color #fff
