@@ -1,7 +1,6 @@
 @import '/fonts/Roboto/Roboto-Bold.styl'
 @import '/fonts/Roboto/Roboto-Regular.styl'
 @import '/fonts/Roboto/Roboto-Black.styl'
-@import '/fonts/Roboto/Roboto-Thin.styl'
 
 @import '/reset.styl'
 @import '/variables.styl'
@@ -44,8 +43,8 @@
         position absolute
         background-image url("/../img/android/mini-phones_android.png")
         background-repeat no-repeat
-        background-position 67px -78px
-        background-size 94%
+        background-position 108px -102px
+        background-size 100%
         background-color transparent
         width 427px
         height 451px
@@ -77,7 +76,7 @@
         width 137px
         height 71px
         margin-bottom 29px
-        z-index 7
+        z-index 8
 
       & .installBtn.installBtn_top.googlePlayBtn
         margin-bottom 31px
@@ -105,7 +104,7 @@
           z-index 8
 
       &__title-listenFree
-        font-family: "Roboto-Regular"
+        font-family: "Roboto-Bold"
         font-size: 24px
         line-height 28px
         margin-bottom: 10px
@@ -114,7 +113,7 @@
 
       &__title-torrents,
       &__title-trial
-        font-family: "Roboto-Thin"
+        font-family: "Roboto-Regular"
         font-weight 100
         font-size: 14px
         line-height 19px
@@ -145,7 +144,7 @@
           top 42%
           width 100%
           color #fff
-          font-family "Roboto-Regular"
+          font-family "Roboto-Bold"
           font-size 25px
           line-height 28px
           text-align center
@@ -193,17 +192,16 @@
       &__title-thousand
         margin-top 10px
         margin-bottom 13px
-        font-family "Roboto-Regular"
+        font-family "Roboto-Bold"
         font-size 25px
         line-height 28px
         text-align left
 
       &__title-oneClick
-        font-family "Roboto-Thin"
+        font-family "Roboto-Regular"
         font-size 14px
         line-height 19px
         text-align left
-
         z-index 10
 
       &-heartWaves
@@ -218,7 +216,7 @@
         z-index 6
 
       &__title-smart
-        font-family "Roboto-Regular"
+        font-family "Roboto-Bold"
         font-size 25px
         line-height 28px
         text-align left
@@ -226,14 +224,14 @@
         z-index 10
 
       &__title-allULike
-        font-family "Roboto-Thin"
+        font-family "Roboto-Regular"
         font-size 14px
         line-height 19px
         text-align left
         margin-bottom 35px
 
       &__title-etc
-        font-family "Roboto-Regular"
+        font-family "Roboto-Bold"
         font-size 25px
         line-height 28px
         text-align left
@@ -253,10 +251,9 @@
             border-bottom none
 
           &-title
-            font-family "Roboto-Thin"
+            font-family "Roboto-Regular"
             font-size 14px
             line-height 19px
-            letter-spacing 1px
             text-align left
 
           &-icon
@@ -294,7 +291,7 @@
     &-premium
       background-color #fff
       width 100%
-      padding-top 35px
+      padding-top 31px
 
       & .icon-cherry
         width 79px
@@ -307,7 +304,7 @@
 
       &__title
         margin-top 11px
-        margin-bottom 25px
+        margin-bottom 27px
         color #000
         font-family "Roboto-Bold"
         font-size 25px
@@ -333,30 +330,34 @@
           margin-right 15px
           background-repeat no-repeat
           background-position top left
-          background-size cover
 
         & .icon-download_black
           background-image url("/../img/android/icon-download_black.svg")
+          background-size 18px 18px
           width 18px
           height 18px
 
         & .icon-plane_black
           background-image url("/../img/android/icon-plane_black.svg")
+          background-size 16.88px 18px
           width 16.88px
           height 18px
 
         & .icon-rewind_black
           background-image url("/../img/android/icon-rewind_black.svg")
+          background-size 19px 12px
           width 19px
           height 12px
 
         & .icon-diamond_black
           background-image url("/../img/android/icon-diamond_black.svg")
+          background-size 20px 18px
           width 20px
           height 18px
 
         & .icon-butterfly_black
           background-image url("/../img/android/icon-butterfly_black.svg")
+          background-size 18px 15px
           width 18px
           height 15px
 
@@ -371,17 +372,17 @@
       padding 24px 0
 
       &__title-try
-        font-family "Roboto-Regular"
+        font-family "Roboto-Bold"
         font-size 25px
         line-height 28px
         text-align left
         margin-bottom 4px
 
       &__title-free
-        font-family "Roboto-Thin"
+        font-family "Roboto-Regular"
         font-size 14px
         line-height 19px
-        margin-bottom 10 px
+        margin-bottom 10px
 
     &-partners
       background-color #2C2C2C
@@ -390,7 +391,7 @@
 
       &__title
         color #817E82
-        font-family "Roboto-Regular"
+        font-family "Roboto-Bold"
         font-size 25px
         line-height 28px
         text-align left
@@ -408,19 +409,21 @@
       & a
         display block
         text-decoration underline
-        margin-bottom 16px
+
         color #9B9B9B
+
+      & .main-links_bold
+        font-family "Roboto-Regular"
+        font-size 18px
+        line-height 19px
+        text-align left
+        margin-bottom 16px
+        color #fff
 
       & .main-links_normal
         font-family "Roboto-Regular"
         font-weight 100
         font-size 14px
         line-height 19px
+        margin-bottom 14px
         text-align left
-
-      & .main-links_bold
-        font-family "Roboto-Thin"
-        font-size 18px
-        line-height 19px
-        text-align left
-        color #fff

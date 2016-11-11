@@ -17,12 +17,9 @@ var MainAndroid = React.createClass({
                             <div className="installBtn installBtn_top googlePlayBtn">
                                 <a href="https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en" target="_blank" />
                             </div>
-
                             <div className="main-top__title-music" >
                                 Включить<br/>музыку<span className="icon-note"/><br/>легко!
-
                             </div>
-
                             <div className="main-top__title-listenFree" >Слушайте всё бесплатно и&nbsp;без регистрации</div>
                             <div className="main-top__title-torrents">Больше не&nbsp;нужны торренты,<br />
                                 социальные сети или пиратские<br />
@@ -114,7 +111,6 @@ var MainAndroid = React.createClass({
                             <div className="installBtn installBtn_tryIt googlePlayBtn">
                                 <a href="https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en" target="_blank" />
                             </div>
-
                         </div>
                     </div>
                     <div className="main-partners">
@@ -126,7 +122,6 @@ var MainAndroid = React.createClass({
                                 <a className="main-links_normal" href="http://zvooq.com" target="_blank">Стать нашим партнером</a>
                                 <a className="main-links_normal" href="http://dreamindustries.co/wanted/" target="_blank">Работать у&nbsp;нас</a>
                                 <a className="main-links_normal" href="mailto:saveme@zvooq.com" target="_blank">Пообщаться с&nbsp;нашим support</a>
-
                                 <a className="main-links__normal" href="https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8" target="_blank">Zvooq для iOS</a>
                             </div>
                         </div>
