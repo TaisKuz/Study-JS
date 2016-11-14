@@ -46,18 +46,19 @@
       background-image url("/img/desktop/zvooqLogo.svg")
       background-repeat no-repeat
       background-position center
-      width 62px
+      background-size 62px 62px
+      width 1029px
       height 62px
       border-radius 17px
       margin-bottom 22px
       margin-top: 46px
 
     .title-Zvooq
+      width 1029px
       background-image url("/../img/desktop/zvooqTitle.svg")
       background-repeat no-repeat
       background-position center
       background-size 96px 26px
-      width 96px
       height 26px
 
     .title-number1
@@ -115,7 +116,7 @@
         line-height 28px
         padding 12px 0 11px
         background-color #F82D8E
-        border-radius 12px
+        border-radius 25px
 
     &-phones
       position relative
@@ -134,15 +135,13 @@
         position absolute
         top -10px
         right 30%px
-        //background-image url("/../img/desktop/sticker.png")
         background: linear-gradient(to bottom, rgba(0,255,171,1) 0%,rgba(174,255,224,1) 100%);
-        //background-repeat no-repeat
-        //background-size cover
         text-align center
         transform rotate(15deg)
         z-index 5
 
         .stiсker-text
+          color: #000000
           font-family: "MuseoSansCyrl-regular", Arial, sans-serif
           font-size: 20px
           line-height: 28px
@@ -150,12 +149,12 @@
           margin-top: 38px
 
         .AppStore
-          width 66px
-          height 15px
+          width 64px
+          height 14px
           padding-top 13px
-          background-image url("/../img/desktop/AppStore.png")
+          background-image url("/../img/desktop/appStore.svg")
           background-repeat no-repeat
-          background-size 66px 15px
+          background-size 64px 14px
 
     &__title-listenFree
       font-family: "MuseoSansCyrl-medium", Arial, sans-serif
@@ -341,17 +340,17 @@
           background-repeat no-repeat
 
           &.item-icon-logos
-            background-image url("/../img/desktop/iconeLogos.svg")
+            background-image url("/../img/desktop/iconLogos.svg")
             background-position left top
             background-size 41px 22px
 
           &.item-icon-android
-            background-image url("/../img/desktop/iconeAndroid.svg")
+            background-image url("/../img/desktop/iconAndroid.svg")
             background-position 10px top
             background-size 16px 19px
 
           &.item-icon-globe
-            background-image url("/../img/desktop/iconeGlobe.svg")
+            background-image url("/../img/desktop/iconGlobe.svg")
             background-position 10px top
             background-size 20px 20px
 
@@ -361,181 +360,96 @@
             line-height 28px
             text-align left
 
-
-
-
-
-
-
-          & a
-            color #fff
-            text-decoration none
-
-        &-icon
-          margin-top 2px
-          margin-right 19px
-          background-repeat no-repeat
-          background-position top left
-          background-size 100%
-
-          &.icon-star_color
-            background-image url("/../img/icon-star_color.svg")
-            width 15px
-            height 14px
-
-          &.icon-butterfly_color
-            background-image url("/../img/icon-butterfly_color.svg")
-            width 14px
-            height 12px
-
-          &.icon-shazam_color
-            background-image url("/../img/icon-shazam_color.png")
-            width 13.3px
-            height 13.34px
-
-          &.icon-cloud_color
-            background-image url("/../img/icon-cloud_color.svg")
-            width 15px
-            height 10px
-
-          &.icon-fire_color
-            background-image url("/../img/icon-fire_color.svg")
-            width 9px
-            height 13px
-
-
-
-
-  &-premium
-    position relative
-    background-color #fff
-    width 97.5%
-    padding 27px 0 5px
-    border-radius 10px
-    margin 0 auto
-    z-index 3
-
-    & .main-content
-      margin-right 0
-
-
-    &__title
-      margin-top 17px
-      margin-bottom 27px
-      color #000
-      font-family "SFUIDisplay-Heavy", Arial, sans-serif
-      font-size 25px
-      line-height 28px
-      text-align left
-
-    &-functionsGroup
-      padding-bottom 15px
-
-    & .functionsGroup__item
-      padding-bottom 15px
-      display flex
-      align-items center
-
-      &-title
-        color #000
-        font-family "SFUIDisplay-Regular", Arial, sans-serif
-        font-size 16px
-        line-height 20px
-
-      &-icon
-        margin-right 15px
-        background-repeat no-repeat
-        background-position top left
-        background-size 20px 20px
-        width 20px
-        height 20px
-
-      & .icon-download_black
-        background-image url("/../img/ios/icon-download-ios.svg")
-
-
-      & .icon-plane_black
-        background-image url("/../img/ios/icon-plane-ios.svg")
-
-
-      & .icon-rewind_black
-        background-image url("/../img/ios/icon-rewind-ios.svg")
-
-
-      & .icon-diamond_black
-        background-image url("/../img/ios/icon-diamond-ios.svg")
-
-
-      & .icon-butterfly_black
-        background-image url("/../img/ios/icon-butterfly-ios.svg")
-
-
-
-  &-tryIt
-    position relative
-    width 100%
-    background-color #000
-    background-image url("/../img/tryIt_gradient.png")
-    background-repeat no-repeat
-    background-position -5px -96px
-    background-size 104%
-    padding: 72px 0 25px
-    margin-top -40px
-    z-index 1
-
-    &__title-try
-      font-family "SFUIDisplay-Heavy", Arial, sans-serif
-      font-size 25px
-      line-height 28px
-      text-align left
-      margin-bottom 4px
-
-    &__title-free
-      font-family "SFUIDisplay-Regular", Arial, sans-serif
-      font-size 14px
-      line-height 19px
-      margin-bottom 21px
-
-
   &-partners
     background-color #2C2C2C
     width 100%
-    padding 25px 0 45px
+    padding 22px 0 25px
+    text-align center
 
     &__title
       color #817E82
-      font-family "SFUIDisplay-Heavy", Arial, sans-serif
-      font-size 25px
-      line-height 28px
-      text-align left
-      margin-bottom 19px
+      font-family "MuseoSansCyrl-medium", Arial, sans-serif
+      font-size 42px
+      line-height 52px
+      text-align center
+      margin-bottom 24px
 
     &__table
-      background-image url("/../img/partners-icons.png")
+      background-image url("/../img/partnersLogos.png")
       background-repeat no-repeat
       background-position center
       background-size cover
-      width 320px
-      height 320px
-      margin-bottom 19px
-      margin-left: -30px
+      width 1024px
+      height 411px
+      margin-bottom 63px
 
-    & a
-      display block
-      color #9B9B9B
+    .desktop-linksGroupe
+      display flex
+      justify-content space-between
 
-    & .main-links_bold
-      font-family "SFUIDisplay-Regular", Arial, sans-serif
-      font-size 18px
-      line-height 19px
+      .desktop-link
+        display inline-block
+        color #ffffff
+        text-decoration underline
+        font-family "MuseoSansCyrl-thin", Arial, sans-serif
+        font-size 14px
+        line-height 19px
+        text-align left
+
+      .desktop-copyright
+        display inline-block
+        color #9B9B9B
+        font-family "MuseoSansCyrl-thin", Arial, sans-serif
+        font-size 14px
+        line-height 19px
+        text-align left
+
+  &-footer
+    position fixed
+    background-color #00FFAB
+    width 100%
+    padding 25px 0
+    text-align left
+    z-index 10000
+
+    &__icon-logos
+      display inline-block
+      background-image url("/../img/desktop/iconLogosBlack.svg")
+      background-position left top
+      background-size 54px 29px
+      width 54px
+      height 29px
+      margin-right 17px
+      margin-left 10px
+
+    &__title
+      color #000000
+      font-family "MuseoSansCyrl-regular", Arial, sans-serif
+      font-size 20px
+      line-height 28px
       text-align left
-      margin-bottom 18px
-      color #fff
 
-    & .main-links_normal
-      font-family "SFUIDisplay-Regular", Arial, sans-serif
-      font-weight 100
-      font-size 14px
-      line-height 19px
-      margin-bottom 14px
-      text-align left
+    &__form
+      display inline-block
+      position relative
+      right 10px
+
+      &-input
+        width 335px
+        color #D2D2D2
+        font-family: "MuseoSansCyrl-regular", Arial, sans-serif
+        font-size: 20px
+        line-height 28px
+        padding 11px 0 12px
+        background-color #ffffff
+        border-radius 25px
+
+      &-submit
+        width 239px
+        padding 11px 0 12px
+        background-color #482BD8
+        color #D2D2D2
+        border-radius 25px
+        font-family: "MuseoSansCyrl-regular", Arial, sans-serif
+        font-size: 20px
+        line-height 28px

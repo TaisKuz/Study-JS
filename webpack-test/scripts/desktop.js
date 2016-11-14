@@ -21,12 +21,10 @@ var Desktop = React.createClass({
                         </div>
                     </div>
                     <div className="desktop-top">
-
                         {/*<div className="desktop-top_gradient"></div>*/}
-
                         <div className="desktop-content">
-                            <div className="zvooq-logo"></div>
-                            <div className="title-Zvooq"></div>
+                            <div className="zvooq-logo" />
+                            <div className="title-Zvooq" />
                             <div className="title-number1">Музыкальное приложение &#8470;&nbsp;1</div>
 
                             <div className="desktop-top__title-music" >
@@ -44,7 +42,7 @@ var Desktop = React.createClass({
                                         Лучшее<br/>
                                         музыкальное<br/>
                                         приложение<br/>
-                                        <div className="AppStore"></div>
+                                        <div className="AppStore" />
                                         2015
                                     </div>
                                 </div>
@@ -63,14 +61,14 @@ var Desktop = React.createClass({
                                 <div className="desktop-top-group25__title-million">треков, включая все горячие новинки, пополярные треки, топы Shazam и ВКонтакте</div>
                             </div>
 
-                            <div className="desktop-top-playGroup"></div>
+                            <div className="desktop-top-playGroup" />
                             <div className="desktop-top__title-thousand">Тысячи готовых плейлистов<br />для любого случая в&nbsp;жизни</div>
                             <div className="desktop-top__title-oneClick">
                                 Одним нажатием включайте готовые плейлисты: когда весело или грутсно,<br />
                                 чтобы не&nbsp;скучать в&nbsp;пробках или метро, выложиться в&nbsp;спортзале или<br />
                                 сфокусироваться на&nbsp;работе.
                             </div>
-                            <div className="desktop-top-heartWaves"></div>
+                            <div className="desktop-top-heartWaves" />
                             <div className="desktop-top__title-smart">Умная Коллекция для вашей музыки</div>
                             <div className="desktop-top__title-allULike">
                                 Все, что вам понравится, можно сохранять в&nbsp;Коллецию, которая<br />
@@ -82,15 +80,15 @@ var Desktop = React.createClass({
                                 <div className="desktop-premium__title">Премиум-возможности:</div>
                                 <div className="desktop-premium-functionsGroup">
                                     <div className="functionsGroup__item">
-                                        <div className="functionsGroup__item-icon icon-cloud"></div>
+                                        <div className="functionsGroup__item-icon icon-cloud" />
                                         <div className="functionsGroup__item-title ">Скачивание<br/>музыки в&nbsp;телефон</div>
                                     </div>
                                     <div className="functionsGroup__item">
-                                        <div className="functionsGroup__item-icon icon-plane "></div>
+                                        <div className="functionsGroup__item-icon icon-plane " />
                                         <div className="functionsGroup__item-title ">Прослушивание<br/>без интернета</div>
                                     </div>
                                     <div className="functionsGroup__item">
-                                        <div className="functionsGroup__item-icon icon-diamond"></div>
+                                        <div className="functionsGroup__item-icon icon-diamond" />
                                         <div className="functionsGroup__item-title">Высокое<br/>качство</div>
                                     </div>
                                     <div className="functionsGroup__item">
@@ -98,7 +96,7 @@ var Desktop = React.createClass({
                                         <div className="functionsGroup__item-title">Безграничная<br/>перемотка</div>
                                     </div>
                                     <div className="functionsGroup__item">
-                                        <div className="functionsGroup__item-icon icon-butterfly"></div>
+                                        <div className="functionsGroup__item-icon icon-butterfly" />
                                         <div className="functionsGroup__item-title">... и никакой<br/>рекламы!</div>
                                     </div>
                                 </div>
@@ -107,7 +105,7 @@ var Desktop = React.createClass({
                             </div>
 
                             <div className="desktop-top-etc">
-                                <div className="desktop-top-etc__title          was main-top__title-etc">...а также</div>
+                                <div className="desktop-top-etc__title">...а также</div>
 
                                 <div className="desktop-top-functionsGroup">
                                     <div className="functionsGroup__item">
@@ -178,7 +176,7 @@ var Desktop = React.createClass({
                                     </div>
                                     <div className="functionsGroup__item">
                                         <div className="item_inline functionsGroup__item-column column_left">
-                                            <div className="item_inline functionsGroup__item-icon item-icon-android "></div>
+                                            <div className="item_inline functionsGroup__item-icon item-icon-android " />
                                             <div className="item_inline functionsGroup__item-icon-title">
                                                 Экономия мобильного<br/>
                                                 трафика
@@ -193,7 +191,7 @@ var Desktop = React.createClass({
                                     </div>
                                     <div className="functionsGroup__item">
                                         <div className="item_inline functionsGroup__item-column column_left">
-                                            <div className="item_inline functionsGroup__item-icon item-icon-globe "></div>
+                                            <div className="item_inline functionsGroup__item-icon item-icon-globe" />
                                             <div className="item_inline functionsGroup__item-icon-title">
                                                 Любимые треки всегда с вами
                                             </div>
@@ -206,36 +204,36 @@ var Desktop = React.createClass({
                                         </div>
                                     </div>
                                 </div>
-                                <div className="desktop-partners">
-                                    <div className="desktop-content">
-                                        <div className="desktop-partners__title">
-                                            Особые условия для клиентов<br />
-                                            наших партнеров
-                                        </div>
-                                        <div className="desktop-partners__table"></div>
-                                        <div className="desktop-links">
-                                            <a className="desktop-links_bold" href="http://zvooq.com/code" target="_blank">У&nbsp;меня есть промокод</a>
-                                            <a className="desktop-links_normal" href="http://zvooq.com" target="_blank">Стать нашим партнером</a>
-                                            <a className="desktop-links_normal" href="http://dreamindustries.co/wanted/" target="_blank">Работать у&nbsp;нас</a>
-                                            <a className="desktop-links_normal" href="mailto:saveme@zvooq.com" target="_blank">Пообщаться с&nbsp;нашим support</a>
-                                            <div className="desktop-links__copyright">&copy; Zvooq, 2001-2016</div>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
-
+                <div className="desktop-partners">
+                    <div className="desktop-content">
+                        <div className="desktop-partners__title">
+                            Особые условия для клиентов<br />
+                            наших партнеров
+                        </div>
+                        <div className="desktop-partners__table" />
+                        <div className="desktop-linksGroupe">
+                            <a className="desktop-link" href="http://zvooq.com/code" target="_blank">У&nbsp;меня есть промокод</a>
+                            <a className="desktop-link" href="http://zvooq.com" target="_blank">Стать нашим партнером</a>
+                            <a className="desktop-link" href="http://dreamindustries.co/wanted/" target="_blank">Работать у&nbsp;нас</a>
+                            <a className="desktop-link" href="mailto:saveme@zvooq.com" target="_blank">Пообщаться с&nbsp;нашим support</a>
+                            <div className="desktop-copyright">&copy; Zvooq, 2001-2016</div>
+                        </div>
+                    </div>
+                </div>
                 <div className="desktop-footer">
                     <div className="desktop-content">
-                        <div className="desktop-footer__icon-ios"></div>
-                        <div className="desktop-footer__icon-ios"></div>
-                        <div className="desktop-footer__title"></div>
-                        <form>
-                            <input type="text" placeholder="+7 910 123-34-56"/>
-                            <button type="submit" value="Получить"/>
+                        <div className="desktop-footer__icon-logos" />
+                        <div className="desktop-footer__title">
+                            Получите СМС со ссылкой для быстрой<br />
+                            установки приложения. Это бесплатно.
+                        </div>
+                        <form className="desktop-footer__form">
+                            <input className="desktop-footer__form-input"  type="text" placeholder="+7 910 123-34-56" />
+                            <button className="desktop-footer__form-submit"  type="submit" value="Получить" />
                         </form>
                     </div>
                 </div>

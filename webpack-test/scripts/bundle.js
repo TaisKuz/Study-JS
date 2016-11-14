@@ -48,348 +48,485 @@
 
 	__webpack_require__(172);
 
-	var MainDesktop = React.createClass({
-	    displayName: "MainDesktop",
+	var Desktop = React.createClass({
+	    displayName: "Desktop",
 	    render: function render() {
 	        return React.createElement(
 	            "div",
-	            { className: "main" },
+	            { className: "desktop" },
 	            React.createElement(
 	                "div",
-	                { className: "main-containerWrapper" },
-	                React.createElement("div", { className: "main-arrows" }),
+	                { className: "desktop-containerWrapper" },
 	                React.createElement(
 	                    "div",
-	                    { className: "main-top" },
-	                    React.createElement("div", { className: "main-top__mini-phones" }),
-	                    React.createElement("div", { className: "main-top_gradient" }),
+	                    { className: "desktop-arrows" },
 	                    React.createElement(
 	                        "div",
-	                        { className: "main-content" },
-	                        React.createElement("img", { className: "zvooq-logo", src: "/img/android/zvooq-logo_android.png", alt: "Zvooq-logo" }),
-	                        React.createElement("div", { className: "main-top__title-Zvooq" }),
+	                        { className: "desktop-content" },
 	                        React.createElement(
 	                            "div",
-	                            { className: "installBtn installBtn_top googlePlayBtn" },
-	                            React.createElement("a", { href: "https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en", target: "_blank" })
-	                        ),
-	                        React.createElement(
-	                            "div",
-	                            { className: "main-top__title-music" },
-	                            "\u0412\u043A\u043B\u044E\u0447\u0438\u0442\u044C",
-	                            React.createElement("br", null),
-	                            "\u043C\u0443\u0437\u044B\u043A\u0443",
-	                            React.createElement("span", { className: "icon-note" }),
-	                            React.createElement("br", null),
-	                            "\u043B\u0435\u0433\u043A\u043E!"
-	                        ),
-	                        React.createElement(
-	                            "div",
-	                            { className: "main-top__title-listenFree" },
-	                            "\u0421\u043B\u0443\u0448\u0430\u0439\u0442\u0435 \u0432\u0441\u0451 \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E \u0438\xA0\u0431\u0435\u0437 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438"
-	                        ),
-	                        React.createElement(
-	                            "div",
-	                            { className: "main-top__title-torrents" },
-	                            "\u0411\u043E\u043B\u044C\u0448\u0435 \u043D\u0435\xA0\u043D\u0443\u0436\u043D\u044B \u0442\u043E\u0440\u0440\u0435\u043D\u0442\u044B,",
-	                            React.createElement("br", null),
-	                            "\u0441\u043E\u0446\u0438\u0430\u043B\u044C\u043D\u044B\u0435 \u0441\u0435\u0442\u0438 \u0438\u043B\u0438 \u043F\u0438\u0440\u0430\u0442\u0441\u043A\u0438\u0435",
-	                            React.createElement("br", null),
-	                            "\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F-\u043E\u0434\u043D\u043E\u0434\u043D\u0435\u0432\u043A\u0438."
-	                        ),
-	                        React.createElement(
-	                            "div",
-	                            { className: "main-top__title-trial" },
-	                            "\u0412\xA0\u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u043C \u0440\u0435\u0436\u043C\u0435 \u043C\u043E\u0436\u043D\u043E \u0441\u043B\u0443\u0448\u0430\u0442\u044C",
-	                            React.createElement("br", null),
-	                            "\u0432\u0441\u044E \u043C\u0443\u0437\u044B\u043A\u0443 \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u043E \u0434\u043E\u043B\u0433\u043E \u0438\xA0\u0432",
-	                            React.createElement("br", null),
-	                            "\u043B\u044E\u0431\u043E\u043C \u043E\u0431\u044A\u0435\u043C\u0435."
-	                        ),
-	                        React.createElement(
-	                            "div",
-	                            { className: "main-top-group25" },
+	                            { className: "desktop-arrow desktop-arrow_left" },
 	                            React.createElement(
 	                                "div",
-	                                { className: "main-top-group25__title-25" },
-	                                "25"
-	                            ),
-	                            React.createElement(
-	                                "div",
-	                                { className: "main-top-group25__title-million" },
-	                                "\u043C\u0438\u043B\u043B\u0438\u043E\u043D\u043E\u0432 \u0442\u0440\u0435\u043A\u043E\u0432"
+	                                { className: "item_inline arrow__icon-left arrow__icon" },
+	                                React.createElement(
+	                                    "a",
+	                                    { className: "item_inline arrow__title", href: "http://zvooq.com/", target: "_blank" },
+	                                    "\u0412\u0435\u0440\u043D\u043A\u0442\u044C\u0441\u044F \u043A \u043C\u0443\u0437\u044B\u043A\u0435"
+	                                )
 	                            )
 	                        ),
 	                        React.createElement(
 	                            "div",
-	                            { className: "main-top-playGroup" },
-	                            React.createElement("div", { className: "play-home" }),
-	                            React.createElement("div", { className: "play-vk" }),
-	                            React.createElement("div", { className: "play-training" })
+	                            { className: "desktop-arrow desktop-arrow_right" },
+	                            React.createElement(
+	                                "div",
+	                                { className: "item_inline arrow__icon-right arrow__icon" },
+	                                React.createElement(
+	                                    "a",
+	                                    { className: "item_inline arrow__title", href: "http://zvooq.com/code", target: "_blank" },
+	                                    "\u0423 \u043C\u0435\u043D\u044F \u0435\u0441\u0442\u044C \u043F\u0440\u043E\u043C\u043E\u043A\u043E\u0434"
+	                                )
+	                            )
+	                        )
+	                    )
+	                ),
+	                React.createElement(
+	                    "div",
+	                    { className: "desktop-top" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "desktop-content" },
+	                        React.createElement("div", { className: "zvooq-logo" }),
+	                        React.createElement("div", { className: "title-Zvooq" }),
+	                        React.createElement(
+	                            "div",
+	                            { className: "title-number1" },
+	                            "\u041C\u0443\u0437\u044B\u043A\u0430\u043B\u044C\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435 \u2116\xA01"
 	                        ),
 	                        React.createElement(
 	                            "div",
-	                            { className: "main-top__title-thousand" },
-	                            "\u0422\u044B\u0441\u044F\u0447\u0438 \u0433\u043E\u0442\u043E\u0432\u044B\u0445",
-	                            React.createElement("br", null),
-	                            "\u043F\u043B\u0435\u0439\u043B\u0438\u0441\u0442\u043E\u0432 \u0434\u043B\u044F \u043B\u044E\u0431\u043E\u0433\u043E",
-	                            React.createElement("br", null),
-	                            "\u0441\u043B\u0443\u0447\u0430\u044F \u0432\xA0\u0436\u0438\u0437\u043D\u0438"
+	                            { className: "desktop-top__title-music" },
+	                            "\u0412\u043A\u043B\u044E\u0447\u0438\u0442\u044C \u043C\u0443\u0437\u044B\u043A\u0443",
+	                            React.createElement("span", { className: "icon-note" }),
+	                            " \u043B\u0435\u0433\u043A\u043E!"
+	                        ),
+	                        React.createElement(
+	                            "form",
+	                            { className: "desktop-top-getSms_form" },
+	                            React.createElement(
+	                                "div",
+	                                { className: "getSms_form__title" },
+	                                "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u0435 \u0421\u041C\u0421 \u0441\u043E \u0441\u0441\u044B\u043B\u043A\u043E\u0439 \u0434\u043B\u044F \u0431\u044B\u0441\u0442\u0440\u043E\u0439 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0438 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F. \u042D\u0442\u043E \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E."
+	                            ),
+	                            React.createElement("input", { type: "text", placeholder: "+7 910 123-34-56", className: "getSms_form_input" }),
+	                            React.createElement("button", { type: "submit", value: "Получить", className: "getSms_form_submit" })
 	                        ),
 	                        React.createElement(
 	                            "div",
-	                            { className: "main-top__title-oneClick" },
-	                            "\u041E\u0434\u043D\u0438\u043C \u043D\u0430\u0436\u0430\u0442\u0438\u0435\u043C \u0432\u043A\u043B\u044E\u0447\u0430\u0439\u0442\u0435 \u0433\u043E\u0442\u043E\u0432\u044B\u0435",
+	                            { className: "desktop-top-phones" },
+	                            React.createElement(
+	                                "div",
+	                                { className: "best-sti\u0441ker" },
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "sti\u0441ker-text" },
+	                                    "\u041B\u0443\u0447\u0448\u0435\u0435",
+	                                    React.createElement("br", null),
+	                                    "\u043C\u0443\u0437\u044B\u043A\u0430\u043B\u044C\u043D\u043E\u0435",
+	                                    React.createElement("br", null),
+	                                    "\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435",
+	                                    React.createElement("br", null),
+	                                    React.createElement("div", { className: "AppStore" }),
+	                                    "2015"
+	                                )
+	                            )
+	                        ),
+	                        React.createElement(
+	                            "div",
+	                            { className: "desktop-top__title-listenFree" },
+	                            "\u0421\u043B\u0443\u0448\u0430\u0439\u0442\u0435 \u0432\u0441\u0451 \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E",
 	                            React.createElement("br", null),
-	                            "\u043F\u043B\u0435\u0439\u043B\u0438\u0441\u0442\u044B: \u043A\u043E\u0433\u0434\u0430 \u0432\u0435\u0441\u0435\u043B\u043E \u0438\u043B\u0438 \u0433\u0440\u0443\u0442\u0441\u043D\u043E,",
+	                            "\u0438\xA0\u0431\u0435\u0437 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438"
+	                        ),
+	                        React.createElement(
+	                            "div",
+	                            { className: "desktop-top__title-torrents" },
+	                            "\u0411\u043E\u043B\u044C\u0448\u0435 \u043D\u0435\xA0\u043D\u0443\u0436\u043D\u044B \u0442\u043E\u0440\u0440\u0435\u043D\u0442\u044B, \u0441\u043E\u0446\u0438\u0430\u043B\u044C\u043D\u044B\u0435 \u0441\u0435\u0442\u0438 \u0438\u043B\u0438",
 	                            React.createElement("br", null),
-	                            "\u0447\u0442\u043E\u0431\u044B \u043D\u0435\xA0\u0441\u043A\u0443\u0447\u0430\u0442\u044C \u0432\xA0\u043F\u0440\u043E\u0431\u043A\u0430\u0445 \u0438\u043B\u0438 \u043C\u0435\u0442\u0440\u043E,",
+	                            "\u043F\u0438\u0440\u0430\u0442\u0441\u043A\u0438\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F-\u043E\u0434\u043D\u043E\u0434\u043D\u0435\u0432\u043A\u0438 \u0441 \u043D\u0435\u043F\u043E\u043B\u043D\u044B\u043C \u043A\u0430\u0442\u0430\u043B\u043E\u0433\u043E\u043C."
+	                        ),
+	                        React.createElement(
+	                            "div",
+	                            { className: "desktop-top__title-trial" },
+	                            "\u0412\xA0\u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u043C \u0440\u0435\u0436\u043C\u0435 \u043C\u043E\u0436\u043D\u043E \u0441\u043B\u0443\u0448\u0430\u0442\u044C \u0432\u0441\u044E \u043C\u0443\u0437\u044B\u043A\u0443",
 	                            React.createElement("br", null),
-	                            "\u0432\u044B\u043B\u043E\u0436\u0438\u0442\u044C\u0441\u044F \u0432\xA0\u0441\u043F\u043E\u0440\u0442\u0437\u0430\u043B\u0435 \u0438\u043B\u0438",
+	                            "\u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u043E \u0434\u043E\u043B\u0433\u043E \u0438\xA0\u0432\xA0\u043B\u044E\u0431\u043E\u043C \u043E\u0431\u044A\u0435\u043C\u0435."
+	                        ),
+	                        React.createElement(
+	                            "div",
+	                            { className: "desktop-top-group25" },
+	                            React.createElement(
+	                                "div",
+	                                { className: "desktop-top-group25__title-25" },
+	                                "25,000,000"
+	                            ),
+	                            React.createElement(
+	                                "div",
+	                                { className: "desktop-top-group25__title-million" },
+	                                "\u0442\u0440\u0435\u043A\u043E\u0432, \u0432\u043A\u043B\u044E\u0447\u0430\u044F \u0432\u0441\u0435 \u0433\u043E\u0440\u044F\u0447\u0438\u0435 \u043D\u043E\u0432\u0438\u043D\u043A\u0438, \u043F\u043E\u043F\u043E\u043B\u044F\u0440\u043D\u044B\u0435 \u0442\u0440\u0435\u043A\u0438, \u0442\u043E\u043F\u044B Shazam \u0438 \u0412\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u0435"
+	                            )
+	                        ),
+	                        React.createElement("div", { className: "desktop-top-playGroup" }),
+	                        React.createElement(
+	                            "div",
+	                            { className: "desktop-top__title-thousand" },
+	                            "\u0422\u044B\u0441\u044F\u0447\u0438 \u0433\u043E\u0442\u043E\u0432\u044B\u0445 \u043F\u043B\u0435\u0439\u043B\u0438\u0441\u0442\u043E\u0432",
+	                            React.createElement("br", null),
+	                            "\u0434\u043B\u044F \u043B\u044E\u0431\u043E\u0433\u043E \u0441\u043B\u0443\u0447\u0430\u044F \u0432\xA0\u0436\u0438\u0437\u043D\u0438"
+	                        ),
+	                        React.createElement(
+	                            "div",
+	                            { className: "desktop-top__title-oneClick" },
+	                            "\u041E\u0434\u043D\u0438\u043C \u043D\u0430\u0436\u0430\u0442\u0438\u0435\u043C \u0432\u043A\u043B\u044E\u0447\u0430\u0439\u0442\u0435 \u0433\u043E\u0442\u043E\u0432\u044B\u0435 \u043F\u043B\u0435\u0439\u043B\u0438\u0441\u0442\u044B: \u043A\u043E\u0433\u0434\u0430 \u0432\u0435\u0441\u0435\u043B\u043E \u0438\u043B\u0438 \u0433\u0440\u0443\u0442\u0441\u043D\u043E,",
+	                            React.createElement("br", null),
+	                            "\u0447\u0442\u043E\u0431\u044B \u043D\u0435\xA0\u0441\u043A\u0443\u0447\u0430\u0442\u044C \u0432\xA0\u043F\u0440\u043E\u0431\u043A\u0430\u0445 \u0438\u043B\u0438 \u043C\u0435\u0442\u0440\u043E, \u0432\u044B\u043B\u043E\u0436\u0438\u0442\u044C\u0441\u044F \u0432\xA0\u0441\u043F\u043E\u0440\u0442\u0437\u0430\u043B\u0435 \u0438\u043B\u0438",
 	                            React.createElement("br", null),
 	                            "\u0441\u0444\u043E\u043A\u0443\u0441\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F \u043D\u0430\xA0\u0440\u0430\u0431\u043E\u0442\u0435."
 	                        ),
-	                        React.createElement("div", { className: "main-top-heartWaves" }),
+	                        React.createElement("div", { className: "desktop-top-heartWaves" }),
 	                        React.createElement(
 	                            "div",
-	                            { className: "main-top__title-smart" },
-	                            "\u0423\u043C\u043D\u0430\u044F \u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u044F",
-	                            React.createElement("br", null),
-	                            "\u0434\u043B\u044F \u0432\u0430\u0448\u0435\u0439 \u043C\u0443\u0437\u044B\u043A\u0438"
+	                            { className: "desktop-top__title-smart" },
+	                            "\u0423\u043C\u043D\u0430\u044F \u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u044F \u0434\u043B\u044F \u0432\u0430\u0448\u0435\u0439 \u043C\u0443\u0437\u044B\u043A\u0438"
 	                        ),
 	                        React.createElement(
 	                            "div",
-	                            { className: "main-top__title-allULike" },
-	                            "\u0412\u0441\u0435, \u0447\u0442\u043E \u0432\u0430\u043C \u043F\u043E\u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F, \u043C\u043E\u0436\u043D\u043E \u0441\u043E\u0445\u0440\u0430\u043D\u044F\u0442\u044C",
+	                            { className: "desktop-top__title-allULike" },
+	                            "\u0412\u0441\u0435, \u0447\u0442\u043E \u0432\u0430\u043C \u043F\u043E\u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F, \u043C\u043E\u0436\u043D\u043E \u0441\u043E\u0445\u0440\u0430\u043D\u044F\u0442\u044C \u0432\xA0\u041A\u043E\u043B\u043B\u0435\u0446\u0438\u044E, \u043A\u043E\u0442\u043E\u0440\u0430\u044F",
 	                            React.createElement("br", null),
-	                            "\u0432\xA0\u041A\u043E\u043B\u043B\u0435\u0446\u0438\u044E, \u043A\u043E\u0442\u043E\u0440\u0430\u044F \u0441\u0430\u043C\u0430 \u043F\u0440\u0435\u0432\u0440\u0430\u0449\u0430\u0435\u0442",
+	                            "\u0441\u0430\u043C\u0430 \u043F\u0440\u0435\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0441\u0432\u0430\u043B\u043A\u0443 \u0438\u0437\xA0\u043B\u044E\u0431\u0438\u043C\u043E\u0439 \u043C\u0443\u0437\u044B\u043A\u0438 \u0432\xA0\u043C\u0435\u0441\u0442\u043E, \u0433\u0434\u0435 \u0432\u044B \u0435\u0449\u0451",
 	                            React.createElement("br", null),
-	                            "\u0441\u0432\u0430\u043B\u043A\u0443 \u0438\u0437\xA0\u043B\u044E\u0431\u0438\u043C\u043E\u0439 \u043C\u0443\u0437\u044B\u043A\u0438 \u0432\xA0\u043C\u0435\u0441\u0442\u043E, \u0433\u0434\u0435 \u0432\u044B",
-	                            React.createElement("br", null),
-	                            "\u0435\u0449\u0451 \u0431\u044B\u0441\u0442\u0440\u0435\u0435 \u043D\u0430\u0439\u0434\u0435\u0442\u0435 \u0432\u0441\u0451, \u0447\u0442\u043E \u043D\u0443\u0436\u043D\u043E."
+	                            "\u0431\u044B\u0441\u0442\u0440\u0435\u0435 \u043D\u0430\u0439\u0434\u0435\u0442\u0435 \u0432\u0441\u0451, \u0447\u0442\u043E \u043D\u0443\u0436\u043D\u043E."
 	                        ),
 	                        React.createElement(
 	                            "div",
-	                            { className: "main-top__title-etc" },
-	                            "...\u0430 \u0442\u0430\u043A\u0436\u0435"
-	                        ),
-	                        React.createElement(
-	                            "div",
-	                            { className: "main-top-functionsGroup" },
+	                            { className: "desktop-premium" },
 	                            React.createElement(
 	                                "div",
-	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "functionsGroup__item-icon icon-star_color item_inline" }),
-	                                React.createElement(
-	                                    "div",
-	                                    { className: "functionsGroup__item-title item_inline" },
-	                                    "\u041F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u0430\u044F \u043C\u0443\u0437\u044B\u043A\u0430 \u0438\xA0\u043D\u043E\u0432\u0438\u043D\u043A\u0438",
-	                                    React.createElement("br", null),
-	                                    "\u0432\xA0\u043E\u0434\u043D\u043E\u043C \u043C\u0435\u0441\u0442\u0435"
-	                                )
+	                                { className: "desktop-premium__title" },
+	                                "\u041F\u0440\u0435\u043C\u0438\u0443\u043C-\u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u0438:"
 	                            ),
 	                            React.createElement(
 	                                "div",
-	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "functionsGroup__item-icon icon-butterfly_color item_inline" }),
+	                                { className: "desktop-premium-functionsGroup" },
 	                                React.createElement(
 	                                    "div",
-	                                    { className: "functionsGroup__item-title item_inline" },
-	                                    "\u041F\u043E\u0438\u0441\u043A, \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u0432\u0430\u0441 \u043F\u043E\u043D\u0438\u043C\u0430\u0435\u0442"
-	                                )
-	                            ),
-	                            React.createElement(
-	                                "div",
-	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "functionsGroup__item-icon icon-shazam_color item_inline" }),
-	                                React.createElement(
-	                                    "div",
-	                                    { className: "functionsGroup__item-title item_inline" },
-	                                    "\u0423\u0434\u043E\u0431\u043D\u043E\u0435 \u043F\u0440\u043E\u0441\u043B\u0443\u0448\u0438\u0432\u0430\u043D\u0438\u0435 \u0441\u0432\u043E\u0438\u0445",
-	                                    React.createElement("br", null),
-	                                    "Shazam\u043E\u0432"
-	                                )
-	                            ),
-	                            React.createElement(
-	                                "div",
-	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "functionsGroup__item-icon icon-cloud_color item_inline" }),
-	                                React.createElement(
-	                                    "div",
-	                                    { className: "functionsGroup__item-title item_inline" },
-	                                    "\u041A\u044D\u0448\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435, \u0447\u0442\u043E\u0431\u044B \u0441\u043B\u0443\u0448\u0430\u0442\u044C \u043C\u0443\u0437\u044B\u043A\u0443",
-	                                    React.createElement("br", null),
-	                                    "\u0431\u0435\u0437 \u043F\u043E\u043C\u0435\u0445"
-	                                )
-	                            ),
-	                            React.createElement(
-	                                "div",
-	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "functionsGroup__item-icon icon-lightning_color item_inline" }),
-	                                React.createElement(
-	                                    "div",
-	                                    { className: "functionsGroup__item-title item_inline" },
-	                                    "\u0421\u0436\u0430\u0442\u0438\u0435 \u043C\u043E\u0431\u0438\u044C\u043D\u043E\u0433\u043E \u0442\u0440\u0430\u0444\u0438\u043A\u0430"
-	                                )
-	                            ),
-	                            React.createElement(
-	                                "div",
-	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "functionsGroup__item-icon icon-fire_color item_inline" }),
-	                                React.createElement(
-	                                    "div",
-	                                    { className: "functionsGroup__item-title item_inline" },
-	                                    "\u041B\u044E\u0431\u0438\u043C\u044B\u0435 \u0442\u0440\u0435\u043A\u0438 \u0432\u0441\u0435\u0433\u0434\u0430 \u0441 \u0432\u0430\u043C\u0438 \u0432",
-	                                    React.createElement("br", null),
-	                                    "\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0438 \u0438 \u043D\u0430 \u0441\u0430\u0439\u0442\u0435 ",
+	                                    { className: "functionsGroup__item" },
+	                                    React.createElement("div", { className: "functionsGroup__item-icon icon-cloud" }),
 	                                    React.createElement(
-	                                        "a",
-	                                        { href: "http://zvooq.com/", target: "_blank" },
-	                                        "zvooq.com"
+	                                        "div",
+	                                        { className: "functionsGroup__item-title " },
+	                                        "\u0421\u043A\u0430\u0447\u0438\u0432\u0430\u043D\u0438\u0435",
+	                                        React.createElement("br", null),
+	                                        "\u043C\u0443\u0437\u044B\u043A\u0438 \u0432\xA0\u0442\u0435\u043B\u0435\u0444\u043E\u043D"
+	                                    )
+	                                ),
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "functionsGroup__item" },
+	                                    React.createElement("div", { className: "functionsGroup__item-icon icon-plane " }),
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "functionsGroup__item-title " },
+	                                        "\u041F\u0440\u043E\u0441\u043B\u0443\u0448\u0438\u0432\u0430\u043D\u0438\u0435",
+	                                        React.createElement("br", null),
+	                                        "\u0431\u0435\u0437 \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u0430"
+	                                    )
+	                                ),
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "functionsGroup__item" },
+	                                    React.createElement("div", { className: "functionsGroup__item-icon icon-diamond" }),
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "functionsGroup__item-title" },
+	                                        "\u0412\u044B\u0441\u043E\u043A\u043E\u0435",
+	                                        React.createElement("br", null),
+	                                        "\u043A\u0430\u0447\u0441\u0442\u0432\u043E"
+	                                    )
+	                                ),
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "functionsGroup__item" },
+	                                    React.createElement("div", { className: "functionsGroup__item-icon icon-rewind" }),
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "functionsGroup__item-title" },
+	                                        "\u0411\u0435\u0437\u0433\u0440\u0430\u043D\u0438\u0447\u043D\u0430\u044F",
+	                                        React.createElement("br", null),
+	                                        "\u043F\u0435\u0440\u0435\u043C\u043E\u0442\u043A\u0430"
+	                                    )
+	                                ),
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "functionsGroup__item" },
+	                                    React.createElement("div", { className: "functionsGroup__item-icon icon-butterfly" }),
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "functionsGroup__item-title" },
+	                                        "... \u0438 \u043D\u0438\u043A\u0430\u043A\u043E\u0439",
+	                                        React.createElement("br", null),
+	                                        "\u0440\u0435\u043A\u043B\u0430\u043C\u044B!"
+	                                    )
+	                                )
+	                            ),
+	                            React.createElement("button", { type: "submit", value: "Попробовать бесплатно", className: "desktop-premium__button" })
+	                        ),
+	                        React.createElement(
+	                            "div",
+	                            { className: "desktop-top-etc" },
+	                            React.createElement(
+	                                "div",
+	                                { className: "desktop-top-etc__title" },
+	                                "...\u0430 \u0442\u0430\u043A\u0436\u0435"
+	                            ),
+	                            React.createElement(
+	                                "div",
+	                                { className: "desktop-top-functionsGroup" },
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "functionsGroup__item" },
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "item_inline functionsGroup__item-column column_left" },
+	                                        React.createElement("div", { className: "item_inline functionsGroup__item-icon item-icon-logos" }),
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "item_inline functionsGroup__item-icon-title" },
+	                                            "\u041F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u043E\u0435 \u0438\xA0\u043D\u043E\u0432\u0438\u043D\u043A\u0438",
+	                                            React.createElement("br", null),
+	                                            "\u0441\u043E\u0431\u0440\u0430\u043D\u044B \u0432\xA0\u043E\u0434\u043D\u043E\u043C \u043C\u0435\u0441\u0442\u0435"
+	                                        )
+	                                    ),
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "item_inline functionsGroup__item-column column_right" },
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "functionsGroup__item-title item_inline" },
+	                                            "\u0412\u0441\u0435 \u0433\u043E\u0440\u044F\u0447\u0438\u0435 \u043D\u043E\u0432\u0438\u043D\u043A\u0438, \u043F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u044B\u0435 \u0442\u0440\u0435\u043A\u0438, \u0447\u0430\u0440\u0442\u044B UK, Billboard,",
+	                                            React.createElement("br", null),
+	                                            "\u0440\u0430\u0437\u043B\u0438\u0447\u043D\u044B\u0445 \u0441\u0442\u0440\u0430\u043D \u043C\u0438\u0440\u0430, \u0430 \u0442\u0430\u043A\u0436\u0435 \u0442\u043E\u043F\u044B Shazam \u0438 \u0412\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u0435",
+	                                            React.createElement("br", null),
+	                                            "\u0441\u043E\u0431\u0440\u0430\u043D\u044B \u0432 \u043E\u0434\u043D\u043E\u043C \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0438."
+	                                        )
+	                                    )
+	                                ),
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "functionsGroup__item" },
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "item_inline functionsGroup__item-column column_left" },
+	                                        React.createElement("div", { className: "item_inline functionsGroup__item-icon item-icon-logos" }),
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "item_inline functionsGroup__item-icon-title" },
+	                                            "\u041F\u043E\u0438\u0441\u043A, \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u0432\u0430\u0441 \u043F\u043E\u043D\u0438\u043C\u0430\u0435\u0442"
+	                                        )
+	                                    ),
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "item_inline functionsGroup__item-column column_right" },
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "functionsGroup__item-title item_inline" },
+	                                            "\u041F\u043E\u0438\u0441\u043A \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u0438\u0441\u043A\u0430\u0442\u044C \u043C\u0443\u0437\u044B\u043A\u0443 \u043D\u0435 \u0442\u043E\u043B\u044C\u043A\u043E \u043A\u043E\u0433\u0434\u0430 \u0432\u044B \u0437\u043D\u0430\u0435\u0442\u0435",
+	                                            React.createElement("br", null),
+	                                            "\u043A\u043E\u043D\u043A\u0440\u0435\u0442\u043D\u044B\u0445 \u0430\u0440\u0442\u0438\u0441\u0442\u043E\u0432, \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u044F \u0430\u043B\u044C\u0431\u043E\u043C\u043E\u0432 \u0438 \u0442\u0440\u0435\u043A\u043E\u0432, \u043D\u043E \u0438 \u043F\u0440\u0438",
+	                                            React.createElement("br", null),
+	                                            "\u043F\u043E\u043C\u043E\u0449\u0438 \u043F\u0440\u043E\u0441\u0442\u044B\u0445 \u0437\u0430\u043F\u0440\u043E\u0441\u043E\u0432: \xAB\u0432\u0435\u0447\u0435\u0440\u0438\u043D\u043A\u0430\xBB, \xAB\u0433\u0440\u0443\u0441\u0442\u043D\u043E\xBB,",
+	                                            React.createElement("br", null),
+	                                            "\xAB\u0441\u043F\u043E\u0440\u0442\u0437\u0430\u043B\xBB \u0438 \u0442\u0430\u043A \u0434\u0430\u043B\u0435\u0435."
+	                                        )
+	                                    )
+	                                ),
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "functionsGroup__item" },
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "item_inline functionsGroup__item-column column_left" },
+	                                        React.createElement("div", { className: "item_inline functionsGroup__item-icon item-icon-logos" }),
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "item_inline functionsGroup__item-icon-title" },
+	                                            "\u0423\u0434\u043E\u0431\u043D\u043E\u0435 \u043F\u0440\u043E\u0441\u043B\u0443\u0448\u0438\u0432\u0430\u043D\u0438\u0435",
+	                                            React.createElement("br", null),
+	                                            "\u0441\u0432\u043E\u0438\u0445 Shazam\u043E\u0432"
+	                                        )
+	                                    ),
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "item_inline functionsGroup__item-column column_right" },
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "functionsGroup__item-title item_inline" },
+	                                            "\u041B\u0435\u0433\u043A\u0438\u0439 \u0441\u043F\u043E\u0441\u043E\u0431 \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C \u0432\u0430\u0448\u0438 Shazam\u044B. \u0420\u0430\u0441\u043F\u043E\u0437\u043D\u0430\u0432\u0430\u0439\u0442\u0435",
+	                                            React.createElement("br", null),
+	                                            "\u0437\u0430\u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043E\u0432\u0430\u0432\u0448\u0438\u0435 \u0432\u0430\u0441 \u0442\u0440\u0435\u043A\u0438 \u043F\u0440\u044F\u043C\u043E \u0438\u0437 Zvooq \u0438 \u043C\u043E\u043C\u0435\u043D\u0442\u0430\u043B\u044C\u043D\u043E",
+	                                            React.createElement("br", null),
+	                                            "\u0434\u043E\u0431\u0430\u0432\u043B\u044F\u0439\u0442\u0435 \u0438\u0445 \u0432 \u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u044E."
+	                                        )
+	                                    )
+	                                ),
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "functionsGroup__item" },
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "item_inline functionsGroup__item-column column_left" },
+	                                        React.createElement("div", { className: "item_inline functionsGroup__item-icon item-icon-logos" }),
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "item_inline functionsGroup__item-icon-title" },
+	                                            "\u041A\u044D\u0448\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0434\u043B\u044F",
+	                                            React.createElement("br", null),
+	                                            "\u043F\u0440\u043E\u0441\u043B\u0443\u0448\u0438\u0432\u0430\u043D\u0438\u044F \u0431\u0435\u0437 \u043F\u043E\u043C\u0435\u0445"
+	                                        )
+	                                    ),
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "item_inline functionsGroup__item-column column_right" },
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "functionsGroup__item-title item_inline" },
+	                                            "\u0412\u043A\u043B\u044E\u0447\u0451\u043D\u043D\u044B\u0439 \u0442\u0440\u0435\u043A \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u0435\u0442 \u0438\u0433\u0440\u0430\u0442\u044C, \u0434\u0430\u0436\u0435 \u0435\u0441\u043B\u0438 \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442 \u043D\u0435\u0441\u0442\u0430\u0431\u0438\u043B\u0435\u043D. \u0412 \u043B\u0438\u0444\u0442\u0435, \u0432 \u0442\u043E\u043D\u043D\u0435\u043B\u0435 \u0438\u043B\u0438 \u0432 \u043C\u0435\u0442\u0440\u043E \u2014 \u0433\u0434\u0435 \u0431\u044B \u0432\u044B \u043D\u0438 \u043E\u043A\u0430\u0437\u0430\u043B\u0438\u0441\u044C, \u043C\u0443\u0437\u044B\u043A\u0430 \u043D\u0435 \u043E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0441\u044F."
+	                                        )
+	                                    )
+	                                ),
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "functionsGroup__item" },
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "item_inline functionsGroup__item-column column_left" },
+	                                        React.createElement("div", { className: "item_inline functionsGroup__item-icon item-icon-android " }),
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "item_inline functionsGroup__item-icon-title" },
+	                                            "\u042D\u043A\u043E\u043D\u043E\u043C\u0438\u044F \u043C\u043E\u0431\u0438\u043B\u044C\u043D\u043E\u0433\u043E",
+	                                            React.createElement("br", null),
+	                                            "\u0442\u0440\u0430\u0444\u0438\u043A\u0430"
+	                                        )
+	                                    ),
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "item_inline functionsGroup__item-column column_right" },
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "functionsGroup__item-title item_inline" },
+	                                            "\u0412\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C \u0441\u0436\u0438\u043C\u0430\u0442\u044C \u0442\u0440\u0430\u0444\u0438\u043A \u043F\u0440\u0438 \u043F\u0440\u043E\u0441\u043B\u0443\u0448\u0438\u0432\u0430\u043D\u0438\u0438 \u043C\u0443\u0437\u044B\u043A\u0438",
+	                                            React.createElement("br", null),
+	                                            "\u043F\u043E\u0447\u0442\u0438 \u0432\u0434\u0432\u043E\u0435 \u0431\u0435\u0437 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0433\u043E \u0443\u0449\u0440\u0431\u0430 \u0434\u043B\u044F \u0435\u0435 \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0430."
+	                                        )
+	                                    )
+	                                ),
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "functionsGroup__item" },
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "item_inline functionsGroup__item-column column_left" },
+	                                        React.createElement("div", { className: "item_inline functionsGroup__item-icon item-icon-globe" }),
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "item_inline functionsGroup__item-icon-title" },
+	                                            "\u041B\u044E\u0431\u0438\u043C\u044B\u0435 \u0442\u0440\u0435\u043A\u0438 \u0432\u0441\u0435\u0433\u0434\u0430 \u0441 \u0432\u0430\u043C\u0438"
+	                                        )
+	                                    ),
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "item_inline functionsGroup__item-column column_right" },
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "functionsGroup__item-title item_inline" },
+	                                            "\u0410\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0441\u0438\u043D\u0445\u0440\u043E\u043D\u0438\u0437\u0430\u0446\u0438\u044F \u0432 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0438 \u0438 \u043D\u0430 \u0441\u0430\u0439\u0442\u0435:",
+	                                            React.createElement("br", null),
+	                                            "\u0432\u0441\u044F \u0432\u0430\u0448\u0430 \u043C\u0443\u0437\u044B\u043A\u0430 \u043D\u0430 \u043B\u044E\u0431\u043E\u043C \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0435."
+	                                        )
 	                                    )
 	                                )
 	                            )
 	                        )
 	                    )
-	                ),
+	                )
+	            ),
+	            React.createElement(
+	                "div",
+	                { className: "desktop-partners" },
 	                React.createElement(
 	                    "div",
-	                    { className: "main-premium" },
+	                    { className: "desktop-content" },
 	                    React.createElement(
 	                        "div",
-	                        { className: "main-content" },
-	                        React.createElement("div", { className: "icon-cherry" }),
+	                        { className: "desktop-partners__title" },
+	                        "\u041E\u0441\u043E\u0431\u044B\u0435 \u0443\u0441\u043B\u043E\u0432\u0438\u044F \u0434\u043B\u044F \u043A\u043B\u0438\u0435\u043D\u0442\u043E\u0432",
+	                        React.createElement("br", null),
+	                        "\u043D\u0430\u0448\u0438\u0445 \u043F\u0430\u0440\u0442\u043D\u0435\u0440\u043E\u0432"
+	                    ),
+	                    React.createElement("div", { className: "desktop-partners__table" }),
+	                    React.createElement(
+	                        "div",
+	                        { className: "desktop-linksGroupe" },
 	                        React.createElement(
-	                            "div",
-	                            { className: "main-premium__title" },
-	                            "\u041F\u0440\u0435\u043C\u0438\u0443\u043C-",
-	                            React.createElement("br", null),
-	                            "\u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u0438:"
+	                            "a",
+	                            { className: "desktop-link", href: "http://zvooq.com/code", target: "_blank" },
+	                            "\u0423\xA0\u043C\u0435\u043D\u044F \u0435\u0441\u0442\u044C \u043F\u0440\u043E\u043C\u043E\u043A\u043E\u0434"
+	                        ),
+	                        React.createElement(
+	                            "a",
+	                            { className: "desktop-link", href: "http://zvooq.com", target: "_blank" },
+	                            "\u0421\u0442\u0430\u0442\u044C \u043D\u0430\u0448\u0438\u043C \u043F\u0430\u0440\u0442\u043D\u0435\u0440\u043E\u043C"
+	                        ),
+	                        React.createElement(
+	                            "a",
+	                            { className: "desktop-link", href: "http://dreamindustries.co/wanted/", target: "_blank" },
+	                            "\u0420\u0430\u0431\u043E\u0442\u0430\u0442\u044C \u0443\xA0\u043D\u0430\u0441"
+	                        ),
+	                        React.createElement(
+	                            "a",
+	                            { className: "desktop-link", href: "mailto:saveme@zvooq.com", target: "_blank" },
+	                            "\u041F\u043E\u043E\u0431\u0449\u0430\u0442\u044C\u0441\u044F \u0441\xA0\u043D\u0430\u0448\u0438\u043C support"
 	                        ),
 	                        React.createElement(
 	                            "div",
-	                            { className: "main-premium-functionsGroup" },
-	                            React.createElement(
-	                                "div",
-	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "functionsGroup__item-icon icon-download_black item_inline" }),
-	                                React.createElement(
-	                                    "div",
-	                                    { className: "functionsGroup__item-title item_inline" },
-	                                    "\u0421\u043A\u0430\u0447\u0438\u0432\u0430\u043D\u0438\u0435 \u043C\u0443\u0437\u044B\u043A\u0438 \u0432\xA0\u0442\u0435\u043B\u0435\u0444\u043E\u043D"
-	                                )
-	                            ),
-	                            React.createElement(
-	                                "div",
-	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "functionsGroup__item-icon icon-plane_black item_inline" }),
-	                                React.createElement(
-	                                    "div",
-	                                    { className: "functionsGroup__item-title item_inline" },
-	                                    "\u041F\u0440\u043E\u0441\u043B\u0443\u0448\u0438\u0432\u0430\u043D\u0438\u0435 \u0431\u0435\u0437 \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u0430"
-	                                )
-	                            ),
-	                            React.createElement(
-	                                "div",
-	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "functionsGroup__item-icon icon-rewind_black item_inline" }),
-	                                React.createElement(
-	                                    "div",
-	                                    { className: "functionsGroup__item-title item_inline" },
-	                                    "\u0411\u0435\u0437\u043B\u0438\u043C\u0438\u0442\u043D\u0430\u044F \u043F\u0435\u0440\u0435\u043C\u043E\u0442\u043A\u0430"
-	                                )
-	                            ),
-	                            React.createElement(
-	                                "div",
-	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "functionsGroup__item-icon icon-diamond_black item_inline" }),
-	                                React.createElement(
-	                                    "div",
-	                                    { className: "functionsGroup__item-title item_inline" },
-	                                    "\u041C\u0443\u0437\u044B\u043A\u0430 \u0432\xA0\u0432\u044B\u0441\u043E\u043A\u043E\u043C \u043A\u0430\u0447\u0441\u0442\u0432\u0435"
-	                                )
-	                            ),
-	                            React.createElement(
-	                                "div",
-	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "functionsGroup__item-icon icon-butterfly_black item_inline" }),
-	                                React.createElement(
-	                                    "div",
-	                                    { className: "functionsGroup__item-title item_inline" },
-	                                    "\u041D\u0438\u043A\u0430\u043A\u043E\u0439 \u0440\u0435\u043A\u043B\u0430\u043C\u044B"
-	                                )
-	                            )
+	                            { className: "desktop-copyright" },
+	                            "\xA9 Zvooq, 2001-2016"
 	                        )
 	                    )
-	                ),
+	                )
+	            ),
+	            React.createElement(
+	                "div",
+	                { className: "desktop-footer" },
 	                React.createElement(
 	                    "div",
-	                    { className: "main-tryIt" },
+	                    { className: "desktop-content" },
+	                    React.createElement("div", { className: "desktop-footer__icon-logos" }),
 	                    React.createElement(
 	                        "div",
-	                        { className: "main-content" },
-	                        React.createElement(
-	                            "div",
-	                            { className: "main-tryIt__title-try" },
-	                            "\u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435!"
-	                        ),
-	                        React.createElement(
-	                            "div",
-	                            { className: "main-tryIt__title-free" },
-	                            "\u042D\u0442\u043E \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E"
-	                        ),
-	                        React.createElement(
-	                            "div",
-	                            { className: "installBtn installBtn_tryIt googlePlayBtn" },
-	                            React.createElement("a", { href: "https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en", target: "_blank" })
-	                        )
-	                    )
-	                ),
-	                React.createElement(
-	                    "div",
-	                    { className: "main-partners" },
+	                        { className: "desktop-footer__title" },
+	                        "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u0435 \u0421\u041C\u0421 \u0441\u043E \u0441\u0441\u044B\u043B\u043A\u043E\u0439 \u0434\u043B\u044F \u0431\u044B\u0441\u0442\u0440\u043E\u0439",
+	                        React.createElement("br", null),
+	                        "\u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0438 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F. \u042D\u0442\u043E \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E."
+	                    ),
 	                    React.createElement(
-	                        "div",
-	                        { className: "main-content" },
-	                        React.createElement(
-	                            "div",
-	                            { className: "main-partners__title" },
-	                            "\u041E\u0441\u043E\u0431\u044B\u0435 \u0443\u0441\u043B\u043E\u0432\u0438\u044F",
-	                            React.createElement("br", null),
-	                            "\u0434\u043B\u044F \u043A\u043B\u0438\u0435\u043D\u0442\u043E\u0432 \u043D\u0430\u0448\u0438\u0445",
-	                            React.createElement("br", null),
-	                            "\u043F\u0430\u0440\u0442\u043D\u0435\u0440\u043E\u0432"
-	                        ),
-	                        React.createElement("div", { className: "main-partners__table" }),
-	                        React.createElement(
-	                            "div",
-	                            { className: "main-links" },
-	                            React.createElement(
-	                                "a",
-	                                { className: "main-links_bold", href: "http://zvooq.com/code", target: "_blank" },
-	                                "\u0423\xA0\u043C\u0435\u043D\u044F \u0435\u0441\u0442\u044C \u043F\u0440\u043E\u043C\u043E\u043A\u043E\u0434"
-	                            ),
-	                            React.createElement(
-	                                "a",
-	                                { className: "main-links_normal", href: "http://zvooq.com", target: "_blank" },
-	                                "\u0421\u0442\u0430\u0442\u044C \u043D\u0430\u0448\u0438\u043C \u043F\u0430\u0440\u0442\u043D\u0435\u0440\u043E\u043C"
-	                            ),
-	                            React.createElement(
-	                                "a",
-	                                { className: "main-links_normal", href: "http://dreamindustries.co/wanted/", target: "_blank" },
-	                                "\u0420\u0430\u0431\u043E\u0442\u0430\u0442\u044C \u0443\xA0\u043D\u0430\u0441"
-	                            ),
-	                            React.createElement(
-	                                "a",
-	                                { className: "main-links_normal", href: "mailto:saveme@zvooq.com", target: "_blank" },
-	                                "\u041F\u043E\u043E\u0431\u0449\u0430\u0442\u044C\u0441\u044F \u0441\xA0\u043D\u0430\u0448\u0438\u043C support"
-	                            ),
-	                            React.createElement(
-	                                "a",
-	                                { className: "main-links__normal", href: "https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8", target: "_blank" },
-	                                "Zvooq \u0434\u043B\u044F iOS"
-	                            )
-	                        )
+	                        "form",
+	                        { className: "desktop-footer__form" },
+	                        React.createElement("input", { className: "desktop-footer__form-input", type: "text", placeholder: "+7 910 123-34-56" }),
+	                        React.createElement("button", { className: "desktop-footer__form-submit", type: "submit", value: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C" })
 	                    )
 	                )
 	            )
@@ -397,7 +534,7 @@
 	    }
 	});
 
-	ReactDOM.render(React.createElement(MainDesktop, null), document.getElementById('page-content'));
+	ReactDOM.render(React.createElement(Desktop, null), document.getElementById('page-content'));
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(34)))
 
 /***/ },
@@ -21802,7 +21939,7 @@
 
 
 	// module
-	exports.push([module.id, "a,\na:hover,\na:focus,\ninput,\ninput:focus,\nselect,\nselect:focus,\ntextarea,\ntextarea:focus {\n  outline: none;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\ninput[type=\"search\"]::-webkit-search-decoration,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  cursor: pointer;\n  -webkit-appearance: button;\n  background-color: transparent;\n}\nhtml {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n}\nbody,\nhtml,\np,\nb,\ninput,\nbutton,\nh1,\nh2,\nh3 {\n  margin: 0;\n  padding: 0;\n  border: none;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\ninput {\n  background-color: transparent;\n  -webkit-appearance: none;\n}\nbutton:focus {\n  outline: none;\n}\n.main {\n  background: linear-gradient(to bottom, #482bd8 33%, rgba(72,43,216,0.39) 59%, rgba(53,32,160,0.25) 71%, rgba(0,0,0,0.25) 100%);\n  background-color: #000;\n}\n.main-containerWrapper {\n  width: 1441px;\n  height: 100%;\n  margin: 0 auto;\n}\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: \"MuseoSansCyrl-thin\";\n  src: url(\"/../../fonts/MuseoSans/MuseoSansCyrl-thin.otf\");\n  font-weight: 300;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"MuseoSansCyrl-regular\";\n  src: url(\"/../../fonts/MuseoSans/MuseoSansCyrl-regular.otf\");\n  font-weight: 500;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"MuseoSansCyrl-medium\";\n  src: url(\"/../../fonts/MuseoSans/MuseoSansCyrl-medium.otf\");\n  font-weight: 700;\n  font-style: normal;\n}\na,\na:hover,\na:focus,\ninput,\ninput:focus,\nselect,\nselect:focus,\ntextarea,\ntextarea:focus {\n  outline: none;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\ninput[type=\"search\"]::-webkit-search-decoration,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  cursor: pointer;\n  -webkit-appearance: button;\n  background-color: transparent;\n}\nhtml {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n}\nbody,\nhtml,\np,\nb,\ninput,\nbutton,\nh1,\nh2,\nh3 {\n  margin: 0;\n  padding: 0;\n  border: none;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\ninput {\n  background-color: transparent;\n  -webkit-appearance: none;\n}\nbutton:focus {\n  outline: none;\n}\n.desktop {\n  background: linear-gradient(to bottom, #482bd8 33%, rgba(72,43,216,0.39) 59%, rgba(53,32,160,0.25) 71%, rgba(0,0,0,0.25) 100%);\n  background-color: #000;\n  color: #fff;\n}\n.desktop-containerWrapper {\n  width: 1441px;\n  height: 100%;\n  text-align: center;\n  margin: 0 auto;\n}\n.desktop .item_inline {\n  display: inline-block;\n}\n.desktop-content {\n  width: 1029px;\n  margin: 0 auto;\n  text-align: center;\n}\n.desktop-arrow .main-arrow_left {\n  height: 15px;\n  background-image: url(\"/../img/desktop/arrowLeft.svg\");\n  background-repeat: no-repeat;\n  background-size: 8px 15px;\n  background-position: left center;\n  text-align: left;\n}\n.desktop-arrow .arrow__title {\n  display: inline-block;\n  height: 15px;\n  vertical-align: middle;\n  padding: 0 22px;\n}\n.desktop-top {\n  text-align: center;\n}\n.desktop-top .zvooq-logo {\n  background-image: url(\"/img/desktop/zvooqLogo.svg\");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 62px 62px;\n  width: 1029px;\n  height: 62px;\n  border-radius: 17px;\n  margin-bottom: 22px;\n  margin-top: 46px;\n}\n.desktop-top .title-Zvooq {\n  width: 1029px;\n  background-image: url(\"/../img/desktop/zvooqTitle.svg\");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 96px 26px;\n  height: 26px;\n}\n.desktop-top .title-number1 {\n  position: relative;\n  font-family: \"MuseoSansCyrl-regular\", Arial, sans-serif;\n  font-size: 20px;\n  line-height: 28px;\n  margin-bottom: 68px;\n  text-align: center;\n}\n.desktop-top__title-music {\n  font-family: \"MuseoSansCyrl-medium\", Arial, sans-serif;\n  font-size: 70px;\n  line-height: 70px;\n  margin-bottom: 55px;\n  text-align: center;\n}\n.desktop-top__title-music .icon-note {\n  display: inline-block;\n  position: relative;\n  top: 5px;\n  left: 3px;\n  background-image: url(\"/../img/desktop/iconNote.svg\");\n  background-repeat: no-repeat;\n  width: 49px;\n  height: 57px;\n}\n.desktop-top-getSms_form {\n  text-align: center;\n  margin-bottom: 36px;\n}\n.desktop-top-getSms_form .getSms_form__title {\n  text-align: center;\n  font-family: \"MuseoSansCyrl-thin\", Arial, sans-serif;\n  font-size: 14px;\n  line-height: 19px;\n  margin-bottom: 10px;\n}\n.desktop-top-getSms_form .getSms_form_input {\n  width: 327px;\n  color: #d2d2d2;\n  font-family: \"MuseoSansCyrl-regular\", Arial, sans-serif;\n  font-size: 20px;\n  line-height: 28px;\n  margin-bottom: 9px;\n  padding: 11px 0 12px;\n  background-color: #fff;\n  border-radius: 5px;\n}\n.desktop-top-getSms_form .getSms_form_submit {\n  width: 336px;\n  color: #fff;\n  font-family: \"MuseoSansCyrl-regular\", Arial, sans-serif;\n  font-size: 20px;\n  line-height: 28px;\n  padding: 12px 0 11px;\n  background-color: #f82d8e;\n  border-radius: 25px;\n}\n.desktop-top-phones {\n  position: relative;\n  width: 1029px;\n  height: 559px;\n  background-image: url(\"/../img/desktop/phones.png\");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  margin-bottom: 47px;\n}\n.desktop-top-phones .best-stiсker {\n  border-radius: 50%;\n  width: 154px;\n  height: 154px;\n  position: absolute;\n  top: -10px;\n  right: 30px;\n  background: linear-gradient(to bottom, #00ffab 0%, #aeffe0 100%);\n  text-align: center;\n  transform: rotate(15deg);\n  z-index: 5;\n}\n.desktop-top-phones .best-stiсker .stiсker-text {\n  color: #000;\n  font-family: \"MuseoSansCyrl-regular\", Arial, sans-serif;\n  font-size: 20px;\n  line-height: 28px;\n  text-align: center;\n  margin-top: 38px;\n}\n.desktop-top-phones .best-stiсker .AppStore {\n  width: 64px;\n  height: 14px;\n  padding-top: 13px;\n  background-image: url(\"/../img/desktop/appStore.svg\");\n  background-repeat: no-repeat;\n  background-size: 64px 14px;\n}\n.desktop-top__title-listenFree {\n  font-family: \"MuseoSansCyrl-medium\", Arial, sans-serif;\n  font-size: 42px;\n  line-height: 52px;\n  margin-bottom: 15px;\n  text-align: center;\n}\n.desktop-top__title-torrents,\n.desktop-top__title-trial {\n  font-family: \"MuseoSansCyrl-regular\", Arial, sans-serif;\n  font-size: 20px;\n  line-height: 28px;\n  text-align: center;\n  margin-bottom: 14px;\n}\n.desktop-top-group25 {\n  text-align: center;\n  margin: 50px 0 80px;\n}\n.desktop-top-group25__title-25 {\n  color: #e93889;\n  font-family: \"MuseoSansCyrl-medium\", Arial, sans-serif;\n  font-size: 150px;\n  line-height: 150px;\n  text-align: center;\n}\n.desktop-top-group25__title-million {\n  font-family: \"MuseoSansCyrl-regular\", Arial, sans-serif;\n  font-size: 20px;\n  line-height: 28px;\n  text-align: center;\n}\n.desktop-top-playGroup {\n  height: 391px;\n  width: 1023px;\n  background-image: url(\"/../img/desktop/playlists.png\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  margin-bottom: 20px;\n}\n.desktop-top__title-thousand {\n  font-family: \"MuseoSansCyrl-medium\", Arial, sans-serif;\n  font-size: 42px;\n  line-height: 52px;\n  text-align: center;\n  margin-bottom: 15px;\n}\n.desktop-top__title-oneClick {\n  font-family: \"MuseoSansCyrl-regular\", Arial, sans-serif;\n  font-size: 20px;\n  line-height: 28px;\n  text-align: center;\n  margin-bottom: 14px;\n  z-index: 10;\n}\n.desktop-top-heartWaves {\n  position: relative;\n  background-image: url(\"/../img/desktop/heartWaves.svg\");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 490px 490px;\n  width: 1029px;\n  height: 490px;\n  z-index: 6;\n}\n.desktop-top__title-smart {\n  font-family: \"MuseoSansCyrl-medium\", Arial, sans-serif;\n  font-size: 42px;\n  line-height: 52px;\n  text-align: center;\n  margin-bottom: 15px;\n  z-index: 10;\n}\n.desktop-top__title-allULike {\n  font-family: \"MuseoSansCyrl-regular\", Arial, sans-serif;\n  font-size: 20px;\n  line-height: 28px;\n  text-align: center;\n  margin-bottom: 80px;\n}\n.desktop-premium {\n  text-align: center;\n  margin-bottom: 80px;\n}\n.desktop-premium__title {\n  font-family: \"MuseoSansCyrl-medium\", Arial, sans-serif;\n  font-size: 42px;\n  line-height: 52px;\n  text-align: center;\n  margin-bottom: 31px;\n}\n.desktop-premium-functionsGroup {\n  display: flex;\n  justify-content: space-around;\n  flex-wrap: nowrap;\n  margin-bottom: 32px;\n}\n.desktop-premium-functionsGroup .functionsGroup__item {\n  text-align: center;\n}\n.desktop-premium-functionsGroup .functionsGroup__item-icon {\n  width: 100px;\n  height: 100px;\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 100px 100px;\n  border-radius: 50%;\n  margin-bottom: 13px;\n}\n.desktop-premium-functionsGroup .functionsGroup__item-icon.icon-cloud {\n  background-image: url(\"/../img/desktop/iconeCloud.svg\");\n  box-shadow: 0px 2px 30px 0px #27caf5;\n}\n.desktop-premium-functionsGroup .functionsGroup__item-icon.icon-plane {\n  background-image: url(\"/../img/desktop/iconePlane.svg\");\n  box-shadow: 0px 2px 30px 0px #ff7d03;\n}\n.desktop-premium-functionsGroup .functionsGroup__item-icon.icon-diamond {\n  background-image: url(\"/../img/desktop/iconeDiamond.svg\");\n  box-shadow: 0px 0px 35px 0px #6b13b3;\n}\n.desktop-premium-functionsGroup .functionsGroup__item-icon.icon-rewind {\n  background-image: url(\"/../img/desktop/iconeRewind.svg\");\n  box-shadow: 0px 2px 30px 0px #d00665;\n}\n.desktop-premium-functionsGroup .functionsGroup__item-icon.icon-butterfly {\n  background-image: url(\"/../img/desktop/iconeButterfly.svg\");\n  box-shadow: 0px 0px 30px 0px #1515b1;\n}\n.desktop-premium-functionsGroup .functionsGroup__item-item-title {\n  text-align: center;\n  font-family: \"MuseoSansCyrl-medium\", Arial, sans-serif;\n  font-size: 20px;\n  line-height: 28px;\n  text-align: center;\n}\n.desktop-premium__button {\n  width: 336px;\n  color: #fff;\n  font-family: \"MuseoSansCyrl-regular\", Arial, sans-serif;\n  font-size: 20px;\n  line-height: 28px;\n  padding: 12px 0 11px;\n  background-color: #f82d8e;\n  border-radius: 12px;\n}\n.desktop-premium-etc__title {\n  font-family: \"MuseoSansCyrl-medium\", Arial, sans-serif;\n  font-size: 42px;\n  line-height: 52px;\n  text-align: center;\n  margin-bottom: 24px;\n}\n.desktop-premium-functionsGroup {\n  margin-bottom: 20px;\n  text-align: center;\n}\n.desktop-premium-functionsGroup .functionsGroup__item {\n  border-bottom: 1px solid #4a4a4a;\n  padding: 16px 0;\n  text-align: left;\n  width: 1021px;\n}\n.desktop-premium-functionsGroup .functionsGroup__item:last-child {\n  border-bottom: none;\n}\n.desktop-premium-functionsGroup .functionsGroup__item-title {\n  font-family: \"MuseoSansCyrl-regular\", Arial, sans-serif;\n  font-size: 20px;\n  line-height: 28px;\n  text-align: left;\n}\n.desktop-premium-functionsGroup .functionsGroup__item-column {\n  display: inline-block;\n  text-align: left;\n}\n.desktop-premium-functionsGroup .functionsGroup__item-column.column_left {\n  margin-right: 45px;\n  width: 354px;\n  text-align: left;\n}\n.desktop-premium-functionsGroup .functionsGroup__item-icon {\n  width: 41px;\n  height: 22px;\n  margin-right: 13px;\n  background-repeat: no-repeat;\n}\n.desktop-premium-functionsGroup .functionsGroup__item-icon.item-icon-logos {\n  background-image: url(\"/../img/desktop/iconLogos.svg\");\n  background-position: left top;\n  background-size: 41px 22px;\n}\n.desktop-premium-functionsGroup .functionsGroup__item-icon.item-icon-android {\n  background-image: url(\"/../img/desktop/iconAndroid.svg\");\n  background-position: 10px top;\n  background-size: 16px 19px;\n}\n.desktop-premium-functionsGroup .functionsGroup__item-icon.item-icon-globe {\n  background-image: url(\"/../img/desktop/iconGlobe.svg\");\n  background-position: 10px top;\n  background-size: 20px 20px;\n}\n.desktop-premium-functionsGroup .functionsGroup__item-icon-title {\n  font-family: \"MuseoSansCyrl-regular\", Arial, sans-serif;\n  font-size: 20px;\n  line-height: 28px;\n  text-align: left;\n}\n.desktop-partners {\n  background-color: #2c2c2c;\n  width: 100%;\n  padding: 22px 0 25px;\n  text-align: center;\n}\n.desktop-partners__title {\n  color: #817e82;\n  font-family: \"MuseoSansCyrl-medium\", Arial, sans-serif;\n  font-size: 42px;\n  line-height: 52px;\n  text-align: center;\n  margin-bottom: 24px;\n}\n.desktop-partners__table {\n  background-image: url(\"/../img/partnersLogos.png\");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  width: 1024px;\n  height: 411px;\n  margin-bottom: 63px;\n}\n.desktop-partners .desktop-linksGroupe {\n  display: flex;\n  justify-content: space-between;\n}\n.desktop-partners .desktop-linksGroupe .desktop-link {\n  display: inline-block;\n  color: #fff;\n  text-decoration: underline;\n  font-family: \"MuseoSansCyrl-thin\", Arial, sans-serif;\n  font-size: 14px;\n  line-height: 19px;\n  text-align: left;\n}\n.desktop-partners .desktop-linksGroupe .desktop-copyright {\n  display: inline-block;\n  color: #9b9b9b;\n  font-family: \"MuseoSansCyrl-thin\", Arial, sans-serif;\n  font-size: 14px;\n  line-height: 19px;\n  text-align: left;\n}\n.desktop-footer {\n  position: fixed;\n  background-color: #00ffab;\n  width: 100%;\n  padding: 25px 0;\n  text-align: left;\n  z-index: 10000;\n}\n.desktop-footer__icon-logos {\n  display: inline-block;\n  background-image: url(\"/../img/desktop/iconLogosBlack.svg\");\n  background-position: left top;\n  background-size: 54px 29px;\n  width: 54px;\n  height: 29px;\n  margin-right: 17px;\n  margin-left: 10px;\n}\n.desktop-footer__title {\n  color: #000;\n  font-family: \"MuseoSansCyrl-regular\", Arial, sans-serif;\n  font-size: 20px;\n  line-height: 28px;\n  text-align: left;\n}\n.desktop-footer__form {\n  display: inline-block;\n  position: relative;\n  right: 10px;\n}\n.desktop-footer__form-input {\n  width: 335px;\n  color: #d2d2d2;\n  font-family: \"MuseoSansCyrl-regular\", Arial, sans-serif;\n  font-size: 20px;\n  line-height: 28px;\n  padding: 11px 0 12px;\n  background-color: #fff;\n  border-radius: 25px;\n}\n.desktop-footer__form-submit {\n  width: 239px;\n  padding: 11px 0 12px;\n  background-color: #482bd8;\n  color: #d2d2d2;\n  border-radius: 25px;\n  font-family: \"MuseoSansCyrl-regular\", Arial, sans-serif;\n  font-size: 20px;\n  line-height: 28px;\n}\n", ""]);
 
 	// exports
 
