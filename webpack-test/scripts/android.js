@@ -11,7 +11,7 @@ var MainAndroid = React.createClass({
                         <div className="main-top_gradient"></div>
 
                         <div className="main-content">
-                            <img className="zvooq-logo" src="/img/android/zvooq-logo_android.png" alt="Zvooq-logo" />
+                            <div className="zvooq-logo"></div>
                             <div className="main-top__title-Zvooq"></div>
 
                             <div className="installBtn installBtn_top googlePlayBtn">

@@ -7,7 +7,9 @@
     "webpack": "webpack && webpack-dev-server --progress --colors",
     "bundle": "webpack ./scripts/main.js bundle.js",
     "i": "stylus --watch ./stylus/ios.styl --out ./css --compress ",
-    "a": "stylus --watch ./stylus/android.styl --out ./css --compress "
+    "a": "stylus --watch ./stylus/android.styl --out ./css --compress ",
+    "d": "stylus --watch ./stylus/desktop.styl --out ./css --compress "
+
   },
   "author": "taiska",
   "license": "ISC",

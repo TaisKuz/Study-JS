@@ -21,7 +21,7 @@ var MainIos = React.createClass({
                         </div>
 
                         <div className="main-content">
-                            <img className="zvooq-logo" src="/img/ios/zvooq-logo_ios.svg" alt="Zvooq-logo" />
+                            <div className="zvooq-logo"></div>
                             <div className="main-top__title-Zvooq"></div>
 
                             <div className="installBtn installBtn_top appStoreBtn">

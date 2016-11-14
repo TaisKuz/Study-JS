@@ -1,0 +1,541 @@
+@import '/fonts/MuseoSans/MuseoSansCyrl-thin.styl'
+@import '/fonts/MuseoSans/MuseoSansCyrl-regular.styl'
+@import '/fonts/MuseoSans/MuseoSansCyrl-medium.styl'
+
+@import '/reset.styl'
+@import '/variables.styl'
+
+.desktop
+  background linear-gradient(to bottom, rgba(72,43,216,1) 33%,rgba(72,43,216,0.39) 59%,rgba(53,32,160,0.25) 71%,rgba(0,0,0,0.25) 100%)
+  background-color #000000
+  color: #fff
+
+  &-containerWrapper
+    width 1441px
+    height 100%
+    text-align center
+    margin 0 auto
+
+  .item_inline
+    display inline-block
+
+  &-content
+    width: 1029px
+    margin: 0 auto
+    text-align center
+
+  &-arrow
+    .main-arrow_left
+      height 15px
+      background-image url("/../img/desktop/arrowLeft.svg")
+      background-repeat no-repeat
+      background-size: 8px 15px
+      background-position left center
+      text-align left
+
+    .arrow__title
+      display inline-block
+      height 15px
+      vertical-align middle
+      padding: 0 22px
+
+  &-top
+    text-align: center
+
+    .zvooq-logo
+      background-image url("/img/desktop/zvooqLogo.svg")
+      background-repeat no-repeat
+      background-position center
+      width 62px
+      height 62px
+      border-radius 17px
+      margin-bottom 22px
+      margin-top: 46px
+
+    .title-Zvooq
+      background-image url("/../img/desktop/zvooqTitle.svg")
+      background-repeat no-repeat
+      background-position center
+      background-size 96px 26px
+      width 96px
+      height 26px
+
+    .title-number1
+      position relative
+      font-family: "MuseoSansCyrl-regular", Arial, sans-serif
+      font-size: 20px
+      line-height 28px
+      margin-bottom 68px
+      text-align: center
+
+    &__title-music
+      font-family: "MuseoSansCyrl-medium", Arial, sans-serif
+      font-size: 70px
+      line-height 70px
+      margin-bottom 55px
+      text-align: center
+
+      & .icon-note
+        display inline-block
+        position relative
+        top 5px
+        left 3px
+        background-image url("/../img/desktop/iconNote.svg")
+        background-repeat no-repeat
+        width 49px
+        height 57px
+
+    &-getSms_form
+      text-align center
+      margin-bottom 36px
+
+      .getSms_form__title
+        text-align center
+        font-family: "MuseoSansCyrl-thin", Arial, sans-serif
+        font-size: 14px
+        line-height 19px
+        margin-bottom 10px
+
+      .getSms_form_input
+        width 327px
+        color #D2D2D2
+        font-family: "MuseoSansCyrl-regular", Arial, sans-serif
+        font-size: 20px
+        line-height 28px
+        margin-bottom 9px
+        padding 11px 0 12px
+        background-color #ffffff
+        border-radius 5px
+
+      .getSms_form_submit
+        width 336px
+        color #ffffff
+        font-family: "MuseoSansCyrl-regular", Arial, sans-serif
+        font-size: 20px
+        line-height 28px
+        padding 12px 0 11px
+        background-color #F82D8E
+        border-radius 12px
+
+    &-phones
+      position relative
+      width: 1029px
+      height: 559px
+      background-image url("/../img/desktop/phones.png")
+      background-repeat no-repeat
+      background-position center
+      background-size cover
+      margin-bottom 47px
+
+      .best-stiсker
+        border-radius 50%
+        width 154px
+        height 154px
+        position absolute
+        top -10px
+        right 30%px
+        //background-image url("/../img/desktop/sticker.png")
+        background: linear-gradient(to bottom, rgba(0,255,171,1) 0%,rgba(174,255,224,1) 100%);
+        //background-repeat no-repeat
+        //background-size cover
+        text-align center
+        transform rotate(15deg)
+        z-index 5
+
+        .stiсker-text
+          font-family: "MuseoSansCyrl-regular", Arial, sans-serif
+          font-size: 20px
+          line-height: 28px
+          text-align: center
+          margin-top: 38px
+
+        .AppStore
+          width 66px
+          height 15px
+          padding-top 13px
+          background-image url("/../img/desktop/AppStore.png")
+          background-repeat no-repeat
+          background-size 66px 15px
+
+    &__title-listenFree
+      font-family: "MuseoSansCyrl-medium", Arial, sans-serif
+      font-size: 42px
+      line-height 52px
+      margin-bottom: 15px
+      text-align: center
+
+    &__title-torrents,
+    &__title-trial
+      font-family: "MuseoSansCyrl-regular", Arial, sans-serif
+      font-size: 20px
+      line-height 28px
+      text-align: center
+      margin-bottom: 14px
+
+    &-group25
+      text-align center
+      margin 50px 0 80px
+
+      &__title-25
+        color #E93889
+        font-family "MuseoSansCyrl-medium", Arial, sans-serif
+        font-size 150px
+        line-height 150px
+        text-align center
+
+      &__title-million
+        font-family "MuseoSansCyrl-regular", Arial, sans-serif
+        font-size 20px
+        line-height 28px
+        text-align center
+
+    &-playGroup
+      height 391px
+      width 1023px
+      background-image url("/../img/desktop/playlists.png")
+      background-repeat no-repeat
+      background-size cover
+      margin-bottom 20px
+
+    &__title-thousand
+      font-family "MuseoSansCyrl-medium", Arial, sans-serif
+      font-size 42px
+      line-height 52px
+      text-align center
+      margin-bottom 15px
+
+    &__title-oneClick
+      font-family "MuseoSansCyrl-regular", Arial, sans-serif
+      font-size 20px
+      line-height 28px
+      text-align center
+      margin-bottom 14px
+      z-index 10
+
+    &-heartWaves
+      position relative
+      background-image url("/../img/desktop/heartWaves.svg")
+      background-repeat no-repeat
+      background-position center
+      background-size 490px 490px
+      width 1029px
+      height 490px
+      z-index 6
+
+    &__title-smart
+      font-family "MuseoSansCyrl-medium", Arial, sans-serif
+      font-size 42px
+      line-height 52px
+      text-align center
+      margin-bottom 15px
+      z-index 10
+
+    &__title-allULike
+      font-family "MuseoSansCyrl-regular", Arial, sans-serif
+      font-size 20px
+      line-height 28px
+      text-align center
+      margin-bottom 80px
+
+  &-premium
+    text-align center
+    margin-bottom: 80px
+
+    &__title
+      font-family "MuseoSansCyrl-medium", Arial, sans-serif
+      font-size 42px
+      line-height 52px
+      text-align center
+      margin-bottom 31px
+
+    &-functionsGroup
+      display flex
+      justify-content space-around
+      flex-wrap nowrap
+      margin-bottom: 32px
+
+      .functionsGroup__item
+        text-align center
+
+        &-icon
+          width: 100px
+          height: 100px
+          background-repeat no-repeat
+          background-position center
+          background-size 100px 100px
+          border-radius 50%
+          margin-bottom 13px
+
+          &.icon-cloud
+            background-image url("/../img/desktop/iconeCloud.svg")
+            box-shadow 0px 2px 30px 0px #27CAF5
+          &.icon-plane
+            background-image url("/../img/desktop/iconePlane.svg")
+            box-shadow 0px 2px 30px 0px #FF7D03
+          &.icon-diamond
+            background-image url("/../img/desktop/iconeDiamond.svg")
+            box-shadow 0px 0px 35px 0px #6B13B3
+          &.icon-rewind
+            background-image url("/../img/desktop/iconeRewind.svg")
+            box-shadow 0px 2px 30px 0px #D00665
+          &.icon-butterfly
+            background-image url("/../img/desktop/iconeButterfly.svg")
+            box-shadow 0px 0px 30px 0px #1515B1
+
+        &-item-title
+          text-align center
+          font-family "MuseoSansCyrl-medium", Arial, sans-serif
+          font-size 20px
+          line-height 28px
+          text-align center
+
+    &__button
+      width 336px
+      color #ffffff
+      font-family: "MuseoSansCyrl-regular", Arial, sans-serif
+      font-size: 20px
+      line-height 28px
+      padding 12px 0 11px
+      background-color #F82D8E
+      border-radius 12px
+
+    &-etc__title
+      font-family "MuseoSansCyrl-medium", Arial, sans-serif
+      font-size 42px
+      line-height 52px
+      text-align center
+      margin-bottom 24px
+
+    &-functionsGroup
+      margin-bottom 20px
+      text-align center
+
+      & .functionsGroup__item
+        border-bottom 1px solid #4A4A4A
+        padding 16px 0
+        text-align left
+        width 1021px
+
+        &:last-child
+          border-bottom none
+
+        &-title
+          font-family "MuseoSansCyrl-regular", Arial, sans-serif
+          font-size 20px
+          line-height 28px
+          text-align left
+
+        &-column
+          display inline-block
+          text-align left
+
+          &.column_left
+            margin-right 45px
+            width 354px
+            text-align left
+
+        &-icon
+          width 41px
+          height 22px
+          margin-right 13px
+          background-repeat no-repeat
+
+          &.item-icon-logos
+            background-image url("/../img/desktop/iconeLogos.svg")
+            background-position left top
+            background-size 41px 22px
+
+          &.item-icon-android
+            background-image url("/../img/desktop/iconeAndroid.svg")
+            background-position 10px top
+            background-size 16px 19px
+
+          &.item-icon-globe
+            background-image url("/../img/desktop/iconeGlobe.svg")
+            background-position 10px top
+            background-size 20px 20px
+
+          &-title
+            font-family "MuseoSansCyrl-regular", Arial, sans-serif
+            font-size 20px
+            line-height 28px
+            text-align left
+
+
+
+
+
+
+
+          & a
+            color #fff
+            text-decoration none
+
+        &-icon
+          margin-top 2px
+          margin-right 19px
+          background-repeat no-repeat
+          background-position top left
+          background-size 100%
+
+          &.icon-star_color
+            background-image url("/../img/icon-star_color.svg")
+            width 15px
+            height 14px
+
+          &.icon-butterfly_color
+            background-image url("/../img/icon-butterfly_color.svg")
+            width 14px
+            height 12px
+
+          &.icon-shazam_color
+            background-image url("/../img/icon-shazam_color.png")
+            width 13.3px
+            height 13.34px
+
+          &.icon-cloud_color
+            background-image url("/../img/icon-cloud_color.svg")
+            width 15px
+            height 10px
+
+          &.icon-fire_color
+            background-image url("/../img/icon-fire_color.svg")
+            width 9px
+            height 13px
+
+
+
+
+  &-premium
+    position relative
+    background-color #fff
+    width 97.5%
+    padding 27px 0 5px
+    border-radius 10px
+    margin 0 auto
+    z-index 3
+
+    & .main-content
+      margin-right 0
+
+
+    &__title
+      margin-top 17px
+      margin-bottom 27px
+      color #000
+      font-family "SFUIDisplay-Heavy", Arial, sans-serif
+      font-size 25px
+      line-height 28px
+      text-align left
+
+    &-functionsGroup
+      padding-bottom 15px
+
+    & .functionsGroup__item
+      padding-bottom 15px
+      display flex
+      align-items center
+
+      &-title
+        color #000
+        font-family "SFUIDisplay-Regular", Arial, sans-serif
+        font-size 16px
+        line-height 20px
+
+      &-icon
+        margin-right 15px
+        background-repeat no-repeat
+        background-position top left
+        background-size 20px 20px
+        width 20px
+        height 20px
+
+      & .icon-download_black
+        background-image url("/../img/ios/icon-download-ios.svg")
+
+
+      & .icon-plane_black
+        background-image url("/../img/ios/icon-plane-ios.svg")
+
+
+      & .icon-rewind_black
+        background-image url("/../img/ios/icon-rewind-ios.svg")
+
+
+      & .icon-diamond_black
+        background-image url("/../img/ios/icon-diamond-ios.svg")
+
+
+      & .icon-butterfly_black
+        background-image url("/../img/ios/icon-butterfly-ios.svg")
+
+
+
+  &-tryIt
+    position relative
+    width 100%
+    background-color #000
+    background-image url("/../img/tryIt_gradient.png")
+    background-repeat no-repeat
+    background-position -5px -96px
+    background-size 104%
+    padding: 72px 0 25px
+    margin-top -40px
+    z-index 1
+
+    &__title-try
+      font-family "SFUIDisplay-Heavy", Arial, sans-serif
+      font-size 25px
+      line-height 28px
+      text-align left
+      margin-bottom 4px
+
+    &__title-free
+      font-family "SFUIDisplay-Regular", Arial, sans-serif
+      font-size 14px
+      line-height 19px
+      margin-bottom 21px
+
+
+  &-partners
+    background-color #2C2C2C
+    width 100%
+    padding 25px 0 45px
+
+    &__title
+      color #817E82
+      font-family "SFUIDisplay-Heavy", Arial, sans-serif
+      font-size 25px
+      line-height 28px
+      text-align left
+      margin-bottom 19px
+
+    &__table
+      background-image url("/../img/partners-icons.png")
+      background-repeat no-repeat
+      background-position center
+      background-size cover
+      width 320px
+      height 320px
+      margin-bottom 19px
+      margin-left: -30px
+
+    & a
+      display block
+      color #9B9B9B
+
+    & .main-links_bold
+      font-family "SFUIDisplay-Regular", Arial, sans-serif
+      font-size 18px
+      line-height 19px
+      text-align left
+      margin-bottom 18px
+      color #fff
+
+    & .main-links_normal
+      font-family "SFUIDisplay-Regular", Arial, sans-serif
+      font-weight 100
+      font-size 14px
+      line-height 19px
+      margin-bottom 14px
+      text-align left

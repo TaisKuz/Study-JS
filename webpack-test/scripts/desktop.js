@@ -1,137 +1,242 @@
-import './../stylus/android.styl';
+import './../stylus/desktop.styl';
 
-var MainAndroid = React.createClass({
+var Desktop = React.createClass({
 
     render() {
         return (
-            <div className="main">
-                <div className="main-containerWrapper">
-                    <div className="main-top">
-                        <div className="main-top__mini-phones"></div>
-                        <div className="main-top_gradient"></div>
-
-                        <div className="main-content">
-                            <img className="zvooq-logo" src="/img/android/zvooq-logo_android.png" alt="Zvooq-logo" />
-                            <div className="main-top__title-Zvooq"></div>
-
-                            <div className="installBtn installBtn_top googlePlayBtn">
-                                <a href="https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en" target="_blank" />
-                            </div>
-                            <div className="main-top__title-music" >
-                                Включить<br/>музыку<span className="icon-note"/><br/>легко!
-                            </div>
-                            <div className="main-top__title-listenFree" >Слушайте всё бесплатно и&nbsp;без регистрации</div>
-                            <div className="main-top__title-torrents">Больше не&nbsp;нужны торренты,<br />
-                                социальные сети или пиратские<br />
-                                приложения-однодневки.
-                            </div>
-                            <div className="main-top__title-trial">В&nbsp;бесплатном режме можно слушать<br />
-                                всю музыку бесконечно долго и&nbsp;в<br />
-                                любом объеме.
-                            </div>
-                            <div className="main-top-group25">
-                                <div className="main-top-group25__title-25">25</div>
-                                <div className="main-top-group25__title-million">миллионов треков</div>
-                            </div>
-
-                            <div className="main-top-playGroup">
-                                <div className="play-home"></div>
-                                <div className="play-vk"></div>
-                                <div className="play-training"></div>
-                            </div>
-                            <div className="main-top__title-thousand">Тысячи готовых<br />плейлистов для любого<br />случая в&nbsp;жизни</div>
-                            <div className="main-top__title-oneClick">Одним нажатием включайте готовые<br />плейлисты: когда весело или грутсно,<br />
-                                чтобы не&nbsp;скучать в&nbsp;пробках или метро,<br />выложиться в&nbsp;спортзале или<br />сфокусироваться на&nbsp;работе.</div>
-                            <div className="main-top-heartWaves"></div>
-                            <div className="main-top__title-smart">Умная Коллекция<br />для вашей музыки</div>
-                            <div className="main-top__title-allULike">Все, что вам понравится, можно сохранять<br />в&nbsp;Коллецию,
-                                которая сама превращает<br />свалку из&nbsp;любимой музыки в&nbsp;место, где вы<br />ещё быстрее найдете всё, что нужно.</div>
-                            <div className="main-top__title-etc">...а также</div>
-
-                            <div className="main-top-functionsGroup">
-                                <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-star_color item_inline"></div>
-                                    <div className="functionsGroup__item-title item_inline">Популярная музыка и&nbsp;новинки<br />в&nbsp;одном месте</div>
+            <div className="desktop">
+                <div className="desktop-containerWrapper">
+                    <div className="desktop-arrows">
+                        <div className="desktop-content">
+                            <div className="desktop-arrow desktop-arrow_left">
+                                <div className="item_inline arrow__icon-left arrow__icon">
+                                    <a className="item_inline arrow__title" href="http://zvooq.com/" target="_blank">Вернкться к музыке</a>
                                 </div>
-                                <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-butterfly_color item_inline"></div>
-                                    <div className="functionsGroup__item-title item_inline">Поиск, который вас понимает</div>
+                            </div>
+                            <div className="desktop-arrow desktop-arrow_right">
+                                <div className="item_inline arrow__icon-right arrow__icon">
+                                    <a className="item_inline arrow__title" href="http://zvooq.com/code" target="_blank">У меня есть промокод</a>
                                 </div>
-                                <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-shazam_color item_inline"></div>
-                                    <div className="functionsGroup__item-title item_inline">Удобное прослушивание своих<br />Shazamов</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="desktop-top">
+
+                        {/*<div className="desktop-top_gradient"></div>*/}
+
+                        <div className="desktop-content">
+                            <div className="zvooq-logo"></div>
+                            <div className="title-Zvooq"></div>
+                            <div className="title-number1">Музыкальное приложение &#8470;&nbsp;1</div>
+
+                            <div className="desktop-top__title-music" >
+                                Включить музыку<span className="icon-note"/> легко!
+                            </div>
+
+                            <form className="desktop-top-getSms_form">
+                                <div className="getSms_form__title">Получите СМС со ссылкой для быстрой установки приложения. Это бесплатно.</div>
+                                <input type="text" placeholder="+7 910 123-34-56" className="getSms_form_input" />
+                                <button type="submit" value={"Получить"} className="getSms_form_submit" />
+                            </form>
+                            <div className="desktop-top-phones">
+                                <div className="best-stiсker">
+                                    <div className="stiсker-text">
+                                        Лучшее<br/>
+                                        музыкальное<br/>
+                                        приложение<br/>
+                                        <div className="AppStore"></div>
+                                        2015
+                                    </div>
                                 </div>
-                                <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-cloud_color item_inline"></div>
-                                    <div className="functionsGroup__item-title item_inline">Кэширование, чтобы слушать музыку<br />без помех</div>
+                            </div>
+                            <div className="desktop-top__title-listenFree" >Слушайте всё бесплатно<br/>и&nbsp;без регистрации</div>
+                            <div className="desktop-top__title-torrents">
+                                Больше не&nbsp;нужны торренты, социальные сети или<br />
+                                пиратские приложения-однодневки с неполным каталогом.
+                            </div>
+                            <div className="desktop-top__title-trial">
+                                В&nbsp;бесплатном режме можно слушать всю музыку<br/>
+                                бесконечно долго и&nbsp;в&nbsp;любом объеме.
+                            </div>
+                            <div className="desktop-top-group25">
+                                <div className="desktop-top-group25__title-25">25,000,000</div>
+                                <div className="desktop-top-group25__title-million">треков, включая все горячие новинки, пополярные треки, топы Shazam и ВКонтакте</div>
+                            </div>
+
+                            <div className="desktop-top-playGroup"></div>
+                            <div className="desktop-top__title-thousand">Тысячи готовых плейлистов<br />для любого случая в&nbsp;жизни</div>
+                            <div className="desktop-top__title-oneClick">
+                                Одним нажатием включайте готовые плейлисты: когда весело или грутсно,<br />
+                                чтобы не&nbsp;скучать в&nbsp;пробках или метро, выложиться в&nbsp;спортзале или<br />
+                                сфокусироваться на&nbsp;работе.
+                            </div>
+                            <div className="desktop-top-heartWaves"></div>
+                            <div className="desktop-top__title-smart">Умная Коллекция для вашей музыки</div>
+                            <div className="desktop-top__title-allULike">
+                                Все, что вам понравится, можно сохранять в&nbsp;Коллецию, которая<br />
+                                сама превращает свалку из&nbsp;любимой музыки в&nbsp;место, где вы ещё<br />
+                                быстрее найдете всё, что нужно.
+                            </div>
+
+                            <div className="desktop-premium">
+                                <div className="desktop-premium__title">Премиум-возможности:</div>
+                                <div className="desktop-premium-functionsGroup">
+                                    <div className="functionsGroup__item">
+                                        <div className="functionsGroup__item-icon icon-cloud"></div>
+                                        <div className="functionsGroup__item-title ">Скачивание<br/>музыки в&nbsp;телефон</div>
+                                    </div>
+                                    <div className="functionsGroup__item">
+                                        <div className="functionsGroup__item-icon icon-plane "></div>
+                                        <div className="functionsGroup__item-title ">Прослушивание<br/>без интернета</div>
+                                    </div>
+                                    <div className="functionsGroup__item">
+                                        <div className="functionsGroup__item-icon icon-diamond"></div>
+                                        <div className="functionsGroup__item-title">Высокое<br/>качство</div>
+                                    </div>
+                                    <div className="functionsGroup__item">
+                                        <div className="functionsGroup__item-icon icon-rewind"></div>
+                                        <div className="functionsGroup__item-title">Безграничная<br/>перемотка</div>
+                                    </div>
+                                    <div className="functionsGroup__item">
+                                        <div className="functionsGroup__item-icon icon-butterfly"></div>
+                                        <div className="functionsGroup__item-title">... и никакой<br/>рекламы!</div>
+                                    </div>
                                 </div>
 
-                                <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-lightning_color item_inline"></div>
-                                    <div className="functionsGroup__item-title item_inline">Сжатие мобиьного трафика</div>
+                                <button type="submit" value={"Попробовать бесплатно"} className="desktop-premium__button"/>
+                            </div>
+
+                            <div className="desktop-top-etc">
+                                <div className="desktop-top-etc__title          was main-top__title-etc">...а также</div>
+
+                                <div className="desktop-top-functionsGroup">
+                                    <div className="functionsGroup__item">
+                                        <div className="item_inline functionsGroup__item-column column_left">
+                                            <div className="item_inline functionsGroup__item-icon item-icon-logos" />
+                                            <div className="item_inline functionsGroup__item-icon-title">
+                                                Популярное и&nbsp;новинки<br />
+                                                собраны в&nbsp;одном месте
+                                            </div>
+                                        </div>
+                                        <div className="item_inline functionsGroup__item-column column_right">
+                                            <div className="functionsGroup__item-title item_inline">
+                                                Все горячие новинки, популярные треки, чарты UK, Billboard,<br/>
+                                                различных стран мира, а также топы Shazam и ВКонтакте<br/>
+                                                собраны в одном приложении.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="functionsGroup__item">
+                                        <div className="item_inline functionsGroup__item-column column_left">
+                                            <div className="item_inline functionsGroup__item-icon item-icon-logos" />
+                                            <div className="item_inline functionsGroup__item-icon-title">
+                                                Поиск, который вас понимает
+                                            </div>
+                                        </div>
+                                        <div className="item_inline functionsGroup__item-column column_right">
+                                            <div className="functionsGroup__item-title item_inline">
+                                                Поиск позволяет искать музыку не только когда вы знаете<br/>
+                                                конкретных артистов, названия альбомов и треков, но и при<br/>
+                                                помощи простых запросов: &laquo;вечеринка&raquo;, &laquo;грустно&raquo;,<br/>
+                                                &laquo;спортзал&raquo; и так далее.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="functionsGroup__item">
+                                        <div className="item_inline functionsGroup__item-column column_left">
+                                            <div className="item_inline functionsGroup__item-icon item-icon-logos" />
+                                            <div className="item_inline functionsGroup__item-icon-title">
+                                                Удобное прослушивание<br />
+                                                своих Shazamов
+                                            </div>
+                                        </div>
+                                        <div className="item_inline functionsGroup__item-column column_right">
+                                            <div className="functionsGroup__item-title item_inline">
+                                                Легкий способ сохранить ваши Shazamы. Распознавайте<br/>
+                                                заинтересовавшие вас треки прямо из Zvooq и моментально<br/>
+                                                добавляйте их в Коллекцию.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="functionsGroup__item">
+                                        <div className="item_inline functionsGroup__item-column column_left">
+                                            <div className="item_inline functionsGroup__item-icon item-icon-logos" />
+                                            <div className="item_inline functionsGroup__item-icon-title">
+                                                Кэширование для<br/>
+                                                прослушивания без помех
+                                            </div>
+                                        </div>
+                                        <div className="item_inline functionsGroup__item-column column_right">
+                                            <div className="functionsGroup__item-title item_inline">
+                                                Включённый трек продолжает играть, даже если интернет
+                                                нестабилен. В лифте, в тоннеле или в метро &mdash; где бы вы ни
+                                                оказались, музыка не остановится.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="functionsGroup__item">
+                                        <div className="item_inline functionsGroup__item-column column_left">
+                                            <div className="item_inline functionsGroup__item-icon item-icon-android "></div>
+                                            <div className="item_inline functionsGroup__item-icon-title">
+                                                Экономия мобильного<br/>
+                                                трафика
+                                            </div>
+                                        </div>
+                                        <div className="item_inline functionsGroup__item-column column_right">
+                                            <div className="functionsGroup__item-title item_inline">
+                                                Возможность сжимать трафик при прослушивании музыки<br/>
+                                                почти вдвое без существенного ущрба для ее качества.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="functionsGroup__item">
+                                        <div className="item_inline functionsGroup__item-column column_left">
+                                            <div className="item_inline functionsGroup__item-icon item-icon-globe "></div>
+                                            <div className="item_inline functionsGroup__item-icon-title">
+                                                Любимые треки всегда с вами
+                                            </div>
+                                        </div>
+                                        <div className="item_inline functionsGroup__item-column column_right">
+                                            <div className="functionsGroup__item-title item_inline">
+                                                Автоматическая синхронизация в приложении и на сайте:<br/>
+                                                вся ваша музыка на любом устройстве.
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-fire_color item_inline"></div>
-                                    <div className="functionsGroup__item-title item_inline">
-                                        Любимые треки всегда с вами в<br/>
-                                        приложении и на сайте <a href="http://zvooq.com/" target="_blank">zvooq.com</a>
+                                <div className="desktop-partners">
+                                    <div className="desktop-content">
+                                        <div className="desktop-partners__title">
+                                            Особые условия для клиентов<br />
+                                            наших партнеров
+                                        </div>
+                                        <div className="desktop-partners__table"></div>
+                                        <div className="desktop-links">
+                                            <a className="desktop-links_bold" href="http://zvooq.com/code" target="_blank">У&nbsp;меня есть промокод</a>
+                                            <a className="desktop-links_normal" href="http://zvooq.com" target="_blank">Стать нашим партнером</a>
+                                            <a className="desktop-links_normal" href="http://dreamindustries.co/wanted/" target="_blank">Работать у&nbsp;нас</a>
+                                            <a className="desktop-links_normal" href="mailto:saveme@zvooq.com" target="_blank">Пообщаться с&nbsp;нашим support</a>
+                                            <div className="desktop-links__copyright">&copy; Zvooq, 2001-2016</div>
+                                        </div>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    <div className="main-premium">
-                        <div className="main-content">
-                            <div className="icon-cherry"></div>
-                            <div className="main-premium__title">Премиум-<br />возможности:</div>
-                            <div className="main-premium-functionsGroup">
-                                <div className="functionsGroup__item">
+                </div>
 
-                                    <div className="functionsGroup__item-icon icon-download_black item_inline"></div>
-                                    <div className="functionsGroup__item-title item_inline">Скачивание музыки в&nbsp;телефон</div>
-                                </div>
-                                <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-plane_black item_inline"></div>
-                                    <div className="functionsGroup__item-title item_inline">Прослушивание без интернета</div>
-                                </div>
-                                <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-rewind_black item_inline"></div>
-                                    <div className="functionsGroup__item-title item_inline">Безлимитная перемотка</div>
-                                </div>
-                                <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-diamond_black item_inline"></div>
-                                    <div className="functionsGroup__item-title item_inline">Музыка в&nbsp;высоком качстве</div>
-                                </div>
-                                <div className="functionsGroup__item">
-                                    <div className="functionsGroup__item-icon icon-butterfly_black item_inline"></div>
-                                    <div className="functionsGroup__item-title item_inline">Никакой рекламы</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="main-tryIt">
-                        <div className="main-content">
-                            <div className="main-tryIt__title-try">Попробуйте!</div>
-                            <div className="main-tryIt__title-free">Это бесплатно</div>
-
-                            <div className="installBtn installBtn_tryIt googlePlayBtn">
-                                <a href="https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en" target="_blank" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="main-partners">
-                        <div className="main-content">
-                            <div className="main-partners__title">Особые условия<br />для клиентов наших<br />партнеров</div>
-                            <div className="main-partners__table"></div>
-                            <div className="main-links">
-                                <a className="main-links_bold" href="http://zvooq.com/code" target="_blank">У&nbsp;меня есть промокод</a>
-                                <a className="main-links_normal" href="http://zvooq.com" target="_blank">Стать нашим партнером</a>
-                                <a className="main-links_normal" href="http://dreamindustries.co/wanted/" target="_blank">Работать у&nbsp;нас</a>
-                                <a className="main-links_normal" href="mailto:saveme@zvooq.com" target="_blank">Пообщаться с&nbsp;нашим support</a>
-                                <a className="main-links__normal" href="https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8" target="_blank">Zvooq для iOS</a>
-                            </div>
-                        </div>
+                <div className="desktop-footer">
+                    <div className="desktop-content">
+                        <div className="desktop-footer__icon-ios"></div>
+                        <div className="desktop-footer__icon-ios"></div>
+                        <div className="desktop-footer__title"></div>
+                        <form>
+                            <input type="text" placeholder="+7 910 123-34-56"/>
+                            <button type="submit" value="Получить"/>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -139,4 +244,4 @@ var MainAndroid = React.createClass({
     }
 });
 
-ReactDOM.render(< MainAndroid />, document.getElementById('page-content') );
+ReactDOM.render(< Desktop />, document.getElementById('page-content') );

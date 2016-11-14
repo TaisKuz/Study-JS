@@ -48,8 +48,8 @@
 
 	__webpack_require__(172);
 
-	var MainIos = React.createClass({
-	    displayName: "MainIos",
+	var MainDesktop = React.createClass({
+	    displayName: "MainDesktop",
 	    render: function render() {
 	        return React.createElement(
 	            "div",
@@ -57,6 +57,7 @@
 	            React.createElement(
 	                "div",
 	                { className: "main-containerWrapper" },
+	                React.createElement("div", { className: "main-arrows" }),
 	                React.createElement(
 	                    "div",
 	                    { className: "main-top" },
@@ -64,30 +65,13 @@
 	                    React.createElement("div", { className: "main-top_gradient" }),
 	                    React.createElement(
 	                        "div",
-	                        { className: "main-top__best-sti\u0441ker main-top__best-sti\u0441ker_up" },
-	                        React.createElement(
-	                            "div",
-	                            { className: "sti\u0441ker-text" },
-	                            "\u041B\u0443\u0447\u0448\u0435\u0435",
-	                            React.createElement("br", null),
-	                            "\u043C\u0443\u0437\u044B\u043A\u0430\u043B\u044C\u043D\u043E\u0435",
-	                            React.createElement("br", null),
-	                            "\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435",
-	                            React.createElement("br", null),
-	                            React.createElement("img", { className: "AppStore", src: "/img/ios/AppStore.png", alt: "AppStore" }),
-	                            React.createElement("br", null),
-	                            "2015"
-	                        )
-	                    ),
-	                    React.createElement(
-	                        "div",
 	                        { className: "main-content" },
-	                        React.createElement("img", { className: "zvooq-logo", src: "/img/ios/zvooq-logo_ios.svg", alt: "Zvooq-logo" }),
+	                        React.createElement("img", { className: "zvooq-logo", src: "/img/android/zvooq-logo_android.png", alt: "Zvooq-logo" }),
 	                        React.createElement("div", { className: "main-top__title-Zvooq" }),
 	                        React.createElement(
 	                            "div",
-	                            { className: "installBtn installBtn_top appStoreBtn" },
-	                            React.createElement("a", { href: "https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8", target: "_blank" })
+	                            { className: "installBtn installBtn_top googlePlayBtn" },
+	                            React.createElement("a", { href: "https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en", target: "_blank" })
 	                        ),
 	                        React.createElement(
 	                            "div",
@@ -102,11 +86,7 @@
 	                        React.createElement(
 	                            "div",
 	                            { className: "main-top__title-listenFree" },
-	                            "\u0421\u043B\u0443\u0448\u0430\u0439\u0442\u0435 \u0432\u0441\u0451",
-	                            React.createElement("br", null),
-	                            "\u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E",
-	                            React.createElement("br", null),
-	                            "\u0438\xA0\u0431\u0435\u0437 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438"
+	                            "\u0421\u043B\u0443\u0448\u0430\u0439\u0442\u0435 \u0432\u0441\u0451 \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E \u0438\xA0\u0431\u0435\u0437 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438"
 	                        ),
 	                        React.createElement(
 	                            "div",
@@ -120,11 +100,11 @@
 	                        React.createElement(
 	                            "div",
 	                            { className: "main-top__title-trial" },
-	                            "\u0412\xA0\u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u043C \u0440\u0435\u0436\u043C\u0435 \u043C\u043E\u0436\u043D\u043E",
+	                            "\u0412\xA0\u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u043C \u0440\u0435\u0436\u043C\u0435 \u043C\u043E\u0436\u043D\u043E \u0441\u043B\u0443\u0448\u0430\u0442\u044C",
 	                            React.createElement("br", null),
-	                            "\u0441\u043B\u0443\u0448\u0430\u0442\u044C \u0432\u0441\u044E \u043C\u0443\u0437\u044B\u043A\u0443 \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u043E",
+	                            "\u0432\u0441\u044E \u043C\u0443\u0437\u044B\u043A\u0443 \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u043E \u0434\u043E\u043B\u0433\u043E \u0438\xA0\u0432",
 	                            React.createElement("br", null),
-	                            "\u0434\u043E\u043B\u0433\u043E \u0438\xA0\u0432\xA0\u043B\u044E\u0431\u043E\u043C \u043E\u0431\u044A\u0435\u043C\u0435."
+	                            "\u043B\u044E\u0431\u043E\u043C \u043E\u0431\u044A\u0435\u043C\u0435."
 	                        ),
 	                        React.createElement(
 	                            "div",
@@ -152,26 +132,22 @@
 	                            { className: "main-top__title-thousand" },
 	                            "\u0422\u044B\u0441\u044F\u0447\u0438 \u0433\u043E\u0442\u043E\u0432\u044B\u0445",
 	                            React.createElement("br", null),
-	                            "\u043F\u043B\u0435\u0439\u043B\u0438\u0441\u0442\u043E\u0432 \u0434\u043B\u044F",
+	                            "\u043F\u043B\u0435\u0439\u043B\u0438\u0441\u0442\u043E\u0432 \u0434\u043B\u044F \u043B\u044E\u0431\u043E\u0433\u043E",
 	                            React.createElement("br", null),
-	                            "\u043B\u044E\u0431\u043E\u0433\u043E \u0441\u043B\u0443\u0447\u0430\u044F",
-	                            React.createElement("br", null),
-	                            "\u0432\xA0\u0436\u0438\u0437\u043D\u0438"
+	                            "\u0441\u043B\u0443\u0447\u0430\u044F \u0432\xA0\u0436\u0438\u0437\u043D\u0438"
 	                        ),
 	                        React.createElement(
 	                            "div",
 	                            { className: "main-top__title-oneClick" },
-	                            "\u041E\u0434\u043D\u0438\u043C \u043D\u0430\u0436\u0430\u0442\u0438\u0435\u043C \u0432\u043A\u043B\u044E\u0447\u0430\u0439\u0442\u0435",
+	                            "\u041E\u0434\u043D\u0438\u043C \u043D\u0430\u0436\u0430\u0442\u0438\u0435\u043C \u0432\u043A\u043B\u044E\u0447\u0430\u0439\u0442\u0435 \u0433\u043E\u0442\u043E\u0432\u044B\u0435",
 	                            React.createElement("br", null),
-	                            "\u0433\u043E\u0442\u043E\u0432\u044B\u0435 \u043F\u043B\u0435\u0439\u043B\u0438\u0441\u0442\u044B: \u043A\u043E\u0433\u0434\u0430 \u0432\u0435\u0441\u0435\u043B\u043E",
+	                            "\u043F\u043B\u0435\u0439\u043B\u0438\u0441\u0442\u044B: \u043A\u043E\u0433\u0434\u0430 \u0432\u0435\u0441\u0435\u043B\u043E \u0438\u043B\u0438 \u0433\u0440\u0443\u0442\u0441\u043D\u043E,",
 	                            React.createElement("br", null),
-	                            "\u0438\u043B\u0438 \u0433\u0440\u0443\u0442\u0441\u043D\u043E, \u0447\u0442\u043E\u0431\u044B \u043D\u0435\xA0\u0441\u043A\u0443\u0447\u0430\u0442\u044C \u0432",
+	                            "\u0447\u0442\u043E\u0431\u044B \u043D\u0435\xA0\u0441\u043A\u0443\u0447\u0430\u0442\u044C \u0432\xA0\u043F\u0440\u043E\u0431\u043A\u0430\u0445 \u0438\u043B\u0438 \u043C\u0435\u0442\u0440\u043E,",
 	                            React.createElement("br", null),
-	                            "\u043F\u0440\u043E\u0431\u043A\u0430\u0445 \u0438\u043B\u0438 \u043C\u0435\u0442\u0440\u043E, \u0432\u044B\u043B\u043E\u0436\u0438\u0442\u044C\u0441\u044F \u0432",
+	                            "\u0432\u044B\u043B\u043E\u0436\u0438\u0442\u044C\u0441\u044F \u0432\xA0\u0441\u043F\u043E\u0440\u0442\u0437\u0430\u043B\u0435 \u0438\u043B\u0438",
 	                            React.createElement("br", null),
-	                            "\u0441\u043F\u043E\u0440\u0442\u0437\u0430\u043B\u0435 \u0438\u043B\u0438 \u0441\u0444\u043E\u043A\u0443\u0441\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F",
-	                            React.createElement("br", null),
-	                            "\u043D\u0430\xA0\u0440\u0430\u0431\u043E\u0442\u0435."
+	                            "\u0441\u0444\u043E\u043A\u0443\u0441\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F \u043D\u0430\xA0\u0440\u0430\u0431\u043E\u0442\u0435."
 	                        ),
 	                        React.createElement("div", { className: "main-top-heartWaves" }),
 	                        React.createElement(
@@ -184,15 +160,13 @@
 	                        React.createElement(
 	                            "div",
 	                            { className: "main-top__title-allULike" },
-	                            "\u0412\u0441\u0435, \u0447\u0442\u043E \u0432\u0430\u043C \u043F\u043E\u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F, \u043C\u043E\u0436\u043D\u043E",
+	                            "\u0412\u0441\u0435, \u0447\u0442\u043E \u0432\u0430\u043C \u043F\u043E\u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F, \u043C\u043E\u0436\u043D\u043E \u0441\u043E\u0445\u0440\u0430\u043D\u044F\u0442\u044C",
 	                            React.createElement("br", null),
-	                            "\u0441\u043E\u0445\u0440\u0430\u043D\u044F\u0442\u044C \u0432\xA0\u041A\u043E\u043B\u043B\u0435\u0446\u0438\u044E, \u043A\u043E\u0442\u043E\u0440\u0430\u044F \u0441\u0430\u043C\u0430",
+	                            "\u0432\xA0\u041A\u043E\u043B\u043B\u0435\u0446\u0438\u044E, \u043A\u043E\u0442\u043E\u0440\u0430\u044F \u0441\u0430\u043C\u0430 \u043F\u0440\u0435\u0432\u0440\u0430\u0449\u0430\u0435\u0442",
 	                            React.createElement("br", null),
-	                            "\u043F\u0440\u0435\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0441\u0432\u0430\u043B\u043A\u0443 \u0438\u0437\xA0\u043B\u044E\u0431\u0438\u043C\u043E\u0439 \u043C\u0443\u0437\u044B\u043A\u0438",
+	                            "\u0441\u0432\u0430\u043B\u043A\u0443 \u0438\u0437\xA0\u043B\u044E\u0431\u0438\u043C\u043E\u0439 \u043C\u0443\u0437\u044B\u043A\u0438 \u0432\xA0\u043C\u0435\u0441\u0442\u043E, \u0433\u0434\u0435 \u0432\u044B",
 	                            React.createElement("br", null),
-	                            "\u0432\xA0\u043C\u0435\u0441\u0442\u043E, \u0433\u0434\u0435 \u0432\u044B\xA0\u0435\u0449\u0451 \u0431\u044B\u0441\u0442\u0440\u0435\u0435 \u043D\u0430\u0439\u0434\u0435\u0442\u0435",
-	                            React.createElement("br", null),
-	                            "\u0432\u0441\u0451, \u0447\u0442\u043E \u043D\u0443\u0436\u043D\u043E."
+	                            "\u0435\u0449\u0451 \u0431\u044B\u0441\u0442\u0440\u0435\u0435 \u043D\u0430\u0439\u0434\u0435\u0442\u0435 \u0432\u0441\u0451, \u0447\u0442\u043E \u043D\u0443\u0436\u043D\u043E."
 	                        ),
 	                        React.createElement(
 	                            "div",
@@ -205,10 +179,10 @@
 	                            React.createElement(
 	                                "div",
 	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "item_inline functionsGroup__item-icon icon-star_color" }),
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-star_color item_inline" }),
 	                                React.createElement(
 	                                    "div",
-	                                    { className: "item_inline functionsGroup__item-title" },
+	                                    { className: "functionsGroup__item-title item_inline" },
 	                                    "\u041F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u0430\u044F \u043C\u0443\u0437\u044B\u043A\u0430 \u0438\xA0\u043D\u043E\u0432\u0438\u043D\u043A\u0438",
 	                                    React.createElement("br", null),
 	                                    "\u0432\xA0\u043E\u0434\u043D\u043E\u043C \u043C\u0435\u0441\u0442\u0435"
@@ -217,35 +191,45 @@
 	                            React.createElement(
 	                                "div",
 	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "item_inline functionsGroup__item-icon icon-butterfly_color" }),
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-butterfly_color item_inline" }),
 	                                React.createElement(
 	                                    "div",
-	                                    { className: "item_inline functionsGroup__item-title" },
+	                                    { className: "functionsGroup__item-title item_inline" },
 	                                    "\u041F\u043E\u0438\u0441\u043A, \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u0432\u0430\u0441 \u043F\u043E\u043D\u0438\u043C\u0430\u0435\u0442"
 	                                )
 	                            ),
 	                            React.createElement(
 	                                "div",
 	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "item_inline functionsGroup__item-icon icon-shazam_color" }),
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-shazam_color item_inline" }),
 	                                React.createElement(
 	                                    "div",
-	                                    { className: "item_inline functionsGroup__item-title" },
-	                                    "\u0423\u0434\u043E\u0431\u043D\u043E\u0435 \u043F\u0440\u043E\u0441\u043B\u0443\u0448\u0438\u0432\u0430\u043D\u0438\u0435",
+	                                    { className: "functionsGroup__item-title item_inline" },
+	                                    "\u0423\u0434\u043E\u0431\u043D\u043E\u0435 \u043F\u0440\u043E\u0441\u043B\u0443\u0448\u0438\u0432\u0430\u043D\u0438\u0435 \u0441\u0432\u043E\u0438\u0445",
 	                                    React.createElement("br", null),
-	                                    "\u0441\u0432\u043E\u0438\u0445 Shazam\u043E\u0432"
+	                                    "Shazam\u043E\u0432"
 	                                )
 	                            ),
 	                            React.createElement(
 	                                "div",
 	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "item_inline functionsGroup__item-icon icon-cloud_color" }),
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-cloud_color item_inline" }),
 	                                React.createElement(
 	                                    "div",
-	                                    { className: "item_inline functionsGroup__item-title" },
-	                                    "\u041A\u044D\u0448\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435, \u0447\u0442\u043E\u0431\u044B \u0441\u043B\u0443\u0448\u0430\u0442\u044C",
+	                                    { className: "functionsGroup__item-title item_inline" },
+	                                    "\u041A\u044D\u0448\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435, \u0447\u0442\u043E\u0431\u044B \u0441\u043B\u0443\u0448\u0430\u0442\u044C \u043C\u0443\u0437\u044B\u043A\u0443",
 	                                    React.createElement("br", null),
-	                                    "\u043C\u0443\u0437\u044B\u043A\u0443 \u0431\u0435\u0437 \u043F\u043E\u043C\u0435\u0445"
+	                                    "\u0431\u0435\u0437 \u043F\u043E\u043C\u0435\u0445"
+	                                )
+	                            ),
+	                            React.createElement(
+	                                "div",
+	                                { className: "functionsGroup__item" },
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-lightning_color item_inline" }),
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "functionsGroup__item-title item_inline" },
+	                                    "\u0421\u0436\u0430\u0442\u0438\u0435 \u043C\u043E\u0431\u0438\u044C\u043D\u043E\u0433\u043E \u0442\u0440\u0430\u0444\u0438\u043A\u0430"
 	                                )
 	                            ),
 	                            React.createElement(
@@ -255,10 +239,9 @@
 	                                React.createElement(
 	                                    "div",
 	                                    { className: "functionsGroup__item-title item_inline" },
-	                                    "\u041B\u044E\u0431\u0438\u043C\u044B\u0435 \u0442\u0440\u0435\u043A\u0438 \u0432\u0441\u0435\u0433\u0434\u0430 \u0441 \u0432\u0430\u043C\u0438",
+	                                    "\u041B\u044E\u0431\u0438\u043C\u044B\u0435 \u0442\u0440\u0435\u043A\u0438 \u0432\u0441\u0435\u0433\u0434\u0430 \u0441 \u0432\u0430\u043C\u0438 \u0432",
 	                                    React.createElement("br", null),
-	                                    "\u0432 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0438 \u0438 \u043D\u0430 \u0441\u0430\u0439\u0442\u0435",
-	                                    React.createElement("br", null),
+	                                    "\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0438 \u0438 \u043D\u0430 \u0441\u0430\u0439\u0442\u0435 ",
 	                                    React.createElement(
 	                                        "a",
 	                                        { href: "http://zvooq.com/", target: "_blank" },
@@ -289,50 +272,50 @@
 	                            React.createElement(
 	                                "div",
 	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "item_inline functionsGroup__item-icon icon-download_black" }),
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-download_black item_inline" }),
 	                                React.createElement(
 	                                    "div",
-	                                    { className: "functionsGroup__item-title" },
+	                                    { className: "functionsGroup__item-title item_inline" },
 	                                    "\u0421\u043A\u0430\u0447\u0438\u0432\u0430\u043D\u0438\u0435 \u043C\u0443\u0437\u044B\u043A\u0438 \u0432\xA0\u0442\u0435\u043B\u0435\u0444\u043E\u043D"
 	                                )
 	                            ),
 	                            React.createElement(
 	                                "div",
 	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "item_inline functionsGroup__item-icon icon-plane_black" }),
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-plane_black item_inline" }),
 	                                React.createElement(
 	                                    "div",
-	                                    { className: "item_inline functionsGroup__item-title" },
+	                                    { className: "functionsGroup__item-title item_inline" },
 	                                    "\u041F\u0440\u043E\u0441\u043B\u0443\u0448\u0438\u0432\u0430\u043D\u0438\u0435 \u0431\u0435\u0437 \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u0430"
 	                                )
 	                            ),
 	                            React.createElement(
 	                                "div",
 	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "item_inline functionsGroup__item-icon icon-diamond_black" }),
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-rewind_black item_inline" }),
 	                                React.createElement(
 	                                    "div",
-	                                    { className: "item_inline functionsGroup__item-title" },
-	                                    "\u041C\u0443\u0437\u044B\u043A\u0430 \u0432\xA0\u0432\u044B\u0441\u043E\u043A\u043E\u043C \u043A\u0430\u0447\u0441\u0442\u0432\u0435"
-	                                )
-	                            ),
-	                            React.createElement(
-	                                "div",
-	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "item_inline functionsGroup__item-icon icon-rewind_black" }),
-	                                React.createElement(
-	                                    "div",
-	                                    { className: "item_inline functionsGroup__item-title" },
+	                                    { className: "functionsGroup__item-title item_inline" },
 	                                    "\u0411\u0435\u0437\u043B\u0438\u043C\u0438\u0442\u043D\u0430\u044F \u043F\u0435\u0440\u0435\u043C\u043E\u0442\u043A\u0430"
 	                                )
 	                            ),
 	                            React.createElement(
 	                                "div",
 	                                { className: "functionsGroup__item" },
-	                                React.createElement("div", { className: "item_inline functionsGroup__item-icon icon-butterfly_black" }),
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-diamond_black item_inline" }),
 	                                React.createElement(
 	                                    "div",
-	                                    { className: "item_inline functionsGroup__item-title" },
+	                                    { className: "functionsGroup__item-title item_inline" },
+	                                    "\u041C\u0443\u0437\u044B\u043A\u0430 \u0432\xA0\u0432\u044B\u0441\u043E\u043A\u043E\u043C \u043A\u0430\u0447\u0441\u0442\u0432\u0435"
+	                                )
+	                            ),
+	                            React.createElement(
+	                                "div",
+	                                { className: "functionsGroup__item" },
+	                                React.createElement("div", { className: "functionsGroup__item-icon icon-butterfly_black item_inline" }),
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "functionsGroup__item-title item_inline" },
 	                                    "\u041D\u0438\u043A\u0430\u043A\u043E\u0439 \u0440\u0435\u043A\u043B\u0430\u043C\u044B"
 	                                )
 	                            )
@@ -357,8 +340,8 @@
 	                        ),
 	                        React.createElement(
 	                            "div",
-	                            { className: "installBtn installBtn_tryIt appStoreBtn" },
-	                            React.createElement("a", { href: "https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8", target: "_blank" })
+	                            { className: "installBtn installBtn_tryIt googlePlayBtn" },
+	                            React.createElement("a", { href: "https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en", target: "_blank" })
 	                        )
 	                    )
 	                ),
@@ -373,9 +356,9 @@
 	                            { className: "main-partners__title" },
 	                            "\u041E\u0441\u043E\u0431\u044B\u0435 \u0443\u0441\u043B\u043E\u0432\u0438\u044F",
 	                            React.createElement("br", null),
-	                            "\u0434\u043B\u044F \u043A\u043B\u0438\u0435\u043D\u0442\u043E\u0432",
+	                            "\u0434\u043B\u044F \u043A\u043B\u0438\u0435\u043D\u0442\u043E\u0432 \u043D\u0430\u0448\u0438\u0445",
 	                            React.createElement("br", null),
-	                            "\u043D\u0430\u0448\u0438\u0445 \u043F\u0430\u0440\u0442\u043D\u0435\u0440\u043E\u0432"
+	                            "\u043F\u0430\u0440\u0442\u043D\u0435\u0440\u043E\u0432"
 	                        ),
 	                        React.createElement("div", { className: "main-partners__table" }),
 	                        React.createElement(
@@ -398,13 +381,13 @@
 	                            ),
 	                            React.createElement(
 	                                "a",
-	                                { className: "main-links_normal", href: "mailto:helpme@zvooq.com", target: "_blank" },
+	                                { className: "main-links_normal", href: "mailto:saveme@zvooq.com", target: "_blank" },
 	                                "\u041F\u043E\u043E\u0431\u0449\u0430\u0442\u044C\u0441\u044F \u0441\xA0\u043D\u0430\u0448\u0438\u043C support"
 	                            ),
 	                            React.createElement(
 	                                "a",
-	                                { className: "main-links__normal", href: "https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en", target: "_blank" },
-	                                "Zvooq \u0434\u043B\u044F Android"
+	                                { className: "main-links__normal", href: "https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8", target: "_blank" },
+	                                "Zvooq \u0434\u043B\u044F iOS"
 	                            )
 	                        )
 	                    )
@@ -414,7 +397,7 @@
 	    }
 	});
 
-	ReactDOM.render(React.createElement(MainIos, null), document.getElementById('page-content'));
+	ReactDOM.render(React.createElement(MainDesktop, null), document.getElementById('page-content'));
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(34)))
 
 /***/ },
@@ -21800,8 +21783,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./ios.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./ios.styl");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./desktop.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./desktop.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -21819,7 +21802,7 @@
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: \"SFUIDisplay-Heavy\";\n  src: url(\"/../../fonts/SF/SFUIDisplay-Heavy.otf\");\n  font-style: normal;\n}\n@font-face {\n  font-family: \"SFUIDisplay-Regular\";\n  src: url(\"/../../fonts/SF/SFUIDisplay-Regular.otf\");\n  font-style: normal;\n}\n@font-face {\n  font-family: \"SFUIDisplay-Black\";\n  src: url(\"/../../fonts/SF/SFUIDisplay-Black.otf\");\n  font-style: normal;\n}\na,\na:hover,\na:focus,\ninput,\ninput:focus,\nselect,\nselect:focus,\ntextarea,\ntextarea:focus {\n  outline: none;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\ninput[type=\"search\"]::-webkit-search-decoration,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  cursor: pointer;\n  -webkit-appearance: button;\n  background-color: transparent;\n}\nhtml {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n}\nbody,\nhtml,\np,\nb,\ninput,\nbutton,\nh1,\nh2,\nh3 {\n  margin: 0;\n  padding: 0;\n  border: none;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\ninput {\n  background-color: transparent;\n  -webkit-appearance: none;\n}\nbutton:focus {\n  outline: none;\n}\n@media screen and (max-width: 510px) {\n  .main {\n    background-color: #000;\n    color: #fff;\n    z-index: 0;\n  }\n  .main-containerWrapper {\n    width: 100%;\n    height: 100%;\n    overflow: hidden;\n  }\n  .main .installBtn.appStoreBtn {\n    background-color: #000;\n    background-image: url(\"/../img/ios/appStoreBtn.png\");\n    background-repeat: no-repeat;\n    background-position: center;\n    background-size: cover;\n    border-radius: 6px;\n    width: 199px;\n    height: 59px;\n  }\n  .main .item_inline {\n    display: inline-block;\n  }\n  .main-content {\n    margin: 0 30px;\n    z-index: 6;\n  }\n  .main-top {\n    background-color: #000;\n    position: relative;\n    text-align: left;\n    z-index: 1;\n  }\n  .main-top__mini-phones {\n    position: absolute;\n    background-image: url(\"/../img/ios/mini-phones_ios.png\");\n    background-repeat: no-repeat;\n    background-position: -89px -128px;\n    background-size: 100%;\n    background-color: transparent;\n    width: 488px;\n    height: 537px;\n    left: 0px;\n    top: 0px;\n    z-index: 3;\n  }\n  .main-top_gradient {\n    background: linear-gradient(to bottom, #482bd8 33%, rgba(72,43,216,0.39) 59%, rgba(53,32,160,0.25) 71%, rgba(0,0,0,0.25) 100%);\n    background-color: transparent;\n    width: 100%;\n    height: 1190px;\n    position: absolute;\n    z-index: -1;\n  }\n  .main-top__best-stiсker_up {\n    border-radius: 50%;\n    width: 195px;\n    height: 195px;\n    position: absolute;\n    top: 55px;\n    right: -20px;\n    background-image: url(\"/../img/ios/oval-sticker.png\");\n    background-repeat: no-repeat;\n    background-size: cover;\n    text-align: center;\n    transform: rotate(22deg);\n    z-index: 5;\n  }\n  .main-top__best-stiсker_up .stiсker-text {\n    font-family: \"SFUIDisplay-Regular\";\n    font-size: 14px;\n    line-height: 19px;\n    text-align: center;\n    margin-top: 38px;\n  }\n  .main-top__best-stiсker_up .AppStore {\n    width: 66px;\n    height: 15px;\n    padding-top: 13px;\n  }\n  .main-top .zvooq-logo {\n    width: 59px;\n    height: 59px;\n    border-radius: 4px;\n    margin-bottom: 24px;\n    margin-top: 125px;\n    z-index: 7;\n  }\n  .main-top__title-Zvooq {\n    background-image: url(\"/../img/title-Zvooq.svg\");\n    background-repeat: no-repeat;\n    background-position: center;\n    background-size: cover;\n    width: 150px;\n    height: 76px;\n    margin-bottom: 28px;\n    z-index: 7;\n  }\n  .main-top .installBtn.installBtn_top.appStoreBtn {\n    margin-bottom: 31px;\n    z-index: 7;\n  }\n  .main-top__title-music {\n    position: relative;\n    font-family: \"SFUIDisplay-Heavy\";\n    font-size: 50px;\n    line-height: 45px;\n    margin-bottom: 34px;\n    text-align: left;\n    z-index: 7;\n  }\n  .main-top__title-music .icon-note {\n    display: inline-block;\n    position: relative;\n    top: 5px;\n    left: 3px;\n    background-image: url(\"/../img/icon-note.svg\");\n    background-repeat: no-repeat;\n    width: 32px;\n    height: 37px;\n    z-index: 8;\n  }\n  .main-top__title-listenFree {\n    font-family: \"SFUIDisplay-Heavy\";\n    font-size: 25px;\n    line-height: 28px;\n    margin-bottom: 13.28px;\n    text-align: left;\n    z-index: 7;\n  }\n  .main-top__title-torrents,\n  .main-top__title-trial {\n    font-family: \"SFUIDisplay-Regular\";\n    font-weight: 100;\n    font-size: 14px;\n    line-height: 19px;\n    text-align: left;\n    margin-bottom: 10px;\n    z-index: 7;\n  }\n  .main-top-group25 {\n    text-align: center;\n    position: relative;\n    z-index: 7;\n  }\n  .main-top-group25__title-25 {\n    color: #e93889;\n    font-family: \"SFUIDisplay-Black\";\n    font-size: 210px;\n    line-height: 210px;\n    width: 100%;\n    text-align: center;\n    z-index: 8;\n  }\n  .main-top-group25__title-million {\n    z-index: 10000;\n    position: absolute;\n    top: 42%;\n    width: 100%;\n    color: #fff;\n    font-family: \"SFUIDisplay-Heavy\";\n    font-size: 25px;\n    line-height: 28px;\n    text-align: center;\n    z-index: 9;\n  }\n  .main-top-playGroup {\n    height: 418px;\n    width: 100%;\n    position: relative;\n    z-index: 7;\n  }\n  .main-top-playGroup .play-home,\n  .main-top-playGroup .play-vk,\n  .main-top-playGroup .play-training {\n    position: absolute;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-size: cover;\n    z-index: 10;\n  }\n  .main-top-playGroup .play-home {\n    background-image: url(\"/../img/ios/play-home-ios.png\");\n    width: 318px;\n    height: 208.85px;\n    right: -30px;\n    top: 0px;\n    z-index: 14;\n  }\n  .main-top-playGroup .play-vk {\n    background-image: url(\"/../img/ios/play-vk-ios.png\");\n    width: 321px;\n    height: 167.9px;\n    left: 19%;\n    top: 69px;\n    z-index: 11;\n  }\n  .main-top-playGroup .play-training {\n    background-image: url(\"/../img/ios/play-training-ios.png\");\n    width: 318px;\n    height: 208.85px;\n    left: -30px;\n    bottom: 0px;\n    z-index: 12;\n  }\n  .main-top__title-thousand {\n    margin-top: -10px;\n    margin-bottom: 7px;\n    font-family: \"SFUIDisplay-Heavy\";\n    font-size: 25px;\n    line-height: 28px;\n    text-align: left;\n  }\n  .main-top__title-oneClick {\n    font-family: \"SFUIDisplay-Regular\";\n    font-size: 14px;\n    line-height: 19px;\n    text-align: left;\n    margin-bottom: 10px;\n    z-index: 10;\n  }\n  .main-top-heartWaves {\n    position: relative;\n    left: -30px;\n    background-image: url(\"/../img/heartWaves.svg\");\n    background-repeat: no-repeat;\n    background-position: center;\n    background-size: cover;\n    width: 268px;\n    height: 147px;\n    z-index: 6;\n  }\n  .main-top__title-smart {\n    font-family: \"SFUIDisplay-Heavy\";\n    font-size: 25px;\n    line-height: 28px;\n    text-align: left;\n    margin-bottom: 10px;\n    z-index: 10;\n  }\n  .main-top__title-allULike {\n    font-family: \"SFUIDisplay-Regular\";\n    font-size: 14px;\n    line-height: 19px;\n    text-align: left;\n    margin-bottom: 26px;\n  }\n  .main-top__title-etc {\n    font-family: \"SFUIDisplay-Heavy\";\n    font-size: 25px;\n    line-height: 28px;\n    text-align: left;\n    margin-bottom: 15px;\n  }\n  .main-top-functionsGroup {\n    margin-right: -30px;\n    margin-bottom: 20px;\n  }\n  .main-top-functionsGroup .functionsGroup__item {\n    border-bottom: 1px solid #4a4a4a;\n    padding: 6px 0;\n    display: flex;\n    align-items: flex-start;\n  }\n  .main-top-functionsGroup .functionsGroup__item:last-child {\n    border-bottom: none;\n  }\n  .main-top-functionsGroup .functionsGroup__item-title {\n    font-family: \"SFUIDisplay-Regular\";\n    font-size: 14px;\n    line-height: 19px;\n    text-align: left;\n  }\n  .main-top-functionsGroup .functionsGroup__item-title a {\n    color: #fff;\n    text-decoration: none;\n  }\n  .main-top-functionsGroup .functionsGroup__item-icon {\n    margin-top: 2px;\n    margin-right: 19px;\n    background-repeat: no-repeat;\n    background-position: top left;\n    background-size: 100%;\n  }\n  .main-top-functionsGroup .functionsGroup__item-icon.icon-star_color {\n    background-image: url(\"/../img/icon-star_color.svg\");\n    width: 15px;\n    height: 14px;\n  }\n  .main-top-functionsGroup .functionsGroup__item-icon.icon-butterfly_color {\n    background-image: url(\"/../img/icon-butterfly_color.svg\");\n    width: 14px;\n    height: 12px;\n  }\n  .main-top-functionsGroup .functionsGroup__item-icon.icon-shazam_color {\n    background-image: url(\"/../img/icon-shazam_color.png\");\n    width: 13.3px;\n    height: 13.34px;\n  }\n  .main-top-functionsGroup .functionsGroup__item-icon.icon-cloud_color {\n    background-image: url(\"/../img/icon-cloud_color.svg\");\n    width: 15px;\n    height: 10px;\n  }\n  .main-top-functionsGroup .functionsGroup__item-icon.icon-fire_color {\n    background-image: url(\"/../img/icon-fire_color.svg\");\n    width: 9px;\n    height: 13px;\n  }\n  .main-premium {\n    position: relative;\n    background-color: #fff;\n    width: 97.5%;\n    padding: 27px 0 5px;\n    border-radius: 10px;\n    margin: 0 auto;\n    z-index: 3;\n  }\n  .main-premium .main-content {\n    margin-right: 0;\n  }\n  .main-premium .icon-cherry {\n    width: 67px;\n    height: 67px;\n    background-image: url(\"/../img/icon-cherry.svg\");\n    background-repeat: no-repeat;\n    background-position: center;\n    background-size: cover;\n    border-radius: 50%;\n  }\n  .main-premium__title {\n    margin-top: 17px;\n    margin-bottom: 27px;\n    color: #000;\n    font-family: \"SFUIDisplay-Heavy\";\n    font-size: 25px;\n    line-height: 28px;\n    text-align: left;\n  }\n  .main-premium-functionsGroup {\n    padding-bottom: 15px;\n  }\n  .main-premium .functionsGroup__item {\n    padding-bottom: 15px;\n    display: flex;\n    align-items: center;\n  }\n  .main-premium .functionsGroup__item-title {\n    color: #000;\n    font-family: \"SFUIDisplay-Regular\";\n    font-size: 16px;\n    line-height: 20px;\n  }\n  .main-premium .functionsGroup__item-icon {\n    margin-right: 15px;\n    background-repeat: no-repeat;\n    background-position: top left;\n    background-size: 20px 20px;\n    width: 20px;\n    height: 20px;\n  }\n  .main-premium .functionsGroup__item .icon-download_black {\n    background-image: url(\"/../img/ios/icon-download-ios.svg\");\n  }\n  .main-premium .functionsGroup__item .icon-plane_black {\n    background-image: url(\"/../img/ios/icon-plane-ios.svg\");\n  }\n  .main-premium .functionsGroup__item .icon-rewind_black {\n    background-image: url(\"/../img/ios/icon-rewind-ios.svg\");\n  }\n  .main-premium .functionsGroup__item .icon-diamond_black {\n    background-image: url(\"/../img/ios/icon-diamond-ios.svg\");\n  }\n  .main-premium .functionsGroup__item .icon-butterfly_black {\n    background-image: url(\"/../img/ios/icon-butterfly-ios.svg\");\n  }\n  .main-tryIt {\n    position: relative;\n    width: 100%;\n    background-color: #000;\n    background-image: url(\"/../img/tryIt_gradient.png\");\n    background-repeat: no-repeat;\n    background-position: -5px -96px;\n    background-size: 104%;\n    padding: 72px 0 25px;\n    margin-top: -40px;\n    z-index: 1;\n  }\n  .main-tryIt__title-try {\n    font-family: \"SFUIDisplay-Heavy\";\n    font-size: 25px;\n    line-height: 28px;\n    text-align: left;\n    margin-bottom: 4px;\n  }\n  .main-tryIt__title-free {\n    font-family: \"SFUIDisplay-Regular\";\n    font-size: 14px;\n    line-height: 19px;\n    margin-bottom: 21px;\n  }\n  .main-partners {\n    background-color: #2c2c2c;\n    width: 100%;\n    padding: 25px 0 45px;\n  }\n  .main-partners__title {\n    color: #817e82;\n    font-family: \"SFUIDisplay-Heavy\";\n    font-size: 25px;\n    line-height: 28px;\n    text-align: left;\n    margin-bottom: 19px;\n  }\n  .main-partners__table {\n    background-image: url(\"/../img/partners-icons.png\");\n    background-repeat: no-repeat;\n    background-position: center;\n    background-size: cover;\n    width: 320px;\n    height: 320px;\n    margin-bottom: 19px;\n    margin-left: -30px;\n  }\n  .main-partners a {\n    display: block;\n    color: #9b9b9b;\n  }\n  .main-partners .main-links_bold {\n    font-family: \"SFUIDisplay-Regular\";\n    font-size: 18px;\n    line-height: 19px;\n    text-align: left;\n    margin-bottom: 18px;\n    color: #fff;\n  }\n  .main-partners .main-links_normal {\n    font-family: \"SFUIDisplay-Regular\";\n    font-weight: 100;\n    font-size: 14px;\n    line-height: 19px;\n    margin-bottom: 14px;\n    text-align: left;\n  }\n}\n", ""]);
+	exports.push([module.id, "a,\na:hover,\na:focus,\ninput,\ninput:focus,\nselect,\nselect:focus,\ntextarea,\ntextarea:focus {\n  outline: none;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\ninput[type=\"search\"]::-webkit-search-decoration,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  cursor: pointer;\n  -webkit-appearance: button;\n  background-color: transparent;\n}\nhtml {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n}\nbody,\nhtml,\np,\nb,\ninput,\nbutton,\nh1,\nh2,\nh3 {\n  margin: 0;\n  padding: 0;\n  border: none;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\ninput {\n  background-color: transparent;\n  -webkit-appearance: none;\n}\nbutton:focus {\n  outline: none;\n}\n.main {\n  background: linear-gradient(to bottom, #482bd8 33%, rgba(72,43,216,0.39) 59%, rgba(53,32,160,0.25) 71%, rgba(0,0,0,0.25) 100%);\n  background-color: #000;\n}\n.main-containerWrapper {\n  width: 1441px;\n  height: 100%;\n  margin: 0 auto;\n}\n", ""]);
 
 	// exports
 

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="158px" height="158px" viewBox="0 0 158 158" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1 Copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="15" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.490196078   0 0 0 0 0.0117647059  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-2">
+            <stop stop-color="#FFB92D" offset="0%"></stop>
+            <stop stop-color="#FF7800" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#E1FAFF" offset="0%"></stop>
+            <stop stop-color="#BBF1FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Zvooq_Web_Landing" transform="translate(-471.000000, -3062.000000)">
+            <g id="6_Premium" transform="translate(208.000000, 3008.000000)">
+                <g id="Icon_2" transform="translate(252.500000, 83.000000)">
+                    <g id="Page-1-Copy-3" filter="url(#filter-1)" transform="translate(39.500000, 0.000000)">
+                        <path d="M100,50 C100,77.6140625 77.6140625,100 50,100 C22.3859375,100 0,77.6140625 0,50 C0,22.3859375 22.3859375,0 50,0 C77.6140625,0 100,22.3859375 100,50" id="Fill-1" fill="url(#radialGradient-2)"></path>
+                        <path d="M44.1139957,20.4068502 L44.1139957,38.1627401 L14.6836063,57.8917532 L14.6836063,63.8103832 L44.1139957,58.8779449 L44.1139957,71.7013966 L32.3418399,79.5931498 L32.3418399,85.5117798 L50.0000736,79.5931498 L50.0000736,14.4882202 C46.7627307,14.4882202 44.1139957,17.1516037 44.1139957,20.4068502" id="Fill-3" fill="#FFFFFF"></path>
+                        <path d="M55.8860043,20.4068502 L55.8860043,38.1627401 L85.3163937,57.8917532 L85.3163937,63.8103832 L55.8860043,58.8779449 L55.8860043,71.7013966 L67.6581601,79.5931498 L67.6581601,85.5117798 L49.9999264,79.5931498 L49.9999264,14.4882202 C53.2372693,14.4882202 55.8860043,17.1516037 55.8860043,20.4068502" id="Fill-5" fill="url(#linearGradient-3)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
