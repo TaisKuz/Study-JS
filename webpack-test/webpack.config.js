@@ -3,8 +3,9 @@ let
     webpack = require('webpack');
 
 module.exports = {
-    entry: "./scripts/android.js",
-    //entry: "./scripts/ios.js",
+    //entry: "./scripts/desktop.js",
+    //entry: "./scripts/android.js",
+    entry: "./scripts/ios.js",
     output: {
         path: __dirname + '/scripts/',
         filename: "bundle.js"

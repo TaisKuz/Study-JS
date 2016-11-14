@@ -86,6 +86,14 @@ var MainIos = React.createClass({
                                     <div className="item_inline functionsGroup__item-icon icon-cloud_color"></div>
                                     <div className="item_inline functionsGroup__item-title">Кэширование, чтобы слушать<br/>музыку без помех</div>
                                 </div>
+                                <div className="functionsGroup__item">
+                                    <div className="functionsGroup__item-icon icon-fire_color item_inline"></div>
+                                    <div className="functionsGroup__item-title item_inline">
+                                        Любимые треки всегда с вами<br/>
+                                        в приложении и на сайте<br/>
+                                        <a href="http://zvooq.com/" target="_blank">zvooq.com</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
