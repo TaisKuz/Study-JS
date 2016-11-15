@@ -6,9 +6,10 @@
 @import '/variables.styl'
 
 .desktop
-  background linear-gradient(to bottom, rgba(72,43,216,1) 33%,rgba(72,43,216,0.39) 59%,rgba(53,32,160,0.25) 71%,rgba(0,0,0,0.25) 100%)
+  background linear-gradient(to bottom, rgba(72,43,216,1) 9%,rgba(72,43,216,0.39) 16%,rgba(53,32,160,0.25) 19%,rgba(0,0,0,0.25) 50%)
   background-color #000000
   color: #fff
+  padding-top: 1px
 
   &-containerWrapper
     width 1441px
@@ -24,20 +25,49 @@
     margin: 0 auto
     text-align center
 
-  &-arrow
-    .main-arrow_left
-      height 15px
-      background-image url("/../img/desktop/arrowLeft.svg")
-      background-repeat no-repeat
-      background-size: 8px 15px
-      background-position left center
-      text-align left
+  &-arrows
+    position: fixed
+    background-color transparent
+    top 45px
+    left: 16%
+    margin: 0 auto
+    z-index 10000
 
-    .arrow__title
-      display inline-block
-      height 15px
-      vertical-align middle
-      padding: 0 22px
+  &-arrows .desktop-content
+    display flex
+    align-items center
+    justify-content space-between
+    flex-wrap nowrap
+    width: 1029px
+    margin: 0 auto
+
+  &-arrow_left
+    height 23px
+    width 300px
+    background-image url("/../img/desktop/arrowLeft.svg")
+    background-repeat no-repeat
+    background-size: 8px 15px
+    background-position 0 1px
+    text-align left
+
+
+  &-arrow_right
+    height 23px
+    width 300px
+    background-image url("/../img/desktop/arrowRight.svg")
+    background-repeat no-repeat
+    background-size: 8px 15px
+    background-position right 1px
+    text-align right
+
+  & .arrow__title
+    display block
+    height 15px
+    vertical-align middle
+    padding: 0 16px
+    cursor pointer
+    color #ffffff
+    text-decoration none
 
   &-top
     text-align: center
@@ -83,11 +113,13 @@
         left 3px
         background-image url("/../img/desktop/iconNote.svg")
         background-repeat no-repeat
+        background-size 49px 57px
         width 49px
         height 57px
+        margin 0 8px
 
     &-getSms_form
-      text-align center
+      display block
       margin-bottom 36px
 
       .getSms_form__title
@@ -98,17 +130,21 @@
         margin-bottom 10px
 
       .getSms_form_input
+        text-align center
         width 327px
         color #D2D2D2
         font-family: "MuseoSansCyrl-regular", Arial, sans-serif
         font-size: 20px
         line-height 28px
-        margin-bottom 9px
+        margin: 0 auto 9px
         padding 11px 0 12px
         background-color #ffffff
         border-radius 5px
+        display block
 
       .getSms_form_submit
+        display block
+        text-align center
         width 336px
         color #ffffff
         font-family: "MuseoSansCyrl-regular", Arial, sans-serif
@@ -117,6 +153,7 @@
         padding 12px 0 11px
         background-color #F82D8E
         border-radius 25px
+        margin: 0 auto
 
     &-phones
       position relative
@@ -133,8 +170,8 @@
         width 154px
         height 154px
         position absolute
-        top -10px
-        right 30%px
+        top -3px
+        right 305px
         background: linear-gradient(to bottom, rgba(0,255,171,1) 0%,rgba(174,255,224,1) 100%);
         text-align center
         transform rotate(15deg)
@@ -143,18 +180,19 @@
         .stiсker-text
           color: #000000
           font-family: "MuseoSansCyrl-regular", Arial, sans-serif
-          font-size: 20px
-          line-height: 28px
+          font-size: 15px
+          line-height: 19px
           text-align: center
-          margin-top: 38px
+          margin-top: 29px
 
         .AppStore
-          width 64px
-          height 14px
-          padding-top 13px
-          background-image url("/../img/desktop/appStore.svg")
-          background-repeat no-repeat
-          background-size 64px 14px
+          width: 80px
+          height: 4px
+          padding-top: 13px
+          background-image: url('/../img/desktop/appStore.svg')
+          background-repeat: no-repeat
+          background-size: cover
+          margin: 7px auto 10px
 
     &__title-listenFree
       font-family: "MuseoSansCyrl-medium", Arial, sans-serif
@@ -215,10 +253,10 @@
       position relative
       background-image url("/../img/desktop/heartWaves.svg")
       background-repeat no-repeat
-      background-position center
-      background-size 490px 490px
-      width 1029px
-      height 490px
+      background-position: center -72px
+      background-size: 490px 490px
+      width: 1029px
+      height: 304px
       z-index 6
 
     &__title-smart
@@ -253,40 +291,38 @@
       flex-wrap nowrap
       margin-bottom: 32px
 
-      .functionsGroup__item
+      .premiumGroup__item
         text-align center
 
-        &-icon
-          width: 100px
-          height: 100px
+        .premiumGroup__item-icon
+          width: 150px
+          height: 150px
           background-repeat no-repeat
           background-position center
-          background-size 100px 100px
+          background-size 150px 150px
           border-radius 50%
-          margin-bottom 13px
+          margin 0 auto 13px
 
           &.icon-cloud
-            background-image url("/../img/desktop/iconeCloud.svg")
-            box-shadow 0px 2px 30px 0px #27CAF5
-          &.icon-plane
-            background-image url("/../img/desktop/iconePlane.svg")
-            box-shadow 0px 2px 30px 0px #FF7D03
-          &.icon-diamond
-            background-image url("/../img/desktop/iconeDiamond.svg")
-            box-shadow 0px 0px 35px 0px #6B13B3
-          &.icon-rewind
-            background-image url("/../img/desktop/iconeRewind.svg")
-            box-shadow 0px 2px 30px 0px #D00665
-          &.icon-butterfly
-            background-image url("/../img/desktop/iconeButterfly.svg")
-            box-shadow 0px 0px 30px 0px #1515B1
+            background-image url("/../img/desktop/iconCloud.svg")
 
-        &-item-title
+          &.icon-plane
+            background-image url("/../img/desktop/iconPlane.svg")
+
+          &.icon-diamond
+            background-image url("/../img/desktop/iconDiamond.svg")
+
+          &.icon-rewind
+            background-image url("/../img/desktop/iconRewind.svg")
+
+          &.icon-butterfly
+            background-image url("/../img/desktop/iconButterfly.svg")
+
+        .premiumGroup-item-title
           text-align center
           font-family "MuseoSansCyrl-medium", Arial, sans-serif
           font-size 20px
           line-height 28px
-          text-align center
 
     &__button
       width 336px
@@ -296,16 +332,19 @@
       line-height 28px
       padding 12px 0 11px
       background-color #F82D8E
-      border-radius 12px
+      border-radius 25px
 
-    &-etc__title
+  &-top-etc
+    text-align center
+
+    &__title
       font-family "MuseoSansCyrl-medium", Arial, sans-serif
       font-size 42px
       line-height 52px
       text-align center
       margin-bottom 24px
 
-    &-functionsGroup
+    .functionsGroup
       margin-bottom 20px
       text-align center
 
@@ -325,13 +364,17 @@
           text-align left
 
         &-column
-          display inline-block
+          display inline-flex
+          align-items flex-start
           text-align left
 
           &.column_left
             margin-right 45px
             width 354px
             text-align left
+
+          &.column_right
+            max-width: 620px
 
         &-icon
           width 41px
@@ -346,12 +389,12 @@
 
           &.item-icon-android
             background-image url("/../img/desktop/iconAndroid.svg")
-            background-position 10px top
+            background-position 24px top
             background-size 16px 19px
 
           &.item-icon-globe
             background-image url("/../img/desktop/iconGlobe.svg")
-            background-position 10px top
+            background-position 20px top
             background-size 20px 20px
 
           &-title
@@ -363,11 +406,11 @@
   &-partners
     background-color #2C2C2C
     width 100%
-    padding 22px 0 25px
+    padding 32px 0 120px
     text-align center
 
     &__title
-      color #817E82
+      color #ffffff
       font-family "MuseoSansCyrl-medium", Arial, sans-serif
       font-size 42px
       line-height 52px
@@ -375,7 +418,7 @@
       margin-bottom 24px
 
     &__table
-      background-image url("/../img/partnersLogos.png")
+      background-image url("/../img/desktop/partnersLogos.png")
       background-repeat no-repeat
       background-position center
       background-size cover
@@ -406,11 +449,17 @@
 
   &-footer
     position fixed
+    bottom 0
     background-color #00FFAB
     width 100%
-    padding 25px 0
-    text-align left
-    z-index 10000
+    padding 20px 0
+    text-align center
+    z-index 100003
+
+    .desktop-content
+      display flex
+      align-items flex-start
+      justify-content space-between
 
     &__icon-logos
       display inline-block
@@ -423,6 +472,7 @@
       margin-left 10px
 
     &__title
+      display inline-block
       color #000000
       font-family "MuseoSansCyrl-regular", Arial, sans-serif
       font-size 20px
@@ -432,20 +482,23 @@
     &__form
       display inline-block
       position relative
-      right 10px
+      right -28px
 
       &-input
-        width 335px
+        text-align left
+        width 282px
         color #D2D2D2
         font-family: "MuseoSansCyrl-regular", Arial, sans-serif
         font-size: 20px
         line-height 28px
-        padding 11px 0 12px
+        padding 11px 0 12px 38px
         background-color #ffffff
         border-radius 25px
 
       &-submit
         width 239px
+        position: relative
+        left: -51px
         padding 11px 0 12px
         background-color #482BD8
         color #D2D2D2
