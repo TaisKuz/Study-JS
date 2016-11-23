@@ -1,5 +1,3 @@
-import './../../css/loginPopup/loginPopup.css'; //comment it later
-
 import './../../stylus/loginPopup/loginPopup.styl';
 
 import { LoginMain } from './loginMain.js';

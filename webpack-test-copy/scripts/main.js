@@ -1,8 +1,3 @@
-//import './../css/style.css'; //comment it later
-
-import './../stylus/fonts/MuseoSansCyrl-normal.styl';
-import './../stylus/fonts/MuseoSansCyrl-thin.styl';
-import './../stylus/reset.styl';
 import './../stylus/main.styl';
 
 import { InstallBox } from './installBox.js';
@@ -63,37 +58,42 @@ var MainPage = React.createClass({
         return (
             <div className="main">
                 <div className="main-containerWrapper">
-                    <div className="main-row-1">
-                        <a href="http://zvooq.com" target="_blank"> <img src="/img/Zvooq-logo.svg" alt="Zvooq-logo" /> </a>
-                        <a href="http://www.shazam.com" target="_blank"> <img src="/img/Shazam-logo.png" alt="Shazam-logo" /> </a>
-                    </div>
-                    <div className="main-pageTitle">Чтобы попробовать новые возможности,<br/>
-                        <div className="main-singIn"
-                             onClick={this.loginPopupHandler}>войдите </div>
-                        в&nbsp;бесплатное приложение Zvooq</div>
-
-                    <div className="main-row-2">
-                        <div className="main-column main-column-1">
-                            <img src="/img/iphone-white.png" alt="iphone-white" />
-                            <img src="/img/iphone-black.png" alt="iphone-black" />
+                    <div className="main-logos">
+                        <div className="main-logos-zvooq">
+                            <a className="main-logos-zvooq__link" href="http://zvooq.com" target="_blank" />
                         </div>
-                        <div className="main-column main-column-2">
-                            <p>Теперь ваши открытия будут всегда под рукой!</p>
-                            <p>Вы&nbsp;сможете Shazamить треки прямо из&nbsp;Zvooq сразу слушать их&nbsp;и&nbsp;моментально добавлять в&nbsp;свою коллекцию.</p>
+                        <div className="main-logos-shazam">
+                            <a className="main-logos-shazam__link" href="http://www.shazam.com" target="_blank" />
+                        </div>
+                    </div>
+                    <div className="main-pageTitle">
+                        Чтобы попробовать новые возможности,<br/>
+                        <div className="main-pageTitle-singIn" onClick={this.loginPopupHandler}>войдите </div>
+                        в&nbsp;бесплатное приложение Zvooq
+                    </div>
+
+                    <div className="main-phonesGroup">
+                        <div className="main-phonesGroup-phones">
+                            <div className="iphone-white"/>
+                            <div className="iphone-black"/>
+                        </div>
+                        <div className="main-phonesGroup-install">
+                            <div className="title-now">Теперь ваши открытия будут всегда под рукой!</div>
+                            <div className="title-shazam">Вы&nbsp;сможете Shazamить треки прямо из&nbsp;Zvooq сразу слушать их&nbsp;и&nbsp;моментально добавлять в&nbsp;свою коллекцию.</div>
 
                             <InstallBox btns={btns} positionClass="header__"/>
                         </div>
                     </div>
-                    <div className="main-row-3">
-                        <a href="http://zvooq.com" target="_blank"><img src="/img/Zvooq-logo.svg" alt="Zvooq-logo" /></a>
-                        <p>Бесплатное приложение,<br/>с которым слушать музыку легко</p>
-                        <p>Бесплатное музыкальное приложение &#8470;1&nbsp;в AppStore</p>
+                    <div className="main-zvooq-logo">
+                        <a className="main-zvooq-logo__link" href="http://zvooq.com" target="_blank" />
                     </div>
+                    <div className="main-title-freeApp">Бесплатное приложение,<br/>с которым слушать музыку легко</div>
+                    <div className="main-title-numberOne">Бесплатное музыкальное приложение &#8470;1&nbsp;в AppStore</div>
 
                     <ColumnBox columns={columns}/>
 
                 </div>
-                <div className="footer">
+                <div className="main-footer">
 
                     <InstallBox btns={btns} positionClass="footer__"/>
 
