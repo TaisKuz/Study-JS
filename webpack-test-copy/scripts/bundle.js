@@ -63,22 +63,22 @@
 	}];
 
 	var columns = [{
-	    src: '/img/icon-cherry.svg',
+	    src: '/img/iconCherry.svg',
 	    alt: 'icon-cherry',
 	    title: 'Совершенно бесплатно',
 	    description: 'Слушайте любую музыку<br/>при наличии интернета!'
 	}, {
-	    src: '/img/icon-plane.svg',
+	    src: '/img/iconPlane.svg',
 	    alt: 'icon-plane',
 	    title: 'Любимые треки всегда с&nbsp;вами',
 	    description: 'Ваша коллекция автоматически сохраняется на&nbsp;компьютере и\&nbsp;на&nbsp;телефоне. Берите её&nbsp;с&nbsp;собой и&nbsp;слушайте где угодно.'
 	}, {
-	    src: '/img/icon-notes.svg',
+	    src: '/img/iconNotes.svg',
 	    alt: 'icon-notes',
 	    title: 'Музыка для любой ситуации',
 	    description: 'Вам не&nbsp;обязательно быть экспертом в&nbsp;музыке. Наши редакторы создали плейлисты на&nbsp;все случаи жизни'
 	}, {
-	    src: '/img/icon-heart.svg',
+	    src: '/img/iconHeart.svg',
 	    alt: 'icon-heart',
 	    title: 'Рекомендации по&nbsp;вашему вкусу',
 	    description: 'Вы&nbsp;легко найдёте свою<br/>любимую музыку и&nbsp;откроете<br/>для себя много нового'
@@ -110,13 +110,13 @@
 	                    { className: 'main-logos' },
 	                    React.createElement(
 	                        'div',
-	                        { className: 'main-logos-zvooq' },
-	                        React.createElement('a', { className: 'main-logos-zvooq__link', href: 'http://zvooq.com', target: '_blank' })
+	                        { className: 'main-zvooq-logo main-zvooq-logo__logos' },
+	                        React.createElement('a', { className: 'main-zvooq-logo__logos_link', href: 'http://zvooq.com', target: '_blank' })
 	                    ),
 	                    React.createElement(
 	                        'div',
 	                        { className: 'main-logos-shazam' },
-	                        React.createElement('a', { className: 'main-logos-shazam__link', href: 'http://www.shazam.com', target: '_blank' })
+	                        React.createElement('a', { className: 'main-shazam-logo__link', href: 'http://www.shazam.com', target: '_blank' })
 	                    )
 	                ),
 	                React.createElement(
@@ -126,31 +126,31 @@
 	                    React.createElement('br', null),
 	                    React.createElement(
 	                        'div',
-	                        { className: 'main-singIn', onClick: this.loginPopupHandler },
+	                        { className: 'main-pageTitle-singIn', onClick: this.loginPopupHandler },
 	                        '\u0432\u043E\u0439\u0434\u0438\u0442\u0435 '
 	                    ),
 	                    '\u0432\xA0\u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435 Zvooq'
 	                ),
 	                React.createElement(
 	                    'div',
-	                    { className: 'main-row-2 main-phonesGroup' },
+	                    { className: 'main-phonesGroup' },
 	                    React.createElement(
 	                        'div',
-	                        { className: 'main-column main-column-1' },
-	                        React.createElement('img', { src: '/img/iphone-white.png', alt: 'iphone-white' }),
-	                        React.createElement('img', { src: '/img/iphone-black.png', alt: 'iphone-black' })
+	                        { className: 'main-phonesGroup-phones' },
+	                        React.createElement('div', { className: 'iphone-white' }),
+	                        React.createElement('div', { className: 'iphone-black' })
 	                    ),
 	                    React.createElement(
 	                        'div',
-	                        { className: 'main-column main-column-2' },
+	                        { className: 'main-phonesGroup-install' },
 	                        React.createElement(
-	                            'p',
-	                            null,
+	                            'div',
+	                            { className: 'title-now' },
 	                            '\u0422\u0435\u043F\u0435\u0440\u044C \u0432\u0430\u0448\u0438 \u043E\u0442\u043A\u0440\u044B\u0442\u0438\u044F \u0431\u0443\u0434\u0443\u0442 \u0432\u0441\u0435\u0433\u0434\u0430 \u043F\u043E\u0434 \u0440\u0443\u043A\u043E\u0439!'
 	                        ),
 	                        React.createElement(
-	                            'p',
-	                            null,
+	                            'div',
+	                            { className: 'title-shazam' },
 	                            '\u0412\u044B\xA0\u0441\u043C\u043E\u0436\u0435\u0442\u0435 Shazam\u0438\u0442\u044C \u0442\u0440\u0435\u043A\u0438 \u043F\u0440\u044F\u043C\u043E \u0438\u0437\xA0Zvooq \u0441\u0440\u0430\u0437\u0443 \u0441\u043B\u0443\u0448\u0430\u0442\u044C \u0438\u0445\xA0\u0438\xA0\u043C\u043E\u043C\u0435\u043D\u0442\u0430\u043B\u044C\u043D\u043E \u0434\u043E\u0431\u0430\u0432\u043B\u044F\u0442\u044C \u0432\xA0\u0441\u0432\u043E\u044E \u043A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u044E.'
 	                        ),
 	                        React.createElement(_installBox.InstallBox, { btns: btns, positionClass: 'header__' })
@@ -158,24 +158,24 @@
 	                ),
 	                React.createElement(
 	                    'div',
-	                    { className: 'main-row-3' },
+	                    { className: 'main-zvooq-logo-wrapper' },
 	                    React.createElement(
-	                        'a',
-	                        { href: 'http://zvooq.com', target: '_blank' },
-	                        React.createElement('img', { src: '/img/Zvooq-logo.svg', alt: 'Zvooq-logo' })
-	                    ),
-	                    React.createElement(
-	                        'p',
-	                        null,
-	                        '\u0411\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435,',
-	                        React.createElement('br', null),
-	                        '\u0441 \u043A\u043E\u0442\u043E\u0440\u044B\u043C \u0441\u043B\u0443\u0448\u0430\u0442\u044C \u043C\u0443\u0437\u044B\u043A\u0443 \u043B\u0435\u0433\u043A\u043E'
-	                    ),
-	                    React.createElement(
-	                        'p',
-	                        null,
-	                        '\u0411\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u0435 \u043C\u0443\u0437\u044B\u043A\u0430\u043B\u044C\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435 \u21161\xA0\u0432 AppStore'
+	                        'div',
+	                        { className: 'main-zvooq-logo main-zvooq-logo__middle' },
+	                        React.createElement('a', { className: 'main-zvooq-logo__middle_link', href: 'http://zvooq.com', target: '_blank' })
 	                    )
+	                ),
+	                React.createElement(
+	                    'div',
+	                    { className: 'main-title-freeApp' },
+	                    '\u0411\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435,',
+	                    React.createElement('br', null),
+	                    '\u0441 \u043A\u043E\u0442\u043E\u0440\u044B\u043C \u0441\u043B\u0443\u0448\u0430\u0442\u044C \u043C\u0443\u0437\u044B\u043A\u0443 \u043B\u0435\u0433\u043A\u043E'
+	                ),
+	                React.createElement(
+	                    'div',
+	                    { className: 'main-title-numberOne' },
+	                    '\u0411\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u0435 \u043C\u0443\u0437\u044B\u043A\u0430\u043B\u044C\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435 \u21161\xA0\u0432 AppStore'
 	                ),
 	                React.createElement(_columnBox.ColumnBox, { columns: columns })
 	            ),
@@ -21594,7 +21594,7 @@
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: \"museoSansCyrl-normal\";\n  src: url(\"/../fonts/MuseoSansCyrl-300.otf\");\n  font-weight: 300;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"museoSansCyrl-thin\";\n  src: url(\"/../fonts/MuseoSansCyrl-100.otf\");\n  font-weight: 100;\n  font-style: normal;\n}\na,\na:hover,\na:focus,\ninput,\ninput:focus,\nselect,\nselect:focus,\ntextarea,\ntextarea:focus {\n  outline: none;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\ninput[type=\"search\"]::-webkit-search-decoration,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  cursor: pointer;\n  -webkit-appearance: button;\n  background-color: transparent;\n}\nhtml {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n}\nbody,\nhtml,\np,\nb,\ninput,\nbutton,\nh1,\nh2,\nh3 {\n  margin: 0;\n  padding: 0;\n  border: none;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\ninput {\n  background-color: transparent;\n  -webkit-appearance: none;\n}\nbutton:focus {\n  outline: none;\n}\na {\n  display: inline-block;\n}\na:hover {\n  cursor: pointer;\n}\np {\n  color: #fff;\n  text-align: center;\n}\n.main {\n  width: 100%;\n  background: -webkit-linear-gradient(-45deg, #5fe4ed 0%, #b062f3 79%, #b062f3 85%, #764e9c 100%);\n  overflow: hidden;\n  height: 100%;\n}\n.main-containerWrapper,\n.main-footer {\n  height: 100%;\n  width: 1024px;\n  margin: 0 auto;\n}\n.main-logos,\n.main-row-2 {\n  display: flex;\n  flex-wrap: nowrap;\n}\n.main-logos {\n  justify-content: center;\n  align-items: center;\n}\n.main-logos-zvooq {\n  background-image: url(\"/../img/Zvooq-logo.svg\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-logos-zvooq,\n.main-logos-shazam {\n  margin: 26px 42px 40px 23px;\n}\n.main-logos-zvooq,\n.main-logos-zvooq__link {\n  display: inline-block;\n  width: 207px;\n  height: 53px;\n}\n.main-logos-shazam {\n  background-image: url(\"/../img/Shazam-logo.png\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-logos-shazam,\n.main-logos-shazam__link {\n  display: inline-block;\n  width: 191.63px;\n  height: 54.21px;\n}\n.main-pageTitle {\n  color: #fff;\n  text-align: center;\n  font-size: 37px;\n  line-height: 47px;\n  letter-spacing: 0.8px;\n}\n.main-pageTitle,\n.main-row-3 p:nth-child(2) {\n  font-family: \"MuseoSansCyrl-normal\";\n  font-weight: 500;\n}\n.main-row-2 {\n  margin: 61px 73px 0 35px;\n  align-items: flex-end;\n  justify-content: space-around;\n}\n.main-row-2 .main-column-2 p:nth-child(2),\n.main-row-3 p:nth-child(3) {\n  font-family: \"MuseoSansCyrl-thin\";\n  font-weight: 100;\n}\n.main-column {\n  display: inline-block;\n}\n.main-column-1 img:first-child {\n  margin-right: 15px;\n}\n.main-column-2 {\n  margin: 25px 39px 12px 78px;\n}\n.main-column-2,\n.main-column-2 p {\n  width: 310px;\n}\n.main-column-2 > p {\n  text-align: left !important;\n}\n.main-column-2 > p:first-child {\n  text-transform: uppercase;\n  font-size: 22.4px;\n  line-height: 29.6px;\n  margin-bottom: 15.8px;\n  font-family: \"MuseoSansCyrl-normal\";\n}\n.main-column-2 p:nth-child(2) {\n  font-size: 21.28px;\n  line-height: 23.52px;\n  letter-spacing: 0.2px;\n}\n.main-singIn {\n  cursor: pointer;\n  display: inline;\n}\n.main-singIn:hover {\n  color: #ff1493;\n  opacity: 0.9;\n  border-radius: 4px;\n}\n.main-row-3 {\n  margin-top: 120px;\n  text-align: center;\n}\n.main-row-3 a img {\n  margin-bottom: 30px;\n}\n.main-row-3 p:nth-child(2) {\n  font-size: 48px;\n  line-height: 57px;\n  margin-bottom: 5px;\n}\n.main-row-3 p:nth-child(3) {\n  font-size: 27px;\n  line-height: 47px;\n  margin-bottom: 38px;\n}\n.main-footer {\n  border-top: 1px solid #fff;\n  width: 100%;\n}\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: \"Museo\";\n  src: url(\"/../fonts/MuseoSansCyrl-300.otf\");\n  font-weight: 300;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"Museo\";\n  src: url(\"/../fonts/MuseoSansCyrl-100.otf\");\n  font-weight: 100;\n  font-style: normal;\n}\na,\na:hover,\na:focus,\ninput,\ninput:focus,\nselect,\nselect:focus,\ntextarea,\ntextarea:focus {\n  outline: none;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\ninput[type=\"search\"]::-webkit-search-decoration,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  cursor: pointer;\n  -webkit-appearance: button;\n  background-color: transparent;\n}\nhtml {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n}\nbody,\nhtml,\np,\nb,\ninput,\nbutton,\nh1,\nh2,\nh3 {\n  margin: 0;\n  padding: 0;\n  border: none;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\ninput {\n  background-color: transparent;\n  -webkit-appearance: none;\n}\nbutton:focus {\n  outline: none;\n}\na {\n  display: inline-block;\n}\na:hover {\n  cursor: pointer;\n}\np {\n  color: #fff;\n  text-align: center;\n}\n.main {\n  width: 100%;\n  background: -webkit-linear-gradient(-45deg, #5fe4ed 0%, #b062f3 79%, #b062f3 85%, #764e9c 100%);\n  overflow: hidden;\n  height: 100%;\n}\n.main-containerWrapper,\n.main-footer {\n  height: 100%;\n  width: 1024px;\n  margin: 0 auto;\n}\n.main-zvooq-logo {\n  background-image: url(\"/img/zvooqLogo.svg\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-zvooq-logo__logos {\n  margin: 26px 42px 40px 23px;\n  display: inline-block;\n  width: 207px;\n  height: 53px;\n}\n.main-zvooq-logo__logos_link {\n  display: inline-block;\n  width: 207px;\n  height: 53px;\n}\n.main-zvooq-logo__logos_link:hover {\n  cursor: pointer;\n}\n.main-zvooq-logo-wrapper {\n  width: 100%;\n  height: 53px;\n  margin-top: 120px;\n  margin-bottom: 30px;\n  text-align: center;\n}\n.main-zvooq-logo__middle {\n  width: 207px;\n  height: 53px;\n  display: inline-block;\n}\n.main-zvooq-logo__middle_link {\n  width: 207px;\n  height: 53px;\n  display: inline-block;\n}\n.main-logos {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: center;\n  align-items: center;\n}\n.main-logos-shazam {\n  margin: 26px 42px 40px 23px;\n  background-image: url(\"/img/shazamLogo.png\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-logos-shazam,\n.main-logos-shazam-logo__link {\n  display: inline-block;\n  width: 191.63px;\n  height: 54.21px;\n}\n.main-logos-shazam:hover,\n.main-logos-shazam-logo__link:hover {\n  cursor: pointer;\n}\n.main-pageTitle {\n  color: #fff;\n  text-align: center;\n  font-size: 37px;\n  line-height: 47px;\n  letter-spacing: 0.8px;\n  font-family: \"Museo\";\n  font-weight: 300;\n}\n.main-pageTitle-singIn {\n  cursor: pointer;\n  display: inline;\n}\n.main-pageTitle-singIn:hover {\n  color: #ff1493;\n  opacity: 0.9;\n  border-radius: 4px;\n}\n.main-phonesGroup {\n  display: flex;\n  flex-wrap: nowrap;\n  margin: 61px 73px 0 35px;\n  align-items: flex-end;\n  justify-content: space-around;\n}\n.main-phonesGroup-phones {\n  display: inline-block;\n}\n.main-phonesGroup-phones .iphone-white {\n  display: inline-block;\n  margin-right: 15px;\n  width: 213.69px;\n  height: 455.98px;\n  background-image: url(\"/img/iphoneWhite.png\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-phonesGroup-phones .iphone-black {\n  display: inline-block;\n  width: 245.69px;\n  height: 455.98px;\n  background-image: url(\"/img/iphoneBlack.png\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-phonesGroup-install {\n  display: inline-block;\n  margin: 25px 39px 12px 78px;\n  width: 310px;\n}\n.main-phonesGroup-install .title-now {\n  color: #fff;\n  width: 310px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 22.4px;\n  line-height: 29.6px;\n  margin-bottom: 15.8px;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n}\n.main-phonesGroup-install .title-shazam {\n  color: #fff;\n  width: 310px;\n  text-align: left;\n  font-size: 21.28px;\n  line-height: 23.52px;\n  letter-spacing: 0.2px;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n}\n.main-title-freeApp {\n  color: #fff;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n  font-size: 48px;\n  line-height: 57px;\n  margin-bottom: 5px;\n  text-align: center;\n}\n.main-title-numberOne {\n  color: #fff;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 27px;\n  line-height: 47px;\n  margin-bottom: 38px;\n  text-align: center;\n}\n.main-footer {\n  border-top: 1px solid #fff;\n  width: 100%;\n}\n", ""]);
 
 	// exports
 
@@ -21999,7 +21999,7 @@
 
 
 	// module
-	exports.push([module.id, ".installBox .install .install__title {\n  font-family: \"MuseoSansCyrl-thin\";\n  font-weight: 100;\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: 0.52px;\n}\n.installBox .install .install-btnsWrapper {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: center;\n}\n.installBox.header__installBox .install .install__title {\n  margin: 42px 0 12px;\n}\n.installBox.footer__installBox {\n  width: 1024px;\n  margin: 0 auto;\n  height: 100%;\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: flex-start;\n  padding-bottom: 56px;\n}\n.installBox.footer__installBox p {\n  margin-bottom: 35px;\n}\n.installBox.footer__installBox .install {\n  margin-top: 51px;\n  margin-right: 93px;\n  width: 380px;\n}\n.installBox.footer__installBox .install .install__title {\n  font-size: 15px;\n  line-height: 18px;\n  letter-spacing: 0.6px;\n}\n", ""]);
+	exports.push([module.id, ".installBox .install .install__title {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: 0.52px;\n}\n.installBox .install .install-btnsWrapper {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: center;\n}\n.installBox.header__installBox .install .install__title {\n  margin: 42px 0 12px;\n}\n.installBox.footer__installBox {\n  width: 1024px;\n  margin: 0 auto;\n  height: 100%;\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: flex-start;\n  padding-bottom: 56px;\n}\n.installBox.footer__installBox p {\n  margin-bottom: 35px;\n}\n.installBox.footer__installBox .install {\n  margin-top: 51px;\n  margin-right: 93px;\n  width: 380px;\n}\n.installBox.footer__installBox .install .install__title {\n  font-size: 15px;\n  line-height: 18px;\n  letter-spacing: 0.6px;\n}\n", ""]);
 
 	// exports
 
@@ -22075,7 +22075,7 @@
 
 
 	// module
-	exports.push([module.id, ".installBtn.btn-app-store {\n  background-image: url(\"/../img/app-store.svg\") !important;\n}\n.installBtn.btn-google-play {\n  background-image: url(\"/../img/google-play.svg\") !important;\n  margin-left: -3px;\n}\n.installBtn.btn-app-store,\n.installBtn.btn-google-play {\n  background-color: #000;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  border-radius: 6px;\n}\n.installBtn.header__installBtn.btn-app-store,\n.installBtn.header__installBtn.btn-app-store a {\n  width: 142px;\n  height: 44px;\n  margin-right: -7px;\n}\n.installBtn.header__installBtn.btn-google-play,\n.installBtn.header__installBtn.btn-google-play a {\n  width: 137.48px;\n  height: 42.33px;\n}\n.installBtn.footer__installBtn.btn-app-store,\n.installBtn.footer__installBtn.btn-app-store a {\n  width: 181px;\n  height: 53px;\n  margin-right: 24.3px;\n}\n.installBtn.footer__installBtn.btn-google-play,\n.installBtn.footer__installBtn.btn-google-play a {\n  width: 174.74px;\n  height: 51.33px;\n}\n", ""]);
+	exports.push([module.id, ".installBtn.btn-app-store {\n  background-image: url(\"/img/appStore.svg\") !important;\n}\n.installBtn.btn-google-play {\n  background-image: url(\"/img/googlePlay.svg\") !important;\n  margin-left: -3px;\n}\n.installBtn.btn-app-store,\n.installBtn.btn-google-play {\n  background-color: #000;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  border-radius: 6px;\n}\n.installBtn.header__installBtn.btn-app-store,\n.installBtn.header__installBtn.btn-app-store a {\n  width: 142px;\n  height: 44px;\n  margin-right: -7px;\n}\n.installBtn.header__installBtn.btn-google-play,\n.installBtn.header__installBtn.btn-google-play a {\n  width: 137.48px;\n  height: 42.33px;\n}\n.installBtn.footer__installBtn.btn-app-store,\n.installBtn.footer__installBtn.btn-app-store a {\n  width: 181px;\n  height: 53px;\n  margin-right: 24.3px;\n}\n.installBtn.footer__installBtn.btn-google-play,\n.installBtn.footer__installBtn.btn-google-play a {\n  width: 174.74px;\n  height: 51.33px;\n}\n", ""]);
 
 	// exports
 
@@ -22158,7 +22158,7 @@
 
 
 	// module
-	exports.push([module.id, ".formBox__title {\n  font-family: \"MuseoSansCyrl-thin\";\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: 0.52px;\n}\n.formBox .phoneEmail-form {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  align-items: center;\n  border-radius: 6px;\n  margin: 0 auto;\n}\n.formBox .phoneEmail-form {\n  background-color: #fff;\n}\n.formBox .phoneEmail-form .phoneEmail-form__submit {\n  text-transform: uppercase;\n  margin-right: 20px;\n  background-color: #fff;\n}\n.formBox .phoneEmail-form .phoneEmail-form__input {\n  height: 26px;\n  padding: 14px 25px 14px 15px;\n  border-radius: 6px;\n  background-color: transparent;\n}\n.formBox .phoneEmail-form .phoneEmail-form__input,\n.formBox .phoneEmail-form .phoneEmail-form__submit {\n  font-family: \"MuseoSansCyrl-normal\";\n  text-align: left;\n  padding-left: 15px;\n  color: #808080;\n}\n.formBox.header__formBox .formBox__title {\n  margin: 29px 0 11px;\n}\n.formBox.header__formBox .phoneEmail-form {\n  width: 304px;\n  height: 48px;\n}\n.formBox.header__formBox .phoneEmail-form__submit {\n  font-size: 12px;\n  line-height: 15px;\n  border-left: 1px solid #808080;\n  height: 22px;\n}\n.formBox.header__formBox .phoneEmail-form__input {\n  font-size: 16px;\n  line-height: 18px;\n}\n.formBox.footer__formBox {\n  margin-top: 51px;\n  margin-left: 5px;\n  width: 380px;\n}\n.formBox.footer__formBox .formBox__title {\n  font-size: 15px;\n  line-height: 18px;\n  letter-spacing: 0.6px;\n}\n.formBox.footer__formBox .phoneEmail-form {\n  width: 380px;\n  height: 51px;\n}\n.formBox.footer__formBox .phoneEmail-form .phoneEmail-form__input {\n  font-size: 20px;\n  line-height: 23px;\n  height: 23px;\n}\n.formBox.footer__formBox .phoneEmail-form .phoneEmail-form__submit {\n  font-size: 15px;\n  line-height: 18px;\n  border-left: 2px solid #808080;\n  height: 27px;\n}\n", ""]);
+	exports.push([module.id, ".formBox__title {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: 0.52px;\n}\n.formBox .phoneEmail-form {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  align-items: center;\n  border-radius: 6px;\n  margin: 0 auto;\n}\n.formBox .phoneEmail-form {\n  background-color: #fff;\n}\n.formBox .phoneEmail-form .phoneEmail-form__submit {\n  text-transform: uppercase;\n  margin-right: 20px;\n  background-color: #fff;\n}\n.formBox .phoneEmail-form .phoneEmail-form__input {\n  height: 26px;\n  padding: 14px 25px 14px 15px;\n  border-radius: 6px;\n  background-color: transparent;\n}\n.formBox .phoneEmail-form .phoneEmail-form__input,\n.formBox .phoneEmail-form .phoneEmail-form__submit {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n  text-align: left;\n  padding-left: 15px;\n  color: #808080;\n}\n.formBox.header__formBox .formBox__title {\n  margin: 29px 0 11px;\n}\n.formBox.header__formBox .phoneEmail-form {\n  width: 304px;\n  height: 48px;\n}\n.formBox.header__formBox .phoneEmail-form__submit {\n  font-size: 12px;\n  line-height: 15px;\n  border-left: 1px solid #808080;\n  height: 22px;\n}\n.formBox.header__formBox .phoneEmail-form__input {\n  font-size: 16px;\n  line-height: 18px;\n}\n.formBox.footer__formBox {\n  margin-top: 51px;\n  margin-left: 5px;\n  width: 380px;\n}\n.formBox.footer__formBox .formBox__title {\n  font-size: 15px;\n  line-height: 18px;\n  letter-spacing: 0.6px;\n}\n.formBox.footer__formBox .phoneEmail-form {\n  width: 380px;\n  height: 51px;\n}\n.formBox.footer__formBox .phoneEmail-form .phoneEmail-form__input {\n  font-size: 20px;\n  line-height: 23px;\n  height: 23px;\n}\n.formBox.footer__formBox .phoneEmail-form .phoneEmail-form__submit {\n  font-size: 15px;\n  line-height: 18px;\n  border-left: 2px solid #808080;\n  height: 27px;\n}\n", ""]);
 
 	// exports
 
@@ -22262,7 +22262,7 @@
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            src: 'img/icon-cherry.svg',
+	            src: 'img/iconCherry.svg',
 	            alt: 'icon-cherry',
 	            title: 'Слушайте любую музыку при наличии интернета!',
 	            description: 'Совершенно бесплатно'
@@ -22322,7 +22322,7 @@
 
 
 	// module
-	exports.push([module.id, ".column {\n  display: inline-block;\n  width: 220px;\n  text-align: center;\n}\n.column__title {\n  font-family: \"MuseoSansCyrl-normal\";\n  font-size: 23px;\n  line-height: 25px;\n  letter-spacing: 0.92px;\n  margin: 37px 0 21px;\n}\n.column__description {\n  font-family: \"MuseoSansCyrl-thin\";\n  font-size: 13px;\n  line-height: 22px;\n  letter-spacing: 0.52px;\n  width: 225px;\n}\n.column .icon-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 102px;\n  height: 102px;\n  margin: 0 auto;\n}\n.column .icon-wrapper .icon-cherry,\n.column .icon-wrapper .icon-plane,\n.column .icon-wrapper .icon-heart {\n  max-width: 90.13px;\n  max-height: 91px;\n}\n.column .icon-wrapper .icon-notes {\n  max-width: 51.76px;\n  max-height: 55.17px;\n}\n", ""]);
+	exports.push([module.id, ".column {\n  display: inline-block;\n  width: 220px;\n  text-align: center;\n}\n.column__title {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n  font-size: 23px;\n  line-height: 25px;\n  letter-spacing: 0.92px;\n  margin: 37px 0 21px;\n}\n.column__description {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 13px;\n  line-height: 22px;\n  letter-spacing: 0.52px;\n  width: 225px;\n}\n.column .icon-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 102px;\n  height: 102px;\n  margin: 0 auto;\n}\n.column .icon-wrapper .icon-cherry,\n.column .icon-wrapper .icon-plane,\n.column .icon-wrapper .icon-heart {\n  max-width: 90.13px;\n  max-height: 91px;\n}\n.column .icon-wrapper .icon-notes {\n  max-width: 51.76px;\n  max-height: 55.17px;\n}\n", ""]);
 
 	// exports
 
@@ -22428,7 +22428,7 @@
 
 
 	// module
-	exports.push([module.id, ".loginPopup.loginPopup_up {\n  z-index: 1001;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: fixed !important;\n}\n.loginPopup.loginPopup_up .banner-inner {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: absolute !important;\n  background-color: rgba(0,0,0,0.5);\n}\n.loginPopup.loginPopup_up .banner-pointer {\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: fixed !important;\n  cursor: pointer;\n}\n.loginPopup.loginPopup_up .banner-scroller {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n.loginPopup.loginPopup_up .banner-window {\n  z-index: 10040;\n  width: 320px;\n  min-height: 381px;\n  cursor: default;\n  position: relative;\n  top: 100px;\n  margin: 0 auto 100px;\n  border-radius: 3px;\n  background: #fff;\n  transition: transform 0.6s;\n  transition-property: transform;\n  transition-duration: 0.6s;\n  transition-timing-function: initial;\n  transition-delay: initial;\n}\n", ""]);
+	exports.push([module.id, ".loginPopup.loginPopup_up {\n  z-index: 10;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: fixed !important;\n}\n.loginPopup.loginPopup_up .banner-inner {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: absolute !important;\n  background-color: rgba(0,0,0,0.5);\n}\n.loginPopup.loginPopup_up .banner-pointer {\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: fixed !important;\n  cursor: pointer;\n}\n.loginPopup.loginPopup_up .banner-scroller {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n.loginPopup.loginPopup_up .banner-window {\n  z-index: 10040;\n  width: 320px;\n  min-height: 381px;\n  cursor: default;\n  position: relative;\n  top: 100px;\n  margin: 0 auto 100px;\n  border-radius: 3px;\n  background: #fff;\n  transition: transform 0.6s;\n  transition-property: transform;\n  transition-duration: 0.6s;\n  transition-timing-function: initial;\n  transition-delay: initial;\n}\n", ""]);
 
 	// exports
 
@@ -22565,7 +22565,7 @@
 
 
 	// module
-	exports.push([module.id, ".loginMain .loginTitle {\n  font: 300 20px/28px \"MuseoSansCyrl-normal\";\n  color: #080808;\n  padding: 30px 0 5px;\n  text-align: center;\n}\n.loginMain .loginBtns-content {\n  padding: 25px 20px 20px;\n}\n.loginMain .btnStriper {\n  border-top: 1px solid #e6e6e6;\n  margin: 20px auto;\n}\n.loginMain .loginMain-links,\n.loginMain .loginMain-links a {\n  text-align: center;\n  font: 100 11px/1.1 \"MuseoSansCyrl-thin\", Arial, sans-serif;\n  color: #ccc !important;\n}\n.loginMain .loginMain-links {\n  margin-top: 20px;\n}\n.loginMain .loginMain-links a {\n  text-decoration: underline !important;\n}\n", ""]);
+	exports.push([module.id, ".loginMain .loginTitle {\n  font: 300 20px/28px \"Museo\", Arial, sans-serif;\n  color: #080808;\n  padding: 30px 0 5px;\n  text-align: center;\n}\n.loginMain .loginBtns-content {\n  padding: 25px 20px 20px;\n}\n.loginMain .btnStriper {\n  border-top: 1px solid #e6e6e6;\n  margin: 20px auto;\n}\n.loginMain .loginMain-links,\n.loginMain .loginMain-links a {\n  text-align: center;\n  font: 100 11px/1.1 \"Museo\", Arial, sans-serif;\n  color: #ccc !important;\n}\n.loginMain .loginMain-links {\n  margin-top: 20px;\n}\n.loginMain .loginMain-links a {\n  text-decoration: underline !important;\n}\n", ""]);
 
 	// exports
 
@@ -22675,7 +22675,7 @@
 
 
 	// module
-	exports.push([module.id, ".loginBtn {\n  display: block;\n  height: 50px;\n  width: 100%;\n  border-radius: 4px;\n  font: 100 15px/18px \"MuseoSansCyrl-thin\";\n  color: #fff;\n  cursor: pointer;\n  margin-top: 10px;\n}\n.loginBtn:hover {\n  opacity: 0.9;\n}\n.loginBtn__vk {\n  background-image: url(\"/../../img/loginPopup/vkontakte.svg\");\n  background-position: 19px 50%;\n  background-size: 15px;\n  background-color: #356ca1;\n}\n.loginBtn__fb {\n  background-image: url(\"/../../img/loginPopup/facebook.svg\");\n  background-position: 22px 50%;\n  background-size: 10px;\n  background-color: #475e97;\n}\n.loginBtn__vk,\n.loginBtn__fb {\n  margin-bottom: 10px;\n  padding-left: 54px;\n  position: relative;\n  text-align: left;\n  background-repeat: no-repeat;\n}\n.loginBtn_color_lightBlue {\n  background-color: #4baeec;\n}\n.loginBtn__email,\n.loginBtn__sms {\n  display: inline-block;\n  margin-top: 0;\n}\n.loginBtn_size_s {\n  width: 135px !important;\n}\n.loginBtn__email {\n  float: left;\n}\n.loginBtn__sms {\n  margin-left: 10px;\n}\n.loginBtn__sms small {\n  pointer-events: none;\n  font: 100 13px/15px \"MuseoSansCyrl-thin\";\n  opacity: 0.6;\n}\n", ""]);
+	exports.push([module.id, ".loginBtn {\n  display: block;\n  height: 50px;\n  width: 100%;\n  border-radius: 4px;\n  font: 100 15px/18px \"Museo\", Arial, sans-serif;\n  color: #fff;\n  cursor: pointer;\n  margin-top: 10px;\n}\n.loginBtn:hover {\n  opacity: 0.9;\n}\n.loginBtn__vk {\n  background-image: url(\"/../../img/loginPopup/vkontakte.svg\");\n  background-position: 19px 50%;\n  background-size: 15px;\n  background-color: #356ca1;\n}\n.loginBtn__fb {\n  background-image: url(\"/../../img/loginPopup/facebook.svg\");\n  background-position: 22px 50%;\n  background-size: 10px;\n  background-color: #475e97;\n}\n.loginBtn__vk,\n.loginBtn__fb {\n  margin-bottom: 10px;\n  padding-left: 54px;\n  position: relative;\n  text-align: left;\n  background-repeat: no-repeat;\n}\n.loginBtn_color_lightBlue {\n  background-color: #4baeec;\n}\n.loginBtn__email,\n.loginBtn__sms {\n  display: inline-block;\n  margin-top: 0;\n}\n.loginBtn_size_s {\n  width: 135px !important;\n}\n.loginBtn__email {\n  float: left;\n}\n.loginBtn__sms {\n  margin-left: 10px;\n}\n.loginBtn__sms small {\n  pointer-events: none;\n  font: 100 13px/15px \"Museo\", Arial, sans-serif;\n  opacity: 0.6;\n}\n", ""]);
 
 	// exports
 
@@ -22776,7 +22776,7 @@
 
 
 	// module
-	exports.push([module.id, ".loginEmail__forgot-button {\n  cursor: pointer;\n  display: inline-block;\n  margin-top: 20px;\n  color: #7c7c7c;\n  font: 100 15px/1.2 \"MuseoSansCyrl-thin\";\n  text-align: center;\n}\n.loginEmail-content {\n  padding: 20px 20px 25px;\n  text-align: center;\n}\n", ""]);
+	exports.push([module.id, ".loginEmail__forgot-button {\n  cursor: pointer;\n  display: inline-block;\n  margin-top: 20px;\n  color: #7c7c7c;\n  font: 100 15px/1.2 \"Museo\", Arial, sans-serif;\n  text-align: center;\n}\n.loginEmail-content {\n  padding: 20px 20px 25px;\n  text-align: center;\n}\n", ""]);
 
 	// exports
 
@@ -22859,7 +22859,7 @@
 
 
 	// module
-	exports.push([module.id, ".loginForm {\n  margin: 0.75em 0 1em;\n}\n.loginForm__input {\n  display: block;\n  width: 100%;\n  height: 50px;\n  padding: 0 15px;\n  margin-bottom: 10px;\n  box-sizing: border-box;\n  box-shadow: inset 0 0 0 1px #f1f1f1;\n  color: #7c7c7c;\n  font: 100 15px/17px \"MuseoSansCyrl-thin\";\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\n.loginForm input[type=\"password\"] {\n  margin-bottom: 20px;\n}\n", ""]);
+	exports.push([module.id, ".loginForm {\n  margin: 0.75em 0 1em;\n}\n.loginForm__input {\n  display: block;\n  width: 100%;\n  height: 50px;\n  padding: 0 15px;\n  margin-bottom: 10px;\n  box-sizing: border-box;\n  box-shadow: inset 0 0 0 1px #f1f1f1;\n  color: #7c7c7c;\n  font: 100 15px/17px \"Museo\", Arial, sans-serif;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\n.loginForm input[type=\"password\"] {\n  margin-bottom: 20px;\n}\n", ""]);
 
 	// exports
 
@@ -22933,7 +22933,7 @@
 
 
 	// module
-	exports.push([module.id, ".loginHeader {\n  position: relative;\n  height: 39px;\n  padding-top: 21px;\n  font: 100 18px \"MuseoSansCyrl-thin\";\n  text-align: center;\n  background-color: #f1f1f1;\n  color: #4d4d4d;\n}\n.loginHeader-back__button {\n  background: url(\"/../../img/loginPopup/back.svg\") 20px 50% no-repeat;\n  position: absolute;\n  cursor: pointer;\n  width: 65px;\n  height: 100%;\n  top: 0;\n  left: 0;\n}\n", ""]);
+	exports.push([module.id, ".loginHeader {\n  position: relative;\n  height: 39px;\n  padding-top: 21px;\n  font: 100 18px \"Museo\", Arial, sans-serif;\n  text-align: center;\n  background-color: #f1f1f1;\n  color: #4d4d4d;\n}\n.loginHeader-back__button {\n  background: url(\"/../../img/loginPopup/back.svg\") 20px 50% no-repeat;\n  position: absolute;\n  cursor: pointer;\n  width: 65px;\n  height: 100%;\n  top: 0;\n  left: 0;\n}\n", ""]);
 
 	// exports
 
@@ -23033,7 +23033,7 @@
 
 
 	// module
-	exports.push([module.id, ".loginSms-content {\n  padding: 20px 20px 120px;\n}\n.loginSms-note {\n  position: relative;\n  width: 160px;\n  height: 90px;\n  padding: 20px;\n  margin: -130px 0 0 293px;\n  top: -20px;\n  color: #fff;\n  background-color: #717578;\n  animation: popup 0.2s;\n  font: 100 15px/1.2 \"MuseoSansCyrl-thin\";\n  text-align: left;\n}\n.loginSms-note:after {\n  position: absolute;\n  width: 12px;\n  height: 12px;\n  top: 58px;\n  left: -5px;\n  content: '';\n  background-color: #717578;\n  transform: rotate(45deg);\n  border-radius: 2px;\n}\n@-moz-keyframes popup {\n  from {\n    margin-left: 285px;\n  }\n  to {\n    margin-left: 293px;\n  }\n}\n@-webkit-keyframes popup {\n  from {\n    margin-left: 285px;\n  }\n  to {\n    margin-left: 293px;\n  }\n}\n@-o-keyframes popup {\n  from {\n    margin-left: 285px;\n  }\n  to {\n    margin-left: 293px;\n  }\n}\n@keyframes popup {\n  from {\n    margin-left: 285px;\n  }\n  to {\n    margin-left: 293px;\n  }\n}\n", ""]);
+	exports.push([module.id, ".loginSms-content {\n  padding: 20px 20px 120px;\n}\n.loginSms-note {\n  position: relative;\n  width: 160px;\n  height: 90px;\n  padding: 20px;\n  margin: -130px 0 0 293px;\n  top: -20px;\n  color: #fff;\n  background-color: #717578;\n  animation: popup 0.2s;\n  font: 100 15px/1.2 \"Museo\", Arial, sans-serif;\n  text-align: left;\n}\n.loginSms-note:after {\n  position: absolute;\n  width: 12px;\n  height: 12px;\n  top: 58px;\n  left: -5px;\n  content: '';\n  background-color: #717578;\n  transform: rotate(45deg);\n  border-radius: 2px;\n}\n@-moz-keyframes popup {\n  from {\n    margin-left: 285px;\n  }\n  to {\n    margin-left: 293px;\n  }\n}\n@-webkit-keyframes popup {\n  from {\n    margin-left: 285px;\n  }\n  to {\n    margin-left: 293px;\n  }\n}\n@-o-keyframes popup {\n  from {\n    margin-left: 285px;\n  }\n  to {\n    margin-left: 293px;\n  }\n}\n@keyframes popup {\n  from {\n    margin-left: 285px;\n  }\n  to {\n    margin-left: 293px;\n  }\n}\n", ""]);
 
 	// exports
 

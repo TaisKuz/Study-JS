@@ -17,25 +17,25 @@ var btns = [
 
 var columns = [
     {
-        src: '/img/icon-cherry.svg',
+        src: '/img/iconCherry.svg',
         alt: 'icon-cherry',
         title: 'Совершенно бесплатно',
         description: 'Слушайте любую музыку<br/>при наличии интернета!'
     },
     {
-        src: '/img/icon-plane.svg',
+        src: '/img/iconPlane.svg',
         alt: 'icon-plane',
         title: 'Любимые треки всегда с&nbsp;вами',
         description: 'Ваша коллекция автоматически сохраняется на&nbsp;компьютере и\&nbsp;на&nbsp;телефоне. Берите её&nbsp;с&nbsp;собой и&nbsp;слушайте где угодно.'
     },
     {
-        src: '/img/icon-notes.svg',
+        src: '/img/iconNotes.svg',
         alt: 'icon-notes',
         title: 'Музыка для любой ситуации',
         description: 'Вам не&nbsp;обязательно быть экспертом в&nbsp;музыке. Наши редакторы создали плейлисты на&nbsp;все случаи жизни'
     },
     {
-        src: '/img/icon-heart.svg',
+        src: '/img/iconHeart.svg',
         alt: 'icon-heart',
         title: 'Рекомендации по&nbsp;вашему вкусу',
         description: 'Вы&nbsp;легко найдёте свою<br/>любимую музыку и&nbsp;откроете<br/>для себя много нового'
@@ -59,11 +59,11 @@ var MainPage = React.createClass({
             <div className="main">
                 <div className="main-containerWrapper">
                     <div className="main-logos">
-                        <div className="main-logos-zvooq">
-                            <a className="main-logos-zvooq__link" href="http://zvooq.com" target="_blank" />
+                        <div className="main-zvooq-logo main-zvooq-logo__logos">
+                            <a className="main-zvooq-logo__logos_link" href="http://zvooq.com" target="_blank" />
                         </div>
                         <div className="main-logos-shazam">
-                            <a className="main-logos-shazam__link" href="http://www.shazam.com" target="_blank" />
+                            <a className="main-shazam-logo__link" href="http://www.shazam.com" target="_blank" />
                         </div>
                     </div>
                     <div className="main-pageTitle">
@@ -81,11 +81,13 @@ var MainPage = React.createClass({
                             <div className="title-now">Теперь ваши открытия будут всегда под рукой!</div>
                             <div className="title-shazam">Вы&nbsp;сможете Shazamить треки прямо из&nbsp;Zvooq сразу слушать их&nbsp;и&nbsp;моментально добавлять в&nbsp;свою коллекцию.</div>
 
-                            <InstallBox btns={btns} positionClass="header__"/>
+                            <InstallBox btns={btns} positionClass="header__" />
                         </div>
                     </div>
-                    <div className="main-zvooq-logo">
-                        <a className="main-zvooq-logo__link" href="http://zvooq.com" target="_blank" />
+                    <div className="main-zvooq-logo-wrapper">
+                        <div className="main-zvooq-logo main-zvooq-logo__middle">
+                            <a className="main-zvooq-logo__middle_link" href="http://zvooq.com" target="_blank" />
+                        </div>
                     </div>
                     <div className="main-title-freeApp">Бесплатное приложение,<br/>с которым слушать музыку легко</div>
                     <div className="main-title-numberOne">Бесплатное музыкальное приложение &#8470;1&nbsp;в AppStore</div>

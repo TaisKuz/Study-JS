@@ -29,38 +29,56 @@ p
     width: 1024px
     margin: 0 auto
 
+  &-zvooq-logo
+    background-image: url('/img/zvooqLogo.svg')
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+
+    &__logos
+      margin: 26px 42px 40px 23px
+      display: inline-block
+      width: 207px
+      height: 53px
+
+      &_link
+        display: inline-block
+        width: 207px
+        height: 53px
+        &:hover
+          cursor: pointer
+    &-wrapper
+      width: 100%
+      height: 53px
+      margin-top: 120px
+      margin-bottom: 30px
+      text-align: center
+
+    &__middle
+      width: 207px
+      height: 53px
+      display: inline-block
+
+      &_link
+        width: 207px
+        height: 53px
+        display: inline-block
+
   &-logos
     display: flex
     flex-wrap: nowrap
     justify-content: center
     align-items: center
 
-    &-zvooq
-      background-image: url('/../img/Zvooq-logo.svg')
-      background-position: center
-      background-size: cover
-      background-repeat: no-repeat
-
-    &-zvooq,
     &-shazam
       margin: 26px 42px 40px 23px
-
-    &-zvooq,
-    &-zvooq__link
-      display: inline-block
-      width: 207px
-      height: 53px
-      &:hover
-        cursor: pointer
-
-    &-shazam
-      background-image: url('/../img/Shazam-logo.png')
+      background-image: url('/img/shazamLogo.png')
       background-position: center
       background-size: cover
       background-repeat: no-repeat
 
     &-shazam,
-    &-shazam__link
+    &-shazam-logo__link
       display: inline-block
       width: 191.63px
       height: 54.21px
@@ -73,7 +91,7 @@ p
     font-size: 37px
     line-height: 47px
     letter-spacing: 0.8px
-    font-family: "MuseoSansCyrl-normal"
+    font-family: "Museo"
     font-weight: 300
 
     &-singIn
@@ -97,18 +115,18 @@ p
       .iphone-white
         display: inline-block
         margin-right: 15px
-        width: 219.69px
+        width: 213.69px
         height: 455.98px
-        background-image: url('/../img/iphone-white.png')
+        background-image: url('/img/iphoneWhite.png')
         background-position: center
         background-size: cover
         background-repeat: no-repeat
 
       .iphone-black
         display: inline-block
-        width: 219.69px
+        width: 245.69px
         height: 455.98px
-        background-image: url('/../img/iphone-black.png')
+        background-image: url('/img/iphoneBlack.png')
         background-position: center
         background-size: cover
         background-repeat: no-repeat
@@ -126,7 +144,7 @@ p
         font-size: 22.4px
         line-height: 29.6px
         margin-bottom: 15.8px
-        font-family: "MuseoSansCyrl-normal"
+        font-family: "Museo", Arial, sans-serif
         font-weight: 300
 
       .title-shazam
@@ -136,40 +154,26 @@ p
         font-size: 21.28px
         line-height: 23.52px
         letter-spacing: 0.2px
-        font-family: "MuseoSansCyrl-thin"
+        font-family: "Museo", Arial, sans-serif
         font-weight: 100
-
-  &-zvooq-logo
-    width: 100%
-    height: 53px
-    margin-top: 120px
-    margin-bottom: 30px
-    text-align: center
-
-    &__link
-      width: 207px
-      height: 53px
-      display: inline-block
-      background-image: url('/../img/Zvooq-logo.svg')
-      background-position: center
-      background-size: cover
-      background-repeat: no-repeat
 
   &-title-freeApp
     color: #ffffff
-    font-family: "MuseoSansCyrl-normal"
+    font-family: "Museo", Arial, sans-serif
     font-weight: 300
     font-size: 48px
     line-height: 57px
     margin-bottom: 5px
+    text-align center
 
   &-title-numberOne
     color: #ffffff
-    font-family: "MuseoSansCyrl-thin"
+    font-family: "Museo", Arial, sans-serif
     font-weight: 100
     font-size: 27px
     line-height: 47px
     margin-bottom: 38px
+    text-align center
 
   &-footer
     border-top: 1px solid main-text-color

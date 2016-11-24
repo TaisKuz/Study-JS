@@ -4,7 +4,7 @@ var Column = React.createClass({
 
     getDefaultProps: function () {
         return {
-            src: 'img/icon-cherry.svg',
+            src: 'img/iconCherry.svg',
             alt: 'icon-cherry',
             title: 'Слушайте любую музыку при наличии интернета!',
             description: 'Совершенно бесплатно'
