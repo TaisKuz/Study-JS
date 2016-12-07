@@ -4,18 +4,18 @@ import { InstallBox } from './installBox.js';
 import { ColumnBox } from './columnBox.js';
 import { LoginPopup } from './loginPopup/loginPopup.js';
 
-var btns = [
+let btns = [
     {
-        className: ' btn-app-store',
+        buttonClass: '-apple',
         href: 'https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8'
     },
     {
-        className: ' btn-google-play',
+        buttonClass: '-google',
         href: 'https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en'
     }
 ];
 
-var columns = [
+let columns = [
     {
         src: '/img/iconCherry.svg',
         alt: 'icon-cherry',
@@ -42,7 +42,7 @@ var columns = [
     }
 ];
 
-var MainPage = React.createClass({
+let MainPage = React.createClass({
 
     getInitialState: function() {
         return {
@@ -57,47 +57,49 @@ var MainPage = React.createClass({
     render() {
         return (
             <div className="main">
-                <div className="main-containerWrapper">
-                    <div className="main-logos">
-                        <div className="main-zvooq-logo main-zvooq-logo__logos">
-                            <a className="main-zvooq-logo__logos_link" href="http://zvooq.com" target="_blank" />
+                <div className="main-contentWrapper">
+                    <div className="main-topLogos">
+                        <div className="main-zvooqLogo main-zvooqLogo_topLogos">
+                            <a className="main-zvooqLogoLink" href="http://zvooq.com" target="_blank" />
                         </div>
-                        <div className="main-logos-shazam">
-                            <a className="main-shazam-logo__link" href="http://www.shazam.com" target="_blank" />
+                        <div className="main-shazamLogo">
+                            <a className="main-shazamLogoLink" href="http://www.shazam.com" target="_blank" />
                         </div>
                     </div>
                     <div className="main-pageTitle">
                         Чтобы попробовать новые возможности,<br/>
-                        <div className="main-pageTitle-singIn" onClick={this.loginPopupHandler}>войдите </div>
+                        <div className="main-singIn" onClick={this.loginPopupHandler}>войдите </div>
                         в&nbsp;бесплатное приложение Zvooq
                     </div>
 
-                    <div className="main-phonesGroup">
-                        <div className="main-phonesGroup-phones">
-                            <div className="iphone-white"/>
-                            <div className="iphone-black"/>
+                    <div className="main-phonesGroupWrapper">
+                        <div className="main-phonesGroup">
+                            <div className="main-iphone main-iphone_white" />
+                            <div className="main-iphone main-iphone_black" />
                         </div>
-                        <div className="main-phonesGroup-install">
-                            <div className="title-now">Теперь ваши открытия будут всегда под рукой!</div>
-                            <div className="title-shazam">Вы&nbsp;сможете Shazamить треки прямо из&nbsp;Zvooq сразу слушать их&nbsp;и&nbsp;моментально добавлять в&nbsp;свою коллекцию.</div>
+                        <div className="main-installGroup">
+                            <div className="main-installGroupTitle">Теперь ваши открытия будут всегда под рукой!</div>
+                            <div className="main-installGroupDescription">Вы&nbsp;сможете Shazamить треки прямо из&nbsp;Zvooq сразу слушать их&nbsp;и&nbsp;моментально добавлять в&nbsp;свою коллекцию.</div>
 
-                            <InstallBox btns={btns} positionClass="header__" />
+                            <InstallBox btns={btns} positionClass="_installGroup" />
+                            {/*<InstallBox btns={btns} positionClass="header__" />*/}
                         </div>
                     </div>
-                    <div className="main-zvooq-logo-wrapper">
-                        <div className="main-zvooq-logo main-zvooq-logo__middle">
-                            <a className="main-zvooq-logo__middle_link" href="http://zvooq.com" target="_blank" />
+                    <div className="main-zvooqLogoWrapper">
+                        <div className="main-zvooqLogo main-zvooqLogo_middle">
+                            <a className="main-zvooqLogoLink" href="http://zvooq.com" target="_blank" />
                         </div>
                     </div>
-                    <div className="main-title-freeApp">Бесплатное приложение,<br/>с которым слушать музыку легко</div>
-                    <div className="main-title-numberOne">Бесплатное музыкальное приложение &#8470;1&nbsp;в AppStore</div>
+                    <div className="main-freeAppTitle">Бесплатное приложение, с&nbsp;которым слушать музыку легко</div>
+                    <div className="main-freeAppDescription">Бесплатное музыкальное приложение &#8470;1&nbsp;в AppStore</div>
 
                     <ColumnBox columns={columns}/>
 
                 </div>
                 <div className="main-footer">
+                    <InstallBox btns={btns} positionClass="_footer"/>
 
-                    <InstallBox btns={btns} positionClass="footer__"/>
+                    {/*<InstallBox btns={btns} positionClass="footer__"/>*/}
 
                 </div>
                 {this.state.showLoginPopup && <LoginPopup onClickClose={this.loginPopupHandler} />}
@@ -106,4 +108,4 @@ var MainPage = React.createClass({
     }
 });
 
-ReactDOM.render(< MainPage />, document.getElementById('page-content') );
+ReactDOM.render(< MainPage />, document.getElementById('pageContent') );
