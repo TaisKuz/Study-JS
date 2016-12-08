@@ -3,7 +3,9 @@
   width: 220px
   text-align: center
 
-  &__title
+  &-title
+    color: #fff
+    text-align: center
     font-family: "Museo", Arial, sans-serif
     font-weight: 300
     font-size: 23px
@@ -11,7 +13,9 @@
     letter-spacing: 0.92px
     margin: 37px 0 21px
 
-  &__description
+  &-description
+    color: #fff
+    text-align: center
     font-family: "Museo", Arial, sans-serif
     font-weight: 100
     font-size: 13px
@@ -19,7 +23,7 @@
     letter-spacing: 0.52px
     width: 225px
 
-  .icon-wrapper
+  &-iconWrapper
     display: flex
     align-items: center
     justify-content: center
@@ -27,12 +31,27 @@
     height: 102px
     margin: 0 auto
 
-    .icon-cherry,
-    .icon-plane,
-    .icon-heart
+  &-icon
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+
+    &_cherry,
+    &_plane,
+    &_heart
       max-width: 90.13px
       max-height: 91px
 
-    .icon-notes
+    &_cherry
+      background-image: url("/img/iconCherry.svg")
+
+    &_plane
+      background-image: url("/img/iconPlane.svg")
+
+    &_heart
+      background-image: url("/img/iconHeart.svg")
+
+    &_notes
+      background-image: url("/img/iconNotes.svg")
       max-width: 51.76px
       max-height: 55.17px

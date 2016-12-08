@@ -17,26 +17,22 @@ let btns = [
 
 let columns = [
     {
-        src: '/img/iconCherry.svg',
-        alt: 'icon-cherry',
+        iconClass: 'cherry',
         title: 'Совершенно бесплатно',
         description: 'Слушайте любую музыку<br/>при наличии интернета!'
     },
     {
-        src: '/img/iconPlane.svg',
-        alt: 'icon-plane',
+        iconClass: 'plane',
         title: 'Любимые треки всегда с&nbsp;вами',
         description: 'Ваша коллекция автоматически сохраняется на&nbsp;компьютере и\&nbsp;на&nbsp;телефоне. Берите её&nbsp;с&nbsp;собой и&nbsp;слушайте где угодно.'
     },
     {
-        src: '/img/iconNotes.svg',
-        alt: 'icon-notes',
+        iconClass: 'notes',
         title: 'Музыка для любой ситуации',
         description: 'Вам не&nbsp;обязательно быть экспертом в&nbsp;музыке. Наши редакторы создали плейлисты на&nbsp;все случаи жизни'
     },
     {
-        src: '/img/iconHeart.svg',
-        alt: 'icon-heart',
+        iconClass: 'heart',
         title: 'Рекомендации по&nbsp;вашему вкусу',
         description: 'Вы&nbsp;легко найдёте свою<br/>любимую музыку и&nbsp;откроете<br/>для себя много нового'
     }
@@ -108,4 +104,4 @@ let MainPage = React.createClass({
     }
 });
 
-ReactDOM.render(< MainPage />, document.getElementById('pageContent') );
+ReactDOM.render( <MainPage />, document.getElementById('pageContent') );

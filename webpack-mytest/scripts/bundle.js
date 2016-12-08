@@ -55,31 +55,27 @@
 	var _loginPopup = __webpack_require__(191);
 
 	var btns = [{
-	    className: ' btn-app-store',
+	    buttonClass: '-apple',
 	    href: 'https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8'
 	}, {
-	    className: ' btn-google-play',
+	    buttonClass: '-google',
 	    href: 'https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en'
 	}];
 
 	var columns = [{
-	    src: '/img/iconCherry.svg',
-	    alt: 'icon-cherry',
+	    iconClass: 'cherry',
 	    title: 'Совершенно бесплатно',
 	    description: 'Слушайте любую музыку<br/>при наличии интернета!'
 	}, {
-	    src: '/img/iconPlane.svg',
-	    alt: 'icon-plane',
+	    iconClass: 'plane',
 	    title: 'Любимые треки всегда с&nbsp;вами',
 	    description: 'Ваша коллекция автоматически сохраняется на&nbsp;компьютере и\&nbsp;на&nbsp;телефоне. Берите её&nbsp;с&nbsp;собой и&nbsp;слушайте где угодно.'
 	}, {
-	    src: '/img/iconNotes.svg',
-	    alt: 'icon-notes',
+	    iconClass: 'notes',
 	    title: 'Музыка для любой ситуации',
 	    description: 'Вам не&nbsp;обязательно быть экспертом в&nbsp;музыке. Наши редакторы создали плейлисты на&nbsp;все случаи жизни'
 	}, {
-	    src: '/img/iconHeart.svg',
-	    alt: 'icon-heart',
+	    iconClass: 'heart',
 	    title: 'Рекомендации по&nbsp;вашему вкусу',
 	    description: 'Вы&nbsp;легко найдёте свою<br/>любимую музыку и&nbsp;откроете<br/>для себя много нового'
 	}];
@@ -104,19 +100,19 @@
 	            { className: 'main' },
 	            React.createElement(
 	                'div',
-	                { className: 'main-containerWrapper' },
+	                { className: 'main-contentWrapper' },
 	                React.createElement(
 	                    'div',
-	                    { className: 'main-logos' },
+	                    { className: 'main-topLogos' },
 	                    React.createElement(
 	                        'div',
-	                        { className: 'main-zvooq-logo main-zvooq-logo__logos' },
-	                        React.createElement('a', { className: 'main-zvooq-logo__logos_link', href: 'http://zvooq.com', target: '_blank' })
+	                        { className: 'main-zvooqLogo main-zvooqLogo_topLogos' },
+	                        React.createElement('a', { className: 'main-zvooqLogoLink', href: 'http://zvooq.com', target: '_blank' })
 	                    ),
 	                    React.createElement(
 	                        'div',
-	                        { className: 'main-logos-shazam' },
-	                        React.createElement('a', { className: 'main-shazam-logo__link', href: 'http://www.shazam.com', target: '_blank' })
+	                        { className: 'main-shazamLogo' },
+	                        React.createElement('a', { className: 'main-shazamLogoLink', href: 'http://www.shazam.com', target: '_blank' })
 	                    )
 	                ),
 	                React.createElement(
@@ -126,55 +122,53 @@
 	                    React.createElement('br', null),
 	                    React.createElement(
 	                        'div',
-	                        { className: 'main-pageTitle-singIn', onClick: this.loginPopupHandler },
+	                        { className: 'main-singIn', onClick: this.loginPopupHandler },
 	                        '\u0432\u043E\u0439\u0434\u0438\u0442\u0435 '
 	                    ),
 	                    '\u0432\xA0\u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435 Zvooq'
 	                ),
 	                React.createElement(
 	                    'div',
-	                    { className: 'main-phonesGroup' },
+	                    { className: 'main-phonesGroupWrapper' },
 	                    React.createElement(
 	                        'div',
-	                        { className: 'main-phonesGroup-phones' },
-	                        React.createElement('div', { className: 'iphone-white' }),
-	                        React.createElement('div', { className: 'iphone-black' })
+	                        { className: 'main-phonesGroup' },
+	                        React.createElement('div', { className: 'main-iphone main-iphone_white' }),
+	                        React.createElement('div', { className: 'main-iphone main-iphone_black' })
 	                    ),
 	                    React.createElement(
 	                        'div',
-	                        { className: 'main-phonesGroup-install' },
+	                        { className: 'main-installGroup' },
 	                        React.createElement(
 	                            'div',
-	                            { className: 'title-now' },
+	                            { className: 'main-installGroupTitle' },
 	                            '\u0422\u0435\u043F\u0435\u0440\u044C \u0432\u0430\u0448\u0438 \u043E\u0442\u043A\u0440\u044B\u0442\u0438\u044F \u0431\u0443\u0434\u0443\u0442 \u0432\u0441\u0435\u0433\u0434\u0430 \u043F\u043E\u0434 \u0440\u0443\u043A\u043E\u0439!'
 	                        ),
 	                        React.createElement(
 	                            'div',
-	                            { className: 'title-shazam' },
+	                            { className: 'main-installGroupDescription' },
 	                            '\u0412\u044B\xA0\u0441\u043C\u043E\u0436\u0435\u0442\u0435 Shazam\u0438\u0442\u044C \u0442\u0440\u0435\u043A\u0438 \u043F\u0440\u044F\u043C\u043E \u0438\u0437\xA0Zvooq \u0441\u0440\u0430\u0437\u0443 \u0441\u043B\u0443\u0448\u0430\u0442\u044C \u0438\u0445\xA0\u0438\xA0\u043C\u043E\u043C\u0435\u043D\u0442\u0430\u043B\u044C\u043D\u043E \u0434\u043E\u0431\u0430\u0432\u043B\u044F\u0442\u044C \u0432\xA0\u0441\u0432\u043E\u044E \u043A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u044E.'
 	                        ),
-	                        React.createElement(_installBox.InstallBox, { btns: btns, positionClass: 'header__' })
+	                        React.createElement(_installBox.InstallBox, { btns: btns, positionClass: '_installGroup' })
 	                    )
 	                ),
 	                React.createElement(
 	                    'div',
-	                    { className: 'main-zvooq-logo-wrapper' },
+	                    { className: 'main-zvooqLogoWrapper' },
 	                    React.createElement(
 	                        'div',
-	                        { className: 'main-zvooq-logo main-zvooq-logo__middle' },
-	                        React.createElement('a', { className: 'main-zvooq-logo__middle_link', href: 'http://zvooq.com', target: '_blank' })
+	                        { className: 'main-zvooqLogo main-zvooqLogo_middle' },
+	                        React.createElement('a', { className: 'main-zvooqLogoLink', href: 'http://zvooq.com', target: '_blank' })
 	                    )
 	                ),
 	                React.createElement(
 	                    'div',
-	                    { className: 'main-title-freeApp' },
-	                    '\u0411\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435,',
-	                    React.createElement('br', null),
-	                    '\u0441 \u043A\u043E\u0442\u043E\u0440\u044B\u043C \u0441\u043B\u0443\u0448\u0430\u0442\u044C \u043C\u0443\u0437\u044B\u043A\u0443 \u043B\u0435\u0433\u043A\u043E'
+	                    { className: 'main-freeAppTitle' },
+	                    '\u0411\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435, \u0441\xA0\u043A\u043E\u0442\u043E\u0440\u044B\u043C \u0441\u043B\u0443\u0448\u0430\u0442\u044C \u043C\u0443\u0437\u044B\u043A\u0443 \u043B\u0435\u0433\u043A\u043E'
 	                ),
 	                React.createElement(
 	                    'div',
-	                    { className: 'main-title-numberOne' },
+	                    { className: 'main-freeAppDescription' },
 	                    '\u0411\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E\u0435 \u043C\u0443\u0437\u044B\u043A\u0430\u043B\u044C\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435 \u21161\xA0\u0432 AppStore'
 	                ),
 	                React.createElement(_columnBox.ColumnBox, { columns: columns })
@@ -182,14 +176,14 @@
 	            React.createElement(
 	                'div',
 	                { className: 'main-footer' },
-	                React.createElement(_installBox.InstallBox, { btns: btns, positionClass: 'footer__' })
+	                React.createElement(_installBox.InstallBox, { btns: btns, positionClass: '_footer' })
 	            ),
 	            this.state.showLoginPopup && React.createElement(_loginPopup.LoginPopup, { onClickClose: this.loginPopupHandler })
 	        );
 	    }
 	});
 
-	ReactDOM.render(React.createElement(MainPage, null), document.getElementById('page-content'));
+	ReactDOM.render(React.createElement(MainPage, null), document.getElementById('pageContent'));
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(34)))
 
 /***/ },
@@ -21594,7 +21588,7 @@
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: \"Museo\";\n  src: url(\"/../fonts/MuseoSansCyrl-300.otf\");\n  font-weight: 300;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"Museo\";\n  src: url(\"/../fonts/MuseoSansCyrl-100.otf\");\n  font-weight: 100;\n  font-style: normal;\n}\na,\na:hover,\na:focus,\ninput,\ninput:focus,\nselect,\nselect:focus,\ntextarea,\ntextarea:focus {\n  outline: none;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\ninput[type=\"search\"]::-webkit-search-decoration,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  cursor: pointer;\n  -webkit-appearance: button;\n  background-color: transparent;\n}\nhtml {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n}\nbody,\nhtml,\np,\nb,\ninput,\nbutton,\nh1,\nh2,\nh3 {\n  margin: 0;\n  padding: 0;\n  border: none;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\ninput {\n  background-color: transparent;\n  -webkit-appearance: none;\n}\nbutton:focus {\n  outline: none;\n}\na {\n  display: inline-block;\n}\na:hover {\n  cursor: pointer;\n}\np {\n  color: #fff;\n  text-align: center;\n}\n.main {\n  width: 100%;\n  background: -webkit-linear-gradient(-45deg, #5fe4ed 0%, #b062f3 79%, #b062f3 85%, #764e9c 100%);\n  overflow: hidden;\n  height: 100%;\n}\n.main-containerWrapper,\n.main-footer {\n  height: 100%;\n  width: 1024px;\n  margin: 0 auto;\n}\n.main-zvooq-logo {\n  background-image: url(\"/img/zvooqLogo.svg\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-zvooq-logo__logos {\n  margin: 26px 42px 40px 23px;\n  display: inline-block;\n  width: 207px;\n  height: 53px;\n}\n.main-zvooq-logo__logos_link {\n  display: inline-block;\n  width: 207px;\n  height: 53px;\n}\n.main-zvooq-logo__logos_link:hover {\n  cursor: pointer;\n}\n.main-zvooq-logo-wrapper {\n  width: 100%;\n  height: 53px;\n  margin-top: 120px;\n  margin-bottom: 30px;\n  text-align: center;\n}\n.main-zvooq-logo__middle {\n  width: 207px;\n  height: 53px;\n  display: inline-block;\n}\n.main-zvooq-logo__middle_link {\n  width: 207px;\n  height: 53px;\n  display: inline-block;\n}\n.main-logos {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: center;\n  align-items: center;\n}\n.main-logos-shazam {\n  margin: 26px 42px 40px 23px;\n  background-image: url(\"/img/shazamLogo.png\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-logos-shazam,\n.main-logos-shazam-logo__link {\n  display: inline-block;\n  width: 191.63px;\n  height: 54.21px;\n}\n.main-logos-shazam:hover,\n.main-logos-shazam-logo__link:hover {\n  cursor: pointer;\n}\n.main-pageTitle {\n  color: #fff;\n  text-align: center;\n  font-size: 37px;\n  line-height: 47px;\n  letter-spacing: 0.8px;\n  font-family: \"Museo\";\n  font-weight: 300;\n}\n.main-pageTitle-singIn {\n  cursor: pointer;\n  display: inline;\n}\n.main-pageTitle-singIn:hover {\n  color: #ff1493;\n  opacity: 0.9;\n  border-radius: 4px;\n}\n.main-phonesGroup {\n  display: flex;\n  flex-wrap: nowrap;\n  margin: 61px 73px 0 35px;\n  align-items: flex-end;\n  justify-content: space-around;\n}\n.main-phonesGroup-phones {\n  display: inline-block;\n}\n.main-phonesGroup-phones .iphone-white {\n  display: inline-block;\n  margin-right: 15px;\n  width: 213.69px;\n  height: 455.98px;\n  background-image: url(\"/img/iphoneWhite.png\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-phonesGroup-phones .iphone-black {\n  display: inline-block;\n  width: 245.69px;\n  height: 455.98px;\n  background-image: url(\"/img/iphoneBlack.png\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-phonesGroup-install {\n  display: inline-block;\n  margin: 25px 39px 12px 78px;\n  width: 310px;\n}\n.main-phonesGroup-install .title-now {\n  color: #fff;\n  width: 310px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 22.4px;\n  line-height: 29.6px;\n  margin-bottom: 15.8px;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n}\n.main-phonesGroup-install .title-shazam {\n  color: #fff;\n  width: 310px;\n  text-align: left;\n  font-size: 21.28px;\n  line-height: 23.52px;\n  letter-spacing: 0.2px;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n}\n.main-title-freeApp {\n  color: #fff;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n  font-size: 48px;\n  line-height: 57px;\n  margin-bottom: 5px;\n  text-align: center;\n}\n.main-title-numberOne {\n  color: #fff;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 27px;\n  line-height: 47px;\n  margin-bottom: 38px;\n  text-align: center;\n}\n.main-footer {\n  border-top: 1px solid #fff;\n  width: 100%;\n}\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: \"Museo\";\n  src: url(\"/../fonts/MuseoSansCyrl-300.otf\");\n  font-weight: 300;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"Museo\";\n  src: url(\"/../fonts/MuseoSansCyrl-100.otf\");\n  font-weight: 100;\n  font-style: normal;\n}\na,\na:hover,\na:focus,\ninput,\ninput:focus,\nselect,\nselect:focus,\ntextarea,\ntextarea:focus {\n  outline: none;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\ninput[type=\"search\"]::-webkit-search-decoration,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  cursor: pointer;\n  -webkit-appearance: button;\n  background-color: transparent;\n}\nhtml {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n}\nbody,\nhtml,\np,\nb,\ninput,\nbutton,\nh1,\nh2,\nh3 {\n  margin: 0;\n  padding: 0;\n  border: none;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\ninput {\n  background-color: transparent;\n  -webkit-appearance: none;\n}\nbutton:focus {\n  outline: none;\n}\na {\n  display: inline-block;\n}\na:hover {\n  cursor: pointer;\n}\np {\n  color: #fff;\n  text-align: center;\n}\n.main {\n  width: 100%;\n  background: -webkit-linear-gradient(-45deg, #5fe4ed 0%, #b062f3 79%, #b062f3 85%, #764e9c 100%);\n  overflow: hidden;\n  height: 100%;\n}\n.main-contentWrapper,\n.main-footer {\n  height: 100%;\n  width: 1024px;\n  margin: 0 auto;\n}\n.main-topLogos {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: center;\n  align-items: center;\n}\n.main-zvooqLogo {\n  background-image: url(\"/img/zvooqLogo.svg\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-zvooqLogo_topLogos {\n  margin: 26px 42px 40px 23px;\n  display: inline-block;\n  width: 207px;\n  height: 53px;\n}\n.main-zvooqLogo_middle {\n  width: 207px;\n  height: 53px;\n  display: inline-block;\n}\n.main-zvooqLogoLink {\n  display: inline-block;\n  width: 207px;\n  height: 53px;\n}\n.main-zvooqLogoLink:hover {\n  cursor: pointer;\n}\n.main-zvooqLogoWrapper {\n  width: 100%;\n  height: 53px;\n  margin-top: 120px;\n  margin-bottom: 30px;\n  text-align: center;\n}\n.main-shazamLogo {\n  margin: 26px 42px 40px 23px;\n  background-image: url(\"/img/shazamLogo.png\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-shazamLogo,\n.main-shazamLogoLink {\n  display: inline-block;\n  width: 191.63px;\n  height: 54.21px;\n}\n.main-shazamLogo:hover,\n.main-shazamLogoLink:hover {\n  cursor: pointer;\n}\n.main-pageTitle {\n  color: #fff;\n  text-align: center;\n  font-size: 37px;\n  line-height: 47px;\n  letter-spacing: 0.8px;\n  font-family: \"Museo\";\n  font-weight: 300;\n}\n.main-singIn {\n  cursor: pointer;\n  display: inline;\n}\n.main-singIn:hover {\n  color: #ff1493;\n  opacity: 0.9;\n  border-radius: 4px;\n}\n.main-phonesGroupWrapper {\n  display: flex;\n  flex-wrap: nowrap;\n  margin: 61px 73px 0 35px;\n  align-items: flex-end;\n  justify-content: space-around;\n}\n.main-phonesGroup {\n  display: inline-block;\n}\n.main-iphone {\n  display: inline-block;\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-iphone-white {\n  margin-right: 15px;\n  width: 213.69px;\n  height: 455.98px;\n  background-image: url(\"/img/iphoneWhite.png\");\n}\n.main-iphone-black {\n  width: 245.69px;\n  height: 455.98px;\n  background-image: url(\"/img/iphoneBlack.png\");\n}\n.main-installGroup {\n  display: inline-block;\n  margin: 25px 39px 12px 78px;\n  width: 310px;\n}\n.main-installGroupTitle {\n  color: #fff;\n  width: 310px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 22.4px;\n  line-height: 29.6px;\n  margin-bottom: 15.8px;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n}\n.main-installGroupDescription {\n  color: #fff;\n  width: 310px;\n  text-align: left;\n  font-size: 21.28px;\n  line-height: 23.52px;\n  letter-spacing: 0.2px;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n}\n.main-freeAppTitle {\n  color: #fff;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n  font-size: 48px;\n  line-height: 57px;\n  margin-bottom: 5px;\n  text-align: center;\n}\n.main-freeAppDescription {\n  color: #fff;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 27px;\n  line-height: 47px;\n  margin-bottom: 38px;\n  text-align: center;\n}\n.main-footer {\n  border-top: 1px solid #fff;\n  width: 100%;\n}\n", ""]);
 
 	// exports
 
@@ -21920,7 +21914,7 @@
 
 	__webpack_require__(177);
 
-	var _installBtn = __webpack_require__(179);
+	var _InstallButton = __webpack_require__(179);
 
 	var _formBox = __webpack_require__(182);
 
@@ -21930,30 +21924,30 @@
 	    getDefaultProps: function getDefaultProps() {
 	        return {
 	            btns: [],
-	            positionClass: "footer__"
+	            positionClass: "_footer"
 	        };
 	    },
 	    render: function render() {
 	        var _this = this;
 
-	        var installBtns = this.props.btns.map(function (btn, index) {
-	            return React.createElement(_installBtn.InstallBtn, { key: index, className: btn.className, href: btn.href, positionClass: _this.props.positionClass });
+	        var InstallButtons = this.props.btns.map(function (btn, index) {
+	            return React.createElement(_InstallButton.InstallButton, { key: index, buttonClass: btn.ButtonClass, href: btn.href, positionClass: _this.props.positionClass });
 	        });
 	        return React.createElement(
 	            'div',
-	            { className: "installBox " + " " + this.props.positionClass + "installBox" },
+	            { className: "installBox " + " " + "installBox" + this.props.positionClass },
 	            React.createElement(
 	                'div',
-	                { className: "install" + " " + this.props.positionClass + "install" },
+	                { className: "installBox-installWrapper" + " " + "installBox-installWrapper" + this.props.positionClass },
 	                React.createElement(
 	                    'p',
-	                    { className: 'install__title' },
+	                    { className: 'install__title as installBox-installTitle' },
 	                    '\u0423\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435'
 	                ),
 	                React.createElement(
 	                    'div',
-	                    { className: 'install-btnsWrapper' },
-	                    installBtns
+	                    { className: 'install-btnsWrapper as installBox-installButtonsWrapper' },
+	                    InstallButtons
 	                )
 	            ),
 	            React.createElement(_formBox.FormBox, { positionClass: this.props.positionClass })
@@ -21999,7 +21993,7 @@
 
 
 	// module
-	exports.push([module.id, ".installBox .install .install__title {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: 0.52px;\n}\n.installBox .install .install-btnsWrapper {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: center;\n}\n.installBox.header__installBox .install .install__title {\n  margin: 42px 0 12px;\n}\n.installBox.footer__installBox {\n  width: 1024px;\n  margin: 0 auto;\n  height: 100%;\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: flex-start;\n  padding-bottom: 56px;\n}\n.installBox.footer__installBox p {\n  margin-bottom: 35px;\n}\n.installBox.footer__installBox .install {\n  margin-top: 51px;\n  margin-right: 93px;\n  width: 380px;\n}\n.installBox.footer__installBox .install .install__title {\n  font-size: 15px;\n  line-height: 18px;\n  letter-spacing: 0.6px;\n}\n", ""]);
+	exports.push([module.id, ".installBox_footer {\n  width: 1024px;\n  margin: 0 auto;\n  height: 100%;\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: flex-start;\n  padding-bottom: 56px;\n}\n.installBox-installWrapper_footer {\n  margin-top: 51px;\n  margin-right: 93px;\n  width: 380px;\n}\n.installBox-installTitle {\n  color: #fff;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: 0.52px;\n}\n.installBox-installTitle_header {\n  margin: 42px 0 12px;\n}\n.installBox-installTitle_footer {\n  font-size: 15px;\n  line-height: 18px;\n  letter-spacing: 0.6px;\n  margin-bottom: 35px;\n}\n.installBox-installButtonsWrapper {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: center;\n}\n", ""]);
 
 	// exports
 
@@ -22013,17 +22007,17 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.InstallBtn = undefined;
+	exports.InstallButton = undefined;
 
 	__webpack_require__(180);
 
-	var InstallBtn = React.createClass({
-	    displayName: "InstallBtn",
+	var InstallButton = React.createClass({
+	    displayName: "InstallButton",
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            positionClass: "header__",
-	            className: "btn-app-store",
+	            positionClass: "_header",
+	            buttonClass: "-apple",
 	            href: "https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8"
 	        };
 	    },
@@ -22031,13 +22025,13 @@
 	    render: function render() {
 	        return React.createElement(
 	            "div",
-	            { className: "installBtn " + this.props.className + " " + this.props.positionClass + "installBtn" },
-	            React.createElement("a", { href: this.props.href, target: "_blank" })
+	            { className: "installButton " + "installButton" + this.props.buttonClass + " " + "installButton" + this.props.buttonClass + this.props.positionClass },
+	            React.createElement("a", { className: "installButton" + this.props.buttonClass + "Link" + " " + "installButton" + this.props.buttonClass + "link" + this.props.positionClass, href: this.props.href, target: "_blank" })
 	        );
 	    }
 	});
 
-	exports.InstallBtn = InstallBtn;
+	exports.InstallButton = InstallButton;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
@@ -22075,7 +22069,7 @@
 
 
 	// module
-	exports.push([module.id, ".installBtn.btn-app-store {\n  background-image: url(\"/img/appStore.svg\") !important;\n}\n.installBtn.btn-google-play {\n  background-image: url(\"/img/googlePlay.svg\") !important;\n  margin-left: -3px;\n}\n.installBtn.btn-app-store,\n.installBtn.btn-google-play {\n  background-color: #000;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  border-radius: 6px;\n}\n.installBtn.header__installBtn.btn-app-store,\n.installBtn.header__installBtn.btn-app-store a {\n  width: 142px;\n  height: 44px;\n  margin-right: -7px;\n}\n.installBtn.header__installBtn.btn-google-play,\n.installBtn.header__installBtn.btn-google-play a {\n  width: 137.48px;\n  height: 42.33px;\n}\n.installBtn.footer__installBtn.btn-app-store,\n.installBtn.footer__installBtn.btn-app-store a {\n  width: 181px;\n  height: 53px;\n  margin-right: 24.3px;\n}\n.installBtn.footer__installBtn.btn-google-play,\n.installBtn.footer__installBtn.btn-google-play a {\n  width: 174.74px;\n  height: 51.33px;\n}\n", ""]);
+	exports.push([module.id, ".installButton {\n  background-color: #000;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  border-radius: 6px;\n}\n.installButton-apple {\n  background-image: url(\"/img/appStore.svg\") !important;\n}\n.installButton-apple_header {\n  width: 142px;\n  height: 44px;\n  margin-right: -7px;\n}\n.installButton-apple_footer {\n  width: 181px;\n  height: 53px;\n  margin-right: 24.3px;\n}\n.installButton-appleLink {\n  display: inline-block;\n}\n.installButton-appleLink:hover {\n  cursor: pointer;\n}\n.installButton-appleLink_header {\n  width: 142px;\n  height: 44px;\n  margin-right: -7px;\n}\n.installButton-appleLink_footer {\n  width: 181px;\n  height: 53px;\n  margin-right: 24.3px;\n}\n.installButton-google {\n  background-image: url(\"/img/googlePlay.svg\") !important;\n  margin-left: -3px;\n}\n.installButton-google_header {\n  width: 137.48px;\n  height: 42.33px;\n}\n.installButton-google_footer {\n  width: 174.74px;\n  height: 51.33px;\n}\n.installButton-googleLink {\n  display: inline-block;\n}\n.installButton-googleLink:hover {\n  cursor: pointer;\n}\n.installButton-googleLink_header {\n  width: 137.48px;\n  height: 42.33px;\n}\n.installButton-googleLink_footer {\n  width: 174.74px;\n  height: 51.33px;\n}\n", ""]);
 
 	// exports
 
@@ -22158,7 +22152,7 @@
 
 
 	// module
-	exports.push([module.id, ".formBox__title {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: 0.52px;\n}\n.formBox .phoneEmail-form {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  align-items: center;\n  border-radius: 6px;\n  margin: 0 auto;\n}\n.formBox .phoneEmail-form {\n  background-color: #fff;\n}\n.formBox .phoneEmail-form .phoneEmail-form__submit {\n  text-transform: uppercase;\n  margin-right: 20px;\n  background-color: #fff;\n}\n.formBox .phoneEmail-form .phoneEmail-form__input {\n  height: 26px;\n  padding: 14px 25px 14px 15px;\n  border-radius: 6px;\n  background-color: transparent;\n}\n.formBox .phoneEmail-form .phoneEmail-form__input,\n.formBox .phoneEmail-form .phoneEmail-form__submit {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n  text-align: left;\n  padding-left: 15px;\n  color: #808080;\n}\n.formBox.header__formBox .formBox__title {\n  margin: 29px 0 11px;\n}\n.formBox.header__formBox .phoneEmail-form {\n  width: 304px;\n  height: 48px;\n}\n.formBox.header__formBox .phoneEmail-form__submit {\n  font-size: 12px;\n  line-height: 15px;\n  border-left: 1px solid #808080;\n  height: 22px;\n}\n.formBox.header__formBox .phoneEmail-form__input {\n  font-size: 16px;\n  line-height: 18px;\n}\n.formBox.footer__formBox {\n  margin-top: 51px;\n  margin-left: 5px;\n  width: 380px;\n}\n.formBox.footer__formBox .formBox__title {\n  font-size: 15px;\n  line-height: 18px;\n  letter-spacing: 0.6px;\n}\n.formBox.footer__formBox .phoneEmail-form {\n  width: 380px;\n  height: 51px;\n}\n.formBox.footer__formBox .phoneEmail-form .phoneEmail-form__input {\n  font-size: 20px;\n  line-height: 23px;\n  height: 23px;\n}\n.formBox.footer__formBox .phoneEmail-form .phoneEmail-form__submit {\n  font-size: 15px;\n  line-height: 18px;\n  border-left: 2px solid #808080;\n  height: 27px;\n}\n", ""]);
+	exports.push([module.id, ".formBox__title {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: 0.52px;\n}\n.formBox .phoneEmail-form {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  align-items: center;\n  border-radius: 6px;\n  margin: 0 auto;\n}\n.formBox .phoneEmail-form {\n  background-color: #fff;\n}\n.formBox .phoneEmail-form .phoneEmail-form__submit {\n  text-transform: uppercase;\n  margin-right: 20px;\n  background-color: #fff;\n}\n.formBox .phoneEmail-form .phoneEmail-form__input {\n  height: 26px;\n  padding: 14px 25px 14px 15px;\n  border-radius: 6px;\n  background-color: transparent;\n}\n.formBox .phoneEmail-form .phoneEmail-form__input,\n.formBox .phoneEmail-form .phoneEmail-form__submit {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n  text-align: left;\n  padding-left: 15px;\n  color: #808080;\n}\n.formBox.header__formBox .formBox__title {\n  margin: 29px 0 11px;\n}\n.formBox.header__formBox .phoneEmail-form {\n  width: 304px;\n  height: 48px;\n}\n.formBox.header__formBox .phoneEmail-form__submit {\n  font-size: 12px;\n  line-height: 15px;\n  border-left: 1px solid #808080;\n  height: 22px;\n}\n.formBox.header__formBox .phoneEmail-form__input {\n  font-size: 16px;\n  line-height: 18px;\n}\n.formBox.footer__formBox {\n  margin-top: 51px;\n  margin-left: 5px;\n  width: 380px;\n}\n.formBox.footer__formBox .formBox__title {\n  font-size: 15px;\n  line-height: 18px;\n  letter-spacing: 0.6px;\n  margin-bottom: 35px;\n}\n.formBox.footer__formBox .phoneEmail-form {\n  width: 380px;\n  height: 51px;\n}\n.formBox.footer__formBox .phoneEmail-form .phoneEmail-form__input {\n  font-size: 20px;\n  line-height: 23px;\n  height: 23px;\n}\n.formBox.footer__formBox .phoneEmail-form .phoneEmail-form__submit {\n  font-size: 15px;\n  line-height: 18px;\n  border-left: 2px solid #808080;\n  height: 27px;\n}\n", ""]);
 
 	// exports
 
@@ -22262,8 +22256,7 @@
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            src: 'img/iconCherry.svg',
-	            alt: 'icon-cherry',
+	            iconClass: "cherry",
 	            title: 'Слушайте любую музыку при наличии интернета!',
 	            description: 'Совершенно бесплатно'
 	        };
@@ -22275,11 +22268,11 @@
 	            { className: 'column' },
 	            React.createElement(
 	                'div',
-	                { className: 'icon-wrapper' },
-	                React.createElement('img', { className: this.props.alt, src: this.props.src, alt: this.props.alt })
+	                { className: 'icon-wrapper as column-iconWrapper' },
+	                React.createElement('div', { className: "column-icon " + "column-icon_" + this.props.iconClass })
 	            ),
-	            React.createElement('p', { className: 'column__title', dangerouslySetInnerHTML: { __html: this.props.title } }),
-	            React.createElement('p', { className: 'column__description', dangerouslySetInnerHTML: { __html: this.props.description } })
+	            React.createElement('p', { className: 'column__title  as column-title', dangerouslySetInnerHTML: { __html: this.props.title } }),
+	            React.createElement('p', { className: 'column__description  as column-description', dangerouslySetInnerHTML: { __html: this.props.description } })
 	        );
 	    }
 	});
@@ -22322,7 +22315,7 @@
 
 
 	// module
-	exports.push([module.id, ".column {\n  display: inline-block;\n  width: 220px;\n  text-align: center;\n}\n.column__title {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n  font-size: 23px;\n  line-height: 25px;\n  letter-spacing: 0.92px;\n  margin: 37px 0 21px;\n}\n.column__description {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 13px;\n  line-height: 22px;\n  letter-spacing: 0.52px;\n  width: 225px;\n}\n.column .icon-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 102px;\n  height: 102px;\n  margin: 0 auto;\n}\n.column .icon-wrapper .icon-cherry,\n.column .icon-wrapper .icon-plane,\n.column .icon-wrapper .icon-heart {\n  max-width: 90.13px;\n  max-height: 91px;\n}\n.column .icon-wrapper .icon-notes {\n  max-width: 51.76px;\n  max-height: 55.17px;\n}\n", ""]);
+	exports.push([module.id, ".column {\n  display: inline-block;\n  width: 220px;\n  text-align: center;\n}\n.column-title {\n  color: #fff;\n  text-align: center;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n  font-size: 23px;\n  line-height: 25px;\n  letter-spacing: 0.92px;\n  margin: 37px 0 21px;\n}\n.column-description {\n  color: #fff;\n  text-align: center;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 13px;\n  line-height: 22px;\n  letter-spacing: 0.52px;\n  width: 225px;\n}\n.column-iconWrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 102px;\n  height: 102px;\n  margin: 0 auto;\n}\n.column-icon {\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n}\n.column-icon_cherry,\n.column-icon_plane,\n.column-icon_heart {\n  max-width: 90.13px;\n  max-height: 91px;\n}\n.column-icon_cherry {\n  background-image: url(\"/img/iconCherry.svg\");\n}\n.column-icon_plane {\n  background-image: url(\"/img/iconPlane.svg\");\n}\n.column-icon_heart {\n  background-image: url(\"/img/iconHeart.svg\");\n}\n.column-icon_notes {\n  background-image: url(\"/img/iconNotes.svg\");\n  max-width: 51.76px;\n  max-height: 55.17px;\n}\n", ""]);
 
 	// exports
 

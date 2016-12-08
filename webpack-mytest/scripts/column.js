@@ -1,11 +1,10 @@
 import './../stylus/column.styl';
 
-var Column = React.createClass({
+let Column = React.createClass({
 
     getDefaultProps: function () {
         return {
-            src: 'img/iconCherry.svg',
-            alt: 'icon-cherry',
+            iconClass: "cherry",
             title: 'Слушайте любую музыку при наличии интернета!',
             description: 'Совершенно бесплатно'
         };
@@ -14,11 +13,11 @@ var Column = React.createClass({
     render: function() {
         return (
             <div className="column">
-                <div className="icon-wrapper">
-                    <img className={this.props.alt} src={this.props.src} alt={this.props.alt} />
+                <div className="icon-wrapper as column-iconWrapper">
+                    <div className={"column-icon " + "column-icon_" + this.props.iconClass} />
                 </div>
-                <p className="column__title" dangerouslySetInnerHTML={{ __html: this.props.title }} />
-                <p className="column__description" dangerouslySetInnerHTML={{ __html: this.props.description }} />
+                <p className="column__title  as column-title" dangerouslySetInnerHTML={{ __html: this.props.title }} />
+                <p className="column__description  as column-description" dangerouslySetInnerHTML={{ __html: this.props.description }} />
             </div>
         );
     }
