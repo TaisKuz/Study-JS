@@ -1,18 +1,20 @@
-import './../stylus/formBox.styl';
+import '../stylus/formBoxTop.styl';
+import '../stylus/formBoxBottom.styl';
 
-var FormBox = React.createClass({
+let FormBox = React.createClass({
     getDefaultProps: function () {
         return {
-            positionClass: "footer__"
+            positionClass: "Bottom"
         };
     },
     render: function() {
+        let formBoxClass = 'formBox' + this.props.positionClass;
         return (
-            <div className={"formBox" + " " + this.props.positionClass + "formBox"}>
-                <p className="formBox__title">Получите ссылку для установки на&nbsp;телефон</p>
-                <form className="phoneEmail-form">
-                    <input className="phoneEmail-form__input" type="text" placeholder="Телефон или Email" />
-                    <input className="phoneEmail-form__submit" type="submit" value="отправить" />
+            <div className={ formBoxClass }>
+                <p className={ formBoxClass + '-title' }>Получите ссылку для установки на&nbsp;телефон</p>
+                <form className={ formBoxClass + '-emailForm' }>
+                    <input className={ formBoxClass + '-inputEmail' } type="text" placeholder="Телефон или Email" />
+                    <input className={ formBoxClass + '-submitEmail' } type="submit" value="отправить" />
                 </form>
             </div>
         );

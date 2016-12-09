@@ -50,32 +50,32 @@
 
 	var _installBox = __webpack_require__(176);
 
-	var _columnBox = __webpack_require__(185);
+	var _columnBox = __webpack_require__(191);
 
-	var _loginPopup = __webpack_require__(191);
+	var _loginPopup = __webpack_require__(197);
 
 	var btns = [{
-	    buttonClass: '-apple',
+	    buttonType: 'apple',
 	    href: 'https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8'
 	}, {
-	    buttonClass: '-google',
+	    buttonType: 'google',
 	    href: 'https://play.google.com/store/apps/details?id=com.zvooq.openplay&hl=en'
 	}];
 
 	var columns = [{
-	    iconClass: 'cherry',
+	    iconType: 'cherry',
 	    title: 'Совершенно бесплатно',
 	    description: 'Слушайте любую музыку<br/>при наличии интернета!'
 	}, {
-	    iconClass: 'plane',
+	    iconType: 'plane',
 	    title: 'Любимые треки всегда с&nbsp;вами',
 	    description: 'Ваша коллекция автоматически сохраняется на&nbsp;компьютере и\&nbsp;на&nbsp;телефоне. Берите её&nbsp;с&nbsp;собой и&nbsp;слушайте где угодно.'
 	}, {
-	    iconClass: 'notes',
+	    iconType: 'notes',
 	    title: 'Музыка для любой ситуации',
 	    description: 'Вам не&nbsp;обязательно быть экспертом в&nbsp;музыке. Наши редакторы создали плейлисты на&nbsp;все случаи жизни'
 	}, {
-	    iconClass: 'heart',
+	    iconType: 'heart',
 	    title: 'Рекомендации по&nbsp;вашему вкусу',
 	    description: 'Вы&nbsp;легко найдёте свою<br/>любимую музыку и&nbsp;откроете<br/>для себя много нового'
 	}];
@@ -149,7 +149,7 @@
 	                            { className: 'main-installGroupDescription' },
 	                            '\u0412\u044B\xA0\u0441\u043C\u043E\u0436\u0435\u0442\u0435 Shazam\u0438\u0442\u044C \u0442\u0440\u0435\u043A\u0438 \u043F\u0440\u044F\u043C\u043E \u0438\u0437\xA0Zvooq \u0441\u0440\u0430\u0437\u0443 \u0441\u043B\u0443\u0448\u0430\u0442\u044C \u0438\u0445\xA0\u0438\xA0\u043C\u043E\u043C\u0435\u043D\u0442\u0430\u043B\u044C\u043D\u043E \u0434\u043E\u0431\u0430\u0432\u043B\u044F\u0442\u044C \u0432\xA0\u0441\u0432\u043E\u044E \u043A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u044E.'
 	                        ),
-	                        React.createElement(_installBox.InstallBox, { btns: btns, positionClass: '_installGroup' })
+	                        React.createElement(_installBox.InstallBox, { btns: btns, positionClass: 'Top' })
 	                    )
 	                ),
 	                React.createElement(
@@ -176,7 +176,7 @@
 	            React.createElement(
 	                'div',
 	                { className: 'main-footer' },
-	                React.createElement(_installBox.InstallBox, { btns: btns, positionClass: '_footer' })
+	                React.createElement(_installBox.InstallBox, { btns: btns, positionClass: 'Bottom' })
 	            ),
 	            this.state.showLoginPopup && React.createElement(_loginPopup.LoginPopup, { onClickClose: this.loginPopupHandler })
 	        );
@@ -21588,7 +21588,7 @@
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: \"Museo\";\n  src: url(\"/../fonts/MuseoSansCyrl-300.otf\");\n  font-weight: 300;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"Museo\";\n  src: url(\"/../fonts/MuseoSansCyrl-100.otf\");\n  font-weight: 100;\n  font-style: normal;\n}\na,\na:hover,\na:focus,\ninput,\ninput:focus,\nselect,\nselect:focus,\ntextarea,\ntextarea:focus {\n  outline: none;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\ninput[type=\"search\"]::-webkit-search-decoration,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  cursor: pointer;\n  -webkit-appearance: button;\n  background-color: transparent;\n}\nhtml {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n}\nbody,\nhtml,\np,\nb,\ninput,\nbutton,\nh1,\nh2,\nh3 {\n  margin: 0;\n  padding: 0;\n  border: none;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\ninput {\n  background-color: transparent;\n  -webkit-appearance: none;\n}\nbutton:focus {\n  outline: none;\n}\na {\n  display: inline-block;\n}\na:hover {\n  cursor: pointer;\n}\np {\n  color: #fff;\n  text-align: center;\n}\n.main {\n  width: 100%;\n  background: -webkit-linear-gradient(-45deg, #5fe4ed 0%, #b062f3 79%, #b062f3 85%, #764e9c 100%);\n  overflow: hidden;\n  height: 100%;\n}\n.main-contentWrapper,\n.main-footer {\n  height: 100%;\n  width: 1024px;\n  margin: 0 auto;\n}\n.main-topLogos {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: center;\n  align-items: center;\n}\n.main-zvooqLogo {\n  background-image: url(\"/img/zvooqLogo.svg\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-zvooqLogo_topLogos {\n  margin: 26px 42px 40px 23px;\n  display: inline-block;\n  width: 207px;\n  height: 53px;\n}\n.main-zvooqLogo_middle {\n  width: 207px;\n  height: 53px;\n  display: inline-block;\n}\n.main-zvooqLogoLink {\n  display: inline-block;\n  width: 207px;\n  height: 53px;\n}\n.main-zvooqLogoLink:hover {\n  cursor: pointer;\n}\n.main-zvooqLogoWrapper {\n  width: 100%;\n  height: 53px;\n  margin-top: 120px;\n  margin-bottom: 30px;\n  text-align: center;\n}\n.main-shazamLogo {\n  margin: 26px 42px 40px 23px;\n  background-image: url(\"/img/shazamLogo.png\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-shazamLogo,\n.main-shazamLogoLink {\n  display: inline-block;\n  width: 191.63px;\n  height: 54.21px;\n}\n.main-shazamLogo:hover,\n.main-shazamLogoLink:hover {\n  cursor: pointer;\n}\n.main-pageTitle {\n  color: #fff;\n  text-align: center;\n  font-size: 37px;\n  line-height: 47px;\n  letter-spacing: 0.8px;\n  font-family: \"Museo\";\n  font-weight: 300;\n}\n.main-singIn {\n  cursor: pointer;\n  display: inline;\n}\n.main-singIn:hover {\n  color: #ff1493;\n  opacity: 0.9;\n  border-radius: 4px;\n}\n.main-phonesGroupWrapper {\n  display: flex;\n  flex-wrap: nowrap;\n  margin: 61px 73px 0 35px;\n  align-items: flex-end;\n  justify-content: space-around;\n}\n.main-phonesGroup {\n  display: inline-block;\n}\n.main-iphone {\n  display: inline-block;\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-iphone-white {\n  margin-right: 15px;\n  width: 213.69px;\n  height: 455.98px;\n  background-image: url(\"/img/iphoneWhite.png\");\n}\n.main-iphone-black {\n  width: 245.69px;\n  height: 455.98px;\n  background-image: url(\"/img/iphoneBlack.png\");\n}\n.main-installGroup {\n  display: inline-block;\n  margin: 25px 39px 12px 78px;\n  width: 310px;\n}\n.main-installGroupTitle {\n  color: #fff;\n  width: 310px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 22.4px;\n  line-height: 29.6px;\n  margin-bottom: 15.8px;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n}\n.main-installGroupDescription {\n  color: #fff;\n  width: 310px;\n  text-align: left;\n  font-size: 21.28px;\n  line-height: 23.52px;\n  letter-spacing: 0.2px;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n}\n.main-freeAppTitle {\n  color: #fff;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n  font-size: 48px;\n  line-height: 57px;\n  margin-bottom: 5px;\n  text-align: center;\n}\n.main-freeAppDescription {\n  color: #fff;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 27px;\n  line-height: 47px;\n  margin-bottom: 38px;\n  text-align: center;\n}\n.main-footer {\n  border-top: 1px solid #fff;\n  width: 100%;\n}\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: \"Museo\";\n  src: url(\"/../fonts/MuseoSansCyrl-300.otf\");\n  font-weight: 300;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"Museo\";\n  src: url(\"/../fonts/MuseoSansCyrl-100.otf\");\n  font-weight: 100;\n  font-style: normal;\n}\na,\na:hover,\na:focus,\ninput,\ninput:focus,\nselect,\nselect:focus,\ntextarea,\ntextarea:focus {\n  outline: none;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\ninput[type=\"search\"]::-webkit-search-decoration,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  cursor: pointer;\n  -webkit-appearance: button;\n  background-color: transparent;\n}\nhtml {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n}\nbody,\nhtml,\np,\nb,\ninput,\nbutton,\nh1,\nh2,\nh3 {\n  margin: 0;\n  padding: 0;\n  border: none;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\ninput {\n  background-color: transparent;\n  -webkit-appearance: none;\n}\nbutton:focus {\n  outline: none;\n}\na {\n  display: inline-block;\n}\na:hover {\n  cursor: pointer;\n}\np {\n  color: #fff;\n  text-align: center;\n}\n.main {\n  width: 100%;\n  background: -webkit-linear-gradient(-45deg, #5fe4ed 0%, #b062f3 79%, #b062f3 85%, #764e9c 100%);\n  overflow: hidden;\n  height: 100%;\n}\n.main-contentWrapper,\n.main-footer {\n  height: 100%;\n  width: 1024px;\n  margin: 0 auto;\n}\n.main-topLogos {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: center;\n  align-items: center;\n}\n.main-zvooqLogo {\n  background-image: url(\"/img/zvooqLogo.svg\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-zvooqLogo_topLogos {\n  margin: 26px 42px 40px 23px;\n  display: inline-block;\n  width: 207px;\n  height: 53px;\n}\n.main-zvooqLogo_middle {\n  width: 207px;\n  height: 53px;\n  display: inline-block;\n}\n.main-zvooqLogoLink {\n  display: inline-block;\n  width: 207px;\n  height: 53px;\n}\n.main-zvooqLogoLink:hover {\n  cursor: pointer;\n}\n.main-zvooqLogoWrapper {\n  width: 100%;\n  height: 53px;\n  margin-top: 120px;\n  margin-bottom: 30px;\n  text-align: center;\n}\n.main-shazamLogo {\n  margin: 26px 42px 40px 23px;\n  background-image: url(\"/img/shazamLogo.png\");\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-shazamLogo,\n.main-shazamLogoLink {\n  display: inline-block;\n  width: 191.63px;\n  height: 54.21px;\n}\n.main-shazamLogo:hover,\n.main-shazamLogoLink:hover {\n  cursor: pointer;\n}\n.main-pageTitle {\n  color: #fff;\n  text-align: center;\n  font-size: 37px;\n  line-height: 47px;\n  letter-spacing: 0.8px;\n  font-family: \"Museo\";\n  font-weight: 300;\n}\n.main-singIn {\n  cursor: pointer;\n  display: inline;\n}\n.main-singIn:hover {\n  color: #ff1493;\n  opacity: 0.9;\n  border-radius: 4px;\n}\n.main-phonesGroupWrapper {\n  display: flex;\n  flex-wrap: nowrap;\n  margin: 61px 73px 0 35px;\n  align-items: flex-end;\n  justify-content: space-around;\n}\n.main-phonesGroup {\n  display: inline-block;\n}\n.main-iphone {\n  display: inline-block;\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main-iphone_white {\n  margin-right: 15px;\n  width: 213.69px;\n  height: 455.98px;\n  background-image: url(\"/img/iphoneWhite.png\");\n}\n.main-iphone_black {\n  width: 245.69px;\n  height: 455.98px;\n  background-image: url(\"/img/iphoneBlack.png\");\n}\n.main-installGroup {\n  display: inline-block;\n  margin: 25px 39px 12px 78px;\n  width: 310px;\n}\n.main-installGroupTitle {\n  color: #fff;\n  width: 310px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 22.4px;\n  line-height: 29.6px;\n  margin-bottom: 15.8px;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n}\n.main-installGroupDescription {\n  color: #fff;\n  width: 310px;\n  text-align: left;\n  font-size: 21.28px;\n  line-height: 23.52px;\n  letter-spacing: 0.2px;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n}\n.main-freeAppTitle {\n  color: #fff;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n  font-size: 48px;\n  line-height: 57px;\n  margin-bottom: 5px;\n  text-align: center;\n}\n.main-freeAppDescription {\n  color: #fff;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 27px;\n  line-height: 47px;\n  margin-bottom: 38px;\n  text-align: center;\n}\n.main-footer {\n  border-top: 1px solid #fff;\n  width: 100%;\n}\n", ""]);
 
 	// exports
 
@@ -21914,9 +21914,11 @@
 
 	__webpack_require__(177);
 
-	var _InstallButton = __webpack_require__(179);
+	__webpack_require__(179);
 
-	var _formBox = __webpack_require__(182);
+	var _InstallButton = __webpack_require__(181);
+
+	var _formBox = __webpack_require__(186);
 
 	var InstallBox = React.createClass({
 	    displayName: 'InstallBox',
@@ -21924,29 +21926,31 @@
 	    getDefaultProps: function getDefaultProps() {
 	        return {
 	            btns: [],
-	            positionClass: "_footer"
+	            positionClass: "Bottom"
 	        };
 	    },
 	    render: function render() {
 	        var _this = this;
 
 	        var InstallButtons = this.props.btns.map(function (btn, index) {
-	            return React.createElement(_InstallButton.InstallButton, { key: index, buttonClass: btn.ButtonClass, href: btn.href, positionClass: _this.props.positionClass });
-	        });
+	            return React.createElement(_InstallButton.InstallButton, { key: index, buttonClass: btn.buttonType, href: btn.href, positionClass: _this.props.positionClass });
+	        }),
+	            installBoxClass = 'installBox' + this.props.positionClass;
+
 	        return React.createElement(
 	            'div',
-	            { className: "installBox " + " " + "installBox" + this.props.positionClass },
+	            { className: installBoxClass },
 	            React.createElement(
 	                'div',
-	                { className: "installBox-installWrapper" + " " + "installBox-installWrapper" + this.props.positionClass },
+	                { className: installBoxClass + '-installWrapper' },
 	                React.createElement(
 	                    'p',
-	                    { className: 'install__title as installBox-installTitle' },
+	                    { className: installBoxClass + '-installTitle' },
 	                    '\u0423\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435'
 	                ),
 	                React.createElement(
 	                    'div',
-	                    { className: 'install-btnsWrapper as installBox-installButtonsWrapper' },
+	                    { className: installBoxClass + '-installButtonsWrapper' },
 	                    InstallButtons
 	                )
 	            ),
@@ -21974,8 +21978,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./installBox.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./installBox.styl");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./installBoxTop.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./installBoxTop.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -21993,7 +21997,7 @@
 
 
 	// module
-	exports.push([module.id, ".installBox_footer {\n  width: 1024px;\n  margin: 0 auto;\n  height: 100%;\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: flex-start;\n  padding-bottom: 56px;\n}\n.installBox-installWrapper_footer {\n  margin-top: 51px;\n  margin-right: 93px;\n  width: 380px;\n}\n.installBox-installTitle {\n  color: #fff;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: 0.52px;\n}\n.installBox-installTitle_header {\n  margin: 42px 0 12px;\n}\n.installBox-installTitle_footer {\n  font-size: 15px;\n  line-height: 18px;\n  letter-spacing: 0.6px;\n  margin-bottom: 35px;\n}\n.installBox-installButtonsWrapper {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: center;\n}\n", ""]);
+	exports.push([module.id, ".installBoxTop-installTitle {\n  color: #fff;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: 0.52px;\n  margin: 42px 0 12px;\n}\n.installBoxTop-installButtonsWrapper {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: center;\n}\n", ""]);
 
 	// exports
 
@@ -22002,46 +22006,10 @@
 /* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.InstallButton = undefined;
-
-	__webpack_require__(180);
-
-	var InstallButton = React.createClass({
-	    displayName: "InstallButton",
-
-	    getDefaultProps: function getDefaultProps() {
-	        return {
-	            positionClass: "_header",
-	            buttonClass: "-apple",
-	            href: "https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8"
-	        };
-	    },
-
-	    render: function render() {
-	        return React.createElement(
-	            "div",
-	            { className: "installButton " + "installButton" + this.props.buttonClass + " " + "installButton" + this.props.buttonClass + this.props.positionClass },
-	            React.createElement("a", { className: "installButton" + this.props.buttonClass + "Link" + " " + "installButton" + this.props.buttonClass + "link" + this.props.positionClass, href: this.props.href, target: "_blank" })
-	        );
-	    }
-	});
-
-	exports.InstallButton = InstallButton;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ },
-/* 180 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(181);
+	var content = __webpack_require__(180);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(175)(content, {});
@@ -22050,8 +22018,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./installButton.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./installButton.styl");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./installBoxBottom.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./installBoxBottom.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22061,7 +22029,7 @@
 	}
 
 /***/ },
-/* 181 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(174)();
@@ -22069,46 +22037,168 @@
 
 
 	// module
-	exports.push([module.id, ".installButton {\n  background-color: #000;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  border-radius: 6px;\n}\n.installButton-apple {\n  background-image: url(\"/img/appStore.svg\") !important;\n}\n.installButton-apple_header {\n  width: 142px;\n  height: 44px;\n  margin-right: -7px;\n}\n.installButton-apple_footer {\n  width: 181px;\n  height: 53px;\n  margin-right: 24.3px;\n}\n.installButton-appleLink {\n  display: inline-block;\n}\n.installButton-appleLink:hover {\n  cursor: pointer;\n}\n.installButton-appleLink_header {\n  width: 142px;\n  height: 44px;\n  margin-right: -7px;\n}\n.installButton-appleLink_footer {\n  width: 181px;\n  height: 53px;\n  margin-right: 24.3px;\n}\n.installButton-google {\n  background-image: url(\"/img/googlePlay.svg\") !important;\n  margin-left: -3px;\n}\n.installButton-google_header {\n  width: 137.48px;\n  height: 42.33px;\n}\n.installButton-google_footer {\n  width: 174.74px;\n  height: 51.33px;\n}\n.installButton-googleLink {\n  display: inline-block;\n}\n.installButton-googleLink:hover {\n  cursor: pointer;\n}\n.installButton-googleLink_header {\n  width: 137.48px;\n  height: 42.33px;\n}\n.installButton-googleLink_footer {\n  width: 174.74px;\n  height: 51.33px;\n}\n", ""]);
+	exports.push([module.id, ".installBoxBottom {\n  width: 1024px;\n  margin: 0 auto;\n  height: 100%;\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: flex-start;\n  padding-bottom: 56px;\n}\n.installBoxBottom-installWrapper {\n  margin-top: 51px;\n  margin-right: 93px;\n  width: 380px;\n}\n.installBoxBottom-installTitle {\n  color: #fff;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 15px;\n  line-height: 18px;\n  letter-spacing: 0.6px;\n  margin-bottom: 35px;\n}\n.installBoxBottom-installButtonsWrapper {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: center;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
+/* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.InstallButton = undefined;
+
+	__webpack_require__(182);
+
+	__webpack_require__(184);
+
+	var InstallButton = React.createClass({
+	    displayName: 'InstallButton',
+
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            positionClass: "Top",
+	            buttonType: "apple",
+	            href: "https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8"
+	        };
+	    },
+
+	    render: function render() {
+	        var buttonClass = 'installButton' + this.props.positionClass;
+	        return React.createElement(
+	            'div',
+	            { className: buttonClass + " " + buttonClass + "-" + this.props.buttonType },
+	            React.createElement('a', { className: buttonClass + "-" + this.props.buttonType + "Link", href: this.props.href, target: '_blank' })
+	        );
+	    }
+	});
+
+	exports.InstallButton = InstallButton;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ },
 /* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(183);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./installButtonTop.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./installButtonTop.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 183 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".installButtonTop {\n  background-color: #000;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  border-radius: 6px;\n}\n.installButtonTop-apple {\n  background-image: url(\"/img/appStore.svg\") !important;\n  width: 142px;\n  height: 44px;\n  margin-right: -7px;\n}\n.installButtonTop-appleLink {\n  display: inline-block;\n  width: 142px;\n  height: 44px;\n  margin-right: -7px;\n}\n.installButtonTop-appleLink:hover {\n  cursor: pointer;\n}\n.installButtonTop-google {\n  background-image: url(\"/img/googlePlay.svg\") !important;\n  margin-left: -3px;\n  width: 137.48px;\n  height: 42.33px;\n}\n.installButtonTop-googleLink {\n  display: inline-block;\n  width: 137.48px;\n  height: 42.33px;\n}\n.installButtonTop-googleLink:hover {\n  cursor: pointer;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(185);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./installButtonBottom.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./installButtonBottom.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".installButtonBottom {\n  background-color: #000;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  border-radius: 6px;\n}\n.installButtonBottom-apple {\n  background-image: url(\"/img/appStore.svg\") !important;\n  width: 181px;\n  height: 53px;\n  margin-right: 24.3px;\n}\n.installButtonBottom-appleLink {\n  display: inline-block;\n  width: 181px;\n  height: 53px;\n  margin-right: 24.3px;\n}\n.installButtonBottom-appleLink:hover {\n  cursor: pointer;\n}\n.installButtonBottom-google {\n  background-image: url(\"/img/googlePlay.svg\") !important;\n  margin-left: -3px;\n  width: 174.74px;\n  height: 51.33px;\n}\n.installButtonBottom-googleLink {\n  display: inline-block;\n  width: 174.74px;\n  height: 51.33px;\n}\n.installButtonBottom-googleLink:hover {\n  cursor: pointer;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 	exports.FormBox = undefined;
 
-	__webpack_require__(183);
+	__webpack_require__(187);
+
+	__webpack_require__(189);
 
 	var FormBox = React.createClass({
-	    displayName: "FormBox",
+	    displayName: 'FormBox',
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            positionClass: "footer__"
+	            positionClass: "Bottom"
 	        };
 	    },
 	    render: function render() {
+	        var formBoxClass = 'formBox' + this.props.positionClass;
 	        return React.createElement(
-	            "div",
-	            { className: "formBox" + " " + this.props.positionClass + "formBox" },
+	            'div',
+	            { className: formBoxClass },
 	            React.createElement(
-	                "p",
-	                { className: "formBox__title" },
-	                "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u0435 \u0441\u0441\u044B\u043B\u043A\u0443 \u0434\u043B\u044F \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0438 \u043D\u0430\xA0\u0442\u0435\u043B\u0435\u0444\u043E\u043D"
+	                'p',
+	                { className: formBoxClass + '-title' },
+	                '\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u0435 \u0441\u0441\u044B\u043B\u043A\u0443 \u0434\u043B\u044F \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0438 \u043D\u0430\xA0\u0442\u0435\u043B\u0435\u0444\u043E\u043D'
 	            ),
 	            React.createElement(
-	                "form",
-	                { className: "phoneEmail-form" },
-	                React.createElement("input", { className: "phoneEmail-form__input", type: "text", placeholder: "\u0422\u0435\u043B\u0435\u0444\u043E\u043D \u0438\u043B\u0438 Email" }),
-	                React.createElement("input", { className: "phoneEmail-form__submit", type: "submit", value: "\u043E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C" })
+	                'form',
+	                { className: formBoxClass + '-emailForm' },
+	                React.createElement('input', { className: formBoxClass + '-inputEmail', type: 'text', placeholder: '\u0422\u0435\u043B\u0435\u0444\u043E\u043D \u0438\u043B\u0438 Email' }),
+	                React.createElement('input', { className: formBoxClass + '-submitEmail', type: 'submit', value: '\u043E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C' })
 	            )
 	        );
 	    }
@@ -22118,13 +22208,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 183 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(184);
+	var content = __webpack_require__(188);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(175)(content, {});
@@ -22133,8 +22223,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./formBox.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./formBox.styl");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./formBoxTop.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./formBoxTop.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22144,7 +22234,7 @@
 	}
 
 /***/ },
-/* 184 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(174)();
@@ -22152,13 +22242,53 @@
 
 
 	// module
-	exports.push([module.id, ".formBox__title {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: 0.52px;\n}\n.formBox .phoneEmail-form {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  align-items: center;\n  border-radius: 6px;\n  margin: 0 auto;\n}\n.formBox .phoneEmail-form {\n  background-color: #fff;\n}\n.formBox .phoneEmail-form .phoneEmail-form__submit {\n  text-transform: uppercase;\n  margin-right: 20px;\n  background-color: #fff;\n}\n.formBox .phoneEmail-form .phoneEmail-form__input {\n  height: 26px;\n  padding: 14px 25px 14px 15px;\n  border-radius: 6px;\n  background-color: transparent;\n}\n.formBox .phoneEmail-form .phoneEmail-form__input,\n.formBox .phoneEmail-form .phoneEmail-form__submit {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n  text-align: left;\n  padding-left: 15px;\n  color: #808080;\n}\n.formBox.header__formBox .formBox__title {\n  margin: 29px 0 11px;\n}\n.formBox.header__formBox .phoneEmail-form {\n  width: 304px;\n  height: 48px;\n}\n.formBox.header__formBox .phoneEmail-form__submit {\n  font-size: 12px;\n  line-height: 15px;\n  border-left: 1px solid #808080;\n  height: 22px;\n}\n.formBox.header__formBox .phoneEmail-form__input {\n  font-size: 16px;\n  line-height: 18px;\n}\n.formBox.footer__formBox {\n  margin-top: 51px;\n  margin-left: 5px;\n  width: 380px;\n}\n.formBox.footer__formBox .formBox__title {\n  font-size: 15px;\n  line-height: 18px;\n  letter-spacing: 0.6px;\n  margin-bottom: 35px;\n}\n.formBox.footer__formBox .phoneEmail-form {\n  width: 380px;\n  height: 51px;\n}\n.formBox.footer__formBox .phoneEmail-form .phoneEmail-form__input {\n  font-size: 20px;\n  line-height: 23px;\n  height: 23px;\n}\n.formBox.footer__formBox .phoneEmail-form .phoneEmail-form__submit {\n  font-size: 15px;\n  line-height: 18px;\n  border-left: 2px solid #808080;\n  height: 27px;\n}\n", ""]);
+	exports.push([module.id, ".formBoxTop-title {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: 0.52px;\n  margin: 29px 0 11px;\n}\n.formBoxTop-emailForm {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  align-items: center;\n  border-radius: 6px;\n  margin: 0 auto;\n  background-color: #fff;\n  width: 304px;\n  height: 48px;\n}\n.formBoxTop-submitEmail,\n.formBoxTop-inputEmail {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n  text-align: left;\n  padding-left: 15px;\n  color: #808080;\n}\n.formBoxTop-submitEmail {\n  text-transform: uppercase;\n  margin-right: 20px;\n  background-color: #fff;\n  font-size: 12px;\n  line-height: 15px;\n  border-left: 1px solid #808080;\n  height: 22px;\n}\n.formBoxTop-inputEmail {\n  height: 26px;\n  padding: 14px 25px 14px 15px;\n  border-radius: 6px;\n  background-color: transparent;\n  font-size: 16px;\n  line-height: 18px;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 185 */
+/* 189 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(190);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(175)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./formBoxBottom.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/stylus-loader/index.js!./formBoxBottom.styl");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 190 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(174)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".formBoxBottom {\n  margin-top: 51px;\n  margin-left: 5px;\n  width: 380px;\n}\n.formBoxBottom-title {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  margin: 0 0 35px;\n  font-size: 15px;\n  line-height: 18px;\n  letter-spacing: 0.6px;\n}\n.formBoxBottom-emailForm {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  align-items: center;\n  border-radius: 6px;\n  margin: 0 auto;\n  background-color: #fff;\n  width: 380px;\n  height: 51px;\n}\n.formBoxBottom-submitEmail,\n.formBoxBottom-inputEmail {\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n  text-align: left;\n  padding-left: 15px;\n  color: #808080;\n}\n.formBoxBottom-submitEmail {\n  text-transform: uppercase;\n  margin-right: 20px;\n  background-color: #fff;\n  font-size: 15px;\n  line-height: 18px;\n  border-left: 2px solid #808080;\n  height: 27px;\n}\n.formBoxBottom-inputEmail {\n  padding: 14px 25px 14px 15px;\n  border-radius: 6px;\n  background-color: transparent;\n  font-size: 20px;\n  line-height: 23px;\n  height: 23px;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22168,9 +22298,9 @@
 	});
 	exports.ColumnBox = undefined;
 
-	__webpack_require__(186);
+	__webpack_require__(192);
 
-	var _column = __webpack_require__(188);
+	var _column = __webpack_require__(194);
 
 	var ColumnBox = React.createClass({
 	    displayName: 'ColumnBox',
@@ -22183,7 +22313,7 @@
 
 	    render: function render() {
 	        var columnNodes = this.props.columns.map(function (column, index) {
-	            return React.createElement(_column.Column, { key: index, src: column.src, alt: column.alt, title: column.title, description: column.description });
+	            return React.createElement(_column.Column, { key: index, iconType: column.iconType, title: column.title, description: column.description });
 	        });
 
 	        return React.createElement(
@@ -22198,13 +22328,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 186 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(187);
+	var content = __webpack_require__(193);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(175)(content, {});
@@ -22224,7 +22354,7 @@
 	}
 
 /***/ },
-/* 187 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(174)();
@@ -22238,7 +22368,7 @@
 
 
 /***/ },
-/* 188 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22248,7 +22378,7 @@
 	});
 	exports.Column = undefined;
 
-	__webpack_require__(189);
+	__webpack_require__(195);
 
 	var Column = React.createClass({
 	    displayName: 'Column',
@@ -22256,7 +22386,7 @@
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            iconClass: "cherry",
+	            iconType: "cherry",
 	            title: 'Слушайте любую музыку при наличии интернета!',
 	            description: 'Совершенно бесплатно'
 	        };
@@ -22268,11 +22398,11 @@
 	            { className: 'column' },
 	            React.createElement(
 	                'div',
-	                { className: 'icon-wrapper as column-iconWrapper' },
-	                React.createElement('div', { className: "column-icon " + "column-icon_" + this.props.iconClass })
+	                { className: 'column-iconWrapper' },
+	                React.createElement('div', { className: "column-icon" + " " + "column-icon_" + this.props.iconType })
 	            ),
-	            React.createElement('p', { className: 'column__title  as column-title', dangerouslySetInnerHTML: { __html: this.props.title } }),
-	            React.createElement('p', { className: 'column__description  as column-description', dangerouslySetInnerHTML: { __html: this.props.description } })
+	            React.createElement('p', { className: 'column-title', dangerouslySetInnerHTML: { __html: this.props.title } }),
+	            React.createElement('p', { className: 'column-description', dangerouslySetInnerHTML: { __html: this.props.description } })
 	        );
 	    }
 	});
@@ -22281,13 +22411,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 189 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(190);
+	var content = __webpack_require__(196);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(175)(content, {});
@@ -22307,7 +22437,7 @@
 	}
 
 /***/ },
-/* 190 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(174)();
@@ -22315,13 +22445,13 @@
 
 
 	// module
-	exports.push([module.id, ".column {\n  display: inline-block;\n  width: 220px;\n  text-align: center;\n}\n.column-title {\n  color: #fff;\n  text-align: center;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n  font-size: 23px;\n  line-height: 25px;\n  letter-spacing: 0.92px;\n  margin: 37px 0 21px;\n}\n.column-description {\n  color: #fff;\n  text-align: center;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 13px;\n  line-height: 22px;\n  letter-spacing: 0.52px;\n  width: 225px;\n}\n.column-iconWrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 102px;\n  height: 102px;\n  margin: 0 auto;\n}\n.column-icon {\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n}\n.column-icon_cherry,\n.column-icon_plane,\n.column-icon_heart {\n  max-width: 90.13px;\n  max-height: 91px;\n}\n.column-icon_cherry {\n  background-image: url(\"/img/iconCherry.svg\");\n}\n.column-icon_plane {\n  background-image: url(\"/img/iconPlane.svg\");\n}\n.column-icon_heart {\n  background-image: url(\"/img/iconHeart.svg\");\n}\n.column-icon_notes {\n  background-image: url(\"/img/iconNotes.svg\");\n  max-width: 51.76px;\n  max-height: 55.17px;\n}\n", ""]);
+	exports.push([module.id, ".column {\n  display: inline-block;\n  width: 220px;\n  text-align: center;\n}\n.column-title {\n  color: #fff;\n  text-align: center;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 300;\n  font-size: 23px;\n  line-height: 25px;\n  letter-spacing: 0.92px;\n  margin: 37px 0 21px;\n}\n.column-description {\n  color: #fff;\n  text-align: center;\n  font-family: \"Museo\", Arial, sans-serif;\n  font-weight: 100;\n  font-size: 13px;\n  line-height: 22px;\n  letter-spacing: 0.52px;\n  width: 225px;\n}\n.column-iconWrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 102px;\n  height: 102px;\n  margin: 0 auto;\n}\n.column-icon {\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n}\n.column-icon_cherry {\n  background-image: url(\"/img/iconCherry.svg\");\n  width: 71px;\n  height: 64px;\n}\n.column-icon_plane {\n  background-image: url(\"/img/iconPlane.svg\");\n  width: 74px;\n  height: 74px;\n}\n.column-icon_notes {\n  background-image: url(\"/img/iconNotes.svg\");\n  width: 51px;\n  height: 58px;\n}\n.column-icon_heart {\n  background-image: url(\"/img/iconHeart.svg\");\n  width: 52px;\n  height: 49px;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 191 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22331,15 +22461,15 @@
 	});
 	exports.LoginPopup = undefined;
 
-	__webpack_require__(192);
+	__webpack_require__(198);
 
-	var _loginMain = __webpack_require__(194);
+	var _loginMain = __webpack_require__(200);
 
-	var _loginEmail = __webpack_require__(200);
+	var _loginEmail = __webpack_require__(206);
 
-	var _loginSms = __webpack_require__(209);
+	var _loginSms = __webpack_require__(215);
 
-	var _emailPasForgot = __webpack_require__(212);
+	var _emailPasForgot = __webpack_require__(218);
 
 	var LoginPopup = exports.LoginPopup = React.createClass({
 	    displayName: 'LoginPopup',
@@ -22387,13 +22517,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 192 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(193);
+	var content = __webpack_require__(199);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(175)(content, {});
@@ -22413,7 +22543,7 @@
 	}
 
 /***/ },
-/* 193 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(174)();
@@ -22427,7 +22557,7 @@
 
 
 /***/ },
-/* 194 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22437,9 +22567,9 @@
 	});
 	exports.LoginMain = undefined;
 
-	__webpack_require__(195);
+	__webpack_require__(201);
 
-	var _loginBtn = __webpack_require__(197);
+	var _loginBtn = __webpack_require__(203);
 
 	var LoginMain = exports.LoginMain = React.createClass({
 	    displayName: 'LoginMain',
@@ -22524,13 +22654,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 195 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(196);
+	var content = __webpack_require__(202);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(175)(content, {});
@@ -22550,7 +22680,7 @@
 	}
 
 /***/ },
-/* 196 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(174)();
@@ -22564,7 +22694,7 @@
 
 
 /***/ },
-/* 197 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22574,7 +22704,7 @@
 	});
 	exports.BUTTONS_TYPE = exports.LoginBtn = undefined;
 
-	__webpack_require__(198);
+	__webpack_require__(204);
 
 	var LoginBtn = exports.LoginBtn = React.createClass({
 	    displayName: 'LoginBtn',
@@ -22634,13 +22764,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 198 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(199);
+	var content = __webpack_require__(205);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(175)(content, {});
@@ -22660,7 +22790,7 @@
 	}
 
 /***/ },
-/* 199 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(174)();
@@ -22674,7 +22804,7 @@
 
 
 /***/ },
-/* 200 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22684,11 +22814,11 @@
 	});
 	exports.LoginEmail = undefined;
 
-	__webpack_require__(201);
+	__webpack_require__(207);
 
-	var _loginForm = __webpack_require__(203);
+	var _loginForm = __webpack_require__(209);
 
-	var _loginHeader = __webpack_require__(206);
+	var _loginHeader = __webpack_require__(212);
 
 	var inputs = [{
 	    type: "email",
@@ -22735,13 +22865,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 201 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(202);
+	var content = __webpack_require__(208);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(175)(content, {});
@@ -22761,7 +22891,7 @@
 	}
 
 /***/ },
-/* 202 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(174)();
@@ -22775,7 +22905,7 @@
 
 
 /***/ },
-/* 203 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22785,9 +22915,9 @@
 	});
 	exports.LoginForm = undefined;
 
-	__webpack_require__(204);
+	__webpack_require__(210);
 
-	var _loginBtn = __webpack_require__(197);
+	var _loginBtn = __webpack_require__(203);
 
 	var LoginForm = exports.LoginForm = React.createClass({
 	    displayName: 'LoginForm',
@@ -22818,13 +22948,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 204 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(205);
+	var content = __webpack_require__(211);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(175)(content, {});
@@ -22844,7 +22974,7 @@
 	}
 
 /***/ },
-/* 205 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(174)();
@@ -22858,7 +22988,7 @@
 
 
 /***/ },
-/* 206 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
@@ -22868,7 +22998,7 @@
 	});
 	exports.LoginHeader = undefined;
 
-	__webpack_require__(207);
+	__webpack_require__(213);
 
 	var LoginHeader = exports.LoginHeader = React.createClass({
 	    displayName: "LoginHeader",
@@ -22892,13 +23022,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 207 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(208);
+	var content = __webpack_require__(214);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(175)(content, {});
@@ -22918,7 +23048,7 @@
 	}
 
 /***/ },
-/* 208 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(174)();
@@ -22932,7 +23062,7 @@
 
 
 /***/ },
-/* 209 */
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -22942,11 +23072,11 @@
 	});
 	exports.LoginSms = undefined;
 
-	__webpack_require__(210);
+	__webpack_require__(216);
 
-	var _loginForm = __webpack_require__(203);
+	var _loginForm = __webpack_require__(209);
 
-	var _loginHeader = __webpack_require__(206);
+	var _loginHeader = __webpack_require__(212);
 
 	var inputs = [{
 	    type: "tel",
@@ -22992,13 +23122,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 210 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(211);
+	var content = __webpack_require__(217);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(175)(content, {});
@@ -23018,7 +23148,7 @@
 	}
 
 /***/ },
-/* 211 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(174)();
@@ -23032,7 +23162,7 @@
 
 
 /***/ },
-/* 212 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
@@ -23042,11 +23172,11 @@
 	});
 	exports.EmailPasForgot = undefined;
 
-	__webpack_require__(213);
+	__webpack_require__(219);
 
-	var _loginForm = __webpack_require__(203);
+	var _loginForm = __webpack_require__(209);
 
-	var _loginHeader = __webpack_require__(206);
+	var _loginHeader = __webpack_require__(212);
 
 	var inputs = [{
 	    type: "email",
@@ -23081,13 +23211,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 213 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(214);
+	var content = __webpack_require__(220);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(175)(content, {});
@@ -23107,7 +23237,7 @@
 	}
 
 /***/ },
-/* 214 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(174)();

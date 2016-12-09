@@ -10,15 +10,15 @@ let ColumnBox = React.createClass({
     },
 
     render: function() {
-        let columnNodes = this.props.columns.map((column, index) => {
+        let columnNodes = this.props.columns.map(( column, index ) => {
             return (
-                <Column key={index} src={column.src} alt={column.alt} title={column.title} description={column.description}/>
+                <Column key={ index } iconType={ column.iconType } title={ column.title } description={ column.description } />
             );
         });
 
         return (
             <div className="columnBox">
-                {columnNodes}
+                { columnNodes }
             </div>
         );
     }
