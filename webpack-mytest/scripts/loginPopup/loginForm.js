@@ -1,29 +1,34 @@
 import './../../stylus/loginPopup/loginForm.styl';
 
-import { LoginBtn } from './loginBtn.js';
+import { LoginButton } from './loginButton.js';
 
-export var LoginForm = React.createClass({
+export let LoginForm = React.createClass({
 
     getDefaultProps: function () {
         return {
-            typebtn: 4,
-            loginBtnText: "Продолжить",
+            buttonType: 4,
+            loginButtonText: "Продолжить",
             inputs: []
         };
     },
 
     render: function() {
-        var loginForm = "loginForm";
-        var inputs = this.props.inputs.map((input, index) => {
+        let inputs = this.props.inputs.map(( input, index ) => {
             return (
-                <input key={index} className={loginForm + "__input"} defaultValue={input.defaultValue} placeholder={input.placeholder} required type={input.type} />
+                <input
+                    key={ index }
+                    className={ input.type === "password" ? "loginForm-password" : "loginForm-input" }
+                    defaultValue={ input.defaultValue }
+                    placeholder={ input.placeholder }
+                    required type={ input.type }
+                />
             );
         });
 
         return (
-            <div className={loginForm + " "}>
-                {inputs}
-                <LoginBtn typebtn={this.props.typebtn} type="submit" loginBtnText={this.props.loginBtnText}/>
+            <div className="loginForm">
+                { inputs }
+                <LoginButton buttonType={ this.props.buttonType } type="submit" loginButtonText={ this.props.loginButtonText } />
             </div>
         );
     }

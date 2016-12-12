@@ -3,7 +3,7 @@ import './../../stylus/loginPopup/loginEmail.styl';
 import { LoginForm } from './loginForm.js';
 import { LoginHeader } from './loginHeader.js';
 
-var inputs = [
+let inputs = [
     {
         type: "email",
         placeholder: "Ваш email",
@@ -14,7 +14,7 @@ var inputs = [
     }
 ];
 
-export var LoginEmail = React.createClass({
+export let LoginEmail = React.createClass({
     getInitialState: function() {
         return {
             onPageClick: () => {}
@@ -23,11 +23,12 @@ export var LoginEmail = React.createClass({
     render: function() {
         return (
             <div className="loginEmail">
-                <LoginHeader clickHandler={() => {this.props.onPageClick(0)}}/>
+                <LoginHeader clickHandler={ () => { this.props.onPageClick(0) } } />
                 <div className="loginEmail-content">
-                    <LoginForm inputs={inputs} typebtn={4} type="submit" />
-                    <div className="loginEmail__forgot-button"
-                         onClick={() => {this.props.onPageClick(3)}}
+                    <LoginForm inputs={ inputs } buttonType={ 4 } type="submit" />
+                    <div
+                         className="loginEmail-forgotButton"
+                         onClick={ () => { this.props.onPageClick(3) } }
                     >Забыли пароль?</div>
                 </div>
             </div>

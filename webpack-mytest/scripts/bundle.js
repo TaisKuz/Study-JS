@@ -65,7 +65,7 @@
 	var columns = [{
 	    iconType: 'cherry',
 	    title: 'Совершенно бесплатно',
-	    description: 'Слушайте любую музыку<br/>при наличии интернета!'
+	    description: 'Слушайте любую музыку<br />при наличии интернета!'
 	}, {
 	    iconType: 'plane',
 	    title: 'Любимые треки всегда с&nbsp;вами',
@@ -77,7 +77,7 @@
 	}, {
 	    iconType: 'heart',
 	    title: 'Рекомендации по&nbsp;вашему вкусу',
-	    description: 'Вы&nbsp;легко найдёте свою<br/>любимую музыку и&nbsp;откроете<br/>для себя много нового'
+	    description: 'Вы&nbsp;легко найдёте свою<br />любимую музыку и&nbsp;откроете<br />для себя много нового'
 	}];
 
 	var MainPage = React.createClass({
@@ -22469,7 +22469,7 @@
 
 	var _loginSms = __webpack_require__(215);
 
-	var _emailPasForgot = __webpack_require__(218);
+	var _emailPasswordForgot = __webpack_require__(218);
 
 	var LoginPopup = exports.LoginPopup = React.createClass({
 	    displayName: 'LoginPopup',
@@ -22482,7 +22482,7 @@
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            views: [_loginMain.LoginMain, _loginEmail.LoginEmail, _loginSms.LoginSms, _emailPasForgot.EmailPasForgot],
+	            views: [_loginMain.LoginMain, _loginEmail.LoginEmail, _loginSms.LoginSms, _emailPasswordForgot.EmailPasswordForgot],
 	            onClickClose: function onClickClose() {}
 	        };
 	    },
@@ -22496,17 +22496,17 @@
 
 	        return React.createElement(
 	            'div',
-	            { className: 'loginPopup loginPopup_up banner' },
+	            { className: 'loginPopup' },
 	            React.createElement(
 	                'div',
-	                { className: 'banner-inner' },
+	                { className: 'loginPopup-bannerInner' },
 	                React.createElement(
 	                    'div',
-	                    { className: 'banner-scroller' },
-	                    React.createElement('div', { className: 'banner-pointer', onClick: this.props.onClickClose }),
+	                    { className: 'loginPopup-bannerScroller' },
+	                    React.createElement('div', { className: 'loginPopup-bannerPointer', onClick: this.props.onClickClose }),
 	                    React.createElement(
 	                        'div',
-	                        { className: 'banner-window' },
+	                        { className: 'loginPopup-bannerWindow' },
 	                        React.createElement(Page, { onPageClick: this.pageClickHandler })
 	                    )
 	                )
@@ -22551,7 +22551,7 @@
 
 
 	// module
-	exports.push([module.id, ".loginPopup.loginPopup_up {\n  z-index: 10;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: fixed !important;\n}\n.loginPopup.loginPopup_up .banner-inner {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: absolute !important;\n  background-color: rgba(0,0,0,0.5);\n}\n.loginPopup.loginPopup_up .banner-pointer {\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: fixed !important;\n  cursor: pointer;\n}\n.loginPopup.loginPopup_up .banner-scroller {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n.loginPopup.loginPopup_up .banner-window {\n  z-index: 10040;\n  width: 320px;\n  min-height: 381px;\n  cursor: default;\n  position: relative;\n  top: 100px;\n  margin: 0 auto 100px;\n  border-radius: 3px;\n  background: #fff;\n  transition: transform 0.6s;\n  transition-property: transform;\n  transition-duration: 0.6s;\n  transition-timing-function: initial;\n  transition-delay: initial;\n}\n", ""]);
+	exports.push([module.id, ".loginPopup {\n  z-index: 10;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: fixed !important;\n}\n.loginPopup-bannerInner {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: absolute !important;\n  background-color: rgba(0,0,0,0.5);\n}\n.loginPopup-bannerScroller {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n.loginPopup-bannerPointer {\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: fixed !important;\n  cursor: pointer;\n}\n.loginPopup-bannerWindow {\n  z-index: 10040;\n  width: 320px;\n  min-height: 381px;\n  cursor: default;\n  position: relative;\n  top: 100px;\n  margin: 0 auto 100px;\n  border-radius: 3px;\n  background: #fff;\n  transition: transform 0.6s;\n  transition-property: transform;\n  transition-duration: 0.6s;\n  transition-timing-function: initial;\n  transition-delay: initial;\n}\n", ""]);
 
 	// exports
 
@@ -22569,7 +22569,7 @@
 
 	__webpack_require__(201);
 
-	var _loginBtn = __webpack_require__(203);
+	var _loginButton = __webpack_require__(203);
 
 	var LoginMain = exports.LoginMain = React.createClass({
 	    displayName: 'LoginMain',
@@ -22577,13 +22577,13 @@
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            socialBtns: [{ typebtn: 0 }, { typebtn: 1 }],
+	            socialButtons: [{ buttonType: 0 }, { buttonType: 1 }],
 
-	            emailBtns: [{
-	                typebtn: 2,
+	            emailButtons: [{
+	                buttonType: 2,
 	                id: 1
 	            }, {
-	                typebtn: 3,
+	                buttonType: 3,
 	                id: 2
 	            }],
 	            onPageClick: function onPageClick() {}
@@ -22593,12 +22593,14 @@
 	    render: function render() {
 	        var _this = this;
 
-	        var socialBtns = this.props.socialBtns.map(function (item, index) {
-	            return React.createElement(_loginBtn.LoginBtn, { key: index, typebtn: item.typebtn });
+	        var socialButtons = this.props.socialButtons.map(function (item, index) {
+	            return React.createElement(_loginButton.LoginButton, { key: index, buttonType: item.buttonType });
 	        });
 
-	        var emailBtns = this.props.emailBtns.map(function (item, index) {
-	            return React.createElement(_loginBtn.LoginBtn, { key: index, typebtn: item.typebtn,
+	        var emailButtons = this.props.emailButtons.map(function (item, index) {
+	            return React.createElement(_loginButton.LoginButton, {
+	                key: index,
+	                buttonType: item.buttonType,
 	                onClick: function onClick() {
 	                    _this.props.onPageClick(item.id);
 	                }
@@ -22610,40 +22612,40 @@
 	            { className: 'loginMain' },
 	            React.createElement(
 	                'div',
-	                { className: 'loginTitle' },
+	                { className: 'loginMain-title' },
 	                '\u0427\u0442\u043E\u0431\u044B \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C, \u0432\u043E\u0439\u0434\u0438\u0442\u0435 \u043B\u044E\u0431\u044B\u043C \u0443\u0434\u043E\u0431\u043D\u044B\u043C \u0434\u043B\u044F \u0432\u0430\u0441 \u0441\u043F\u043E\u0441\u043E\u0431\u043E\u043C:'
 	            ),
 	            React.createElement(
 	                'div',
-	                { className: 'loginBtns-content' },
-	                socialBtns,
-	                React.createElement('div', { className: 'btnStriper' }),
-	                emailBtns,
+	                { className: 'loginMain-loginButtonsWrapper' },
+	                socialButtons,
+	                React.createElement('div', { className: 'loginMain-buttonsStriper' }),
+	                emailButtons,
 	                React.createElement(
 	                    'p',
-	                    { className: 'loginMain-links' },
-	                    '\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u0443\u044F\u0441\u044C, \u0432\u044B \u0441\u043E\u0433\u043B\u0430\u0448\u0430\u0435\u0442\u0435\u0441\u044C \u0441 ',
+	                    { className: 'loginMain-linksWrapper' },
+	                    '\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u0443\u044F\u0441\u044C, \u0432\u044B \u0441\u043E\u0433\u043B\u0430\u0448\u0430\u0435\u0442\u0435\u0441\u044C \u0441\xA0',
 	                    React.createElement(
 	                        'a',
-	                        { href: 'http://zvooq.com/about/terms', target: '_blank' },
+	                        { className: 'loginMain-link', href: 'http://zvooq.com/about/terms', target: '_blank' },
 	                        '\u0423\u0441\u043B\u043E\u0432\u0438\u044F\u043C\u0438'
 	                    ),
 	                    React.createElement('br', null),
 	                    React.createElement(
 	                        'a',
-	                        { href: 'http://zvooq.com/about/terms', target: '_blank' },
+	                        { className: 'loginMain-link', href: 'http://zvooq.com/about/terms', target: '_blank' },
 	                        '\u043E\u0431\u0441\u043B\u0443\u0436\u0438\u0432\u0430\u043D\u0438\u044F'
 	                    ),
-	                    ' \u0438',
+	                    ' \u0438\xA0',
 	                    React.createElement(
 	                        'a',
-	                        { href: 'http://zvooq.com/about/privacy', target: '_blank' },
+	                        { className: 'loginMain-link', href: 'http://zvooq.com/about/privacy', target: '_blank' },
 	                        '\u041F\u0440\u0430\u0432\u0438\u043B\u0430\u043C\u0438 \u0445\u0440\u0430\u043D\u0435\u043D\u0438\u044F \u043B\u0438\u0447\u043D\u043E\u0439'
 	                    ),
 	                    React.createElement('br', null),
 	                    React.createElement(
 	                        'a',
-	                        { href: 'http://zvooq.com/about/privacy', target: '_blank' },
+	                        { className: 'loginMain-link', href: 'http://zvooq.com/about/privacy', target: '_blank' },
 	                        '\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438'
 	                    )
 	                )
@@ -22688,7 +22690,7 @@
 
 
 	// module
-	exports.push([module.id, ".loginMain .loginTitle {\n  font: 300 20px/28px \"Museo\", Arial, sans-serif;\n  color: #080808;\n  padding: 30px 0 5px;\n  text-align: center;\n}\n.loginMain .loginBtns-content {\n  padding: 25px 20px 20px;\n}\n.loginMain .btnStriper {\n  border-top: 1px solid #e6e6e6;\n  margin: 20px auto;\n}\n.loginMain .loginMain-links,\n.loginMain .loginMain-links a {\n  text-align: center;\n  font: 100 11px/1.1 \"Museo\", Arial, sans-serif;\n  color: #ccc !important;\n}\n.loginMain .loginMain-links {\n  margin-top: 20px;\n}\n.loginMain .loginMain-links a {\n  text-decoration: underline !important;\n}\n", ""]);
+	exports.push([module.id, ".loginMain-title {\n  font: 300 20px/28px \"Museo\", Arial, sans-serif;\n  color: #080808;\n  padding: 30px 0 5px;\n  text-align: center;\n}\n.loginMain-loginButtonsWrapper {\n  padding: 25px 20px 20px;\n}\n.loginMain-buttonsStriper {\n  border-top: 1px solid #e6e6e6;\n  margin: 20px auto;\n}\n.loginMain-linksWrapper,\n.loginMain-link {\n  text-align: center;\n  font: 100 11px/1.1 \"Museo\", Arial, sans-serif;\n  color: #ccc !important;\n}\n.loginMain-linksWrapper {\n  margin-top: 20px;\n}\n.loginMain-link {\n  text-decoration: underline !important;\n}\n", ""]);
 
 	// exports
 
@@ -22702,12 +22704,12 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.BUTTONS_TYPE = exports.LoginBtn = undefined;
+	exports.BUTTONS_TYPE = exports.LoginButton = undefined;
 
 	__webpack_require__(204);
 
-	var LoginBtn = exports.LoginBtn = React.createClass({
-	    displayName: 'LoginBtn',
+	var LoginButton = exports.LoginButton = React.createClass({
+	    displayName: 'LoginButton',
 
 
 	    windowWidth: 700,
@@ -22715,14 +22717,14 @@
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            classNames: [' loginBtn__vk ', ' loginBtn__fb ', ' loginBtn__email loginBtn_color_lightBlue loginBtn_size_s ', ' loginBtn__sms loginBtn_color_lightBlue loginBtn_size_s ', ' loginBtn_color_lightBlue ', ' loginBtn_color_lightBlue ', ' loginBtn_color_lightBlue '],
-	            typebtn: 0
+	            classNames: [' loginButton_vk ', ' loginButton_fb ', ' loginButton_email loginButton_lightBlue loginButton_small ', ' loginButton_sms loginButton_lightBlue loginButton_small ', ' loginButton_lightBlue ', ' loginButton_lightBlue ', ' loginButton_lightBlue '],
+	            buttonType: 0
 	        };
 	    },
 
 	    getInitialState: function getInitialState() {
 	        return {
-	            text: ['Войти с помощью Вконтакте', 'Войти с помощью Facebook', 'Через email', "По коду в SMS</br><small>(бесплатно)</small>", "Зарегистрироваться или войти", "Продолжить", "Восстановить пароль"]
+	            text: ['Войти с помощью Вконтакте', 'Войти с помощью Facebook', 'Через email', "По коду в SMS<br /><small>(бесплатно)</small>", "Зарегистрироваться или войти", "Продолжить", "Восстановить пароль"]
 	        };
 	    },
 
@@ -22736,18 +22738,18 @@
 
 	    render: function render() {
 
-	        var btnText = this.props.text || this.state.text[this.props.typebtn];
-	        var onClickBtn;
+	        var buttonText = this.props.text || this.state.text[this.props.buttonType];
+	        var onClickButton = void 0;
 
-	        if (this.props.typebtn === 0) {
-	            onClickBtn = this.vkClickHandler;
-	        } else if (this.props.typebtn === 1) onClickBtn = this.fbClickHandler;else onClickBtn = this.props.onClick;
+	        if (this.props.buttonType === 0) {
+	            onClickButton = this.vkClickHandler;
+	        } else if (this.props.buttonType === 1) onClickButton = this.fbClickHandler;else onClickButton = this.props.onClick;
 
 	        return React.createElement('button', {
-	            className: "loginBtn " + this.props.classNames[this.props.typebtn] + " loginBtn__" + this.props.type,
-	            dangerouslySetInnerHTML: { __html: btnText },
+	            className: "loginButton " + this.props.classNames[this.props.buttonType],
+	            dangerouslySetInnerHTML: { __html: buttonText },
 	            type: this.props.type,
-	            onClick: onClickBtn
+	            onClick: onClickButton
 	        });
 	    }
 	});
@@ -22779,8 +22781,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginBtn.styl", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginBtn.styl");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginButton.styl", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./loginButton.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22798,7 +22800,7 @@
 
 
 	// module
-	exports.push([module.id, ".loginBtn {\n  display: block;\n  height: 50px;\n  width: 100%;\n  border-radius: 4px;\n  font: 100 15px/18px \"Museo\", Arial, sans-serif;\n  color: #fff;\n  cursor: pointer;\n  margin-top: 10px;\n}\n.loginBtn:hover {\n  opacity: 0.9;\n}\n.loginBtn__vk {\n  background-image: url(\"/../../img/loginPopup/vkontakte.svg\");\n  background-position: 19px 50%;\n  background-size: 15px;\n  background-color: #356ca1;\n}\n.loginBtn__fb {\n  background-image: url(\"/../../img/loginPopup/facebook.svg\");\n  background-position: 22px 50%;\n  background-size: 10px;\n  background-color: #475e97;\n}\n.loginBtn__vk,\n.loginBtn__fb {\n  margin-bottom: 10px;\n  padding-left: 54px;\n  position: relative;\n  text-align: left;\n  background-repeat: no-repeat;\n}\n.loginBtn_color_lightBlue {\n  background-color: #4baeec;\n}\n.loginBtn__email,\n.loginBtn__sms {\n  display: inline-block;\n  margin-top: 0;\n}\n.loginBtn_size_s {\n  width: 135px !important;\n}\n.loginBtn__email {\n  float: left;\n}\n.loginBtn__sms {\n  margin-left: 10px;\n}\n.loginBtn__sms small {\n  pointer-events: none;\n  font: 100 13px/15px \"Museo\", Arial, sans-serif;\n  opacity: 0.6;\n}\n", ""]);
+	exports.push([module.id, ".loginButton {\n  display: block;\n  height: 50px;\n  width: 100%;\n  border-radius: 4px;\n  font: 100 15px/18px \"Museo\", Arial, sans-serif;\n  color: #fff;\n  cursor: pointer;\n  margin-top: 10px;\n}\n.loginButton:hover {\n  opacity: 0.9;\n}\n.loginButton_vk {\n  background-image: url(\"/../../img/loginPopup/vkontakte.svg\");\n  background-position: 19px 50%;\n  background-size: 15px;\n  background-color: #356ca1;\n}\n.loginButton_fb {\n  background-image: url(\"/../../img/loginPopup/facebook.svg\");\n  background-position: 22px 50%;\n  background-size: 10px;\n  background-color: #475e97;\n}\n.loginButton_vk,\n.loginButton_fb {\n  margin-bottom: 10px;\n  padding-left: 54px;\n  position: relative;\n  text-align: left;\n  background-repeat: no-repeat;\n}\n.loginButton_lightBlue {\n  background-color: #4baeec;\n}\n.loginButton_small {\n  width: 135px !important;\n}\n.loginButton_email,\n.loginButton_sms {\n  display: inline-block;\n  margin-top: 0;\n}\n.loginButton_email {\n  float: left;\n}\n.loginButton_sms {\n  margin-left: 10px;\n}\n.loginButton_sms small {\n  pointer-events: none;\n  font: 100 13px/15px \"Museo\", Arial, sans-serif;\n  opacity: 0.6;\n}\n", ""]);
 
 	// exports
 
@@ -22848,10 +22850,11 @@
 	            React.createElement(
 	                'div',
 	                { className: 'loginEmail-content' },
-	                React.createElement(_loginForm.LoginForm, { inputs: inputs, typebtn: 4, type: 'submit' }),
+	                React.createElement(_loginForm.LoginForm, { inputs: inputs, buttonType: 4, type: 'submit' }),
 	                React.createElement(
 	                    'div',
-	                    { className: 'loginEmail__forgot-button',
+	                    {
+	                        className: 'loginEmail-forgotButton',
 	                        onClick: function onClick() {
 	                            _this.props.onPageClick(3);
 	                        }
@@ -22899,7 +22902,7 @@
 
 
 	// module
-	exports.push([module.id, ".loginEmail__forgot-button {\n  cursor: pointer;\n  display: inline-block;\n  margin-top: 20px;\n  color: #7c7c7c;\n  font: 100 15px/1.2 \"Museo\", Arial, sans-serif;\n  text-align: center;\n}\n.loginEmail-content {\n  padding: 20px 20px 25px;\n  text-align: center;\n}\n", ""]);
+	exports.push([module.id, ".loginEmail-forgotButton {\n  cursor: pointer;\n  display: inline-block;\n  margin-top: 20px;\n  color: #7c7c7c;\n  font: 100 15px/1.2 \"Museo\", Arial, sans-serif;\n  text-align: center;\n}\n.loginEmail-content {\n  padding: 20px 20px 25px;\n  text-align: center;\n}\n", ""]);
 
 	// exports
 
@@ -22917,7 +22920,7 @@
 
 	__webpack_require__(210);
 
-	var _loginBtn = __webpack_require__(203);
+	var _loginButton = __webpack_require__(203);
 
 	var LoginForm = exports.LoginForm = React.createClass({
 	    displayName: 'LoginForm',
@@ -22925,23 +22928,28 @@
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            typebtn: 4,
-	            loginBtnText: "Продолжить",
+	            buttonType: 4,
+	            loginButtonText: "Продолжить",
 	            inputs: []
 	        };
 	    },
 
 	    render: function render() {
-	        var loginForm = "loginForm";
 	        var inputs = this.props.inputs.map(function (input, index) {
-	            return React.createElement('input', { key: index, className: loginForm + "__input", defaultValue: input.defaultValue, placeholder: input.placeholder, required: true, type: input.type });
+	            return React.createElement('input', {
+	                key: index,
+	                className: input.type === "password" ? "loginForm-password" : "loginForm-input",
+	                defaultValue: input.defaultValue,
+	                placeholder: input.placeholder,
+	                required: true, type: input.type
+	            });
 	        });
 
 	        return React.createElement(
 	            'div',
-	            { className: loginForm + " " },
+	            { className: 'loginForm' },
 	            inputs,
-	            React.createElement(_loginBtn.LoginBtn, { typebtn: this.props.typebtn, type: 'submit', loginBtnText: this.props.loginBtnText })
+	            React.createElement(_loginButton.LoginButton, { buttonType: this.props.buttonType, type: 'submit', loginButtonText: this.props.loginButtonText })
 	        );
 	    }
 	});
@@ -22982,7 +22990,7 @@
 
 
 	// module
-	exports.push([module.id, ".loginForm {\n  margin: 0.75em 0 1em;\n}\n.loginForm__input {\n  display: block;\n  width: 100%;\n  height: 50px;\n  padding: 0 15px;\n  margin-bottom: 10px;\n  box-sizing: border-box;\n  box-shadow: inset 0 0 0 1px #f1f1f1;\n  color: #7c7c7c;\n  font: 100 15px/17px \"Museo\", Arial, sans-serif;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\n.loginForm input[type=\"password\"] {\n  margin-bottom: 20px;\n}\n", ""]);
+	exports.push([module.id, ".loginForm {\n  margin: 0.75em 0 1em;\n}\n.loginForm-input,\n.loginForm-password {\n  display: block;\n  width: 100%;\n  height: 50px;\n  padding: 0 15px;\n  margin-bottom: 10px;\n  box-sizing: border-box;\n  box-shadow: inset 0 0 0 1px #f1f1f1;\n  color: #7c7c7c;\n  font: 100 15px/17px \"Museo\", Arial, sans-serif;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n}\n.loginForm-password {\n  margin-bottom: 20px;\n}\n", ""]);
 
 	// exports
 
@@ -23014,7 +23022,7 @@
 	        return React.createElement(
 	            "div",
 	            { className: "loginHeader" },
-	            React.createElement("button", { className: "loginHeader-back__button ", type: "button", onClick: this.props.clickHandler }),
+	            React.createElement("button", { className: "loginHeader-backButton", type: "button", onClick: this.props.clickHandler }),
 	            this.props.text
 	        );
 	    }
@@ -23056,7 +23064,7 @@
 
 
 	// module
-	exports.push([module.id, ".loginHeader {\n  position: relative;\n  height: 39px;\n  padding-top: 21px;\n  font: 100 18px \"Museo\", Arial, sans-serif;\n  text-align: center;\n  background-color: #f1f1f1;\n  color: #4d4d4d;\n}\n.loginHeader-back__button {\n  background: url(\"/../../img/loginPopup/back.svg\") 20px 50% no-repeat;\n  position: absolute;\n  cursor: pointer;\n  width: 65px;\n  height: 100%;\n  top: 0;\n  left: 0;\n}\n", ""]);
+	exports.push([module.id, ".loginHeader {\n  position: relative;\n  height: 39px;\n  padding-top: 21px;\n  font: 100 18px \"Museo\", Arial, sans-serif;\n  text-align: center;\n  background-color: #f1f1f1;\n  color: #4d4d4d;\n}\n.loginHeader-backButton {\n  background: url(\"/../../img/loginPopup/back.svg\") 20px 50% no-repeat;\n  position: absolute;\n  cursor: pointer;\n  width: 65px;\n  height: 100%;\n  top: 0;\n  left: 0;\n}\n", ""]);
 
 	// exports
 
@@ -23104,7 +23112,7 @@
 	            React.createElement(
 	                'div',
 	                { className: 'loginSms-content' },
-	                React.createElement(_loginForm.LoginForm, { inputs: inputs, typebtn: 5, type: 'submit' }),
+	                React.createElement(_loginForm.LoginForm, { inputs: inputs, buttonType: 5, type: 'submit' }),
 	                React.createElement(
 	                    'div',
 	                    { className: 'loginSms-note' },
@@ -23170,7 +23178,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.EmailPasForgot = undefined;
+	exports.EmailPasswordForgot = undefined;
 
 	__webpack_require__(219);
 
@@ -23183,8 +23191,8 @@
 	    placeholder: "Ваш email"
 	}];
 
-	var EmailPasForgot = exports.EmailPasForgot = React.createClass({
-	    displayName: 'EmailPasForgot',
+	var EmailPasswordForgot = exports.EmailPasswordForgot = React.createClass({
+	    displayName: 'EmailPasswordForgot',
 
 	    getInitialState: function getInitialState() {
 	        return {
@@ -23196,14 +23204,14 @@
 
 	        return React.createElement(
 	            'div',
-	            { className: 'emailPasForgot' },
+	            { className: 'emailPasswordForgot' },
 	            React.createElement(_loginHeader.LoginHeader, { clickHandler: function clickHandler() {
 	                    _this.props.onPageClick(0);
 	                }, text: '\u0417\u0430\u0431\u044B\u043B\u0438 \u043F\u0430\u0440\u043E\u043B\u044C?' }),
 	            React.createElement(
 	                'div',
-	                { className: 'emailPasForgot-content' },
-	                React.createElement(_loginForm.LoginForm, { inputs: inputs, typebtn: 6, type: 'submit' })
+	                { className: 'emailPasswordForgot-content' },
+	                React.createElement(_loginForm.LoginForm, { inputs: inputs, buttonType: 6, type: 'submit' })
 	            )
 	        );
 	    }
@@ -23226,8 +23234,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./emailPasForgot.styl", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./emailPasForgot.styl");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./emailPasswordForgot.styl", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js!./emailPasswordForgot.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23245,7 +23253,7 @@
 
 
 	// module
-	exports.push([module.id, ".emailPasForgot-content {\n  padding: 20px 20px 120px;\n}\n", ""]);
+	exports.push([module.id, ".emailPasswordForgot-content {\n  padding: 20px 20px 120px;\n}\n", ""]);
 
 	// exports
 

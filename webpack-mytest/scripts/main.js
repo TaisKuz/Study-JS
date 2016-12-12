@@ -19,7 +19,7 @@ let columns = [
     {
         iconType: 'cherry',
         title: 'Совершенно бесплатно',
-        description: 'Слушайте любую музыку<br/>при наличии интернета!'
+        description: 'Слушайте любую музыку<br />при наличии интернета!'
     },
     {
         iconType: 'plane',
@@ -34,7 +34,7 @@ let columns = [
     {
         iconType: 'heart',
         title: 'Рекомендации по&nbsp;вашему вкусу',
-        description: 'Вы&nbsp;легко найдёте свою<br/>любимую музыку и&nbsp;откроете<br/>для себя много нового'
+        description: 'Вы&nbsp;легко найдёте свою<br />любимую музыку и&nbsp;откроете<br />для себя много нового'
     }
 ];
 
@@ -63,8 +63,8 @@ let MainPage = React.createClass({
                         </div>
                     </div>
                     <div className="main-pageTitle">
-                        Чтобы попробовать новые возможности,<br/>
-                        <div className="main-singIn" onClick={this.loginPopupHandler}>войдите </div>
+                        Чтобы попробовать новые возможности,<br />
+                        <div className="main-singIn" onClick={ this.loginPopupHandler }>войдите </div>
                         в&nbsp;бесплатное приложение Zvooq
                     </div>
 
@@ -76,7 +76,7 @@ let MainPage = React.createClass({
                         <div className="main-installGroup">
                             <div className="main-installGroupTitle">Теперь ваши открытия будут всегда под рукой!</div>
                             <div className="main-installGroupDescription">Вы&nbsp;сможете Shazamить треки прямо из&nbsp;Zvooq сразу слушать их&nbsp;и&nbsp;моментально добавлять в&nbsp;свою коллекцию.</div>
-                            <InstallBox btns={btns} positionClass="Top" />
+                            <InstallBox btns={ btns } positionClass="Top" />
                         </div>
                     </div>
                     <div className="main-zvooqLogoWrapper">
@@ -86,12 +86,12 @@ let MainPage = React.createClass({
                     </div>
                     <div className="main-freeAppTitle">Бесплатное приложение, с&nbsp;которым слушать музыку легко</div>
                     <div className="main-freeAppDescription">Бесплатное музыкальное приложение &#8470;1&nbsp;в AppStore</div>
-                    <ColumnBox columns={columns}/>
+                    <ColumnBox columns={ columns } />
                 </div>
                 <div className="main-footer">
-                    <InstallBox btns={btns} positionClass="Bottom"/>
+                    <InstallBox btns={ btns } positionClass="Bottom"/>
                 </div>
-                {this.state.showLoginPopup && <LoginPopup onClickClose={this.loginPopupHandler} />}
+                { this.state.showLoginPopup && <LoginPopup onClickClose={ this.loginPopupHandler } /> }
             </div>
         );
     }

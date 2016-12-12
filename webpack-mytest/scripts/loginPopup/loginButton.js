@@ -1,6 +1,6 @@
-import './../../stylus/loginPopup/loginBtn.styl';
+import '../../stylus/loginPopup/loginButton.styl';
 
-export var LoginBtn = React.createClass({
+export let LoginButton = React.createClass({
 
     windowWidth: 700,
     windowHeight: 510,
@@ -8,15 +8,15 @@ export var LoginBtn = React.createClass({
     getDefaultProps: function () {
         return {
             classNames: [
-                ' loginBtn__vk ',
-                ' loginBtn__fb ',
-                ' loginBtn__email loginBtn_color_lightBlue loginBtn_size_s ',
-                ' loginBtn__sms loginBtn_color_lightBlue loginBtn_size_s ',
-                ' loginBtn_color_lightBlue ',
-                ' loginBtn_color_lightBlue ',
-                ' loginBtn_color_lightBlue '
+                ' loginButton_vk ',
+                ' loginButton_fb ',
+                ' loginButton_email loginButton_lightBlue loginButton_small ',
+                ' loginButton_sms loginButton_lightBlue loginButton_small ',
+                ' loginButton_lightBlue ',
+                ' loginButton_lightBlue ',
+                ' loginButton_lightBlue '
             ],
-            typebtn: 0
+            buttonType: 0
         };
     },
 
@@ -26,7 +26,7 @@ export var LoginBtn = React.createClass({
                 'Войти с помощью Вконтакте',
                 'Войти с помощью Facebook',
                 'Через email',
-                "По коду в SMS</br><small>(бесплатно)</small>",
+                "По коду в SMS<br /><small>(бесплатно)</small>",
                 "Зарегистрироваться или войти",
                 "Продолжить",
                 "Восстановить пароль"
@@ -46,19 +46,19 @@ export var LoginBtn = React.createClass({
 
     render: function() {
 
-        var btnText = this.props.text || this.state.text[this.props.typebtn];
-        var onClickBtn;
+        let buttonText = this.props.text || this.state.text[this.props.buttonType];
+        let onClickButton;
 
-        if (this.props.typebtn === 0) {onClickBtn = this.vkClickHandler;}
-        else if(this.props.typebtn === 1) onClickBtn = this.fbClickHandler;
-        else onClickBtn = this.props.onClick;
+        if (this.props.buttonType === 0) { onClickButton = this.vkClickHandler; }
+        else if(this.props.buttonType === 1) onClickButton = this.fbClickHandler;
+        else onClickButton = this.props.onClick;
 
         return (
             <button
-                className={"loginBtn " + this.props.classNames[this.props.typebtn] + " loginBtn__" + this.props.type}
-                dangerouslySetInnerHTML={{ __html: btnText }}
-                type={this.props.type}
-                onClick={onClickBtn}
+                className={ "loginButton " + this.props.classNames[this.props.buttonType] }
+                dangerouslySetInnerHTML={{ __html: buttonText }}
+                type={ this.props.type }
+                onClick={ onClickButton }
             />
         );
     }

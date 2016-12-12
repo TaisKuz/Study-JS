@@ -1,6 +1,6 @@
 import './../../stylus/loginPopup/loginHeader.styl';
 
-export var LoginHeader = React.createClass({
+export let LoginHeader = React.createClass({
     getDefaultProps: function () {
         return {
             text: "",
@@ -11,8 +11,8 @@ export var LoginHeader = React.createClass({
     render: function() {
         return (
             <div className="loginHeader">
-                <button className="loginHeader-back__button " type="button" onClick={this.props.clickHandler} />
-                {this.props.text}
+                <button className="loginHeader-backButton" type="button" onClick={ this.props.clickHandler } />
+                { this.props.text }
             </div>
         );
     }

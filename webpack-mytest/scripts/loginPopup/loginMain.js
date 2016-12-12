@@ -1,23 +1,23 @@
 import './../../stylus/loginPopup/loginMain.styl';
 
-import { LoginBtn, BUTTONS_TYPE } from './loginBtn.js';
+import { LoginButton, BUTTONS_TYPE } from './loginButton.js';
 
-export var LoginMain = React.createClass({
+export let LoginMain = React.createClass({
 
     getDefaultProps: function () {
         return {
-            socialBtns: [
-                { typebtn: 0 },
-                { typebtn: 1 }
+            socialButtons: [
+                { buttonType: 0 },
+                { buttonType: 1 }
             ],
 
-            emailBtns: [
+            emailButtons: [
                 {
-                    typebtn: 2,
+                    buttonType: 2,
                     id: 1
                 },
                 {
-                    typebtn: 3,
+                    buttonType: 3,
                     id: 2
                 }
             ],
@@ -26,32 +26,36 @@ export var LoginMain = React.createClass({
     },
 
     render: function() {
-        var socialBtns = this.props.socialBtns.map((item, index) => {
+        let socialButtons = this.props.socialButtons.map((item, index) => {
             return (
-                <LoginBtn key={index} typebtn={item.typebtn} />
+                <LoginButton key={ index } buttonType={ item.buttonType } />
             );
         });
 
-        var emailBtns = this.props.emailBtns.map((item, index) => {
+        let emailButtons = this.props.emailButtons.map((item, index) => {
             return (
-                <LoginBtn key={index} typebtn={item.typebtn}
-                    onClick={() => { this.props.onPageClick(item.id) }}
+                <LoginButton
+                    key={ index }
+                    buttonType={ item.buttonType }
+                    onClick={ () => { this.props.onPageClick(item.id) }}
                 />
             );
         });
 
         return (
             <div className="loginMain">
-                <div className="loginTitle">Чтобы продолжить, войдите любым удобным для вас способом:</div>
-                <div className="loginBtns-content">
-                    {socialBtns}
-                    <div className="btnStriper"></div>
-                    {emailBtns}
-                    <p className="loginMain-links">
-                        Регистрируясь, вы соглашаетесь с <a href="http://zvooq.com/about/terms" target="_blank">Условиями</a>
-                        <br/><a href="http://zvooq.com/about/terms" target="_blank">обслуживания</a> и
-                        <a href="http://zvooq.com/about/privacy" target="_blank">Правилами хранения личной</a>
-                        <br/><a href="http://zvooq.com/about/privacy" target="_blank">информации</a></p>
+                <div className="loginMain-title">Чтобы продолжить, войдите любым удобным для вас способом:</div>
+                <div className="loginMain-loginButtonsWrapper">
+                    { socialButtons }
+                    <div className="loginMain-buttonsStriper" />
+                    { emailButtons }
+                    <p className="loginMain-linksWrapper">
+                        Регистрируясь, вы соглашаетесь с&nbsp;
+                        <a className="loginMain-link"  href="http://zvooq.com/about/terms" target="_blank">Условиями</a>
+                        <br /><a className="loginMain-link" href="http://zvooq.com/about/terms" target="_blank">обслуживания</a> и&nbsp;
+                        <a className="loginMain-link" href="http://zvooq.com/about/privacy" target="_blank">Правилами хранения личной</a>
+                        <br /><a className="loginMain-link" href="http://zvooq.com/about/privacy" target="_blank">информации</a>
+                    </p>
                 </div>
             </div>
         );
