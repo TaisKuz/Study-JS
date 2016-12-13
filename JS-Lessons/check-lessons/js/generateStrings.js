@@ -1,8 +1,6 @@
 "use strict";
 
-function GenerateStrings() {
-
-}
+function GenerateStrings() {}
 
 GenerateStrings.prototype = Object.create(Lesson.prototype);
 GenerateStrings.prototype.constructor = GenerateStrings; 
@@ -43,7 +41,6 @@ GenerateStrings.prototype.init = function() {
 
   this.inputText.onchange = this.clearMess.bind(this);
   this.inputText.onfocus = this.clearMess.bind(this);
-
 }
 
 
@@ -60,7 +57,7 @@ GenerateStrings.prototype.subStrings = function() {
       inputTextNoSpaces = inputStrVal.replace(/(^\s+|\s+$)/g,'');
     
     for (var i = 0; i < inputTextNoSpaces.length; i++) {
-      for (var j = i; j < inputTextNoSpaces.length; j++) {         
+      for (var j = i; j < inputTextNoSpaces.length; j++) {
         subStr += inputTextNoSpaces[j];
         if (i < inputTextNoSpaces.length-1)
           strArr += `${subStr}, `;
@@ -76,7 +73,7 @@ GenerateStrings.prototype.subStrings = function() {
 
 GenerateStrings.prototype.destroy = function() {
 
-  this.containerWrapper.onsubmit = null;
+  this.containerWrapper.onclick = null;
   this.inputText.onchange = null;
   this.inputText.onfocus = null;
 

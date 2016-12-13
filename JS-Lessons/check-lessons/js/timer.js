@@ -1,18 +1,13 @@
 "use strict";
 
-function Timer() {
-
-}
+function Timer() {}
 
 Timer.prototype = Object.create(Lesson.prototype);
 Timer.prototype.constructor = Timer;
 
-
 Timer.prototype.init = function() {
 
-  //отрисовка урока в браузере
-  var
-	  date = new Date();
+  var date = new Date();
 
 	this.containerWrapper = createUI("div", {className: "containerWrapper", 
 		id: "0"
@@ -28,11 +23,11 @@ Timer.prototype.init = function() {
 
 	this.containerTime = createUI("div", {className: "container-time"}, this.containerWrapper);
 
-	this.intervalID = window.setInterval(this.secondsTimer.bind(this), 1000); 
-
+	this.intervalID = window.setInterval(this.secondsTimer.bind(this), 1000);
 }
 
 Timer.prototype.secondsTimer = function() {
+
   var date = new Date();
   this.containerTime.innerHTML =  `Current time is : ${date.toLocaleString("en-US", { hour: 'numeric' })} : 
   ${date.getMinutes()} : ${date.getSeconds()}`;

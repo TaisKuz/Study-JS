@@ -11,7 +11,6 @@ Polindrome.prototype.init = function() {
       id: "1"
   }, document.body);
 
-
   this.title = createUI("p", {className: "description",
     innerHTML: "Write a JavaScript function that checks whether a passed string is palindrome or not?<br>Note: A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run."
   }, this.containerWrapper);
@@ -38,10 +37,9 @@ Polindrome.prototype.init = function() {
 
   this.containerResult = createUI("div", {className: "containerMessage"}, this.containerWrapper);
 
-    this.containerWrapper.onclick = this.checkPolindrome.bind(this);
+  this.containerWrapper.onclick = this.checkPolindrome.bind(this);
   this.inputText.onchange = this.clearMess.bind(this);
   this.inputText.onfocus = this.clearMess.bind(this);
-
 }
 
 Polindrome.prototype.checkPolindrome = function() {
@@ -69,17 +67,15 @@ Polindrome.prototype.checkPolindrome = function() {
 
 Polindrome.prototype.destroy = function() {
 
-    this.containerWrapper.onsubmit = null;
+    this.containerWrapper.onclick = null;
     this.inputText.onchange = null;
     this.inputText.onfocus = null;
 
     this.containerWrapper.remove();
     this.title = null;
     this.description = null;
-
     this.inputText = null;
     this.containerWrapTitle = null;
-
     this.errorMessage = null;
     this.btnGenerate = null;
     this.resultTitle = null;

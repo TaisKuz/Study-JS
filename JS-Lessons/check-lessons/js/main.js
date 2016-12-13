@@ -2,33 +2,27 @@
 
 var mainForm = new MainForm();
 
-var lessonClass;
-
 window.onload = function () {
 
   mainForm.init();
 }
 
 function Lesson(id) {
+
   this.id = id;
 }
 
 Lesson.prototype.init = function() {
-  //отрисовка урока в браузере
-  //переопределяется в скрипте каждого урока
+  //init UI of current lesson in browser
+  //init in each lesson
 }
 
 Lesson.prototype.destroy = function() {
-  //удаление остальный уроков, кроме этого из браузера
-
-}
-
-Lesson.prototype.reStart = function() {
-  //
+  //destroying current lesson UI from browser
+  //init in each lesson
 }
 
 // ENTRY POINT
-
 function MainForm() {
 
   this.loadedScripts = [
@@ -46,7 +40,7 @@ MainForm.prototype.init = function() {
   
   containerWrapper = createUI("form", {className: "containerWrapper"}, document.body); 
 
-  createUI("p", {className: "titleBig", 
+  createUI("p", { className: "titleBig",
     innerHTML: "Select the task below:"
   }, containerWrapper); 
   
@@ -64,29 +58,27 @@ MainForm.prototype.init = function() {
   inputBtn.onclick = this.clickHanler.bind(this);
 }
 
+//adding html <option> into lessonSelect (list of lessons)
 MainForm.prototype.setOption = function(lessons, target) {
-//внедряет html <option> в lessonSelect - список уроков
 
   for (var i = 0; i < lessons.length; i++) {
+    if (i == 0) {
 
-    if (i == 0) { 
       createUI("option", {innerHTML: lessons[i], 
         selected: "selected", id: i
       }, target);
     }
-
     else {
       createUI("option", {innerHTML: lessons[i], id: i}, target);   
     } 
   }
 }
 
-
 MainForm.prototype.loadScript = function(scriptId) {
 
   if (this.loadedScripts[scriptId].isLoaded == false) {
+
     this.script = document.createElement('script');
-    
     this.script.onload = this.loadHandler.bind(this);
     this.script.src = this.loadedScripts[scriptId].src;
     this.script.id = scriptId;
@@ -96,17 +88,13 @@ MainForm.prototype.loadScript = function(scriptId) {
   }
   else {
     selectLessons(mainForm.loadedScripts[scriptId].id, mainForm.loadedScripts[scriptId].class);
-
   }
-  
 }
 
 MainForm.prototype.loadHandler = function() {
 
   this.loadedScripts[this.script.id].isLoaded = true;
-
 }
-
 
 MainForm.prototype.clickHanler = function() {
 
@@ -131,14 +119,13 @@ function selectLessons(id, lessonClass) {
   mainForm.addLesson(id, lessonClass);
 
   if (mainForm.currentLesson) {
+
     mainForm.currentLesson.destroy();
   }
 
     mainForm.currentLesson = new lessonClass();
     mainForm.currentLesson.init(); 
 }
-
-
 
 // ---------------------- UTIL ------------------------
 var
@@ -149,12 +136,15 @@ var
   GRAY = "#fdfdfd",
   BLUE = "#e6f7ff";
 
+// creates UI elements and insert them to browser
 function createUI(type, params, parent) {
+
   var 
     element = document.createElement(type),
     keys = Object.keys(params);
 
   for (var i = 0; i < keys.length; i++) {
+
     element[keys[i]] = params[keys[i]];
   }
 
@@ -164,6 +154,7 @@ function createUI(type, params, parent) {
   return element;
 }
 
+// changing colors of warning messages
 function changeColor(color, bgColor, container) {
 
   container.style.color = color;
@@ -171,14 +162,15 @@ function changeColor(color, bgColor, container) {
 }
 
 Lesson.prototype.clearMess = function () {
+
   this.errorMessage.innerHTML = "";
   changeColor("black", GRAY, this.inputText);
 }
 
+// input-text verification
 Lesson.prototype.checkInput = function (inputTextValue, messageBox, inputBox) {
 
-  var  
-    inputTextVal,
+  var
     onlySpaces,
     inputTextNoSpaces;
 
@@ -186,17 +178,19 @@ Lesson.prototype.checkInput = function (inputTextValue, messageBox, inputBox) {
   onlySpaces = inputTextValue.replace(/\s+/g,'');
   
   if(inputTextValue === "" || onlySpaces == "") {
+
     messageBox.innerHTML = "(Error: Insert your text)";
     changeColor(RED, BG_RED, inputBox);
     return false;
   }
-  else if(inputTextValue.search(/[^a-zA-Zа-яА-я\' ']/) < 0 && onlySpaces !== "")
-  {
+  else if(inputTextValue.search(/[^a-zA-Zа-яА-я\' ']/) < 0 && onlySpaces !== "") {
+
     inputTextNoSpaces = inputTextValue.replace(/(^\s+|\s+$)/g,'');
     this.clearMess();
     return true;
   }  
-  else{
+  else {
+
     messageBox.innerHTML = "(Error: Incorrect text)";
     changeColor(RED, BG_RED, inputBox);
     return false;
