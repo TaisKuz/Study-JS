@@ -7,16 +7,16 @@ import { FormBox } from './formBox.js';
 let InstallBox = React.createClass({
     getDefaultProps: function () {
         return {
-            btns: [],
+            buttons: [],
             positionClass: "Bottom"
         };
     },
     render: function() {
 
         let
-            InstallButtons = this.props.btns.map(( btn, index ) => {
+            InstallButtons = this.props.buttons.map(( button, index ) => {
                 return (
-                    <InstallButton key={ index } buttonClass={ btn.buttonType } href={ btn.href } positionClass={ this.props.positionClass } />
+                    <InstallButton key={ index } buttonClass={ button.buttonType } href={ button.href } positionClass={ this.props.positionClass } />
                 );
             }),
             installBoxClass = 'installBox' + this.props.positionClass;

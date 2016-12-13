@@ -4,7 +4,7 @@ import { InstallBox } from './installBox.js';
 import { ColumnBox } from './columnBox.js';
 import { LoginPopup } from './loginPopup/loginPopup.js';
 
-let btns = [
+let buttons = [
     {
         buttonType: 'apple',
         href: 'https://itunes.apple.com/ru/app/muzyka-dla-iphone-besplatno/id833449999?mt=8'
@@ -76,7 +76,7 @@ let MainPage = React.createClass({
                         <div className="main-installGroup">
                             <div className="main-installGroupTitle">Теперь ваши открытия будут всегда под рукой!</div>
                             <div className="main-installGroupDescription">Вы&nbsp;сможете Shazamить треки прямо из&nbsp;Zvooq сразу слушать их&nbsp;и&nbsp;моментально добавлять в&nbsp;свою коллекцию.</div>
-                            <InstallBox btns={ btns } positionClass="Top" />
+                            <InstallBox buttons={ buttons } positionClass="Top" />
                         </div>
                     </div>
                     <div className="main-zvooqLogoWrapper">
@@ -89,7 +89,7 @@ let MainPage = React.createClass({
                     <ColumnBox columns={ columns } />
                 </div>
                 <div className="main-footer">
-                    <InstallBox btns={ btns } positionClass="Bottom"/>
+                    <InstallBox buttons={ buttons } positionClass="Bottom"/>
                 </div>
                 { this.state.showLoginPopup && <LoginPopup onClickClose={ this.loginPopupHandler } /> }
             </div>
@@ -97,4 +97,4 @@ let MainPage = React.createClass({
     }
 });
 
-ReactDOM.render( <MainPage />, document.getElementById('pageContent') );
+ReactDOM.render(<MainPage />, document.getElementById('pageContent'));
